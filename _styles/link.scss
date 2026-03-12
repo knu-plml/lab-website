@@ -1,0 +1,18 @@
+---
+---
+
+a {
+  color: var(--primary);
+  transition: color var(--transition);
+  overflow-wrap: break-word;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--primary) 76%, var(--text) 24%);
+}
+
+a:not([href]) {
+  color: var(--text);
+}

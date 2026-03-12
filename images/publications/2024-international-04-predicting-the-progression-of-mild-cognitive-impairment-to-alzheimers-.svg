@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Predicting the Progression of Mild Cognitive Impairment to Alzheimer’s Dementia Using Recurrent Neural Networks With a Series of Neuropsychological Tests">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b4f4a"/>
+      <stop offset="100%" stop-color="#147a73"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#99f6e4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#67e8f9" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="28" fill="url(#g)"/>
+  <circle cx="530" cy="74" r="86" fill="#99f6e4" opacity="0.09"/>
+  <circle cx="488" cy="300" r="126" fill="#67e8f9" opacity="0.08"/>
+  <path d="M-20 254 C98 212, 214 322, 352 278 S 554 252, 620 198" fill="none" stroke="url(#wave)" stroke-width="3"/>
+  <text x="46" y="62" font-family="Sora, sans-serif" font-size="18" font-weight="700" letter-spacing="2.4" fill="#d7fffb">PLML PUBLICATION</text>
+  <text x="46" y="126" font-family="Sora, Noto Sans KR, sans-serif" font-size="26" font-weight="700" fill="#f8fafc">Predicting the Progression of</text><text x="46" y="160" font-family="Sora, Noto Sans KR, sans-serif" font-size="26" font-weight="700" fill="#f8fafc">Mild Cognitive Impairment to</text><text x="46" y="194" font-family="Sora, Noto Sans KR, sans-serif" font-size="26" font-weight="700" fill="#f8fafc">Alzheimer’s Dementia Using</text><text x="46" y="228" font-family="Sora, Noto Sans KR, sans-serif" font-size="26" font-weight="700" fill="#f8fafc">Recurrent Neural Networks With</text>
+  <text x="46" y="282" font-family="Noto Sans KR, sans-serif" font-size="16" font-weight="500" fill="#c9f7f1">Journal of Clinical Neurology.</text><text x="46" y="306" font-family="Noto Sans KR, sans-serif" font-size="16" font-weight="500" fill="#c9f7f1">20(5):478-486, September 2024</text>
+</svg>

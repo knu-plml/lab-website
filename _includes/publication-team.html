@@ -1,0 +1,32 @@
+{% assign raw_authors = include.authors | default: "" | replace: " ", " " | replace: "(* equal contributions)", "" | strip %}
+{% assign author_items = raw_authors | split: "," %}
+
+<div class="publication-author-list">
+  {% for author in author_items %}
+    {% assign author_name = author | replace: "*", "" | strip %}
+    {% assign matched_member = nil %}
+
+    {% for member in site.members %}
+      {% assign display_name = member.name | default: "" %}
+      {% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
+      {% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+      {% assign aliases = member.aliases | default: empty %}
+
+      {% if author_name == english_name or author_name == korean_name or aliases contains author_name %}
+        {% assign matched_member = member %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched_member %}
+      <a
+        href="{{ matched_member.url | relative_url | uri_escape }}"
+        class="publication-author-link"
+      >
+        {{ author_name }}
+      </a>
+    {% else %}
+      <span class="publication-author-chip">{{ author_name }}</span>
+    {% endif %}
+  {% endfor %}
+</div>

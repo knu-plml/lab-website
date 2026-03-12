@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Programming languages illustration">
+  <defs>
+    <linearGradient id="pl-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#16284a"/>
+    </linearGradient>
+    <linearGradient id="pl-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#pl-bg)"/>
+  <circle cx="540" cy="78" r="120" fill="#1d4ed8" opacity="0.14"/>
+  <circle cx="84" cy="300" r="100" fill="#67e8f9" opacity="0.12"/>
+  <rect x="52" y="48" width="250" height="264" rx="26" fill="#0f1b33" stroke="#334155" stroke-opacity="0.7"/>
+  <rect x="338" y="82" width="250" height="196" rx="26" fill="#12213d" stroke="#3b82f6" stroke-opacity="0.35"/>
+  <path d="M106 126l-34 28 34 28" fill="none" stroke="url(#pl-accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+  <path d="M246 126l34 28-34 28" fill="none" stroke="url(#pl-accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+  <path d="M152 198h78" stroke="#e2e8f0" stroke-linecap="round" stroke-width="12"/>
+  <circle cx="392" cy="128" r="14" fill="#93c5fd"/>
+  <circle cx="462" cy="168" r="14" fill="#67e8f9"/>
+  <circle cx="534" cy="128" r="14" fill="#bfdbfe"/>
+  <path d="M392 128h142M462 168V224" fill="none" stroke="#93c5fd" stroke-linecap="round" stroke-width="8"/>
+  <rect x="418" y="220" width="88" height="26" rx="13" fill="#1e3a8a"/>
+</svg>

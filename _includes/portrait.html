@@ -1,0 +1,58 @@
+{% if include.lookup %}
+  {% assign member = site.members 
+    | where_exp: "member", "member.slug == include.lookup"
+    | first
+  %}
+{% else %}
+  {% assign member = include %}
+{% endif %}
+
+{% assign type = site.data.types[member.role] %}
+{% assign display_name = member.name | default: "" %}
+{% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
+{% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+
+<div class="portrait-wrapper">
+  <a
+    {% if page.slug != member.slug %}
+      href="{{ member.url | relative_url | uri_escape }}"
+    {% endif %}
+    class="portrait"
+    data-style="{{ include.style }}"
+    aria-label="{{ member.name | default: "member link" | regex_strip }}"
+  >
+    {% if type %}
+      {% include icon.html icon=type.icon %}
+    {% endif %}
+
+    <img
+      src="{{ member.image | relative_url | uri_escape }}"
+      class="portrait-image"
+      style="object-position: {{ member.image_position | default: '50% 20%' }};"
+      alt="member portrait"
+      loading="lazy"
+      {% include fallback.html %}
+    >
+
+    {% if display_name != "" %}
+      <span class="portrait-name">
+        <span class="portrait-name-en">{{ english_name | default: display_name }}</span>
+        {% if korean_name != "" %}
+          <span class="portrait-name-ko">{{ korean_name }}</span>
+        {% endif %}
+      </span>
+    {% endif %}
+
+    {% if member.description or type %}
+      <span class="portrait-description">
+        {{ member.description | default: type.description }}
+      </span>
+    {% endif %}
+
+    {% if member.affiliation %}
+      <span class="portrait-affiliation">
+        {{ member.affiliation }}
+      </span>
+    {% endif %}
+  </a>
+</div>

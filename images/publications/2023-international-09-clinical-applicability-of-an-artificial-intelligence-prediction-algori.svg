@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" role="img" aria-label="Clinical Applicability of an Artificial Intelligence Prediction Algorithm for Early Prediction of Non-persistent Atrial Fibrillation">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b4f4a"/>
+      <stop offset="100%" stop-color="#147a73"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="420" rx="28" fill="url(#g)"/>
+  <circle cx="-18" cy="44" r="54" fill="#99f6e4" opacity="0.14"/>
+  <circle cx="294" cy="58" r="44" fill="#d7fffb" opacity="0.10"/>
+  <circle cx="290" cy="330" r="96" fill="#67e8f9" opacity="0.10"/>
+  <path d="M-20 300 C40 278, 88 330, 160 314 S 280 286, 340 248" fill="none" stroke="#d5fffb" stroke-opacity="0.18" stroke-width="2.5"/>
+  <text x="28" y="48" font-family="Sora, sans-serif" font-size="14" font-weight="700" letter-spacing="2.2" fill="#d7fffb">PLML PUBLICATION</text>
+  <text x="28" y="112" font-family="Sora, Noto Sans KR, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Clinical</text><text x="28" y="146" font-family="Sora, Noto Sans KR, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Applicability of</text><text x="28" y="180" font-family="Sora, Noto Sans KR, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">an Artificial</text><text x="28" y="214" font-family="Sora, Noto Sans KR, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Intelligence</text><text x="28" y="248" font-family="Sora, Noto Sans KR, sans-serif" font-size="22" font-weight="700" fill="#f8fafc">Prediction</text>
+  <text x="28" y="330" font-family="Noto Sans KR, sans-serif" font-size="13" font-weight="500" fill="#d5fffb">Frontiers in</text><text x="28" y="350" font-family="Noto Sans KR, sans-serif" font-size="13" font-weight="500" fill="#d5fffb">Cardiovascular Medicine.</text><text x="28" y="370" font-family="Noto Sans KR, sans-serif" font-size="13" font-weight="500" fill="#d5fffb">10:1168054, September 2023</text>
+</svg>

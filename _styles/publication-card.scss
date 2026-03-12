@@ -1,0 +1,122 @@
+---
+---
+
+.publication-card {
+  display: flex;
+  align-items: stretch;
+  width: min(100%, 1120px);
+  margin: 20px;
+  background: color-mix(in srgb, var(--background) 84%, white 16%);
+  border: 1px solid color-mix(in srgb, var(--light-gray) 88%, white 12%);
+  border-radius: var(--rounded);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.publication-card-image {
+  flex: 0 0 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--background-alt) 80%, white 20%);
+}
+
+.publication-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.publication-card-text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 32px 34px;
+  text-align: left;
+}
+
+.publication-card-title {
+  font-family: var(--heading);
+  font-size: 1.34rem;
+  font-weight: var(--semi-bold);
+}
+
+.publication-card-venue {
+  font-family: var(--heading);
+  font-size: 1.05rem;
+  font-weight: var(--semi-bold);
+  font-style: normal;
+}
+
+.publication-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.publication-card-meta strong {
+  font-family: var(--heading);
+  font-size: 0.95rem;
+}
+
+.publication-card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+
+.publication-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+}
+
+.publication-card-tag {
+  padding: 5px 10px;
+  margin: 0;
+}
+
+.publication-author-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.publication-author-link,
+.publication-author-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--light-gray) 78%, white 22%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background-alt) 84%, white 16%);
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.publication-author-link:hover {
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--light-gray) 72%);
+  background: color-mix(in srgb, var(--background) 88%, white 12%);
+  color: var(--primary);
+}
+
+@media (max-width: 700px) {
+  .publication-card {
+    flex-direction: column;
+  }
+
+  .publication-card-image {
+    flex-basis: auto;
+  }
+
+  .publication-card-image img {
+    aspect-ratio: 3 / 2;
+    height: auto;
+  }
+}

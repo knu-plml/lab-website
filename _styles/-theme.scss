@@ -1,0 +1,54 @@
+---
+---
+
+// colors
+[data-dark="false"] {
+  --primary: #3f5786;
+  --secondary: #e9eff9;
+  --text: #24324a;
+  --background: #ffffff;
+  --background-alt: #f8fafc;
+  --light-gray: #d9e1ee;
+  --gray: #6f7d96;
+  --dark-gray: #16233a;
+  --overlay: rgba(22, 35, 58, 0.09);
+}
+[data-dark="true"] {
+  --primary: #93aee3;
+  --secondary: #1f2d4828;
+  --text: #e5ecf8;
+  --background: #0d1422;
+  --background-alt: #121b2d;
+  --light-gray: #243047;
+  --gray: #93a0b8;
+  --dark-gray: #f3f7ff;
+  --overlay: rgba(6, 10, 20, 0.36);
+}
+
+:root {
+  // font families
+  --title: "Sora", sans-serif;
+  --heading: "Sora", sans-serif;
+  --body: "IBM Plex Sans KR", sans-serif;
+  --code: "Roboto Mono", monospace;
+
+  // font sizes
+  --large: 1.2rem;
+  --xl: 1.4rem;
+  --xxl: 1.6rem;
+
+  // font weights
+  --thin: 200;
+  --regular: 400;
+  --semi-bold: 500;
+  --bold: 600;
+
+  // text line spacing
+  --spacing: 2;
+  --compact: 1.5;
+
+  // effects
+  --rounded: 12px;
+  --shadow: 0 12px 32px -18px var(--overlay), 0 2px 8px -4px var(--overlay);
+  --transition: 0.2s ease;
+}

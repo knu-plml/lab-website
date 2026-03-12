@@ -1,0 +1,38 @@
+---
+---
+
+.course-card {
+  width: min(100%, 980px);
+  margin: 20px;
+  background: var(--background);
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
+}
+
+.course-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px 28px;
+  text-align: left;
+}
+
+.course-card-title {
+  font-family: var(--heading);
+  font-size: var(--large);
+  font-weight: var(--semi-bold);
+}
+
+.course-card-subtitle {
+  font-style: italic;
+  color: color-mix(in srgb, var(--text) 72%, transparent);
+}
+
+.course-card-description {
+  margin: 0;
+}
+
+.course-card-text > .tags {
+  margin-top: 4px;
+}

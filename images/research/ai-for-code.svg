@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="AI for code illustration">
+  <defs>
+    <linearGradient id="ai-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10101f"/>
+      <stop offset="100%" stop-color="#1f2146"/>
+    </linearGradient>
+    <linearGradient id="ai-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#ai-bg)"/>
+  <circle cx="130" cy="56" r="110" fill="#8b5cf6" opacity="0.15"/>
+  <circle cx="566" cy="306" r="96" fill="#60a5fa" opacity="0.14"/>
+  <rect x="62" y="76" width="244" height="208" rx="24" fill="#17172d" stroke="#4338ca" stroke-opacity="0.45"/>
+  <rect x="338" y="52" width="240" height="256" rx="30" fill="#141b35" stroke="#818cf8" stroke-opacity="0.3"/>
+  <path d="M110 134h148M110 178h96M110 222h124" stroke="#c4b5fd" stroke-linecap="round" stroke-width="12"/>
+  <circle cx="444" cy="132" r="56" fill="none" stroke="url(#ai-accent)" stroke-width="12"/>
+  <circle cx="444" cy="132" r="12" fill="#ddd6fe"/>
+  <circle cx="388" cy="212" r="10" fill="#93c5fd"/>
+  <circle cx="500" cy="212" r="10" fill="#93c5fd"/>
+  <circle cx="444" cy="260" r="10" fill="#93c5fd"/>
+  <path d="M444 144v72M400 206l44-34 44 34M400 206l44 54 44-54" fill="none" stroke="#93c5fd" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+</svg>

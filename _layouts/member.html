@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{% assign display_name = page.name | default: page.title %}
+{% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
+{% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+{% assign aliases = page.aliases
+  | default: ""
+  | join: ","
+  | split: ","
+  | array_filter
+%}
+
+{% capture search -%}
+  publications/?search=
+  {% if english_name != "" %}"{{ english_name }}" {% endif %}
+  {% if korean_name != "" %}"{{ korean_name }}" {% endif %}
+  {% for alias in aliases %}"{{ alias }}" {% endfor %}
+{%- endcapture %}
+
+<div class="member-page">
+  <aside class="member-sidebar">
+    <div class="member-profile-card">
+      {% include portrait.html lookup=page.slug %}
+
+      {% if page.links %}
+        <div class="member-links">
+          {% for link in page.links %}
+            {% assign key = link[0] %}
+            {% assign value = link[1] %}
+            {% include button.html type=key link=value style="bare" %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </aside>
+
+  <div class="member-main">
+    <article class="member-content">
+      {{ content }}
+    </article>
+
+    <div class="member-search-card">
+      {% include button.html
+        type="search"
+        text="Find Publications"
+        link=search
+      %}
+      <p>Search publications by {{ page.name | default: page.title }} on the Publications page.</p>
+    </div>
+  </div>
+</div>

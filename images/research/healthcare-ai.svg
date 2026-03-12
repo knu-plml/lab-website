@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Healthcare AI illustration">
+  <defs>
+    <linearGradient id="hc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101727"/>
+      <stop offset="100%" stop-color="#1f3b5a"/>
+    </linearGradient>
+    <linearGradient id="hc-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#hc-bg)"/>
+  <circle cx="116" cy="82" r="120" fill="#f472b6" opacity="0.12"/>
+  <circle cx="560" cy="294" r="100" fill="#60a5fa" opacity="0.14"/>
+  <rect x="78" y="70" width="210" height="220" rx="28" fill="#172134" stroke="#60a5fa" stroke-opacity="0.3"/>
+  <path d="M182 118c24-34 82-18 82 24 0 58-82 108-82 108s-82-50-82-108c0-42 58-58 82-24z" fill="url(#hc-accent)" opacity="0.92"/>
+  <rect x="342" y="84" width="230" height="190" rx="26" fill="#12233c" stroke="#93c5fd" stroke-opacity="0.26"/>
+  <path d="M374 204c30 0 30-72 60-72s30 120 60 120 30-96 58-96" fill="none" stroke="#93c5fd" stroke-linecap="round" stroke-width="10"/>
+  <circle cx="374" cy="204" r="10" fill="#dbeafe"/>
+  <circle cx="434" cy="132" r="10" fill="#f9a8d4"/>
+  <circle cx="494" cy="252" r="10" fill="#bfdbfe"/>
+  <circle cx="552" cy="156" r="10" fill="#93c5fd"/>
+</svg>

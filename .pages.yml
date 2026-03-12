@@ -1,0 +1,426 @@
+media:
+  input: images
+  output: /new/images
+  path: uploads
+
+settings:
+  hide: true
+  content:
+    merge: true
+
+components:
+  nav:
+    label: Navigation
+    type: object
+    fields:
+      - name: order
+        label: Menu Order
+        type: number
+        required: true
+      - name: tooltip
+        label: Tooltip
+        type: string
+        required: false
+
+  member_links:
+    label: Links
+    type: object
+    fields:
+      - name: email
+        label: Email
+        type: string
+        required: false
+      - name: home-page
+        label: Home Page
+        type: string
+        required: false
+      - name: github
+        label: GitHub
+        type: string
+        required: false
+      - name: google-scholar
+        label: Google Scholar
+        type: string
+        required: false
+      - name: dblp
+        label: DBLP
+        type: string
+        required: false
+      - name: researchgate
+        label: ResearchGate
+        type: string
+        required: false
+      - name: linkedin
+        label: LinkedIn
+        type: string
+        required: false
+      - name: orcid
+        label: ORCID
+        type: string
+        required: false
+
+  action_button:
+    label: Button
+    type: object
+    fields:
+      - name: text
+        label: Text
+        type: string
+        required: true
+      - name: link
+        label: Link
+        type: string
+        required: true
+      - name: icon
+        label: Icon
+        type: string
+        required: false
+
+content:
+  - name: home
+    label: Home
+    type: file
+    path: index.md
+    fields:
+      - name: header-dark
+        label: Dark Header
+        type: boolean
+        required: false
+      - name: show-title
+        label: Show Title
+        type: boolean
+        required: false
+      - name: show-subtitle
+        label: Show Subtitle
+        type: boolean
+        required: false
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: members_page
+    label: Members Page
+    type: file
+    path: members/index.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: nav
+        component: nav
+        required: false
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: publications_page
+    label: Publications Page
+    type: file
+    path: publications/index.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: nav
+        component: nav
+        required: false
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: courses_page
+    label: Courses Page
+    type: file
+    path: courses/index.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: nav
+        component: nav
+        required: false
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: news_page
+    label: News Page
+    type: file
+    path: news/index.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: nav
+        component: nav
+        required: false
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: contact_page
+    label: Contact Page
+    type: file
+    path: contact/index.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: nav
+        component: nav
+        required: false
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: members
+    label: Members
+    type: collection
+    path: _members
+    subfolders: false
+    filename: "{slug}.md"
+    view:
+      primary: name
+      fields: [name, role, description]
+      sort: [name, role]
+      default:
+        sort: name
+        order: asc
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        hidden: true
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: image
+        label: Image
+        type: image
+        required: false
+        options:
+          path: members
+      - name: role
+        label: Role
+        type: select
+        required: true
+        options:
+          values:
+            - value: principal-investigator
+              label: Principal Investigator
+            - value: postdoc
+              label: Postdoc
+            - value: phd
+              label: PhD Student
+            - value: ms
+              label: MS Student
+            - value: undergrad
+              label: Undergraduate Researcher
+            - value: alumni
+              label: Alumni
+      - name: affiliation
+        label: Affiliation
+        type: string
+        required: false
+      - name: description
+        label: Description
+        type: string
+        required: false
+      - name: aliases
+        label: Aliases
+        type: string
+        required: false
+        list: true
+      - name: links
+        component: member_links
+        required: false
+      - name: body
+        label: Bio
+        type: code
+        required: false
+        options:
+          language: markdown
+
+  - name: news_posts
+    label: News Posts
+    type: collection
+    path: _posts
+    subfolders: false
+    filename: "{year}-{month}-{day}-{slug}.md"
+    view:
+      primary: title
+      fields: [title, date, "tags[0]"]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Publish Date
+        type: date
+        required: true
+        options:
+          time: true
+          format: yyyy-MM-dd HH:mm:ss xx
+      - name: tags
+        label: Tags
+        type: string
+        required: false
+        list: true
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
+
+  - name: publications
+    label: Publications
+    type: collection
+    path: _publications
+    subfolders: false
+    filename: "{slug}.md"
+    view:
+      primary: title
+      fields: [title, date, "tags[0]"]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Venue
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: false
+      - name: link
+        label: Canonical Link
+        type: string
+        required: false
+      - name: image
+        label: Image
+        type: image
+        required: false
+        options:
+          path: publications
+      - name: tags
+        label: Tags
+        type: string
+        required: false
+        list: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: buttons
+        label: Buttons
+        component: action_button
+        required: false
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.text}"
+      - name: body
+        label: Body
+        type: code
+        required: false
+        options:
+          language: markdown
+
+  - name: courses
+    label: Courses
+    type: collection
+    path: _courses
+    subfolders: false
+    filename: "{slug}.md"
+    view:
+      primary: title
+      fields: [title, title_en, subtitle]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: title_en
+        label: English Title
+        type: string
+        required: false
+      - name: subtitle
+        label: Semester
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: false
+      - name: link
+        label: Course Link
+        type: string
+        required: false
+      - name: tags
+        label: Tags
+        type: string
+        required: false
+        list: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: body
+        label: Body
+        type: code
+        required: false
+        options:
+          language: markdown

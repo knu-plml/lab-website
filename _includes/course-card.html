@@ -1,0 +1,39 @@
+{% if include.lookup %}
+  {% assign course = site.courses
+    | where_exp: "course", "course.slug == include.lookup"
+    | first
+    | default: include
+  %}
+{% else %}
+  {% assign course = include %}
+{% endif %}
+
+<div class="course-card">
+  <div class="course-card-text">
+    {% if course.title %}
+      <div class="course-card-title">
+        {{ course.title }}
+      </div>
+    {% endif %}
+
+    {% if course.title_en %}
+      <div class="course-card-subtitle">{{ course.title_en }}</div>
+    {% endif %}
+
+    {% if course.subtitle %}
+      <div class="course-card-description">
+        {{ course.subtitle }}
+      </div>
+    {% endif %}
+
+    {% if course.description %}
+      <p class="course-card-description">
+        {{ course.description | markdownify | remove: "<p>" | remove: "</p>" }}
+      </p>
+    {% endif %}
+
+    {% if course.tags or course.repo %}
+      {% include tags.html tags=course.tags repo=course.repo %}
+    {% endif %}
+  </div>
+</div>

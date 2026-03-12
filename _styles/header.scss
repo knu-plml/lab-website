@@ -1,0 +1,218 @@
+---
+---
+
+$logo-big: 80px;
+$logo: 40px;
+$big-padding: 84px;
+$collapse: 700px;
+$sticky: true;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(191, 219, 254, 0.1);
+  box-shadow: none;
+  background:
+    linear-gradient(135deg, rgba(4, 7, 18, 0.8) 0%, rgba(9, 18, 42, 0.68) 52%, rgba(15, 30, 64, 0.74) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  @if $sticky {
+    position: sticky !important;
+    top: 0;
+    z-index: 10 !important;
+  }
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(147, 197, 253, 0.06) 0, transparent 20%, rgba(219, 234, 254, 0.04) 48%, transparent 72%, rgba(96, 165, 250, 0.06) 100%),
+    linear-gradient(90deg, rgba(219, 234, 254, 0.05) 1px, transparent 1px);
+  background-size: auto, 120px 100%;
+  pointer-events: none;
+}
+
+header.background:before {
+  opacity: 0.34;
+  filter: saturate(0.92) brightness(0.62) contrast(1.08);
+}
+
+header a {
+  color: rgba(248, 250, 252, 0.95);
+  text-decoration: none;
+}
+
+.home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.logo {
+  height: $logo;
+}
+
+.logo > * {
+  width: unset;
+  height: 100%;
+}
+
+.title-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-width: 0;
+  font-family: var(--title);
+  text-align: left;
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  opacity: 0.75;
+  font-family: var(--code);
+  font-size: 0.8rem;
+  font-weight: var(--regular);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  color: rgba(248, 250, 252, 0.9);
+  appearance: none;
+  transition: background var(--transition);
+}
+
+.nav-toggle:after {
+  content: "\f0c9";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: var(--text);
+  color: rgba(248, 250, 252, 0.9);
+  font-size: 15px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+}
+
+.nav-toggle:checked:after {
+  content: "\f00d";
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-family: var(--heading);
+  letter-spacing: 0.01em;
+}
+
+nav > a {
+  padding: 4px 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(226, 232, 240, 0.78);
+  font-size: 0.94rem;
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+}
+
+nav > a:hover {
+  color: #ffffff;
+}
+
+header:not([data-big]) {
+  @media (max-width: $collapse) {
+    justify-content: flex-end;
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-toggle:not(:checked) + nav {
+      display: none;
+    }
+
+    nav {
+      align-items: flex-end;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+header[data-big] {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  border-bottom: 0;
+  box-shadow: none;
+  background:
+    linear-gradient(135deg, rgba(4, 7, 18, 0.8) 0%, rgba(9, 18, 42, 0.68) 52%, rgba(15, 30, 64, 0.74) 100%);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  @if $sticky {
+    top: unset;
+  }
+
+  .home {
+    flex-direction: column;
+    flex-grow: 0;
+  }
+
+  .logo {
+    height: $logo-big;
+    flex-shrink: 0;
+  }
+
+  .title-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: var(--xxl);
+  }
+
+  .subtitle {
+    font-size: var(--large);
+  }
+}
+
+header[data-big]::after {
+  background:
+    linear-gradient(90deg, rgba(147, 197, 253, 0.06) 0, transparent 20%, rgba(219, 234, 254, 0.04) 48%, transparent 72%, rgba(96, 165, 250, 0.06) 100%),
+    linear-gradient(90deg, rgba(219, 234, 254, 0.05) 1px, transparent 1px);
+  background-size: auto, 120px 100%;
+}
+
+header[data-big].background:before {
+  opacity: 0.34;
+  filter: saturate(0.92) brightness(0.62) contrast(1.08);
+}

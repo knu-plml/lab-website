@@ -1,0 +1,106 @@
+{% if include.lookup %}
+  {% assign publication = site.publications
+    | where_exp: "publication", "publication.slug == include.lookup"
+    | first
+    | default: include
+  %}
+{% else %}
+  {% assign publication = include %}
+{% endif %}
+
+{% assign authors = "" %}
+{% assign support = "" %}
+{% assign subtitle_clean = publication.subtitle
+  | default: ""
+  | replace: "[PDF]", ""
+  | replace: "[GitHub]", ""
+  | replace: "[DOI]", ""
+  | replace: "[Paper]", ""
+  | replace: "[Webpage]", ""
+  | strip
+%}
+{% assign subtitle_parts = subtitle_clean | split: ". " %}
+{% assign publication_venue = subtitle_parts | first | strip %}
+{% if publication.description contains "Authors:" %}
+  {% assign authors = publication.description | split: "Venue:" | first | remove: "Authors:" | strip %}
+{% endif %}
+{% if publication.description contains "사사:" %}
+  {% assign support = publication.description | split: "사사:" | last | strip %}
+{% endif %}
+{% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
+
+<div class="publication-card">
+  <a
+    {% if publication.url %}
+      href="{{ publication.url | relative_url | uri_escape }}"
+    {% endif %}
+    aria-label="{{ publication.title | default: "publication link" | regex_strip }}"
+    class="publication-card-image"
+  >
+    <img
+      src="{{ publication.image | relative_url | uri_escape }}"
+      alt="{{ publication.title | default: "publication image" | regex_strip }}"
+      loading="lazy"
+      {% include fallback.html %}
+    >
+  </a>
+
+  <div class="publication-card-text">
+    {% if publication.title %}
+      <a
+        {% if publication.url %}
+          href="{{ publication.url | relative_url | uri_escape }}"
+        {% endif %}
+        class="publication-card-title"
+      >
+        {{ publication.title }}
+      </a>
+    {% endif %}
+
+    {% if publication_venue != "" %}
+      <div class="publication-card-venue">{{ publication_venue }}</div>
+    {% endif %}
+
+    {% if authors != "" %}
+      <div class="publication-card-meta">
+        <strong>Authors</strong>
+        {% include publication-team.html authors=authors %}
+      </div>
+    {% endif %}
+
+    {% if support != "" %}
+      <div class="publication-card-meta">
+        <strong>Support</strong>
+        <span>{{ support }}</span>
+      </div>
+    {% endif %}
+
+    {% if publication.buttons.size > 0 %}
+      <div class="publication-card-buttons">
+        {% for button in publication.buttons %}
+          {%
+            include button.html
+            icon=button.icon
+            text=button.text
+            link=button.link
+            style="bare"
+          %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="publication-card-tags tags">
+      {% for tag in publication.tags %}
+        {% unless hidden_tags contains tag %}
+          <a
+            href="publications/?search=&quot;tag: {{ tag | downcase }}&quot;"
+            class="publication-card-tag tag"
+            data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
+          >
+            {{ tag | downcase }}
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

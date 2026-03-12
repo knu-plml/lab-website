@@ -1,0 +1,40 @@
+---
+---
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.page-shell {
+  view-transition-name: page-shell;
+}
+
+@supports (view-transition-name: page-shell) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-new(page-shell) {
+    animation: page-shell-in 320ms ease;
+  }
+}
+
+@keyframes page-shell-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-new(page-shell) {
+    animation-duration: 1ms;
+  }
+}

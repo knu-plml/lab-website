@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64" role="img" aria-label="PLML Laboratory logo">
+  <defs>
+    <linearGradient id="plml-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#99f6e4"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+
+  <text
+    x="0"
+    y="50"
+    font-family="'Sora', 'Aptos', sans-serif"
+    font-size="48"
+    font-weight="700"
+    letter-spacing="2.5"
+    fill="#f8fafc"
+  >PL</text>
+  <text
+    x="65"
+    y="50"
+    font-family="'Sora', 'Aptos', sans-serif"
+    font-size="48"
+    font-weight="700"
+    letter-spacing="2.5"
+    fill="url(#plml-accent)"
+  >ML</text>
+  <text
+    x="150"
+    y="50"
+    font-family="'Sora', 'Noto Sans KR', sans-serif"
+    font-size="32"
+    font-weight="600"
+    letter-spacing="0.6"
+    fill="#f8fafc"
+  >Laboratory</text>
+</svg>

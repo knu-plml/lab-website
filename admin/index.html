@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLML Laboratory Pages CMS</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Noto Sans KR", "Segoe UI", sans-serif;
+        background: #f4efe6;
+        color: #1f1a14;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(179, 104, 39, 0.18), transparent 30%),
+          linear-gradient(180deg, #f7f2ea 0%, #efe6d9 100%);
+      }
+
+      main {
+        width: min(640px, calc(100vw - 32px));
+        padding: 32px;
+        border: 1px solid rgba(73, 54, 37, 0.12);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 24px 60px rgba(57, 38, 18, 0.12);
+        backdrop-filter: blur(12px);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        line-height: 1.05;
+      }
+
+      p {
+        margin: 0 0 16px;
+        line-height: 1.6;
+      }
+
+      code {
+        padding: 0.12rem 0.38rem;
+        border-radius: 999px;
+        background: rgba(73, 54, 37, 0.08);
+      }
+
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+        padding: 0.95rem 1.2rem;
+        border-radius: 999px;
+        background: #8b4513;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a.button:hover {
+        background: #73380f;
+      }
+
+      .meta {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(73, 54, 37, 0.12);
+        color: #5b4a39;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>CMS</p>
+      <h1>Pages CMS</h1>
+      <p>
+        Sign in with GitHub, then open the repository
+        <code>knu-plml/lab-website</code> on the <code>master</code> branch.
+      </p>
+      <a class="button" href="https://app.pagescms.org/" target="_blank" rel="noreferrer">
+        Open Pages CMS
+      </a>
+    </main>
+  </body>
+</html>

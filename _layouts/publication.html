@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+{% assign subtitle_clean = page.subtitle
+  | default: ""
+  | replace: "[PDF]", ""
+  | replace: "[GitHub]", ""
+  | replace: "[DOI]", ""
+  | replace: "[Paper]", ""
+  | replace: "[Webpage]", ""
+  | strip
+%}
+{% assign subtitle_parts = subtitle_clean | split: ". " %}
+{% assign publication_venue = subtitle_parts | first | strip %}
+
+{% assign authors = "" %}
+{% assign support = "" %}
+{% if page.description contains "Authors:" %}
+  {% assign authors = page.description | split: "Venue:" | first | remove: "Authors:" | strip %}
+{% endif %}
+{% if page.description contains "사사:" %}
+  {% assign support = page.description | split: "사사:" | last | strip %}
+{% endif %}
+
+<article class="entry-page">
+  <div class="entry-hero">
+    {% if page.image %}
+      <div class="entry-cover">
+        <img
+          src="{{ page.image | relative_url | uri_escape }}"
+          alt="{{ page.title | default: 'publication image' | regex_strip }}"
+          loading="lazy"
+          {% include fallback.html %}
+        >
+      </div>
+    {% endif %}
+
+    <div class="entry-summary">
+      <div class="entry-eyebrow">Publication</div>
+      <h1 class="entry-title">{{ page.title }}</h1>
+
+      {% if publication_venue != "" %}
+        <p class="entry-subtitle">{{ publication_venue }}</p>
+      {% endif %}
+
+      {% if page.buttons.size > 0 %}
+        <div class="entry-actions">
+          {% for button in page.buttons %}
+            {% include button.html
+              icon=button.icon
+              text=button.text
+              link=button.link
+            %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="entry-body">
+    {% if authors != "" %}
+      <section class="entry-section">
+        <h2>Authors</h2>
+        <p>{% include publication-team.html authors=authors %}</p>
+      </section>
+    {% endif %}
+
+    {% if support != "" %}
+      <section class="entry-section">
+        <h2>Support</h2>
+        <p>{{ support }}</p>
+      </section>
+    {% endif %}
+
+    {% if page.tags %}
+      <section class="entry-section">
+        <h2>Tags</h2>
+        {% include tags.html tags=page.tags %}
+      </section>
+    {% endif %}
+
+    {% if content and content != "" %}
+      <section class="entry-section">
+        {{ content }}
+      </section>
+    {% endif %}
+  </div>
+</article>
