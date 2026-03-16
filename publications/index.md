@@ -7,8 +7,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-scroll" %}Publications
 
-Selected work from PLML Laboratory is organized below across international publications, domestic journals, and domestic conferences.
-
 {% assign international_publications = site.publications | data_filter: "tags && tags.include?('international')" %}
 {% assign domestic_publications = site.publications | data_filter: "tags && (tags.include?('domestic-journal') || tags.include?('domestic-conference'))" %}
 

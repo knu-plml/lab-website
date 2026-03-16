@@ -7,8 +7,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-PLML Laboratory brings together programming languages and machine learning researchers at Kangwon National University.
-
 ## Faculty
 
 <div class="grid">

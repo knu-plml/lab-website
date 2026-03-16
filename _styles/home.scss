@@ -67,9 +67,8 @@ $stack: 860px;
 
 .home-hero-title {
   margin: 0;
-  max-width: 12ch;
   font-family: var(--title);
-  font-size: clamp(2.6rem, 5vw, 4.9rem);
+  font-size: clamp(2rem, 5vw, 2.6rem);
   line-height: 0.97;
   letter-spacing: -0.04em;
 }

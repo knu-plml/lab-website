@@ -6,9 +6,9 @@ show-subtitle: false
 
 <div class="home-hero-panel reveal-on-scroll">
   <div class="home-hero-copy">
-    <p class="home-section-label">Programming Languages + Machine Learning</p>
+    <p class="home-section-label">Welcome!</p>
     <h1 class="home-hero-title">
-      <span>PLML Laboratory</span>
+      <span>Programming Language & Machine Learning Lab.</span>
     </h1>
     <p class="home-hero-lead">
       강원대학교 PLML 연구실은 프로그래밍 언어, 소프트웨어 공학, 기계학습, 의료 인공지능을

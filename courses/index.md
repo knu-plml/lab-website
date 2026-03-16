@@ -8,8 +8,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-book-open" %}Courses
 
-PLML teaching spans programming languages, machine learning, software engineering, formal methods, and interdisciplinary graduate offerings.
-
 <div class="courses-page">
   <div class="courses-page-rule"></div>
 

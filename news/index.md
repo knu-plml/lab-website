@@ -7,8 +7,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-bullhorn" %}News
 
-News and announcements from PLML Laboratory.
-
 {% include section.html %}
 
 {% include search-box.html %}
