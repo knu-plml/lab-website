@@ -8,10 +8,10 @@ description: "Professor"
 links:
   email: "hsim@kangwon.ac.kr"
   home-page: "https://pl.kangwon.ac.kr/hsim/"
-  dblp: "17/4146"
-  researchgate: "Hyeonseung-Im"
-  linkedin: "hyeonseung-im-498516131"
-  orcid: "0000-0002-9991-6626"
+  dblp: "78/997"
+  researchgate: "Hyeonseung-Im-2"
+  linkedin: "hyeonseung-im-83b4aa69"
+  orcid: "0000-0002-3901-0834"
 ---
 
 Hyeonseung Im is a professor at Kangwon National University and leads the Programming Language and Machine Learning Laboratory.
