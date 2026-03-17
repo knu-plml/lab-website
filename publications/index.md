@@ -39,7 +39,8 @@ nav:
         aria-controls="publication-panel-international"
         data-tab-target="international"
       >
-        International ({{ international_publications.size }})
+        <span data-tab-label>International</span>
+        <span data-tab-count>({{ international_publications.size }})</span>
       </button>
       <button
         type="button"
@@ -50,7 +51,8 @@ nav:
         aria-controls="publication-panel-domestic"
         data-tab-target="domestic"
       >
-        Domestic ({{ domestic_publications.size }})
+        <span data-tab-label>Domestic</span>
+        <span data-tab-count>({{ domestic_publications.size }})</span>
       </button>
     </div>
 

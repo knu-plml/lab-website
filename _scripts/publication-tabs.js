@@ -19,6 +19,37 @@ for (const group of publicationTabGroups) {
     });
   };
 
+  const countVisiblePublications = (panel) => {
+    if (!panel) {
+      return 0;
+    }
+
+    let count = 0;
+
+    for (const card of panel.querySelectorAll(".publication-card")) {
+      const matchesKind = activeKind === "all" || card.dataset.publicationKind === activeKind;
+      const matchesSearch = card.style.display !== "none";
+
+      if (matchesKind && matchesSearch) {
+        count += 1;
+      }
+    }
+
+    return count;
+  };
+
+  const syncTabCounts = () => {
+    for (const tab of tabs) {
+      const panel = panels.find((item) => item.dataset.tabPanel === tab.dataset.tabTarget);
+      const count = countVisiblePublications(panel);
+      const countNode = tab.querySelector("[data-tab-count]");
+
+      if (countNode) {
+        countNode.textContent = `(${count})`;
+      }
+    }
+  };
+
   const applyKindFilter = (panel) => {
     if (!panel) {
       return;
@@ -48,7 +79,9 @@ for (const group of publicationTabGroups) {
         continue;
       }
 
-      const isVisible = activeKind === "all" || child.dataset.publicationKind === activeKind;
+      const matchesKind = activeKind === "all" || child.dataset.publicationKind === activeKind;
+      const matchesSearch = child.style.display !== "none";
+      const isVisible = matchesKind && matchesSearch;
       child.hidden = !isVisible;
 
       if (isVisible) {
@@ -62,6 +95,8 @@ for (const group of publicationTabGroups) {
     if (emptyState) {
       emptyState.hidden = visibleCount !== 0;
     }
+
+    syncTabCounts();
   };
 
   const syncKindFilters = () => {
@@ -176,4 +211,9 @@ for (const group of publicationTabGroups) {
   if (initialTab) {
     activateTab(initialTab.dataset.tabTarget, { animate: false });
   }
+
+  window.addEventListener("search:updated", () => {
+    const activePanel = panels.find((panel) => panel.dataset.tabPanel === activeTarget);
+    applyKindFilter(activePanel);
+  });
 }

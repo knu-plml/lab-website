@@ -92,6 +92,58 @@
     return [x, n, tags];
   };
 
+  const isElementVisible = (element) => {
+    if (!element || element.hidden || element.style.display === "none") {
+      return false;
+    }
+
+    return true;
+  };
+
+  const syncYearHeadings = () => {
+    const filterableSelector = ".card, .citation, .post-excerpt-container, .publication-card";
+    const parents = new Set(
+      Array.from(document.querySelectorAll(filterableSelector))
+        .map((element) => element.parentElement)
+        .filter(Boolean)
+    );
+
+    for (const parent of parents) {
+      const children = Array.from(parent.children);
+      let currentHeading = null;
+      let visibleInSection = 0;
+
+      const flushSection = () => {
+        if (currentHeading) {
+          currentHeading.hidden = visibleInSection === 0;
+        }
+      };
+
+      for (const child of children) {
+        if (child.matches("h3")) {
+          flushSection();
+          currentHeading = child;
+          visibleInSection = 0;
+          continue;
+        }
+
+        if (!child.matches(filterableSelector)) {
+          continue;
+        }
+
+        const target = child.matches(".post-excerpt-container")
+          ? child.querySelector(".post-excerpt")
+          : child;
+
+        if (isElementVisible(child) && isElementVisible(target)) {
+          visibleInSection += 1;
+        }
+      }
+
+      flushSection();
+    }
+  };
+
   // highlight search terms
   const highlightMatches = async ({ terms, phrases }) => {
     // make sure Mark library available
@@ -164,10 +216,12 @@
   const runSearch = (query = "") => {
     const parts = splitQuery(query);
     const [x, n] = filterElements(parts);
+    syncYearHeadings();
     updateSearchBox(query);
     updateInfoBox(query, x, n);
     updateTags(query);
     highlightMatches(parts);
+    window.dispatchEvent(new CustomEvent("search:updated", { detail: { query, matches: x, total: n } }));
   };
 
   // update url based on query
