@@ -4,7 +4,12 @@
 <div class="publication-author-list">
   {% for author in author_items %}
     {% assign author_name = author | replace: "*", "" | strip %}
+    {% assign author_markup = author_name %}
     {% assign matched_member = nil %}
+
+    {% if author_name == "Hyeonseung Im" or author_name == "임현승" %}
+      {% capture author_markup %}<strong>{{ author_name }}</strong>{% endcapture %}
+    {% endif %}
 
     {% for member in site.members %}
       {% assign display_name = member.name | default: "" %}
@@ -23,10 +28,10 @@
         href="{{ matched_member.url | relative_url | uri_escape }}"
         class="publication-author-link"
       >
-        {{ author_name }}
+        {{ author_markup }}
       </a>
     {% else %}
-      <span class="publication-author-chip">{{ author_name }}</span>
+      <span class="publication-author-chip">{{ author_markup }}</span>
     {% endif %}
   {% endfor %}
 </div>
