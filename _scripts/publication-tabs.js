@@ -118,8 +118,13 @@ for (const group of publicationTabGroups) {
     activeKind = kind;
     syncKindFilters();
     const activePanel = panels.find((panel) => panel.dataset.tabPanel === activeTarget);
+
+    if (!activePanel) {
+      return;
+    }
+
     applyKindFilter(activePanel);
-    animatePanel(activePanel, "is-filter-animating");
+    animatePanel(activePanel, "is-animating");
   };
 
   for (const tab of tabs) {
