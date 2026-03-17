@@ -10,7 +10,6 @@ baseurl: /new
 
 # site social media and other links
 links:
-  email: hsim@kangwon.ac.kr
   github: knu-plml
 
 ### jekyll settings

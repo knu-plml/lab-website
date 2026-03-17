@@ -28,18 +28,4 @@
   <circle cx="1260" cy="180" r="280" fill="url(#glowB)"/>
   <circle cx="220" cy="120" r="240" fill="url(#glowA)"/>
   <circle cx="1180" cy="760" r="260" fill="url(#glowA)" opacity="0.45"/>
-
-  <g opacity="0.78">
-    <rect x="1020" y="164" width="432" height="246" rx="28" fill="#081328" fill-opacity="0.38" stroke="#dbeafe" stroke-opacity="0.12"/>
-    <path d="M1062 334c56-52 102-80 150-80 64 0 108 54 162 54 30 0 70-12 120-42" fill="none" stroke="#93c5fd" stroke-width="8" stroke-linecap="round"/>
-    <path d="M1062 286c42-26 88-40 132-40 46 0 94 16 150 42 44 20 84 28 138 24" fill="none" stroke="#60a5fa" stroke-width="8" stroke-linecap="round" stroke-opacity="0.5"/>
-    <circle cx="1062" cy="334" r="9" fill="#93c5fd"/>
-    <circle cx="1212" cy="254" r="9" fill="#dbeafe"/>
-    <circle cx="1370" cy="308" r="9" fill="#60a5fa"/>
-  </g>
-
-  <g fill="none" stroke-linecap="round">
-    <path d="M-40 650c136-46 248-54 352-30 96 22 156 58 244 58 84 0 154-30 246-50 86-20 178-16 288 22 86 30 164 34 260 0" stroke="#dbeafe" stroke-opacity="0.18" stroke-width="4"/>
-    <path d="M-20 724c144-28 254-10 360 38 82 38 146 70 236 70 88 0 160-28 252-62 90-34 174-44 292-18 84 18 154 18 244-6" stroke="#93c5fd" stroke-opacity="0.22" stroke-width="3"/>
-  </g>
 </svg>

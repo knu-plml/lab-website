@@ -183,7 +183,7 @@ show-subtitle: false
       <span>교육대학원</span>
       <p>교직 이수와 함께 컴퓨팅 교육 및 프로그래밍 언어 교육 관련 연구를 수행합니다.</p>
     </a>
-    <a class="home-program-card reveal-on-scroll" href="http://cse.kangwon.ac.kr:60443/">
+    <a class="home-program-card reveal-on-scroll" href="http://cse.kangwon.ac.kr/cse/index.do">
       <strong>정보보안전공</strong>
       <span>정보과학행정대학원</span>
       <p>야간제 기반으로 정보보안 및 실무 중심의 융합 연구를 병행할 수 있습니다.</p>

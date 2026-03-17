@@ -97,6 +97,20 @@
   line-height: 1.9;
 }
 
+.contact-map {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+  border-radius: calc(var(--rounded) - 6px);
+  box-shadow: var(--shadow);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+}
+
 @media (max-width: 800px) {
   .entry-hero {
     grid-template-columns: 1fr;
@@ -112,5 +126,9 @@
   .entry-summary-only,
   .entry-body {
     padding: 22px 20px;
+  }
+
+  .contact-map iframe {
+    min-height: 300px;
   }
 }

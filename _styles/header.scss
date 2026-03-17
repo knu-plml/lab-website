@@ -147,6 +147,7 @@ nav > a:hover {
 header:not([data-big]) {
   @media (max-width: $collapse) {
     justify-content: flex-end;
+    padding: 14px 16px;
 
     .nav-toggle {
       display: flex;
@@ -202,6 +203,24 @@ header[data-big] {
 
   .subtitle {
     font-size: var(--large);
+  }
+}
+
+@media (max-width: $collapse) {
+  header[data-big] {
+    padding: 72px 16px;
+
+    .logo {
+      height: 56px;
+    }
+
+    .title {
+      font-size: clamp(2.4rem, 11vw, 3.4rem);
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+    }
   }
 }
 

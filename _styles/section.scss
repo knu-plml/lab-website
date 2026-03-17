@@ -2,7 +2,8 @@
 ---
 
 $page: 1200px;
-$padding: 56px;
+$padding: 50px;
+$mobile-padding: 20px;
 
 section {
   padding: $padding max($padding, calc((100% - $page) / 2));
@@ -40,4 +41,14 @@ main > section:nth-of-type(even) {
 
 .team-section {
   background: var(--background) !important;
+}
+
+@media (max-width: 700px) {
+  section {
+    padding: 32px $mobile-padding;
+  }
+
+  section[data-size="wide"] {
+    padding: 32px $mobile-padding;
+  }
 }

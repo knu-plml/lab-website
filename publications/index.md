@@ -28,29 +28,58 @@ nav:
 {% include section.html %}
 
 <div class="publication-tabs" data-publication-tabs>
-  <div class="publication-tabs-nav" role="tablist" aria-label="Publication categories">
-    <button
-      type="button"
-      class="publication-tab is-active"
-      id="publication-tab-international"
-      role="tab"
-      aria-selected="true"
-      aria-controls="publication-panel-international"
-      data-tab-target="international"
-    >
-      International ({{ international_publications.size }})
-    </button>
-    <button
-      type="button"
-      class="publication-tab"
-      id="publication-tab-domestic"
-      role="tab"
-      aria-selected="false"
-      aria-controls="publication-panel-domestic"
-      data-tab-target="domestic"
-    >
-      Domestic ({{ domestic_publications.size }})
-    </button>
+  <div class="publication-tabs-toolbar">
+    <div class="publication-tabs-nav" role="tablist" aria-label="Publication categories">
+      <button
+        type="button"
+        class="publication-tab is-active"
+        id="publication-tab-international"
+        role="tab"
+        aria-selected="true"
+        aria-controls="publication-panel-international"
+        data-tab-target="international"
+      >
+        International ({{ international_publications.size }})
+      </button>
+      <button
+        type="button"
+        class="publication-tab"
+        id="publication-tab-domestic"
+        role="tab"
+        aria-selected="false"
+        aria-controls="publication-panel-domestic"
+        data-tab-target="domestic"
+      >
+        Domestic ({{ domestic_publications.size }})
+      </button>
+    </div>
+
+    <div class="publication-kind-filters" role="group" aria-label="Publication type">
+      <button
+        type="button"
+        class="publication-kind-filter is-active"
+        data-kind-filter="all"
+        aria-pressed="true"
+      >
+        All
+      </button>
+      <button
+        type="button"
+        class="publication-kind-filter"
+        data-kind-filter="conference"
+        aria-pressed="false"
+      >
+        Conference
+      </button>
+      <button
+        type="button"
+        class="publication-kind-filter"
+        data-kind-filter="journal"
+        aria-pressed="false"
+      >
+        Journal
+      </button>
+    </div>
   </div>
 
   <div
@@ -61,6 +90,7 @@ nav:
     data-tab-panel="international"
   >
     {% include list.html data="publications" component="publication-card" filter="tags && tags.include?('international')" %}
+    <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
   </div>
 
   <div
@@ -72,5 +102,6 @@ nav:
     hidden
   >
     {% include list.html data="publications" component="publication-card" filter="tags && (tags.include?('domestic-journal') || tags.include?('domestic-conference'))" %}
+    <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
   </div>
 </div>

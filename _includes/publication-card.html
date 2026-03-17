@@ -28,8 +28,25 @@
   {% assign support = publication.description | split: "사사:" | last | strip %}
 {% endif %}
 {% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
+{% assign subtitle_normalized = subtitle_clean | downcase %}
+{% assign publication_kind = "journal" %}
+{% if publication.tags contains "domestic-conference" %}
+  {% assign publication_kind = "conference" %}
+{% elsif publication.tags contains "domestic-journal" %}
+  {% assign publication_kind = "journal" %}
+{% elsif subtitle_normalized contains "conference"
+  or subtitle_normalized contains "symposium"
+  or subtitle_normalized contains "workshop"
+  or subtitle_normalized contains "proceedings"
+  or subtitle_normalized contains "congress"
+  or subtitle_normalized contains "forum"
+  or subtitle_normalized contains "colloquium"
+  or subtitle_normalized contains "meeting"
+%}
+  {% assign publication_kind = "conference" %}
+{% endif %}
 
-<div class="publication-card">
+<div class="publication-card" data-publication-kind="{{ publication_kind }}">
   <a
     {% if publication.url %}
       href="{{ publication.url | relative_url | uri_escape }}"
