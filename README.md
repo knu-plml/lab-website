@@ -1,32 +1,26 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17228741.svg)](https://doi.org/10.5281/zenodo.17228741)
+# PLML Laboratory Website
 
-<h1 align="center">Lab Website Template</h1>
-<p align="center">
-<img height="200" src="https://raw.githubusercontent.com/greenelab/lab-website-template/main/images/share.jpg?raw=true" alt="Lab Website Template">
-</p>
+강원대학교 PLML 연구실 웹사이트입니다.  
+Jekyll 기반으로 동작하며 연구실 소개, 구성원, 논문, 소식을 관리합니다.
 
-Lab Website Template (LWT) is an easy-to-use, flexible website template for labs.
-Spend less time worrying about managing a website and citations, and more time running your lab.
+## Run
 
-👇👇 **Get Started** 👇👇
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-[**Documentation**](https://greene-lab.gitbook.io/lab-website-template-docs)
+기본 주소: `http://127.0.0.1:4000/new`
 
-## Key Features
+## Structure
 
-- 🤖 Based on Git, GitHub, and Jekyll.
-- 📜 Automatically generated citations from simple identifiers (DOI, PubMed, ORCID, and many more) using Manubot. E.g. `doi:1234/5678` -> `title`, `authors`, `publisher`, `date`, etc.
-- 🧱 A comprehensive and flexible suite of pre-made components (building blocks) for structuring and styling your website:
-  - Formatted tables, code blocks, figures, and other basic elements.
-  - Citations with thumbnails and other rich details.
-  - List large sets of data with flexible filters and components.
-  - ...many more
-- 👁️ Automatic pull request previews.
-- ⚙️ Easy and automated configuration.
-- 👥 Team member pages with bios, roles, and social media links.
-- 🖋️ Blog posts with tags and rich content.
-- 📱 Works and looks good on desktop and mobile.
-- 🤝 Great documentation and support (if we do say so ourselves).
-- ... and much more!
+- `_config.yaml`: 사이트 설정
+- `_styles/`: SCSS 스타일
+- `_layouts/`, `_includes/`: 레이아웃과 공통 컴포넌트
+- `_members/`, `_publications/`, `_posts/`, `_courses/`: 콘텐츠 데이터
+- `images/`: 이미지 자산
 
-![GitHub last commit](https://img.shields.io/github/last-commit/greenelab/lab-website-template)
+## Notes
+
+- 기존 템플릿은 Greene Lab의 Lab Website Template을 기반으로 커스터마이즈했습니다.
+- 라이선스는 [LICENSE.md](LICENSE.md)를 따릅니다.
