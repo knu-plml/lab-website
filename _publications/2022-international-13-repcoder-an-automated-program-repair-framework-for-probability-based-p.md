@@ -10,7 +10,7 @@ description: 'Authors: Suhwan Ji, Sang-Min Choi, Sang-Ki Ko, Dohyung Kim, Hyeons
   Venue: SAC 2022: 37th ACM/SIGAPP Symposium on Applied Computing. 25-29 April 2022
   [DOI] [GitHub]'
 link: https://pl.kangwon.ac.kr/publications/
-image: images/publications/2022-international-13-repcoder-an-automated-program-repair-framework-for-probability-based-p.svg
+image: images/publications/2022-international-13-repcoder-an-automated-program-repair-framework-for-probability-based-p.png
 tags:
 - international
 - SAC

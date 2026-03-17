@@ -11,7 +11,7 @@ description: 'Authors: Suhwan Ji, Sanghwa Lee, Changsup Lee, Yo-Sub Han, Hyeonse
 
   사사: 지역지능화, BRL후속, Post-Doc.'
 link: https://pl.kangwon.ac.kr/publications/
-image: images/publications/2025-international-03-impact-of-large-language-models-of-code-on-fault-localization.svg
+image: images/publications/2025-international-03-impact-of-large-language-models-of-code-on-fault-localization.png
 tags:
 - international
 - ICST

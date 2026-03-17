@@ -6,7 +6,7 @@ description: 'Authors: Seong Uk Kim, Hanyoung Jang, Hyeonseung Im, Jongmin Kim
 
   Venue: Pattern Recognition Letters. vol. 150, pp. 162-169, October 2021 [PDF][DOI]'
 link: https://pl.kangwon.ac.kr/publications/
-image: images/publications/2021-international-14-human-motion-reconstruction-using-deep-transformer-networks.svg
+image: images/publications/2021-international-14-human-motion-reconstruction-using-deep-transformer-networks.png
 tags:
 - international
 - machine-learning

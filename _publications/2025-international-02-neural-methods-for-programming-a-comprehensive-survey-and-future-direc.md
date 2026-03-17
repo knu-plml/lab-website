@@ -9,7 +9,7 @@ description: 'Authors: Gebremedhin Gebreslassie Maru, Sanghwa Lee, Suhwan Ji,�
 
   사사: 글로컬랩, BRL후속, Post-Doc., RISE'
 link: https://pl.kangwon.ac.kr/publications/
-image: images/publications/2025-international-02-neural-methods-for-programming-a-comprehensive-survey-and-future-direc.svg
+image: images/publications/2025-international-02-neural-methods-for-programming-a-comprehensive-survey-and-future-direc.png
 tags:
 - international
 - machine-learning

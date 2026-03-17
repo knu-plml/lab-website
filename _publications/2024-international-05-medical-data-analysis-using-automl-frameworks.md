@@ -11,7 +11,7 @@ description: 'Authors: Seunghun Shin*, Dongyoung Park*, Suhwan Ji, Gihun Joo, H
 
   사사: 지역지능화, BRL후속, DS, RIS'
 link: https://pl.kangwon.ac.kr/publications/
-image: images/publications/2024-international-05-medical-data-analysis-using-automl-frameworks.svg
+image: images/publications/2024-international-05-medical-data-analysis-using-automl-frameworks.png
 tags:
 - international
 - machine-learning

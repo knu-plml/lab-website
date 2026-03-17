@@ -11,3 +11,6 @@ package.json
 package-lock.json
 yarn.lock
 node_modules
+images/publications/**/*.jpg
+images/publications/**/*.jpeg
+images/publications/**/*.webp

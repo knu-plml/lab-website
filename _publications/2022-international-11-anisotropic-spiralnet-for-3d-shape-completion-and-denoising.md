@@ -6,7 +6,7 @@ description: 'Authors: Seong Uk Kim, Jihyun Roh, Hyeonseung Im, Jongmin Kim
 
   Venue: Sensors. 22(17): 6457 (2022) [PDF]'
 link: https://pl.kangwon.ac.kr/publications/
-image: images/publications/2022-international-11-anisotropic-spiralnet-for-3d-shape-completion-and-denoising.svg
+image: images/publications/2022-international-11-anisotropic-spiralnet-for-3d-shape-completion-and-denoising.png
 tags:
 - international
 - machine-learning
