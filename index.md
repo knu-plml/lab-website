@@ -96,7 +96,7 @@ show-subtitle: false
 
 {% include section.html %}
 
-{% assign featured_publications = site.publications | sort: "date" | reverse %}
+{% assign featured_publications = site.publications | data_filter: "tags && tags.include?('international')" | sort: "date" | reverse %}
 <div class="home-block reveal-on-scroll">
   <div class="home-block-header reveal-on-scroll">
     <p class="home-section-label">Research Output</p>
