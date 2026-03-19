@@ -13,7 +13,6 @@ support:
 - BRL후속
 - RIS
 - 융합보안
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2023-domestic-conference-68-performance-evaluation-of-large-code-language-models-on-cross-language.svg
 tags:
 - domestic-conference

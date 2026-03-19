@@ -10,7 +10,6 @@ authors:
 - Sang-Ki Ko
 support:
 - BRL
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2023-international-10-automated-grading-of-regular-expressions.png
 tags:
 - international

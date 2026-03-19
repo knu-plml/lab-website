@@ -13,7 +13,6 @@ support:
 - 지역지능화
 - DS
 - RIS
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2023-international-07-prediction-of-osteoporosis-in-patients-with-rheumatoid-arthritis-using.png
 tags:
 - international

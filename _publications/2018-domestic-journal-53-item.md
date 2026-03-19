@@ -5,7 +5,6 @@ subtitle: '정보과학회논문지, 제45권 제11호, pp. 1176-1184, 2018.11'
 authors:
 - 지수환
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2018-domestic-journal-53-item.svg
 tags:
 - domestic-journal

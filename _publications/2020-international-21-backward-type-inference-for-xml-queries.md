@@ -7,7 +7,6 @@ authors:
 - Pierre Genevès
 - Nils Gesbert
 - Nabil Layaïda
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2020-international-21-backward-type-inference-for-xml-queries.png
 tags:
 - international

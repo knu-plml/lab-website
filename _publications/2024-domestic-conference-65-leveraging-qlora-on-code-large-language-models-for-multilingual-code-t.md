@@ -10,7 +10,6 @@ support:
 - BRL후속
 - DS
 - RIS
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2024-domestic-conference-65-leveraging-qlora-on-code-large-language-models-for-multilingual-code-t.svg
 tags:
 - domestic-conference

@@ -5,7 +5,6 @@ subtitle: 'Journal of Functional Programming. 19(1): 107-142 (2009)'
 authors:
 - Sungwoo Park
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2009-international-38-type-safe-higher-order-channels-with-channel-locality.svg
 tags:
 - international

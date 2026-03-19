@@ -9,7 +9,6 @@ authors:
 - 주기훈
 - 지수환
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2022-domestic-conference-71-7.svg
 tags:
 - domestic-conference

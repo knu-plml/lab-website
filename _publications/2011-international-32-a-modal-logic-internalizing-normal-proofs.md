@@ -5,7 +5,6 @@ subtitle: 'Information and Computation. 209(12): 1519-1535 (2011)'
 authors:
 - Sungwoo Park
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2011-international-32-a-modal-logic-internalizing-normal-proofs.svg
 tags:
 - international

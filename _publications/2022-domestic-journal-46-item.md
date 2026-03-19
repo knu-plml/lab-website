@@ -6,7 +6,6 @@ authors:
 - 김희상
 - 임현승
 - 문양세
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2022-domestic-journal-46-item.svg
 tags:
 - domestic-journal

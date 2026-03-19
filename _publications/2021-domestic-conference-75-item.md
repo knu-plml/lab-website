@@ -9,7 +9,6 @@ authors:
 - 추예린
 - 임현승
 - 정은주
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-conference-75-item.svg
 tags:
 - domestic-conference

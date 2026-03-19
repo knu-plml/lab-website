@@ -5,7 +5,6 @@ subtitle: 'Information Sciences. 188: 151-169 (2012)'
 authors:
 - Hyeonseung Im
 - Sungwoo Park
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2012-international-31-group-skyline-computation.svg
 tags:
 - international

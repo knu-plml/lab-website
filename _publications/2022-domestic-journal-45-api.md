@@ -8,7 +8,6 @@ authors:
 - 지수환
 - 김아욱
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2022-domestic-journal-45-api.svg
 tags:
 - domestic-journal

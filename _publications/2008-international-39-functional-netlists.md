@@ -6,7 +6,6 @@ authors:
 - Sungwoo Park
 - Jinha Kim
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2008-international-39-functional-netlists.svg
 tags:
 - international

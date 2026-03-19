@@ -7,7 +7,6 @@ authors:
 - Hyeonseung Im
 - Kim Nguyễn
 - Véronique Benzaken
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2015-international-26-a-core-calculus-for-xquery-3-0-combining-navigational-and-pattern-matc.png
 tags:
 - international

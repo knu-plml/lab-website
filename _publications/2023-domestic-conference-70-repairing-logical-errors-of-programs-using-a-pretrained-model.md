@@ -11,7 +11,6 @@ authors:
 support:
 - BRL후속
 - RIS
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2023-domestic-conference-70-repairing-logical-errors-of-programs-using-a-pretrained-model.svg
 tags:
 - domestic-conference

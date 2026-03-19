@@ -6,7 +6,6 @@ authors:
 - 임현승
 - 임정표
 - 박성우
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2012-domestic-journal-56-item.svg
 tags:
 - domestic-journal

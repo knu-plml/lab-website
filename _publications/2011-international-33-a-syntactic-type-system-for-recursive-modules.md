@@ -7,7 +7,6 @@ authors:
 - Keiko Nakata
 - Jacques Garrigue
 - Sungwoo Park
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2011-international-33-a-syntactic-type-system-for-recursive-modules.svg
 tags:
 - international

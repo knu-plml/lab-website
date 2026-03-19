@@ -12,7 +12,6 @@ support:
 - DS
 - RIS
 - 융합보안
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2023-domestic-conference-67-item.svg
 tags:
 - domestic-conference

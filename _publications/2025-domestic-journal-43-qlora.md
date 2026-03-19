@@ -11,7 +11,6 @@ support:
 - BRL후속
 - DS
 - 지역지능화
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2025-domestic-journal-43-qlora.svg
 tags:
 - domestic-journal

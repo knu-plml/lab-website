@@ -5,7 +5,6 @@ subtitle: 'Journal of Functional Programming. 21(1): 21-58 (2011)'
 authors:
 - Sungwoo Park
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2011-international-35-a-calculus-for-hardware-description.svg
 tags:
 - international

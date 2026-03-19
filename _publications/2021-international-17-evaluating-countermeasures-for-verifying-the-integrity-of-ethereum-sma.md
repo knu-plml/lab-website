@@ -7,7 +7,6 @@ authors:
 - Suhwan Ji
 - Dohyung Kim
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2021-international-17-evaluating-countermeasures-for-verifying-the-integrity-of-ethereum-sma.svg
 tags:
 - international

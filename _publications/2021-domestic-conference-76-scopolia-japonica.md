@@ -7,7 +7,6 @@ authors:
 - 이내헌
 - 임현승
 - 정은주
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-conference-76-scopolia-japonica.svg
 tags:
 - domestic-conference

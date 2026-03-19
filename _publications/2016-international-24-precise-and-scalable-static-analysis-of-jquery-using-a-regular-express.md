@@ -6,7 +6,6 @@ authors:
 - Changhee Park
 - Hyeonseung Im
 - Sukyoung Ryu
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2016-international-24-precise-and-scalable-static-analysis-of-jquery-using-a-regular-express.png
 tags:
 - international

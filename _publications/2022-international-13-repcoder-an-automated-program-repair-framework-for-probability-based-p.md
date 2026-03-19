@@ -9,7 +9,6 @@ authors:
 - Sang-Ki Ko
 - Dohyung Kim
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2022-international-13-repcoder-an-automated-program-repair-framework-for-probability-based-p.png
 tags:
 - international

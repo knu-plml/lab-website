@@ -6,7 +6,6 @@ authors:
 - 주기훈
 - 박치현
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2020-domestic-journal-49-item.svg
 tags:
 - domestic-journal

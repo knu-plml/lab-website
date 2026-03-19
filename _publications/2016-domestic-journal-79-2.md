@@ -6,7 +6,6 @@ authors:
 - 이종욱
 - 임현승
 - 김성수
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2016-domestic-journal-79-2.svg
 tags:
 - domestic-journal

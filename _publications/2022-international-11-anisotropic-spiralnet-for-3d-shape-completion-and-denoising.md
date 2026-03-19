@@ -7,7 +7,6 @@ authors:
 - Jihyun Roh
 - Hyeonseung Im
 - Jongmin Kim
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2022-international-11-anisotropic-spiralnet-for-3d-shape-completion-and-denoising.png
 tags:
 - international

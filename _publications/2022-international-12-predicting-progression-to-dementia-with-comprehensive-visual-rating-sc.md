@@ -20,7 +20,6 @@ authors:
 - Chihyun Park
 - Hyeonseung Im
 - SangYun Kim
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2022-international-12-predicting-progression-to-dementia-with-comprehensive-visual-rating-sc.png
 tags:
 - international

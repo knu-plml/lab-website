@@ -5,7 +5,6 @@ title: On Correspondence between Selective CPS Transformation and Selective Dou
 subtitle: 'Mathematics. 9(4): 385 (2021)'
 authors:
 - Hyeonseung Im
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2021-international-18-on-correspondence-between-selective-cps-transformation-and-selective-d.svg
 tags:
 - international

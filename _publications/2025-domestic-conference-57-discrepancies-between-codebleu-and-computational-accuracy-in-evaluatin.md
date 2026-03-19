@@ -11,7 +11,6 @@ support:
 - BRL후속
 - 지역지능화
 - RISE
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2025-domestic-conference-57-discrepancies-between-codebleu-and-computational-accuracy-in-evaluatin.svg
 tags:
 - domestic-conference

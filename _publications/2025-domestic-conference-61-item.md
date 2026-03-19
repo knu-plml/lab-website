@@ -10,7 +10,6 @@ authors:
 support:
 - 지역지능화
 - Post-Doc.
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2025-domestic-conference-61-item.svg
 tags:
 - domestic-conference

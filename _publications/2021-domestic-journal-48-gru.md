@@ -6,7 +6,6 @@ authors:
 - 김희상
 - 주기훈
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-journal-48-gru.png
 tags:
 - domestic-journal

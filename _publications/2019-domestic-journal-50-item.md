@@ -6,7 +6,6 @@ authors:
 - 노지현
 - 임현승
 - 김종민
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2019-domestic-journal-50-item.svg
 tags:
 - domestic-journal

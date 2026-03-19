@@ -12,7 +12,6 @@ support:
 - 블록체인
 - 지역지능화
 - RIS
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste.png
 tags:
 - international

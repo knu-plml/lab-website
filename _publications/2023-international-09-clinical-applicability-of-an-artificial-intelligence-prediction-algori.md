@@ -14,7 +14,6 @@ authors:
 support:
 - 융합보안
 - RIS
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2023-international-09-clinical-applicability-of-an-artificial-intelligence-prediction-algori.png
 tags:
 - international

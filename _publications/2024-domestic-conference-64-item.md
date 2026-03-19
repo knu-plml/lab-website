@@ -9,7 +9,6 @@ authors:
 support:
 - BRL후속
 - DS
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2024-domestic-conference-64-item.svg
 tags:
 - domestic-conference

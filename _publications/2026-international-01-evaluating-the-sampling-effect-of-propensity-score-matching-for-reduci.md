@@ -14,7 +14,6 @@ support:
 - PACEN
 - Post-Doc.
 - RISE
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2026-international-01-evaluating-the-sampling-effect-of-propensity-score-matching-for-reduci.png
 tags:
 - international

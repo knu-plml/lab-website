@@ -6,7 +6,6 @@ authors:
 - Hyungchul Park
 - Hyeonseung Im
 - Sungwoo Park
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2018-international-41-a-bidirectional-decision-procedure-for-intuitionistic-modal-logic-is5.png
 tags:
 - international

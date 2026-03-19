@@ -7,7 +7,6 @@ authors:
 - 송영진
 - 임현승
 - 박준범
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2019-domestic-conference-78-item.svg
 tags:
 - domestic-conference

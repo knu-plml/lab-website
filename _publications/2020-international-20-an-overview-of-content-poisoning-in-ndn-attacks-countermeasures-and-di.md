@@ -5,7 +5,6 @@ subtitle: 'KSII Transactions on Internet and Information Systems. vol. 14, no. 7
 authors:
 - Hyeonseung Im
 - Dohyung Kim
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2020-international-20-an-overview-of-content-poisoning-in-ndn-attacks-countermeasures-and-di.png
 tags:
 - international

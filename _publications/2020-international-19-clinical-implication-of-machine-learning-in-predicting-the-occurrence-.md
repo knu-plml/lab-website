@@ -8,7 +8,6 @@ authors:
 - Yeongjin Song
 - Hyeonseung Im
 - Junbeom Park
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2020-international-19-clinical-implication-of-machine-learning-in-predicting-the-occurrence-.svg
 tags:
 - international

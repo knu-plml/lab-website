@@ -11,7 +11,6 @@ support:
 - BRL후속
 - RIS
 - SW
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2023-domestic-conference-69-item.svg
 tags:
 - domestic-conference

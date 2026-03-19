@@ -10,7 +10,6 @@ authors:
 support:
 - RIS
 - 지역지능화
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2023-domestic-conference-66-item.svg
 tags:
 - domestic-conference

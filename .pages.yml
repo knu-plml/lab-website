@@ -332,10 +332,6 @@ content:
         label: Abstract
         type: text
         required: false
-      - name: link
-        label: Canonical Link
-        type: string
-        required: false
       - name: image
         label: Image
         type: image

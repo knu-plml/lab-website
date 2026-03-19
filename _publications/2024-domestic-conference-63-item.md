@@ -9,7 +9,6 @@ authors:
 support:
 - BRL후속
 - 지역지능화
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2024-domestic-conference-63-item.svg
 tags:
 - domestic-conference

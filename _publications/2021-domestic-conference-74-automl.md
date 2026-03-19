@@ -6,7 +6,6 @@ authors:
 - 신승훈
 - 주기훈
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-conference-74-automl.svg
 tags:
 - domestic-conference

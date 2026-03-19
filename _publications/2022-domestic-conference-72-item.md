@@ -7,7 +7,6 @@ authors:
 - 주진호
 - 김아욱
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2022-domestic-conference-72-item.svg
 tags:
 - domestic-conference

@@ -7,7 +7,6 @@ authors:
 - Hanyoung Jang
 - Hyeonseung Im
 - Jongmin Kim
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2021-international-14-human-motion-reconstruction-using-deep-transformer-networks.png
 tags:
 - international

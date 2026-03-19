@@ -13,7 +13,6 @@ support:
 - BRL후속
 - DS
 - RIS
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2024-international-05-medical-data-analysis-using-automl-frameworks.png
 tags:
 - international

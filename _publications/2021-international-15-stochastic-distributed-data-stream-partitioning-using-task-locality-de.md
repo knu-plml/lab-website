@@ -7,7 +7,6 @@ authors:
 - Siwoon Son
 - Hyeonseung Im
 - Yang-Sae Moon
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2021-international-15-stochastic-distributed-data-stream-partitioning-using-task-locality-de.svg
 tags:
 - international

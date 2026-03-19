@@ -9,7 +9,6 @@ authors:
 support:
 - BRL후속
 - DS
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2025-domestic-journal-42-item.svg
 tags:
 - domestic-journal

@@ -17,7 +17,6 @@ support:
 - 융합보안
 - DS
 - RIS
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2024-international-04-predicting-the-progression-of-mild-cognitive-impairment-to-alzheimers-.png
 tags:
 - international

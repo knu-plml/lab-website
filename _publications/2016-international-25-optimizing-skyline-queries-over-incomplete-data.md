@@ -6,7 +6,6 @@ authors:
 - Jongwuk Lee
 - Hyeonseung Im
 - Gae-won You
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2016-international-25-optimizing-skyline-queries-over-incomplete-data.svg
 tags:
 - international

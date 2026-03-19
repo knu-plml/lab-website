@@ -6,7 +6,6 @@ authors:
 - Hyeonseung Im
 - Jonghyun Park
 - Sungwoo Park
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2011-international-34-parallel-skyline-computation-on-multicore-architectures.svg
 tags:
 - international

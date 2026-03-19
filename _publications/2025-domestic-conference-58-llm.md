@@ -11,7 +11,6 @@ support:
 - 지역지능화
 - Post-Doc.
 - PACEN
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2025-domestic-conference-58-llm.svg
 tags:
 - domestic-conference

@@ -7,7 +7,6 @@ authors:
 - 주기훈
 - 임현승
 - 박준범
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-conference-77-automl.svg
 tags:
 - domestic-conference

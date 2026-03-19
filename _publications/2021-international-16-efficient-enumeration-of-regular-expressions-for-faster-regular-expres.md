@@ -7,7 +7,6 @@ authors:
 - Su-Hyeon Kim
 - Hyeonseung Im
 - Sang-Ki Ko
-link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2021-international-16-efficient-enumeration-of-regular-expressions-for-faster-regular-expres.svg
 tags:
 - international

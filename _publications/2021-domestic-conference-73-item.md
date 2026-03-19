@@ -7,7 +7,6 @@ authors:
 - 장경주
 - 정은주
 - 임현승
-link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-conference-73-item.svg
 tags:
 - domestic-conference
