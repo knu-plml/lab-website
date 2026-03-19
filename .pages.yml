@@ -76,6 +76,29 @@ components:
         type: string
         required: false
 
+  course_semester:
+    label: Semester
+    type: object
+    fields:
+      - name: year
+        label: Year
+        type: number
+        required: true
+      - name: term
+        label: Term
+        type: select
+        required: true
+        options:
+          values:
+            - value: 1-spring
+              label: Spring
+            - value: 2-summer
+              label: Summer
+            - value: 3-fall
+              label: Fall
+            - value: 4-winter
+              label: Winter
+
 content:
   - name: home
     label: Home
@@ -366,11 +389,11 @@ content:
     filename: "{slug}.md"
     view:
       primary: title
-      fields: [title, title_en, subtitle]
-      sort: [date, title]
+      fields: [title, title_en, "semesters[0].label"]
+      sort: [title]
       default:
-        sort: date
-        order: desc
+        sort: title
+        order: asc
     fields:
       - name: slug
         label: Slug
@@ -385,32 +408,26 @@ content:
         label: English Title
         type: string
         required: false
-      - name: subtitle
-        label: Semester
-        type: string
-        required: true
       - name: description
         label: Description
         type: text
-        required: false
-      - name: link
-        label: Course Link
-        type: string
         required: false
       - name: tags
         label: Tags
         type: string
         required: false
         list: true
-      - name: date
-        label: Date
-        type: date
+      - name: semesters
+        label: Semesters
+        component: course_semester
         required: true
-        options:
-          format: yyyy-MM-dd
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.year} {fields.term}"
       - name: body
-        label: Body
-        type: code
+        label: Notes
         required: false
+        type: code
         options:
           language: markdown

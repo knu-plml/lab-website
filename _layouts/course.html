@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% assign emptyarray = "" | split: "," %}
+{% assign semesters = page.semesters | default: emptyarray %}
+{% assign latest_semester = semesters | first %}
+
 <article class="entry-page entry-page-course">
   <div class="entry-summary entry-summary-only">
     <div class="entry-eyebrow">Course</div>
@@ -11,22 +15,66 @@ layout: default
       <p class="entry-subtitle">{{ page.title_en }}</p>
     {% endif %}
 
-    {% if page.subtitle %}
-      <p class="entry-description">{{ page.subtitle }}</p>
+    {% if latest_semester and latest_semester.year and latest_semester.term %}
+      {% assign latest_term_name = latest_semester.term | split: "-" | last %}
+      {% assign latest_term_label = latest_term_name %}
+      {% case latest_term_name %}
+        {% when "spring" %}
+          {% assign latest_term_label = "봄" %}
+        {% when "summer" %}
+          {% assign latest_term_label = "여름" %}
+        {% when "fall" %}
+          {% assign latest_term_label = "가을" %}
+        {% when "winter" %}
+          {% assign latest_term_label = "겨울" %}
+      {% endcase %}
+      <p class="entry-description">{{ latest_semester.year }} {{ latest_term_label }}</p>
     {% endif %}
 
     {% if page.description and page.description != "" %}
       <p class="entry-description">{{ page.description }}</p>
     {% endif %}
 
-    {% if page.link %}
-      <div class="entry-actions">
-        {% include button.html
-          text="Visit Course Page"
-          link=page.link
-          icon="fa-solid fa-arrow-up-right-from-square"
-        %}
-      </div>
+    {% if page.tags %}
+      {% include tags.html tags=page.tags %}
     {% endif %}
   </div>
+
+  {% assign has_content = content | to_s | strip %}
+  {% if semesters.size > 0 or has_content != "" %}
+    <div class="entry-body">
+      {% if semesters.size > 0 %}
+        <section class="entry-section">
+          <h2>Semesters</h2>
+          <div class="course-group-dates">
+            {% for semester in semesters %}
+              {% assign term_name = semester.term | split: "-" | last %}
+              {% assign term_ko = term_name %}
+              {% case term_name %}
+                {% when "spring" %}
+                  {% assign term_ko = "봄" %}
+                {% when "summer" %}
+                  {% assign term_ko = "여름" %}
+                {% when "fall" %}
+                  {% assign term_ko = "가을" %}
+                {% when "winter" %}
+                  {% assign term_ko = "겨울" %}
+              {% endcase %}
+
+              <span class="course-date-chip" aria-disabled="true">
+                <span class="course-date-chip-year">{{ semester.year }}</span>
+                <span class="course-date-chip-term">{{ term_ko }}</span>
+              </span>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% if has_content != "" %}
+        <section class="entry-section">
+          {{ content }}
+        </section>
+      {% endif %}
+    </div>
+  {% endif %}
 </article>

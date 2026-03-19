@@ -9,6 +9,7 @@ nav:
 # {% include icon.html icon="fa-solid fa-book-open" %}Courses
 
 <div class="courses-page">
+  {% assign emptyarray = "" | split: "," %}
   <div class="courses-page-rule"></div>
 
   <div class="courses-page-notice">
@@ -20,14 +21,16 @@ nav:
     </span>
   </div>
 
-  {% assign courses_sorted = site.courses | sort: "date" | reverse %}
-  {% assign course_groups = courses_sorted | group_by_exp: "course", "course.title | append: '||' | append: course.title_en" %}
+  {% assign courses_sorted = site.courses | sort: "latest_sort" | reverse %}
 
   <div class="courses-group-list">
-    {% for group in course_groups %}
-      {% assign latest = group.items | first %}
-      {% assign earliest = group.items | last %}
+    {% for latest in courses_sorted %}
+      {% assign semesters = latest.semesters | default: emptyarray %}
+      {% assign latest_semester = semesters | first %}
+      {% assign earliest_semester = semesters | last %}
       {% assign latest_description = latest.description | to_s | strip %}
+      {% assign latest_year = latest_semester.year | default: "" %}
+      {% assign earliest_year = earliest_semester.year | default: "" %}
       <section class="course-group">
         <div class="course-group-header">
           <div class="course-group-main">
@@ -37,8 +40,8 @@ nav:
             {% endif %}
           </div>
           <div class="course-group-meta">
-            <span>{{ group.items | size }}회 개설</span>
-            <span>{{ earliest.date | date: "%Y" }}-{{ latest.date | date: "%Y" }}</span>
+            <span>{{ semesters | size }}회 개설</span>
+            <span>{{ earliest_year }}-{{ latest_year }}</span>
           </div>
         </div>
 
@@ -70,27 +73,27 @@ nav:
         </div>
 
         <div class="course-group-dates">
-          {% for course in group.items %}
-            {% assign subtitle_normalized = course.subtitle | replace: " ", " " | strip %}
-            {% assign term = subtitle_normalized | split: " " | last %}
-            {% assign term_ko = term %}
-            {% case term %}
-              {% when "Spring" %}
+          {% for semester in semesters %}
+            {% assign term_name = semester.term | split: "-" | last %}
+            {% assign term_ko = term_name %}
+            {% case term_name %}
+              {% when "spring" %}
                 {% assign term_ko = "봄" %}
-              {% when "Summer" %}
+              {% when "summer" %}
                 {% assign term_ko = "여름" %}
-              {% when "Fall" %}
+              {% when "fall" %}
                 {% assign term_ko = "가을" %}
-              {% when "Winter" %}
+              {% when "winter" %}
                 {% assign term_ko = "겨울" %}
             {% endcase %}
 
             <span class="course-date-chip" aria-disabled="true">
-              <span class="course-date-chip-year">{{ course.date | date: "%Y" }}</span>
+              <span class="course-date-chip-year">{{ semester.year }}</span>
               <span class="course-date-chip-term">{{ term_ko }}</span>
             </span>
           {% endfor %}
         </div>
       </section>
     {% endfor %}
+  </div>
 </div>

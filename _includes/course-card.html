@@ -8,6 +8,10 @@
   {% assign course = include %}
 {% endif %}
 
+{% assign emptyarray = "" | split: "," %}
+{% assign semesters = course.semesters | default: emptyarray %}
+{% assign latest_semester = semesters | first %}
+
 <div class="course-card">
   <div class="course-card-text">
     {% if course.title %}
@@ -20,9 +24,21 @@
       <div class="course-card-subtitle">{{ course.title_en }}</div>
     {% endif %}
 
-    {% if course.subtitle %}
+    {% if latest_semester and latest_semester.year and latest_semester.term %}
+      {% assign latest_term_name = latest_semester.term | split: "-" | last %}
+      {% assign latest_term_label = latest_term_name %}
+      {% case latest_term_name %}
+        {% when "spring" %}
+          {% assign latest_term_label = "봄" %}
+        {% when "summer" %}
+          {% assign latest_term_label = "여름" %}
+        {% when "fall" %}
+          {% assign latest_term_label = "가을" %}
+        {% when "winter" %}
+          {% assign latest_term_label = "겨울" %}
+      {% endcase %}
       <div class="course-card-description">
-        {{ course.subtitle }}
+        {{ latest_semester.year }} {{ latest_term_label }}
       </div>
     {% endif %}
 

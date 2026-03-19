@@ -1,0 +1,11 @@
+---
+slug: computer-programming-scsc
+title: 컴퓨터 프로그래밍
+title_en: Computer Programming (SCSC)
+description: SCSC
+semesters:
+- year: 2016
+  term: 1-spring
+- year: 2015
+  term: 1-spring
+---
