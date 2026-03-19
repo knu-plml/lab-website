@@ -65,6 +65,13 @@ layout: default
       </section>
     {% endif %}
 
+    {% if page.description and page.description != "" %}
+      <section class="entry-section">
+        <h2>Abstract</h2>
+        {{ page.description | markdownify }}
+      </section>
+    {% endif %}
+
     {% if page.tags %}
       <section class="entry-section">
         <h2>Tags</h2>

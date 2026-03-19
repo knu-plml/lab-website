@@ -325,11 +325,11 @@ content:
         type: string
         required: true
       - name: subtitle
-        label: Venue
+        label: Subtitle
         type: string
         required: true
       - name: description
-        label: Description
+        label: Abstract
         type: text
         required: false
       - name: link
