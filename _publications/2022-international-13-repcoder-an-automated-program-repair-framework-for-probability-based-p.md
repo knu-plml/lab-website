@@ -1,7 +1,6 @@
 ---
 slug: 2022-international-13-repcoder-an-automated-program-repair-framework-for-probability-based-p
-title: 'RepCoder: An Automated Program Repair Framework for Probability-Based Program
-  Synthesis'
+title: 'RepCoder: An Automated Program Repair Framework for Probability-Based Program Synthesis'
 subtitle: 'SAC 2022: 37th ACM/SIGAPP Symposium on Applied Computing. 25-29 April 2022'
 authors:
 - Suhwan Ji

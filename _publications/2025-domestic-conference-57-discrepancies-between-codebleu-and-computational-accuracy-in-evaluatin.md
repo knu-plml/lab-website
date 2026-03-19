@@ -1,7 +1,6 @@
 ---
 slug: 2025-domestic-conference-57-discrepancies-between-codebleu-and-computational-accuracy-in-evaluatin
-title: Discrepancies Between CodeBLEU and Computational Accuracy in Evaluating Code
-  Translation Models
+title: Discrepancies Between CodeBLEU and Computational Accuracy in Evaluating Code Translation Models
 subtitle: '한국정보과학회 2025 한국소프트웨어종합학술대회 (KSC), 2025.12'
 authors:
 - Maru Gebremedhin Gebreslassie

@@ -1,7 +1,6 @@
 ---
 slug: 2021-international-16-efficient-enumeration-of-regular-expressions-for-faster-regular-expres
-title: Efficient Enumeration of Regular Expressions for Faster Regular Expression
-  Synthesis
+title: Efficient Enumeration of Regular Expressions for Faster Regular Expression Synthesis
 subtitle: 'CIAA 2021: International Conference on Implementation and Application of Automata. 19-23 July 2021'
 authors:
 - Su-Hyeon Kim

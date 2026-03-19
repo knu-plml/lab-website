@@ -1,7 +1,6 @@
 ---
 slug: 2023-international-09-clinical-applicability-of-an-artificial-intelligence-prediction-algori
-title: Clinical Applicability of an Artificial Intelligence Prediction Algorithm for
-  Early Prediction of Non-persistent Atrial Fibrillation
+title: Clinical Applicability of an Artificial Intelligence Prediction Algorithm for Early Prediction of Non-persistent Atrial Fibrillation
 subtitle: 'Frontiers in Cardiovascular Medicine. 10:1168054, September 2023'
 authors:
 - Yeji Kim*
