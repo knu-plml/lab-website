@@ -290,16 +290,16 @@ content:
         options:
           time: true
           format: yyyy-MM-dd HH:mm:ss xx
-      - name: tags
-        label: Tags
-        type: string
-        required: false
-        list: true
       - name: body
         label: Body
         type: code
         options:
           language: markdown
+      - name: tags
+        label: Tags
+        type: string
+        required: false
+        list: true
 
   - name: publications
     label: Publications
@@ -361,12 +361,6 @@ content:
           collapsible:
             collapsed: true
             summary: "{fields.text}"
-      - name: body
-        label: Body
-        type: code
-        required: false
-        options:
-          language: markdown
 
   - name: courses
     label: Courses
