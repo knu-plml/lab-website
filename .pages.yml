@@ -1,6 +1,6 @@
 media:
   input: images
-  output: /new/images
+  output: /images
   path: uploads
 
 settings:
