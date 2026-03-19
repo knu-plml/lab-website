@@ -238,10 +238,10 @@ content:
         order: asc
     fields:
       - name: slug
-        label: Slug
+        label: URL
         type: string
         required: true
-        hidden: true
+        description: "URL path value. Example: hyeonseung-im"
       - name: name
         label: Name
         type: string
@@ -308,10 +308,10 @@ content:
         order: desc
     fields:
       - name: slug
-        label: Slug
+        label: URL
         type: string
         required: true
-        hidden: true
+        description: "URL path value. Example: 2026-03-19-example-post"
       - name: title
         label: Title
         type: string
@@ -349,10 +349,10 @@ content:
         order: desc
     fields:
       - name: slug
-        label: Slug
+        label: URL
         type: string
         required: true
-        hidden: true
+        description: "URL path value. Example: 2026-international-example-paper"
       - name: title
         label: Title
         type: string
@@ -418,10 +418,10 @@ content:
         order: asc
     fields:
       - name: slug
-        label: Slug
+        label: URL
         type: string
         required: true
-        hidden: true
+        description: "URL path value. Example: programming-languages"
       - name: title
         label: Title
         type: string
