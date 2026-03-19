@@ -2,8 +2,8 @@
 slug: computational-thinking-general
 title: 컴퓨팅 사고력(일반)
 title_en: Computational Thinking(General)
-description: 일반 / General / 온라인수업
 tags:
+- general
 - online
 semesters:
 - year: 2024

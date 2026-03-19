@@ -39,8 +39,7 @@ layout: default
     {% endif %}
   </div>
 
-  {% assign has_content = content | to_s | strip %}
-  {% if semesters.size > 0 or has_content != "" %}
+  {% if semesters.size > 0 %}
     <div class="entry-body">
       {% if semesters.size > 0 %}
         <section class="entry-section">
@@ -65,12 +64,6 @@ layout: default
               </span>
             {% endfor %}
           </div>
-        </section>
-      {% endif %}
-
-      {% if has_content != "" %}
-        <section class="entry-section">
-          {{ content }}
         </section>
       {% endif %}
     </div>

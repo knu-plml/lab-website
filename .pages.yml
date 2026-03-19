@@ -409,7 +409,7 @@ content:
         type: string
         required: false
       - name: description
-        label: Description
+        label: Notes
         type: text
         required: false
       - name: tags
@@ -425,9 +425,3 @@ content:
           collapsible:
             collapsed: true
             summary: "{fields.year} {fields.term}"
-      - name: body
-        label: Notes
-        required: false
-        type: code
-        options:
-          language: markdown

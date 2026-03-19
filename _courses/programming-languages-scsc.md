@@ -2,7 +2,8 @@
 slug: programming-languages-scsc
 title: 프로그래밍 언어론
 title_en: Programming Languages (SCSC)
-description: SCSC
+tags:
+- scsc
 semesters:
 - year: 2016
   term: fall

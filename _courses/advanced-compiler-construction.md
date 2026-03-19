@@ -2,7 +2,6 @@
 slug: advanced-compiler-construction
 title: 고급 컴파일러 구성론
 title_en: Advanced Compiler Construction
-description: 대학원
 tags:
 - graduate
 semesters:

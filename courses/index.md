@@ -28,7 +28,6 @@ nav:
       {% assign semesters = latest.semesters | default: emptyarray %}
       {% assign latest_semester = semesters | first %}
       {% assign earliest_semester = semesters | last %}
-      {% assign latest_description = latest.description | to_s | strip %}
       {% assign latest_year = latest_semester.year | default: "" %}
       {% assign earliest_year = earliest_semester.year | default: "" %}
       <section class="course-group">
@@ -37,6 +36,9 @@ nav:
             <h2 class="course-group-title">{{ latest.title }}</h2>
             {% if latest.title_en %}
               <p class="course-group-title-en">{{ latest.title_en }}</p>
+            {% endif %}
+            {% if latest.description and latest.description != "" %}
+              <p class="course-group-title-en">{{ latest.description }}</p>
             {% endif %}
           </div>
           <div class="course-group-meta">
@@ -54,21 +56,19 @@ nav:
                   {% assign label = "대학원" %}
                 {% when "graduate-school-of-education" %}
                   {% assign label = "교육대학원" %}
+                {% when "general" %}
+                  {% assign label = "일반" %}
+                {% when "gangwon-innovation-platform" %}
+                  {% assign label = "강원혁신플랫폼" %}
                 {% when "online" %}
                   {% assign label = "온라인수업" %}
+                {% when "scsc" %}
+                  {% assign label = "SCSC" %}
                 {% when "team-teaching" %}
                   {% assign label = "팀티칭" %}
               {% endcase %}
               <span class="course-row-tag">{{ label }}</span>
             {% endfor %}
-          {% endif %}
-
-          {% if latest_description contains "강원혁신플랫폼" %}
-            <span class="course-row-tag">강원혁신플랫폼</span>
-          {% endif %}
-
-          {% if latest_description contains "일반" %}
-            <span class="course-row-tag">일반</span>
           {% endif %}
         </div>
 
