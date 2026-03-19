@@ -103,7 +103,7 @@
   border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
 }
 
-.publication-section-plain {
+.publication-section + .publication-section.publication-section-plain {
   margin-top: 0;
   padding-top: 0;
   border-top: 0;

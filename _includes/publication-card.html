@@ -102,7 +102,7 @@
       {% for tag in publication.tags %}
         {% unless hidden_tags contains tag %}
           <a
-            href="publications/?search=&quot;tag: {{ tag | downcase }}&quot;"
+            href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;"
             class="publication-card-tag tag"
             data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
           >
