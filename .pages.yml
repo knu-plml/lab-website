@@ -351,7 +351,7 @@ content:
         label: Subtitle
         type: string
         required: true
-      - name: description
+      - name: abstract
         label: Abstract
         type: text
         required: false

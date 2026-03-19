@@ -5,14 +5,25 @@ layout: default
 {% assign subtitle_clean = page.subtitle | default: "" | strip %}
 {% assign subtitle_parts = subtitle_clean | split: ". " %}
 {% assign publication_venue = subtitle_parts | first | strip %}
+{% assign publication_year = page.date | date: "%Y" %}
 
 {% assign authors = page.authors | default: "" %}
 {% assign support = page.support | default: "" %}
+{% assign author_count = 0 %}
+{% assign authors_json = authors | jsonify %}
+{% assign authors_json_prefix = authors_json | slice: 0, 1 %}
+{% if authors != "" %}
+  {% if authors_json_prefix == "[" %}
+    {% assign author_count = authors | size %}
+  {% else %}
+    {% assign author_count = authors | split: "," | size %}
+  {% endif %}
+{% endif %}
 
-<article class="entry-page">
-  <div class="entry-hero">
+<article class="entry-page entry-page-publication">
+  <div class="entry-hero publication-hero">
     {% if page.image %}
-      <div class="entry-cover">
+      <div class="entry-cover publication-cover">
         <img
           src="{{ page.image | relative_url | uri_escape }}"
           alt="{{ page.title | default: 'publication image' | regex_strip }}"
@@ -22,16 +33,33 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="entry-summary">
+    <div class="entry-summary publication-summary">
       <div class="entry-eyebrow">Publication</div>
       <h1 class="entry-title">{{ page.title }}</h1>
 
-      {% if publication_venue != "" %}
-        <p class="entry-subtitle">{{ publication_venue }}</p>
+      {% if page.date or author_count > 0 or publication_venue != "" %}
+        <div class="publication-summary-meta">
+          {% if page.date %}
+            <span>{{ publication_year }}</span>
+          {% endif %}
+          {% if author_count > 0 %}
+            <span>{{ author_count }} authors</span>
+          {% endif %}
+          {% if publication_venue != "" %}
+            <span>{{ publication_venue }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if authors != "" %}
+        <div class="publication-hero-block">
+          <div class="publication-block-label">Authors</div>
+          {% include publication-team.html authors=authors %}
+        </div>
       {% endif %}
 
       {% if page.buttons.size > 0 %}
-        <div class="entry-actions">
+        <div class="entry-actions publication-actions">
           {% for button in page.buttons %}
             {% include button.html
               icon=button.icon
@@ -41,48 +69,38 @@ layout: default
           {% endfor %}
         </div>
       {% endif %}
+
+      {% if page.tags %}
+        <div class="publication-hero-block">
+          <div class="publication-block-label">Topics</div>
+          {% include tags.html tags=page.tags link="publications" %}
+        </div>
+      {% endif %}
     </div>
   </div>
 
-  <div class="entry-body">
-    {% if authors != "" %}
-      <section class="entry-section">
-        <h2>Authors</h2>
-        <p>{% include publication-team.html authors=authors %}</p>
-      </section>
-    {% endif %}
+  {% assign has_abstract = page.abstract | to_s | strip %}
+  {% if has_abstract != "" or support != "" %}
+    <div class="entry-body publication-body">
+      {% if has_abstract != "" %}
+        <section class="entry-section publication-section publication-abstract">
+          <h2>Abstract</h2>
+          {{ page.abstract | markdownify }}
+        </section>
+      {% endif %}
 
-    {% if support != "" %}
-      <section class="entry-section">
-        <h2>Support</h2>
-        {% assign support_json = support | jsonify %}
-        {% assign support_json_prefix = support_json | slice: 0, 1 %}
-        {% if support_json_prefix == "[" %}
-          <p>{{ support | join: ", " }}</p>
-        {% else %}
-          <p>{{ support }}</p>
-        {% endif %}
-      </section>
-    {% endif %}
-
-    {% if page.description and page.description != "" %}
-      <section class="entry-section">
-        <h2>Abstract</h2>
-        {{ page.description | markdownify }}
-      </section>
-    {% endif %}
-
-    {% if page.tags %}
-      <section class="entry-section">
-        <h2>Tags</h2>
-        {% include tags.html tags=page.tags %}
-      </section>
-    {% endif %}
-
-    {% if content and content != "" %}
-      <section class="entry-section">
-        {{ content }}
-      </section>
-    {% endif %}
-  </div>
+      {% if support != "" %}
+        <section class="entry-section publication-section publication-section-plain">
+          <h2>Support</h2>
+          {% assign support_json = support | jsonify %}
+          {% assign support_json_prefix = support_json | slice: 0, 1 %}
+          {% if support_json_prefix == "[" %}
+            <p>{{ support | join: ", " }}</p>
+          {% else %}
+            <p>{{ support }}</p>
+          {% endif %}
+        </section>
+      {% endif %}
+    </div>
+  {% endif %}
 </article>
