@@ -6,5 +6,3 @@ tags:
   - "publication"
   - "conference"
 ---
-
-4 papers will be presented at KSC 2023. Good job, Geonhui, Changsup, Chaeyoon, and Minji!

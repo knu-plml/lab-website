@@ -6,5 +6,3 @@ tags:
   - "publication"
   - "conference"
 ---
-
-One paper has been accepted for presentation at KSC 2024. Good job, Changsup!

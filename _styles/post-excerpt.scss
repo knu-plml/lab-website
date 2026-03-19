@@ -62,6 +62,11 @@ $wrap: 800px;
   width: 100%;
 }
 
+.post-excerpt-body {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
 @container (max-width: #{$wrap}) {
   .post-excerpt {
     flex-direction: column;

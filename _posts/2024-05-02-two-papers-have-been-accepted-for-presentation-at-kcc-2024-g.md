@@ -6,5 +6,3 @@ tags:
   - "publication"
   - "conference"
 ---
-
-Two papers have been accepted for presentation at KCC 2024. Good job, Changsup and Gerie!

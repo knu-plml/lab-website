@@ -12,6 +12,7 @@
   <div class="post-excerpt">
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
+    {% assign excerpt = post.content | default: include.content | markdownify | strip_html | strip %}
 
     {% if image %}
       <div class="post-excerpt-image">
@@ -27,6 +28,10 @@
     <div class="post-excerpt-text">
       <h3 class="post-excerpt-title">{{ title }}</h3>
 
+      {% if excerpt != "" %}
+        <p class="post-excerpt-body">{{ excerpt }}</p>
+      {% endif %}
+
       {%
         include post-info.html
         author=post.author
@@ -34,7 +39,6 @@
         updated=post.last_modified_at
         tags=post.tags
       %}
-
     </div>
   </div>
 </div>

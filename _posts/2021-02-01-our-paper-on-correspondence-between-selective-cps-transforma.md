@@ -5,5 +5,3 @@ date: "2021-02-01 09:00:00 +0900"
 tags:
   - "publication"
 ---
-
-Our paper “On Correspondence between Selective CPS Transformation and Selective Double Negation Translation” has been published in Mathematics (SCIE, IF: 1.747).

@@ -6,5 +6,3 @@ tags:
   - "publication"
   - "conference"
 ---
-
-Four papers have been accepted for presentation at KSC 2025. Good job, Changsup, Dongyoung, Gerie, Minji!

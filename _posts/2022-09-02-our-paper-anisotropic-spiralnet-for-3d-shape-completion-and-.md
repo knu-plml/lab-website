@@ -5,5 +5,3 @@ date: "2022-09-02 09:00:00 +0900"
 tags:
   - "publication"
 ---
-
-Our paper “Anisotropic SpiralNet for 3D Shape Completion and Denoising” (with Seong Uk Kim, Jihyun Roh, and Jongmin Kim) has been published in Sensors (SCIE, IF: 3.847).
