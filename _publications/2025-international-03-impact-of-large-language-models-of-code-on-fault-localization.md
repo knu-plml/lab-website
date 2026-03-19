@@ -13,7 +13,7 @@ support:
   - 지역지능화
   - BRL후속
   - Post-Doc.
-image: /new/images/publications/2025-international-03-impact-of-large-language-models-of-code-on-fault-localization.png
+image: /images/publications/2025-international-03-impact-of-large-language-models-of-code-on-fault-localization.png
 tags:
   - international
   - ICST
