@@ -22,7 +22,7 @@ tags:
 - programming-languages
 date: '2025-01-01'
 buttons:
-- text: PDF
+- text: DOI
   link: https://doi.org/10.3390/app152212150
   icon: fa-solid fa-file-lines
 ---

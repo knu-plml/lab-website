@@ -22,7 +22,7 @@ tags:
 - healthcare-ai
 date: '2023-12-01'
 buttons:
-- text: PDF
+- text: DOI
   link: https://doi.org/10.1038/s41598-023-48842-7
   icon: fa-solid fa-file-lines
 - text: GitHub

@@ -20,6 +20,6 @@ tags:
 date: '2021-07-01'
 buttons:
 - text: DOI
-  link: https://link.springer.com/chapter/10.1007%2F978-3-030-79121-6_6
+  link: https://doi.org/10.1007/978-3-030-79121-6_6
   icon: fa-solid fa-file-lines
 ---
