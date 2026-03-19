@@ -1,12 +1,11 @@
 ---
 slug: 2016-international-25-optimizing-skyline-queries-over-incomplete-data
 title: Optimizing skyline queries over incomplete data
-subtitle: Information Sciences. 361-362: 14-28 (2016)
+subtitle: 'Information Sciences. 361-362: 14-28 (2016)'
 authors:
 - Jongwuk Lee
 - Hyeonseung Im
 - Gae-won You
-venue: 'Information Sciences. 361-362: 14-28 (2016)'
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2016-international-25-optimizing-skyline-queries-over-incomplete-data.svg
 tags:

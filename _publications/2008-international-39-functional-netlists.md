@@ -1,14 +1,11 @@
 ---
 slug: 2008-international-39-functional-netlists
 title: Functional netlists
-subtitle: 'ICFP 2008: ACM SIGPLAN International Conference on Functional Programming.
-  pp. 353-366'
+subtitle: 'ICFP 2008: ACM SIGPLAN International Conference on Functional Programming. pp. 353-366'
 authors:
 - Sungwoo Park
 - Jinha Kim
 - Hyeonseung Im
-venue: 'ICFP 2008: ACM SIGPLAN International Conference on Functional Programming.
-  pp. 353-366'
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2008-international-39-functional-netlists.svg
 tags:

@@ -1,16 +1,13 @@
 ---
 slug: 2024-international-05-medical-data-analysis-using-automl-frameworks
 title: Medical Data Analysis Using AutoML Frameworks
-subtitle: Journal of Electrical Engineering & Technology. 19:4515-4522, September
-  2024 [PDF] [GitHub]
+subtitle: 'Journal of Electrical Engineering & Technology. 19:4515-4522, September 2024'
 authors:
 - Seunghun Shin*
 - Dongyoung Park*
 - Suhwan Ji
 - Gihun Joo
 - Hyeonseung Im (* equal contributions)
-venue: Journal of Electrical Engineering & Technology. 19:4515-4522, September 2024
-  [PDF] [GitHub]
 support:
 - 지역지능화
 - BRL후속

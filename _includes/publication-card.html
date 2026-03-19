@@ -8,20 +8,9 @@
   {% assign publication = include %}
 {% endif %}
 
-{% assign subtitle_clean = publication.subtitle
-  | default: ""
-  | replace: "[PDF]", ""
-  | replace: "[GitHub]", ""
-  | replace: "[DOI]", ""
-  | replace: "[Paper]", ""
-  | replace: "[Webpage]", ""
-  | strip
-%}
+{% assign subtitle_clean = publication.subtitle | default: "" | strip %}
 {% assign subtitle_parts = subtitle_clean | split: ". " %}
-{% assign publication_venue = publication.venue | default: "" %}
-{% if publication_venue == "" %}
-  {% assign publication_venue = subtitle_parts | first | strip %}
-{% endif %}
+{% assign publication_venue = subtitle_parts | first | strip %}
 {% assign authors = publication.authors | default: "" %}
 {% assign support = publication.support | default: "" %}
 {% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}

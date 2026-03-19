@@ -1,15 +1,12 @@
 ---
 slug: 2011-international-33-a-syntactic-type-system-for-recursive-modules
 title: A syntactic type system for recursive modules
-subtitle: 'OOPSLA 2011: ACM SIGPLAN Conference on Object-Oriented Programming, Systems,
-  Languages, and Applications. pp. 993-1012'
+subtitle: 'OOPSLA 2011: ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications. pp. 993-1012'
 authors:
 - Hyeonseung Im
 - Keiko Nakata
 - Jacques Garrigue
 - Sungwoo Park
-venue: 'OOPSLA 2011: ACM SIGPLAN Conference on Object-Oriented Programming, Systems,
-  Languages, and Applications. pp. 993-1012'
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2011-international-33-a-syntactic-type-system-for-recursive-modules.svg
 tags:

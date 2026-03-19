@@ -8,7 +8,6 @@ authors:
 - Jonghyun Park
 - Jinha Kim
 - Hyeonseung Im
-venue: 'ICDE 2009: International Conference on Data Engineering. pp. 760-771'
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2009-international-37-parallel-skyline-computation-on-multicore-architectures.svg
 tags:

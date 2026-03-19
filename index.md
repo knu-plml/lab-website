@@ -105,20 +105,17 @@ show-subtitle: false
   <div class="home-research-publications">
     {% for publication in featured_publications limit:4 %}
       {% capture subtitle_clean -%}
-        {{ publication.subtitle | default: "" | replace: "[PDF]", "" | replace: "[GitHub]", "" | replace: "[DOI]", "" | replace: "[Paper]", "" | replace: "[Webpage]", "" | strip }}
+        {{ publication.subtitle | default: "" | strip }}
       {%- endcapture %}
       {% assign publication_year = publication.date | date: "%Y" %}
-      {% assign publication_venue = publication.venue | default: "" %}
-      {% if publication_venue == "" %}
-        {% assign first_sentence = subtitle_clean | split: ". " | first | strip %}
-        {% assign comma_prefix = subtitle_clean | split: ", " | first | strip %}
-        {% if comma_prefix contains publication_year %}
-          {% assign publication_venue = comma_prefix | replace: publication_year, "" | replace: "  ", " " | strip %}
-        {% elsif first_sentence contains publication_year %}
-          {% assign publication_venue = first_sentence | replace: publication_year, "" | replace: "  ", " " | strip %}
-        {% else %}
-          {% assign publication_venue = first_sentence %}
-        {% endif %}
+      {% assign first_sentence = subtitle_clean | split: ". " | first | strip %}
+      {% assign comma_prefix = subtitle_clean | split: ", " | first | strip %}
+      {% if comma_prefix contains publication_year %}
+        {% assign publication_venue = comma_prefix | replace: publication_year, "" | replace: "  ", " " | strip %}
+      {% elsif first_sentence contains publication_year %}
+        {% assign publication_venue = first_sentence | replace: publication_year, "" | replace: "  ", " " | strip %}
+      {% else %}
+        {% assign publication_venue = first_sentence %}
       {% endif %}
       {% assign publication_venue = publication_venue | replace: " .", "." | replace: " ,", "," | strip %}
       <a class="home-research-publication reveal-on-scroll" href="{{ publication.url | relative_url }}">
