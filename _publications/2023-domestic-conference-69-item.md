@@ -1,12 +1,17 @@
 ---
-slug: "2023-domestic-conference-69-item"
+slug: 2023-domestic-conference-69-item
 title: 대규모 코드 언어 모델의 코드 수정 성능 비교
 subtitle: 한국정보과학회 2023 한국소프트웨어종합학술대회 (KSC), 2023.12
-description: 'Authors: 이창섭, 이상화, 지수환, 임현승
-
-  Venue: 한국정보과학회 2023 한국소프트웨어종합학술대회 (KSC), 2023.12
-
-  사사: BRL후속, RIS, SW'
+authors:
+- 이창섭
+- 이상화
+- 지수환
+- 임현승
+venue: 한국정보과학회 2023 한국소프트웨어종합학술대회 (KSC), 2023.12
+support:
+- BRL후속
+- RIS
+- SW
 link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2023-domestic-conference-69-item.svg
 tags:

@@ -1,11 +1,13 @@
 ---
-slug: "2021-international-17-evaluating-countermeasures-for-verifying-the-integrity-of-ethereum-sma"
+slug: 2021-international-17-evaluating-countermeasures-for-verifying-the-integrity-of-ethereum-sma
 title: Evaluating countermeasures for verifying the integrity of Ethereum smart contract
   applications
 subtitle: IEEE Access. vol. 9, pp. 90029-90042, June 2021 [PDF][GitHub]
-description: 'Authors: Suhwan Ji, Dohyung Kim, Hyeonseung Im
-
-  Venue: IEEE Access. vol. 9, pp. 90029-90042, June 2021 [PDF][GitHub]'
+authors:
+- Suhwan Ji
+- Dohyung Kim
+- Hyeonseung Im
+venue: IEEE Access. vol. 9, pp. 90029-90042, June 2021 [PDF][GitHub]
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2021-international-17-evaluating-countermeasures-for-verifying-the-integrity-of-ethereum-sma.svg
 tags:

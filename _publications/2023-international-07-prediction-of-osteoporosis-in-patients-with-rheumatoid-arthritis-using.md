@@ -3,12 +3,17 @@ slug: 2023-international-07-prediction-of-osteoporosis-in-patients-with-rheumato
 title: Prediction of osteoporosis in patients with rheumatoid arthritis using machine
   learning
 subtitle: Scientific Reports. 13:21800, December 2023 [PDF] [GitHub]
-description: 'Authors: Chaewon Lee, Gihun Joo, Seunghun Shin, Hyeonseung Im, Ki Won
-  Moon
-
-  Venue: Scientific Reports. 13:21800, December 2023 [PDF] [GitHub]
-
-  사사: 지역지능화, DS, RIS'
+authors:
+- Chaewon Lee
+- Gihun Joo
+- Seunghun Shin
+- Hyeonseung Im
+- Ki Won Moon
+venue: Scientific Reports. 13:21800, December 2023 [PDF] [GitHub]
+support:
+- 지역지능화
+- DS
+- RIS
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2023-international-07-prediction-of-osteoporosis-in-patients-with-rheumatoid-arthritis-using.png
 tags:

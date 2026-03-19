@@ -12,16 +12,13 @@ layout: default
   | strip
 %}
 {% assign subtitle_parts = subtitle_clean | split: ". " %}
-{% assign publication_venue = subtitle_parts | first | strip %}
+{% assign publication_venue = page.venue | default: "" %}
+{% if publication_venue == "" %}
+  {% assign publication_venue = subtitle_parts | first | strip %}
+{% endif %}
 
-{% assign authors = "" %}
-{% assign support = "" %}
-{% if page.description contains "Authors:" %}
-  {% assign authors = page.description | split: "Venue:" | first | remove: "Authors:" | strip %}
-{% endif %}
-{% if page.description contains "사사:" %}
-  {% assign support = page.description | split: "사사:" | last | strip %}
-{% endif %}
+{% assign authors = page.authors | default: "" %}
+{% assign support = page.support | default: "" %}
 
 <article class="entry-page">
   <div class="entry-hero">
@@ -69,7 +66,13 @@ layout: default
     {% if support != "" %}
       <section class="entry-section">
         <h2>Support</h2>
-        <p>{{ support }}</p>
+        {% assign support_json = support | jsonify %}
+        {% assign support_json_prefix = support_json | slice: 0, 1 %}
+        {% if support_json_prefix == "[" %}
+          <p>{{ support | join: ", " }}</p>
+        {% else %}
+          <p>{{ support }}</p>
+        {% endif %}
       </section>
     {% endif %}
 

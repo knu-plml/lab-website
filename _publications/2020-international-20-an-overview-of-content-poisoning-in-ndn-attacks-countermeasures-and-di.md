@@ -3,10 +3,11 @@ slug: 2020-international-20-an-overview-of-content-poisoning-in-ndn-attacks-coun
 title: 'An Overview of Content Poisoning in NDN: Attacks, Countermeasures, and Direction'
 subtitle: KSII Transactions on Internet and Information Systems. vol. 14, no. 7, pp.
   2904-2918, July 2020 [PDF]
-description: 'Authors: Hyeonseung Im, Dohyung Kim
-
-  Venue: KSII Transactions on Internet and Information Systems. vol. 14, no. 7, pp.
-  2904-2918, July 2020 [PDF]'
+authors:
+- Hyeonseung Im
+- Dohyung Kim
+venue: KSII Transactions on Internet and Information Systems. vol. 14, no. 7, pp.
+  2904-2918, July 2020 [PDF]
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2020-international-20-an-overview-of-content-poisoning-in-ndn-attacks-countermeasures-and-di.png
 tags:

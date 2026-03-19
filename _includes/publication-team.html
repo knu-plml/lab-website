@@ -1,9 +1,15 @@
-{% assign raw_authors = include.authors | default: "" | replace: " ", " " | replace: "(* equal contributions)", "" | strip %}
-{% assign author_items = raw_authors | split: "," %}
+{% assign authors_json = include.authors | jsonify %}
+{% assign authors_json_prefix = authors_json | slice: 0, 1 %}
+{% if authors_json_prefix == "[" %}
+  {% assign author_items = include.authors %}
+{% else %}
+  {% assign raw_authors = include.authors | default: "" | replace: " ", " " | replace: "(* equal contributions)", "" | strip %}
+  {% assign author_items = raw_authors | split: "," %}
+{% endif %}
 
 <div class="publication-author-list">
   {% for author in author_items %}
-    {% assign author_name = author | replace: "*", "" | strip %}
+    {% assign author_name = author | replace: "(* equal contributions)", "" | replace: "*", "" | strip %}
     {% assign author_markup = author_name %}
     {% assign matched_member = nil %}
 

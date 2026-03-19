@@ -1,12 +1,15 @@
 ---
-slug: "2025-domestic-conference-62-llm"
+slug: 2025-domestic-conference-62-llm
 title: 헬스케어 분야에서 LLM 응답 일관성 향상을 위한 프롬프트 엔지니어링 기법 비교
 subtitle: 한국정보과학회 2025 한국컴퓨터종합학술대회 (KCC), 2025.07
-description: 'Authors: 노민지, 주기훈, 임현승
-
-  Venue: 한국정보과학회 2025 한국컴퓨터종합학술대회 (KCC), 2025.07
-
-  사사: 지역지능화, Post-Doc.'
+authors:
+- 노민지
+- 주기훈
+- 임현승
+venue: 한국정보과학회 2025 한국컴퓨터종합학술대회 (KCC), 2025.07
+support:
+- 지역지능화
+- Post-Doc.
 link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2025-domestic-conference-62-llm.svg
 tags:

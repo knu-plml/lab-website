@@ -3,12 +3,18 @@ slug: 2023-international-09-clinical-applicability-of-an-artificial-intelligence
 title: Clinical Applicability of an Artificial Intelligence Prediction Algorithm for
   Early Prediction of Non-persistent Atrial Fibrillation
 subtitle: Frontiers in Cardiovascular Medicine. 10:1168054, September 2023 [PDF]
-description: 'Authors: Yeji Kim*, Gihun Joo*, Bo-Kyung Jeon, Dong-Hyeon Kim, Tae Young
-  Shin, Hyeonseung Im, Junbeom Park (* equal contributions)
-
-  Venue: Frontiers in Cardiovascular Medicine. 10:1168054, September 2023 [PDF]
-
-  사사: 융합보안, RIS'
+authors:
+- Yeji Kim*
+- Gihun Joo*
+- Bo-Kyung Jeon
+- Dong-Hyeon Kim
+- Tae Young Shin
+- Hyeonseung Im
+- Junbeom Park (* equal contributions)
+venue: Frontiers in Cardiovascular Medicine. 10:1168054, September 2023 [PDF]
+support:
+- 융합보안
+- RIS
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2023-international-09-clinical-applicability-of-an-artificial-intelligence-prediction-algori.png
 tags:

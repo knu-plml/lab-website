@@ -1,16 +1,20 @@
 ---
-slug: "2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste"
+slug: 2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste
 title: Design and Implementation of a Blockchain-Based Open Peer Review System Using
   Hyperledger Fabric
 subtitle: Journal of Electrical Engineering & Technology. 19:3421–3428, July 2024
   [PDF] [GitHub]
-description: 'Authors: Suhwan Ji*, Seong-U Kim*, Dohyung Kim, Hyeonseung Im (* equal
-  contributions)
-
-  Venue: Journal of Electrical Engineering & Technology. 19:3421–3428, July 2024 [PDF]
+authors:
+- Suhwan Ji*
+- Seong-U Kim*
+- Dohyung Kim
+- Hyeonseung Im (* equal contributions)
+venue: Journal of Electrical Engineering & Technology. 19:3421–3428, July 2024 [PDF]
   [GitHub]
-
-  사사: 블록체인, 지역지능화, RIS'
+support:
+- 블록체인
+- 지역지능화
+- RIS
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste.png
 tags:

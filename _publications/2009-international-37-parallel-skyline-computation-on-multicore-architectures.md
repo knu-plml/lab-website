@@ -1,11 +1,14 @@
 ---
-slug: "2009-international-37-parallel-skyline-computation-on-multicore-architectures"
+slug: 2009-international-37-parallel-skyline-computation-on-multicore-architectures
 title: Parallel Skyline Computation on Multicore Architectures
 subtitle: 'ICDE 2009: International Conference on Data Engineering. pp. 760-771'
-description: 'Authors: Sungwoo Park, Taekyung Kim, Jonghyun Park, Jinha Kim, Hyeonseung
-  Im
-
-  Venue: ICDE 2009: International Conference on Data Engineering. pp. 760-771'
+authors:
+- Sungwoo Park
+- Taekyung Kim
+- Jonghyun Park
+- Jinha Kim
+- Hyeonseung Im
+venue: 'ICDE 2009: International Conference on Data Engineering. pp. 760-771'
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2009-international-37-parallel-skyline-computation-on-multicore-architectures.svg
 tags:

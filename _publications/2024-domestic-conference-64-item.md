@@ -1,12 +1,15 @@
 ---
-slug: "2024-domestic-conference-64-item"
+slug: 2024-domestic-conference-64-item
 title: 인코더 기반 거대 언어 모델의 초기 계층이 코드 분류에 효과적인가?
 subtitle: 한국정보과학회 2024 한국컴퓨터종합학술대회 (KCC), 2024.06 (최우수논문상)
-description: 'Authors: 이창섭, 지수환, 임현승
-
-  Venue: 한국정보과학회 2024 한국컴퓨터종합학술대회 (KCC), 2024.06 (최우수논문상)
-
-  사사: BRL후속, DS'
+authors:
+- 이창섭
+- 지수환
+- 임현승
+venue: 한국정보과학회 2024 한국컴퓨터종합학술대회 (KCC), 2024.06 (최우수논문상)
+support:
+- BRL후속
+- DS
 link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2024-domestic-conference-64-item.svg
 tags:

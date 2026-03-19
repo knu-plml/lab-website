@@ -1,12 +1,19 @@
 ---
-slug: "2024-domestic-journal-44-item"
+slug: 2024-domestic-journal-44-item
 title: 단일 리드 심전도 데이터를 이용한 심혈관 질환 예측
 subtitle: 정보과학회논문지, 제51권 제10호, pp. 928-934, 2024.10
-description: 'Authors: 박채윤, 주기훈, 지수환, 박준범, 백준호, 임현승
-
-  Venue: 정보과학회논문지, 제51권 제10호, pp. 928-934, 2024.10
-
-  사사: DS, RIS, 융합보안'
+authors:
+- 박채윤
+- 주기훈
+- 지수환
+- 박준범
+- 백준호
+- 임현승
+venue: 정보과학회논문지, 제51권 제10호, pp. 928-934, 2024.10
+support:
+- DS
+- RIS
+- 융합보안
 link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2024-domestic-journal-44-item.svg
 tags:

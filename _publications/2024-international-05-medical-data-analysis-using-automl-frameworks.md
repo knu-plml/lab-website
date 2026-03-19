@@ -1,15 +1,21 @@
 ---
-slug: "2024-international-05-medical-data-analysis-using-automl-frameworks"
+slug: 2024-international-05-medical-data-analysis-using-automl-frameworks
 title: Medical Data Analysis Using AutoML Frameworks
 subtitle: Journal of Electrical Engineering & Technology. 19:4515-4522, September
   2024 [PDF] [GitHub]
-description: 'Authors: Seunghun Shin*, Dongyoung Park*, Suhwan Ji, Gihun Joo, Hyeonseung
-  Im (* equal contributions)
-
-  Venue: Journal of Electrical Engineering & Technology. 19:4515-4522, September 2024
+authors:
+- Seunghun Shin*
+- Dongyoung Park*
+- Suhwan Ji
+- Gihun Joo
+- Hyeonseung Im (* equal contributions)
+venue: Journal of Electrical Engineering & Technology. 19:4515-4522, September 2024
   [PDF] [GitHub]
-
-  사사: 지역지능화, BRL후속, DS, RIS'
+support:
+- 지역지능화
+- BRL후속
+- DS
+- RIS
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2024-international-05-medical-data-analysis-using-automl-frameworks.png
 tags:

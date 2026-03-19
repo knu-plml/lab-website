@@ -1,11 +1,14 @@
 ---
-slug: "2020-international-19-clinical-implication-of-machine-learning-in-predicting-the-occurrence-"
+slug: 2020-international-19-clinical-implication-of-machine-learning-in-predicting-the-occurrence-
 title: Clinical Implication of Machine Learning in Predicting the Occurrence of Cardiovascular
   Disease Using Big Data (Nationwide Cohort Data in Korea)
 subtitle: IEEE Access. vol. 8, pp. 157643-157653, September 2020 [PDF]
-description: 'Authors: Gihun Joo, Yeongjin Song, Hyeonseung Im, Junbeom Park
-
-  Venue: IEEE Access. vol. 8, pp. 157643-157653, September 2020 [PDF]'
+authors:
+- Gihun Joo
+- Yeongjin Song
+- Hyeonseung Im
+- Junbeom Park
+venue: IEEE Access. vol. 8, pp. 157643-157653, September 2020 [PDF]
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2020-international-19-clinical-implication-of-machine-learning-in-predicting-the-occurrence-.svg
 tags:

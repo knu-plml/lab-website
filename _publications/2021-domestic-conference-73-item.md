@@ -1,10 +1,13 @@
 ---
-slug: "2021-domestic-conference-73-item"
+slug: 2021-domestic-conference-73-item
 title: 이미지 기반 식물 수형 측정 프로그램 구현
 subtitle: 한국정보과학회 2021 한국소프트웨어종합학술대회 (KSC), 2021.12 [GitHub]
-description: 'Authors: 주진호, 장경주, 정은주, 임현승
-
-  Venue: 한국정보과학회 2021 한국소프트웨어종합학술대회 (KSC), 2021.12 [GitHub]'
+authors:
+- 주진호
+- 장경주
+- 정은주
+- 임현승
+venue: 한국정보과학회 2021 한국소프트웨어종합학술대회 (KSC), 2021.12 [GitHub]
 link: https://pl.kangwon.ac.kr/publications/domestic/
 image: images/publications/2021-domestic-conference-73-item.svg
 tags:

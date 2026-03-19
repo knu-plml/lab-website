@@ -8,8 +8,6 @@
   {% assign publication = include %}
 {% endif %}
 
-{% assign authors = "" %}
-{% assign support = "" %}
 {% assign subtitle_clean = publication.subtitle
   | default: ""
   | replace: "[PDF]", ""
@@ -20,13 +18,12 @@
   | strip
 %}
 {% assign subtitle_parts = subtitle_clean | split: ". " %}
-{% assign publication_venue = subtitle_parts | first | strip %}
-{% if publication.description contains "Authors:" %}
-  {% assign authors = publication.description | split: "Venue:" | first | remove: "Authors:" | strip %}
+{% assign publication_venue = publication.venue | default: "" %}
+{% if publication_venue == "" %}
+  {% assign publication_venue = subtitle_parts | first | strip %}
 {% endif %}
-{% if publication.description contains "사사:" %}
-  {% assign support = publication.description | split: "사사:" | last | strip %}
-{% endif %}
+{% assign authors = publication.authors | default: "" %}
+{% assign support = publication.support | default: "" %}
 {% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
 {% assign subtitle_normalized = subtitle_clean | downcase %}
 {% assign publication_kind = "journal" %}
@@ -88,7 +85,13 @@
     {% if support != "" %}
       <div class="publication-card-meta">
         <strong>Support</strong>
-        <span>{{ support }}</span>
+        {% assign support_json = support | jsonify %}
+        {% assign support_json_prefix = support_json | slice: 0, 1 %}
+        {% if support_json_prefix == "[" %}
+          <span>{{ support | join: ", " }}</span>
+        {% else %}
+          <span>{{ support }}</span>
+        {% endif %}
       </div>
     {% endif %}
 

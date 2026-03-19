@@ -1,10 +1,12 @@
 ---
-slug: "2011-international-34-parallel-skyline-computation-on-multicore-architectures"
+slug: 2011-international-34-parallel-skyline-computation-on-multicore-architectures
 title: Parallel skyline computation on multicore architectures
 subtitle: Information Systems. 36(4): 808-823 (2011)
-description: 'Authors: Hyeonseung Im, Jonghyun Park, Sungwoo Park
-
-  Venue: Information Systems. 36(4): 808-823 (2011)'
+authors:
+- Hyeonseung Im
+- Jonghyun Park
+- Sungwoo Park
+venue: 'Information Systems. 36(4): 808-823 (2011)'
 link: https://pl.kangwon.ac.kr/publications/
 image: images/publications/2011-international-34-parallel-skyline-computation-on-multicore-architectures.svg
 tags:
