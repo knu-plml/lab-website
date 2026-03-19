@@ -73,8 +73,18 @@ components:
         required: true
       - name: icon
         label: Icon
-        type: string
+        type: select
         required: false
+        options:
+          values:
+            - value: fa-solid fa-file-lines
+              label: Document
+            - value: fa-brands fa-github
+              label: GitHub
+            - value: fa-solid fa-link
+              label: Link
+            - value: fa-solid fa-code
+              label: Code
 
   course_semester:
     label: Semester
@@ -363,6 +373,16 @@ content:
         required: false
         options:
           path: publications
+      - name: authors
+        label: Authors
+        type: string
+        required: false
+        list: true
+      - name: support
+        label: Support
+        type: string
+        required: false
+        list: true
       - name: tags
         label: Tags
         type: string
