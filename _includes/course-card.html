@@ -25,9 +25,8 @@
     {% endif %}
 
     {% if latest_semester and latest_semester.year and latest_semester.term %}
-      {% assign latest_term_name = latest_semester.term | split: "-" | last %}
-      {% assign latest_term_label = latest_term_name %}
-      {% case latest_term_name %}
+      {% assign latest_term_label = latest_semester.term %}
+      {% case latest_semester.term %}
         {% when "spring" %}
           {% assign latest_term_label = "봄" %}
         {% when "summer" %}

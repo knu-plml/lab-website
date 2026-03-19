@@ -7,5 +7,5 @@ tags:
 - graduate
 semesters:
 - year: 2017
-  term: 3-fall
+  term: fall
 ---

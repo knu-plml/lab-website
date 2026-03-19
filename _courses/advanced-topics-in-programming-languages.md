@@ -8,5 +8,5 @@ tags:
 - graduate-school-of-education
 semesters:
 - year: 2018
-  term: 4-winter
+  term: winter
 ---

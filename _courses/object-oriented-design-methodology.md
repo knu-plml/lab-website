@@ -7,5 +7,5 @@ tags:
 - graduate
 semesters:
 - year: 2017
-  term: 1-spring
+  term: spring
 ---

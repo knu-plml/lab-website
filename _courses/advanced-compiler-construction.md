@@ -7,7 +7,7 @@ tags:
 - graduate
 semesters:
 - year: 2023
-  term: 1-spring
+  term: spring
 - year: 2018
-  term: 3-fall
+  term: fall
 ---

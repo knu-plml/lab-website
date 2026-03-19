@@ -7,7 +7,7 @@ tags:
 - graduate
 semesters:
 - year: 2019
-  term: 3-fall
+  term: fall
 - year: 2016
-  term: 1-spring
+  term: spring
 ---

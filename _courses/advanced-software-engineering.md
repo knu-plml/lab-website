@@ -7,5 +7,5 @@ tags:
 - graduate
 semesters:
 - year: 2020
-  term: 1-spring
+  term: spring
 ---

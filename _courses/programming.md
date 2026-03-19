@@ -8,9 +8,9 @@ tags:
 - graduate-school-of-education
 semesters:
 - year: 2024
-  term: 4-winter
+  term: winter
 - year: 2023
-  term: 2-summer
+  term: summer
 - year: 2021
-  term: 4-winter
+  term: winter
 ---

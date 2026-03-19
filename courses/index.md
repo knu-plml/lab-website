@@ -74,9 +74,8 @@ nav:
 
         <div class="course-group-dates">
           {% for semester in semesters %}
-            {% assign term_name = semester.term | split: "-" | last %}
-            {% assign term_ko = term_name %}
-            {% case term_name %}
+            {% assign term_ko = semester.term %}
+            {% case semester.term %}
               {% when "spring" %}
                 {% assign term_ko = "봄" %}
               {% when "summer" %}

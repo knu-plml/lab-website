@@ -5,7 +5,7 @@ title_en: Programming Languages (SCSC)
 description: SCSC
 semesters:
 - year: 2016
-  term: 3-fall
+  term: fall
 - year: 2015
-  term: 3-fall
+  term: fall
 ---

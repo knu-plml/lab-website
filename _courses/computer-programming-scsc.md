@@ -5,7 +5,7 @@ title_en: Computer Programming (SCSC)
 description: SCSC
 semesters:
 - year: 2016
-  term: 1-spring
+  term: spring
 - year: 2015
-  term: 1-spring
+  term: spring
 ---

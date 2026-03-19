@@ -7,5 +7,5 @@ tags:
 - graduate
 semesters:
 - year: 2024
-  term: 3-fall
+  term: fall
 ---

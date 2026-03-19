@@ -7,29 +7,29 @@ tags:
 - online
 semesters:
 - year: 2024
-  term: 3-fall
+  term: fall
 - year: 2024
-  term: 1-spring
+  term: spring
 - year: 2023
-  term: 3-fall
+  term: fall
 - year: 2023
-  term: 1-spring
+  term: spring
 - year: 2022
-  term: 3-fall
+  term: fall
 - year: 2022
-  term: 1-spring
+  term: spring
 - year: 2022
-  term: 4-winter
+  term: winter
 - year: 2021
-  term: 3-fall
+  term: fall
 - year: 2021
-  term: 1-spring
+  term: spring
 - year: 2020
-  term: 3-fall
+  term: fall
 - year: 2020
-  term: 1-spring
+  term: spring
 - year: 2019
-  term: 3-fall
+  term: fall
 - year: 2019
-  term: 1-spring
+  term: spring
 ---

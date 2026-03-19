@@ -9,5 +9,5 @@ tags:
 - team-teaching
 semesters:
 - year: 2022
-  term: 2-summer
+  term: summer
 ---

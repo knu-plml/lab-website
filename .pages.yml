@@ -90,13 +90,13 @@ components:
         required: true
         options:
           values:
-            - value: 1-spring
+            - value: spring
               label: Spring
-            - value: 2-summer
+            - value: summer
               label: Summer
-            - value: 3-fall
+            - value: fall
               label: Fall
-            - value: 4-winter
+            - value: winter
               label: Winter
 
 content:

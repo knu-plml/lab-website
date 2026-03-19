@@ -8,7 +8,7 @@ tags:
 - team-teaching
 semesters:
 - year: 2024
-  term: 1-spring
+  term: spring
 - year: 2023
-  term: 1-spring
+  term: spring
 ---
