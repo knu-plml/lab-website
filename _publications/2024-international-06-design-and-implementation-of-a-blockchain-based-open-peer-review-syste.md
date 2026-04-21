@@ -2,6 +2,7 @@
 slug: 2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste
 title: Design and Implementation of a Blockchain-Based Open Peer Review System Using Hyperledger Fabric
 subtitle: 'Journal of Electrical Engineering & Technology. 19:3421–3428, July 2024'
+venue: 'Journal of Electrical Engineering & Technology'
 authors:
 - Suhwan Ji*
 - Seong-U Kim*

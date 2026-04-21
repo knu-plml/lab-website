@@ -2,6 +2,7 @@
 slug: 2016-international-24-precise-and-scalable-static-analysis-of-jquery-using-a-regular-express
 title: Precise and Scalable Static Analysis of jQuery using a Regular Expression Domain
 subtitle: 'DLS 2016: Dynamic Language Symposium. 1 Nov 2016 ACM SIGPLAN Notices – DLS ’16. Volume 52 Issue 2, February 2017, pp. 25-36'
+venue: 'DLS 2016: Dynamic Language Symposium'
 authors:
 - Changhee Park
 - Hyeonseung Im

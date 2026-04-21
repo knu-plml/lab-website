@@ -1,0 +1,53 @@
+{% assign value = include.value | default: "" %}
+{% assign value_json = value | jsonify %}
+{% assign value_json_prefix = value_json | slice: 0, 1 %}
+{% assign search_key = include.search_key | default: "" %}
+{% assign chip_class = include.chip_class | default: "publication-meta-chip" %}
+{% assign chip_tooltip_prefix = include.chip_tooltip_prefix | default: "" %}
+{% assign tab = include.tab | default: "" %}
+{% assign kind = include.kind | default: "" %}
+
+{% if value != "" %}
+  {% if value_json_prefix == "[" %}
+    <div class="publication-meta-list">
+      {% for item in value %}
+        {% assign item_text = item | to_s | strip %}
+        {% if item_text != "" %}
+          {% if search_key != "" %}
+            <a
+              href="{{ '/publications/' | relative_url }}?search=&quot;{{ search_key }}: {{ item_text }}&quot;{% if tab != "" %}&tab={{ tab }}{% endif %}{% if kind != "" %}&kind={{ kind }}{% endif %}"
+              class="{{ chip_class }}"
+              data-publication-search-link
+              data-search-group="{{ search_key }}"
+              {% if chip_tooltip_prefix != "" %}
+                data-tooltip="{{ chip_tooltip_prefix }} &quot;{{ item_text | xml_escape }}&quot;"
+              {% endif %}
+            >
+              {{ item_text }}
+            </a>
+          {% else %}
+            <span class="{{ chip_class }}">{{ item_text }}</span>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% else %}
+    {% if search_key != "" %}
+      <div class="publication-meta-list">
+        <a
+          href="{{ '/publications/' | relative_url }}?search=&quot;{{ search_key }}: {{ value }}&quot;{% if tab != "" %}&tab={{ tab }}{% endif %}{% if kind != "" %}&kind={{ kind }}{% endif %}"
+          class="{{ chip_class }}"
+          data-publication-search-link
+          data-search-group="{{ search_key }}"
+          {% if chip_tooltip_prefix != "" %}
+            data-tooltip="{{ chip_tooltip_prefix }} &quot;{{ value | xml_escape }}&quot;"
+          {% endif %}
+        >
+          {{ value }}
+        </a>
+      </div>
+    {% else %}
+      <p class="publication-meta-text">{{ value }}</p>
+    {% endif %}
+  {% endif %}
+{% endif %}

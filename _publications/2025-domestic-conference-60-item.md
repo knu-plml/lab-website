@@ -2,6 +2,7 @@
 slug: 2025-domestic-conference-60-item
 title: 논리적 추론 모델을 활용한 템플릿 기반 프로그램 자동 수정
 subtitle: '한국정보과학회 2025 한국소프트웨어종합학술대회 (KSC), 2025.12'
+venue: '한국정보과학회 2025 한국소프트웨어종합학술대회 (KSC)'
 authors:
 - 이창섭
 - 지수환

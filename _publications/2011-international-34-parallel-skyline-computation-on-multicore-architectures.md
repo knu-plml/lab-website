@@ -2,6 +2,7 @@
 slug: 2011-international-34-parallel-skyline-computation-on-multicore-architectures
 title: Parallel skyline computation on multicore architectures
 subtitle: 'Information Systems. 36(4): 808-823 (2011)'
+venue: 'Information Systems'
 authors:
 - Hyeonseung Im
 - Jonghyun Park

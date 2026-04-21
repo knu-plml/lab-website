@@ -9,25 +9,35 @@
 {% endif %}
 
 {% assign subtitle_clean = publication.subtitle | default: "" | strip %}
-{% assign subtitle_parts = subtitle_clean | split: ". " %}
-{% assign publication_venue = subtitle_parts | first | strip %}
+{% assign publication_venue = publication.venue | default: subtitle_clean | strip %}
 {% assign authors = publication.authors | default: "" %}
+{% assign awards = publication.awards | default: "" %}
 {% assign support = publication.support | default: "" %}
 {% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
-{% assign subtitle_normalized = subtitle_clean | downcase %}
+{% assign visible_tags = "" | split: "," %}
+{% assign publication_tab = "international" %}
+{% unless publication.tags contains "international" %}
+  {% assign publication_tab = "domestic" %}
+{% endunless %}
+{% for tag in publication.tags %}
+  {% unless hidden_tags contains tag %}
+    {% assign visible_tags = visible_tags | push: tag %}
+  {% endunless %}
+{% endfor %}
+{% assign publication_filter_text = publication_venue | default: subtitle_clean | strip | downcase %}
 {% assign publication_kind = "journal" %}
 {% if publication.tags contains "domestic-conference" %}
   {% assign publication_kind = "conference" %}
 {% elsif publication.tags contains "domestic-journal" %}
   {% assign publication_kind = "journal" %}
-{% elsif subtitle_normalized contains "conference"
-  or subtitle_normalized contains "symposium"
-  or subtitle_normalized contains "workshop"
-  or subtitle_normalized contains "proceedings"
-  or subtitle_normalized contains "congress"
-  or subtitle_normalized contains "forum"
-  or subtitle_normalized contains "colloquium"
-  or subtitle_normalized contains "meeting"
+{% elsif publication_filter_text contains "conference"
+  or publication_filter_text contains "symposium"
+  or publication_filter_text contains "workshop"
+  or publication_filter_text contains "proceedings"
+  or publication_filter_text contains "congress"
+  or publication_filter_text contains "forum"
+  or publication_filter_text contains "colloquium"
+  or publication_filter_text contains "meeting"
 %}
   {% assign publication_kind = "conference" %}
 {% endif %}
@@ -71,16 +81,42 @@
       </div>
     {% endif %}
 
+    {% if awards != "" %}
+      <div class="publication-card-meta">
+        <strong>Awards</strong>
+        {% include publication-meta-value.html value=awards %}
+      </div>
+    {% endif %}
+
     {% if support != "" %}
       <div class="publication-card-meta">
         <strong>Support</strong>
-        {% assign support_json = support | jsonify %}
-        {% assign support_json_prefix = support_json | slice: 0, 1 %}
-        {% if support_json_prefix == "[" %}
-          <span>{{ support | join: ", " }}</span>
-        {% else %}
-          <span>{{ support }}</span>
-        {% endif %}
+        {% include publication-meta-value.html
+          value=support
+          search_key="support"
+          chip_class="publication-meta-chip publication-support-chip"
+          chip_tooltip_prefix="Show items with the support"
+          tab=publication_tab
+          kind=publication_kind
+        %}
+      </div>
+    {% endif %}
+
+    {% if visible_tags.size > 0 %}
+      <div class="publication-card-meta">
+        <strong>Tags</strong>
+        <div class="publication-meta-list">
+          {% for tag in visible_tags %}
+            <a
+              href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
+              class="publication-card-tag tag"
+              data-publication-search-link
+              data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
+            >
+              {{ tag | downcase }}
+            </a>
+          {% endfor %}
+        </div>
       </div>
     {% endif %}
 
@@ -98,18 +134,5 @@
       </div>
     {% endif %}
 
-    <div class="publication-card-tags tags">
-      {% for tag in publication.tags %}
-        {% unless hidden_tags contains tag %}
-          <a
-            href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;"
-            class="publication-card-tag tag"
-            data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
-          >
-            {{ tag | downcase }}
-          </a>
-        {% endunless %}
-      {% endfor %}
-    </div>
   </div>
 </div>

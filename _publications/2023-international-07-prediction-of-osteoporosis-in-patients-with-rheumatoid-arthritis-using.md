@@ -2,6 +2,7 @@
 slug: 2023-international-07-prediction-of-osteoporosis-in-patients-with-rheumatoid-arthritis-using
 title: Prediction of osteoporosis in patients with rheumatoid arthritis using machine learning
 subtitle: 'Scientific Reports. 13:21800, December 2023'
+venue: 'Scientific Reports'
 authors:
 - Chaewon Lee
 - Gihun Joo

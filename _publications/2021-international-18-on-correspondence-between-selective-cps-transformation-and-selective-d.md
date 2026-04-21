@@ -2,6 +2,7 @@
 slug: 2021-international-18-on-correspondence-between-selective-cps-transformation-and-selective-d
 title: On Correspondence between Selective CPS Transformation and Selective Double Negation Translation
 subtitle: 'Mathematics. 9(4): 385 (2021)'
+venue: 'Mathematics'
 authors:
 - Hyeonseung Im
 image: images/publications/2021-international-18-on-correspondence-between-selective-cps-transformation-and-selective-d.svg

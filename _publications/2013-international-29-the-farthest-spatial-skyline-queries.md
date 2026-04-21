@@ -2,6 +2,7 @@
 slug: 2013-international-29-the-farthest-spatial-skyline-queries
 title: The Farthest Spatial Skyline Queries
 subtitle: 'Information Systems. 38(3): 286-301 (2013)'
+venue: 'Information Systems'
 authors:
 - Gae-won You
 - Mu-Woong Lee

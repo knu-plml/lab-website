@@ -2,6 +2,7 @@
 slug: 2022-international-11-anisotropic-spiralnet-for-3d-shape-completion-and-denoising
 title: Anisotropic SpiralNet for 3D Shape Completion and Denoising
 subtitle: 'Sensors. 22(17): 6457 (2022)'
+venue: 'Sensors'
 authors:
 - Seong Uk Kim
 - Jihyun Roh

@@ -2,6 +2,7 @@
 slug: 2019-domestic-journal-51-item
 title: 딥 러닝 기반 휴먼 모션 디노이징
 subtitle: '전기전자학회논문지, 23(4), pp. 180-186, 2019.12'
+venue: '전기전자학회논문지'
 authors:
 - 김성욱
 - 임현승

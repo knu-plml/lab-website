@@ -1,7 +1,7 @@
 /*
   filters elements on page based on url or search box.
-  syntax: term1 term2 "full phrase 1" "full phrase 2" "tag: tag 1"
-  match if: all terms AND at least one phrase AND at least one tag
+  syntax: term1 term2 "full phrase 1" "full phrase 2" "tag: tag 1" "support: grant"
+  match if: all terms AND at least one phrase AND at least one tag AND at least one support
 */
 {
   // elements to filter
@@ -12,6 +12,10 @@
   const infoBoxSelector = ".search-info";
   // tags element
   const tagSelector = ".tag";
+  const quotedQueryPrefixes = {
+    "tag:": "tags",
+    "support:": "supports",
+  };
 
   // split search query into terms, phrases, and tags
   const splitQuery = (query) => {
@@ -22,18 +26,28 @@
     const terms = [];
     const phrases = [];
     const tags = [];
+    const supports = [];
 
     // put parts into bins
     for (let part of parts) {
       if (part.startsWith('"')) {
         part = part.replaceAll('"', "").trim();
-        if (part.startsWith("tag:"))
-          tags.push(normalizeTag(part.replace(/tag:\s*/, "")));
-        else phrases.push(part.toLowerCase());
+        const matchedPrefix = Object.keys(quotedQueryPrefixes).find((prefix) =>
+          part.startsWith(prefix)
+        );
+
+        if (matchedPrefix) {
+          const target = quotedQueryPrefixes[matchedPrefix];
+          ({ tags, supports }[target]).push(
+            normalizeTag(part.replace(new RegExp(`${matchedPrefix}\\s*`), ""))
+          );
+        } else {
+          phrases.push(part.toLowerCase());
+        }
       } else terms.push(part.toLowerCase());
     }
 
-    return { terms, phrases, tags };
+    return { terms, phrases, tags, supports };
   };
 
   // normalize tag string for comparison
@@ -46,10 +60,17 @@
       .map((element) => element.dataset[attr])
       .join(" ");
 
+  const getNormalizedTextMatches = (element, selector) =>
+    [...element.querySelectorAll(selector)].map((item) => normalizeTag(item.innerText));
+
   // determine if element should show up in results based on query
-  const elementMatches = (element, { terms, phrases, tags }) => {
+  const elementMatches = (element, { terms, phrases, tags, supports }) => {
     // tag elements within element
-    const tagElements = [...element.querySelectorAll(".tag")];
+    const tagMatches = getNormalizedTextMatches(element, ".tag");
+    const supportMatches = getNormalizedTextMatches(
+      element,
+      '[data-search-group="support"]'
+    );
 
     // check if text content exists in element
     const hasText = (string) =>
@@ -61,14 +82,15 @@
         .toLowerCase()
         .includes(string);
     // check if text matches a tag in element
-    const hasTag = (string) =>
-      tagElements.some((tag) => normalizeTag(tag.innerText) === string);
+    const hasTag = (string) => tagMatches.includes(string);
+    const hasSupport = (string) => supportMatches.includes(string);
 
     // match logic
     return (
       (terms.every(hasText) || !terms.length) &&
       (phrases.some(hasText) || !phrases.length) &&
-      (tags.some(hasTag) || !tags.length)
+      (tags.some(hasTag) || !tags.length) &&
+      (supports.some(hasSupport) || !supports.length)
     );
   };
 

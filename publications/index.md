@@ -18,6 +18,7 @@ nav:
     <a
       href="?search=&quot;tag: {{ item.tag }}&quot;"
       class="tag"
+      data-publication-search-link
       data-tooltip="Filter publications by {{ item.label }}"
     >
       {{ item.label }}

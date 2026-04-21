@@ -2,6 +2,7 @@
 slug: 2025-international-02-neural-methods-for-programming-a-comprehensive-survey-and-future-direc
 title: "Neural Methods for Programming: A Comprehensive Survey and Future Directions"
 subtitle: Applied Sciences. 2025, 15(22), 12150
+venue: 'Applied Sciences'
 authors:
   - Gebremedhin Gebreslassie Maru
   - Sanghwa Lee

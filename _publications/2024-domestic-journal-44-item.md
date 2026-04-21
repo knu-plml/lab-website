@@ -2,6 +2,7 @@
 slug: 2024-domestic-journal-44-item
 title: 단일 리드 심전도 데이터를 이용한 심혈관 질환 예측
 subtitle: '정보과학회논문지, 제51권 제10호, pp. 928-934, 2024.10'
+venue: '정보과학회논문지'
 authors:
 - 박채윤
 - 주기훈

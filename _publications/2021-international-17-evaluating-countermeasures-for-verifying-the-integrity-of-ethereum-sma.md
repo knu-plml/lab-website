@@ -2,6 +2,7 @@
 slug: 2021-international-17-evaluating-countermeasures-for-verifying-the-integrity-of-ethereum-sma
 title: Evaluating countermeasures for verifying the integrity of Ethereum smart contract applications
 subtitle: 'IEEE Access. vol. 9, pp. 90029-90042, June 2021'
+venue: 'IEEE Access'
 authors:
 - Suhwan Ji
 - Dohyung Kim

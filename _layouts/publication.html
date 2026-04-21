@@ -3,12 +3,33 @@ layout: default
 ---
 
 {% assign subtitle_clean = page.subtitle | default: "" | strip %}
-{% assign subtitle_parts = subtitle_clean | split: ". " %}
-{% assign publication_venue = subtitle_parts | first | strip %}
+{% assign publication_summary_text = subtitle_clean | default: page.venue | default: "" | strip %}
 {% assign publication_year = page.date | date: "%Y" %}
 {% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
+{% assign publication_tab = "international" %}
+{% unless page.tags contains "international" %}
+  {% assign publication_tab = "domestic" %}
+{% endunless %}
+{% assign publication_kind = "journal" %}
+{% assign publication_filter_text = page.venue | default: subtitle_clean | default: "" | strip | downcase %}
+{% if page.tags contains "domestic-conference" %}
+  {% assign publication_kind = "conference" %}
+{% elsif page.tags contains "domestic-journal" %}
+  {% assign publication_kind = "journal" %}
+{% elsif publication_filter_text contains "conference"
+  or publication_filter_text contains "symposium"
+  or publication_filter_text contains "workshop"
+  or publication_filter_text contains "proceedings"
+  or publication_filter_text contains "congress"
+  or publication_filter_text contains "forum"
+  or publication_filter_text contains "colloquium"
+  or publication_filter_text contains "meeting"
+%}
+  {% assign publication_kind = "conference" %}
+{% endif %}
 
 {% assign authors = page.authors | default: "" %}
+{% assign awards = page.awards | default: "" %}
 {% assign support = page.support | default: "" %}
 {% assign author_count = 0 %}
 {% assign authors_json = authors | jsonify %}
@@ -38,7 +59,7 @@ layout: default
       <div class="entry-eyebrow">Publication</div>
       <h1 class="entry-title">{{ page.title }}</h1>
 
-      {% if page.date or author_count > 0 or publication_venue != "" %}
+      {% if page.date or author_count > 0 or publication_summary_text != "" %}
         <div class="publication-summary-meta">
           {% if page.date %}
             <span>{{ publication_year }}</span>
@@ -46,8 +67,8 @@ layout: default
           {% if author_count > 0 %}
             <span>{{ author_count }} authors</span>
           {% endif %}
-          {% if publication_venue != "" %}
-            <span>{{ publication_venue }}</span>
+          {% if publication_summary_text != "" %}
+            <span>{{ publication_summary_text }}</span>
           {% endif %}
         </div>
       {% endif %}
@@ -56,6 +77,47 @@ layout: default
         <div class="publication-hero-block">
           <div class="publication-block-label">Authors</div>
           {% include publication-team.html authors=authors %}
+        </div>
+      {% endif %}
+
+      {% if awards != "" %}
+        <div class="publication-hero-block">
+          <div class="publication-block-label">Awards</div>
+          {% include publication-meta-value.html value=awards %}
+        </div>
+      {% endif %}
+
+      {% if support != "" %}
+        <div class="publication-hero-block">
+          <div class="publication-block-label">Support</div>
+          {% include publication-meta-value.html
+            value=support
+            search_key="support"
+            chip_class="publication-meta-chip publication-support-chip"
+            chip_tooltip_prefix="Show items with the support"
+            tab=publication_tab
+            kind=publication_kind
+          %}
+        </div>
+      {% endif %}
+
+      {% if page.tags %}
+        <div class="publication-hero-block">
+          <div class="publication-block-label">Tags</div>
+          <div class="tags">
+            {% for tag in page.tags %}
+              {% unless hidden_tags contains tag %}
+                <a
+                  href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
+                  class="tag"
+                  data-publication-search-link
+                  data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
+                >
+                  {{ tag | downcase }}
+                </a>
+              {% endunless %}
+            {% endfor %}
+          </div>
         </div>
       {% endif %}
 
@@ -70,48 +132,16 @@ layout: default
           {% endfor %}
         </div>
       {% endif %}
-
-      {% if page.tags %}
-        <div class="publication-hero-block">
-          <div class="publication-block-label">Topics</div>
-          <div class="tags">
-            {% for tag in page.tags %}
-              {% unless hidden_tags contains tag %}
-                <a
-                  href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;"
-                  class="tag"
-                  data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
-                >
-                  {{ tag | downcase }}
-                </a>
-              {% endunless %}
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
     </div>
   </div>
 
   {% assign has_abstract = page.abstract | to_s | strip %}
-  {% if has_abstract != "" or support != "" %}
+  {% if has_abstract != "" %}
     <div class="entry-body publication-body">
       {% if has_abstract != "" %}
         <section class="entry-section publication-section publication-abstract">
           <h2>Abstract</h2>
           {{ page.abstract | markdownify }}
-        </section>
-      {% endif %}
-
-      {% if support != "" %}
-        <section class="entry-section publication-section publication-section-plain">
-          <h2>Support</h2>
-          {% assign support_json = support | jsonify %}
-          {% assign support_json_prefix = support_json | slice: 0, 1 %}
-          {% if support_json_prefix == "[" %}
-            <p>{{ support | join: ", " }}</p>
-          {% else %}
-            <p>{{ support }}</p>
-          {% endif %}
         </section>
       {% endif %}
     </div>

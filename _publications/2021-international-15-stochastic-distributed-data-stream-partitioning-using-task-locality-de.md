@@ -2,6 +2,7 @@
 slug: 2021-international-15-stochastic-distributed-data-stream-partitioning-using-task-locality-de
 title: 'Stochastic distributed data stream partitioning using task locality: design, implementation, and optimization'
 subtitle: 'The Journal of Supercomputing. vol. 77, pp. 11353–11389, October 2021  (Published 24 March 2021)'
+venue: 'The Journal of Supercomputing'
 authors:
 - Siwoon Son
 - Hyeonseung Im

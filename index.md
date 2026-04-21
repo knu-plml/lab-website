@@ -104,20 +104,7 @@ show-subtitle: false
   </div>
   <div class="home-research-publications">
     {% for publication in featured_publications limit:4 %}
-      {% capture subtitle_clean -%}
-        {{ publication.subtitle | default: "" | strip }}
-      {%- endcapture %}
-      {% assign publication_year = publication.date | date: "%Y" %}
-      {% assign first_sentence = subtitle_clean | split: ". " | first | strip %}
-      {% assign comma_prefix = subtitle_clean | split: ", " | first | strip %}
-      {% if comma_prefix contains publication_year %}
-        {% assign publication_venue = comma_prefix | replace: publication_year, "" | replace: "  ", " " | strip %}
-      {% elsif first_sentence contains publication_year %}
-        {% assign publication_venue = first_sentence | replace: publication_year, "" | replace: "  ", " " | strip %}
-      {% else %}
-        {% assign publication_venue = first_sentence %}
-      {% endif %}
-      {% assign publication_venue = publication_venue | replace: " .", "." | replace: " ,", "," | strip %}
+      {% assign publication_venue = publication.venue | default: publication.subtitle | default: "" | strip %}
       <a class="home-research-publication reveal-on-scroll" href="{{ publication.url | relative_url }}">
         <div class="home-research-publication-image">
           <img

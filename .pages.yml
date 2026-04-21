@@ -342,7 +342,7 @@ content:
     filename: "{slug}.md"
     view:
       primary: title
-      fields: [title, date, "tags[0]"]
+      fields: [title, venue, date, "tags[0]"]
       sort: [date, title]
       default:
         sort: date
@@ -361,6 +361,12 @@ content:
         label: Subtitle
         type: string
         required: true
+        description: "Full citation text shown on the publication detail page."
+      - name: venue
+        label: Venue
+        type: string
+        required: true
+        description: "Short venue name shown on publication cards and the home page."
       - name: abstract
         label: Abstract
         type: code
@@ -375,6 +381,11 @@ content:
           path: publications
       - name: authors
         label: Authors
+        type: string
+        required: false
+        list: true
+      - name: awards
+        label: Awards
         type: string
         required: false
         list: true

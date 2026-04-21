@@ -1,4 +1,5 @@
 const publicationTabGroups = document.querySelectorAll("[data-publication-tabs]");
+const publicationSearchLinkSelector = "[data-publication-search-link]";
 
 for (const group of publicationTabGroups) {
   const tabs = Array.from(group.querySelectorAll("[data-tab-target]"));
@@ -7,6 +8,34 @@ for (const group of publicationTabGroups) {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeTarget = null;
   let activeKind = "all";
+  const url = new URL(window.location.href);
+  const updateStateInUrl = ({ target = activeTarget, kind = activeKind } = {}) => {
+    const params = new URLSearchParams(window.location.search);
+    if (target) {
+      params.set("tab", target);
+    }
+    if (kind) {
+      params.set("kind", kind);
+    }
+    url.search = params.toString();
+    window.history.replaceState(null, "", url);
+  };
+  const getPanelByTarget = (target = activeTarget) =>
+    panels.find((panel) => panel.dataset.tabPanel === target);
+  const syncSearchLinks = () => {
+    const links = document.querySelectorAll(publicationSearchLinkSelector);
+
+    for (const link of links) {
+      const linkUrl = new URL(link.href, window.location.origin);
+      if (activeTarget) {
+        linkUrl.searchParams.set("tab", activeTarget);
+      }
+      if (activeKind) {
+        linkUrl.searchParams.set("kind", activeKind);
+      }
+      link.href = linkUrl.pathname + linkUrl.search + linkUrl.hash;
+    }
+  };
 
   const animatePanel = (panel, className) => {
     if (!panel || reduceMotion.matches) {
@@ -40,7 +69,7 @@ for (const group of publicationTabGroups) {
 
   const syncTabCounts = () => {
     for (const tab of tabs) {
-      const panel = panels.find((item) => item.dataset.tabPanel === tab.dataset.tabTarget);
+      const panel = getPanelByTarget(tab.dataset.tabTarget);
       const count = countVisiblePublications(panel);
       const countNode = tab.querySelector("[data-tab-count]");
 
@@ -110,8 +139,7 @@ for (const group of publicationTabGroups) {
   const activateTab = (target, { animate = true } = {}) => {
     if (!target || target === activeTarget) {
       if (target === activeTarget) {
-        const activePanel = panels.find((panel) => panel.dataset.tabPanel === target);
-        applyKindFilter(activePanel);
+        applyKindFilter(getPanelByTarget(target));
       }
       return;
     }
@@ -142,7 +170,9 @@ for (const group of publicationTabGroups) {
     }
 
     activeTarget = target;
-    applyKindFilter(panels.find((panel) => panel.dataset.tabPanel === target));
+    updateStateInUrl({ target });
+    syncSearchLinks();
+    applyKindFilter(getPanelByTarget(target));
   };
 
   const activateKind = (kind) => {
@@ -151,8 +181,10 @@ for (const group of publicationTabGroups) {
     }
 
     activeKind = kind;
+    updateStateInUrl({ kind });
     syncKindFilters();
-    const activePanel = panels.find((panel) => panel.dataset.tabPanel === activeTarget);
+    syncSearchLinks();
+    const activePanel = getPanelByTarget();
 
     if (!activePanel) {
       return;
@@ -199,9 +231,16 @@ for (const group of publicationTabGroups) {
     });
   }
 
-  const initialTab = tabs.find((tab) => tab.classList.contains("is-active")) || tabs[0];
+  const tabFromUrl = url.searchParams.get("tab");
+  const kindFromUrl = url.searchParams.get("kind");
+  const initialTab =
+    tabs.find((tab) => tab.dataset.tabTarget === tabFromUrl) ||
+    tabs.find((tab) => tab.classList.contains("is-active")) ||
+    tabs[0];
   const initialKindFilter =
-    kindFilters.find((filter) => filter.classList.contains("is-active")) || kindFilters[0];
+    kindFilters.find((filter) => filter.dataset.kindFilter === kindFromUrl) ||
+    kindFilters.find((filter) => filter.classList.contains("is-active")) ||
+    kindFilters[0];
 
   if (initialKindFilter) {
     activeKind = initialKindFilter.dataset.kindFilter;
@@ -213,7 +252,6 @@ for (const group of publicationTabGroups) {
   }
 
   window.addEventListener("search:updated", () => {
-    const activePanel = panels.find((panel) => panel.dataset.tabPanel === activeTarget);
-    applyKindFilter(activePanel);
+    applyKindFilter(getPanelByTarget());
   });
 }

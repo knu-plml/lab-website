@@ -2,6 +2,7 @@
 slug: 2011-international-35-a-calculus-for-hardware-description
 title: A calculus for hardware description
 subtitle: 'Journal of Functional Programming. 21(1): 21-58 (2011)'
+venue: 'Journal of Functional Programming'
 authors:
 - Sungwoo Park
 - Hyeonseung Im
