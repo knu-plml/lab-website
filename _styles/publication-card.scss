@@ -42,6 +42,16 @@
   font-family: var(--heading);
   font-size: 1.34rem;
   font-weight: var(--semi-bold);
+  text-decoration: none;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.publication-card-title:hover,
+.publication-card-title:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
 }
 
 .publication-card-venue {

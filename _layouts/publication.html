@@ -31,17 +31,6 @@ layout: default
 {% assign authors = page.authors | default: "" %}
 {% assign awards = page.awards | default: "" %}
 {% assign support = page.support | default: "" %}
-{% assign author_count = 0 %}
-{% assign authors_json = authors | jsonify %}
-{% assign authors_json_prefix = authors_json | slice: 0, 1 %}
-{% if authors != "" %}
-  {% if authors_json_prefix == "[" %}
-    {% assign author_count = authors | size %}
-  {% else %}
-    {% assign author_count = authors | split: "," | size %}
-  {% endif %}
-{% endif %}
-
 <article class="entry-page entry-page-publication">
   <div class="entry-hero publication-hero">
     {% if page.image %}
@@ -59,17 +48,9 @@ layout: default
       <div class="entry-eyebrow">Publication</div>
       <h1 class="entry-title">{{ page.title }}</h1>
 
-      {% if page.date or author_count > 0 or publication_summary_text != "" %}
+      {% if publication_summary_text != "" %}
         <div class="publication-summary-meta">
-          {% if page.date %}
-            <span>{{ publication_year }}</span>
-          {% endif %}
-          {% if author_count > 0 %}
-            <span>{{ author_count }} authors</span>
-          {% endif %}
-          {% if publication_summary_text != "" %}
-            <span>{{ publication_summary_text }}</span>
-          {% endif %}
+          <span class="publication-summary-subtitle">{{ publication_summary_text }}</span>
         </div>
       {% endif %}
 
@@ -128,6 +109,7 @@ layout: default
               icon=button.icon
               text=button.text
               link=button.link
+              style="bare"
             %}
           {% endfor %}
         </div>
