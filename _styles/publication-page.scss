@@ -8,22 +8,22 @@
 .publication-hero {
   grid-template-columns: minmax(240px, 330px) minmax(0, 1fr);
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--background-alt) 88%, white 12%), var(--background) 58%),
-    var(--background);
+    linear-gradient(135deg, var(--surface-raised) 0%, var(--surface) 58%),
+    var(--surface);
 }
 
 .publication-cover {
   padding: 20px;
   background:
-    radial-gradient(circle at top left, color-mix(in srgb, var(--primary) 7%, white 93%), transparent 62%),
-    color-mix(in srgb, var(--background-alt) 82%, white 18%);
-  border-right: 1px solid color-mix(in srgb, var(--text) 7%, transparent);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--primary) 10%, transparent) 0%, transparent 62%),
+    var(--surface-raised);
+  border-right: 1px solid var(--surface-border);
 }
 
 .publication-cover img {
   border-radius: calc(var(--rounded) - 10px);
   background: white;
-  box-shadow: 0 18px 42px color-mix(in srgb, var(--text) 12%, transparent);
+  box-shadow: 0 18px 42px color-mix(in srgb, black 18%, transparent);
 }
 
 .publication-summary {
@@ -83,8 +83,8 @@
 }
 
 .publication-summary .tag {
-  border-color: color-mix(in srgb, var(--primary) 10%, var(--light-gray) 90%);
-  background: color-mix(in srgb, var(--background-alt) 70%, white 30%);
+  border-color: var(--surface-border);
+  background: var(--surface-raised);
 }
 
 .publication-body {
@@ -100,7 +100,7 @@
 .publication-section + .publication-section {
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  border-top: 1px solid var(--surface-border);
 }
 
 .publication-section + .publication-section.publication-section-plain {
@@ -125,7 +125,7 @@
   .publication-cover {
     padding: 16px;
     border-right: 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--text) 7%, transparent);
+    border-bottom: 1px solid var(--surface-border);
   }
 
   .publication-summary {

@@ -37,14 +37,10 @@ $stack: 860px;
 .home-hero-panel {
   display: block;
   padding: 40px;
-  border: 1px solid color-mix(in srgb, var(--light-gray) 72%, white 28%);
+  border: 1px solid var(--surface-border);
   border-radius: 32px;
   background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--background) 78%, white 22%) 0%,
-      color-mix(in srgb, var(--background) 92%, white 8%) 100%
-    );
+    linear-gradient(180deg, var(--surface) 0%, var(--surface-raised) 100%);
   box-shadow: var(--shadow);
   overflow: hidden;
   position: relative;
@@ -55,7 +51,7 @@ $stack: 860px;
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.55) 0, transparent 34%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18) 0, transparent 34%),
     linear-gradient(135deg, color-mix(in srgb, var(--dark-gray) 3%, transparent) 0%, transparent 62%);
   pointer-events: none;
 }
@@ -75,12 +71,12 @@ $stack: 860px;
 
 .home-hero-title span {
   display: block;
-  color: #334a78;
+  color: color-mix(in srgb, var(--primary) 82%, var(--text) 18%);
 }
 
 .home-hero-lead {
   margin: 22px 0 0;
-  color: #43506b;
+  color: var(--gray);
   font-size: 1.12rem;
   line-height: 1.8;
 }
@@ -108,26 +104,34 @@ $stack: 860px;
   display: inline-flex;
   align-items: center;
   padding: 7px 12px;
-  border: 1px solid color-mix(in srgb, var(--light-gray) 76%, white 24%);
+  border: 1px solid var(--surface-border);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--background) 80%, white 20%);
-  color: #6a7892;
+  background: var(--surface-raised);
+  color: var(--gray);
   font-family: var(--body);
   font-size: 0.85rem;
   text-decoration: none;
 }
 
 .home-hero-panel .home-section-label {
-  color: #6b7a95;
+  color: color-mix(in srgb, var(--primary) 54%, var(--gray) 46%);
 }
 
 .home-hero-panel .button:not([data-style="bare"]) {
-  background: linear-gradient(135deg, #394c73 0%, #455982 100%);
-  border-color: rgba(51, 74, 120, 0.16);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 74%, var(--surface-contrast) 26%) 0%,
+    color-mix(in srgb, var(--primary) 66%, var(--surface-raised) 34%) 100%
+  );
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .home-hero-panel .button:not([data-style="bare"]):hover {
-  background: linear-gradient(135deg, #314465 0%, #3d5178 100%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 68%, var(--surface-contrast) 32%) 0%,
+    color-mix(in srgb, var(--primary) 60%, var(--surface-raised) 40%) 100%
+  );
 }
 
 .home-block {
@@ -173,9 +177,9 @@ $stack: 860px;
   display: grid;
   gap: 10px;
   padding: 24px;
-  border: 1px solid color-mix(in srgb, var(--light-gray) 76%, white 24%);
+  border: 1px solid var(--surface-border);
   border-radius: 24px;
-  background: color-mix(in srgb, var(--background) 82%, white 18%);
+  background: var(--surface);
   box-shadow: var(--shadow);
   word-break: keep-all;
   overflow-wrap: anywhere;
@@ -185,9 +189,9 @@ $stack: 860px;
   overflow: hidden;
   min-height: 156px;
   margin: -24px -24px 4px;
-  border-bottom: 1px solid color-mix(in srgb, var(--light-gray) 76%, white 24%);
+  border-bottom: 1px solid var(--surface-border);
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--background-alt) 70%, white 30%) 0%, color-mix(in srgb, var(--background) 92%, white 8%) 100%);
+    linear-gradient(180deg, var(--background-alt) 0%, var(--surface) 100%);
 }
 
 .home-research-image img {
@@ -220,7 +224,7 @@ $stack: 860px;
 .home-research-kicker,
 .home-research-publication span {
   margin: 0;
-  color: #6b7a95;
+  color: color-mix(in srgb, var(--primary) 54%, var(--gray) 46%);
   font-family: var(--code);
   font-size: 0.78rem;
   font-weight: var(--semi-bold);
@@ -241,9 +245,9 @@ $stack: 860px;
 .home-research-publication-image {
   overflow: hidden;
   margin: -24px -24px 4px;
-  border-bottom: 1px solid color-mix(in srgb, var(--light-gray) 76%, white 24%);
+  border-bottom: 1px solid var(--surface-border);
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--background-alt) 70%, white 30%) 0%, color-mix(in srgb, var(--background) 92%, white 8%) 100%);
+    linear-gradient(180deg, var(--background-alt) 0%, var(--surface) 100%);
 }
 
 .home-research-publication-image img {
@@ -285,9 +289,9 @@ $stack: 860px;
   gap: 10px;
   min-height: 190px;
   padding: 22px;
-  border: 1px solid color-mix(in srgb, var(--light-gray) 76%, white 24%);
+  border: 1px solid var(--surface-border);
   border-radius: 24px;
-  background: var(--background);
+  background: var(--surface);
   color: var(--text);
   text-decoration: none;
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
@@ -328,21 +332,21 @@ $stack: 860px;
 }
 
 [data-dark="true"] .home-hero-panel {
-  border-color: color-mix(in srgb, var(--light-gray) 86%, white 14%);
+  border-color: rgba(255, 255, 255, 0.1);
   background:
     linear-gradient(
       135deg,
-      color-mix(in srgb, var(--background-alt) 90%, #1c2942 10%) 0%,
-      color-mix(in srgb, var(--background) 84%, #17243b 16%) 52%,
-      color-mix(in srgb, var(--background-alt) 88%, #253756 12%) 100%
+      color-mix(in srgb, var(--surface) 94%, #111214 6%) 0%,
+      color-mix(in srgb, var(--surface-raised) 88%, #15171a 12%) 52%,
+      color-mix(in srgb, var(--surface) 90%, #17191d 10%) 100%
     );
 }
 
 [data-dark="true"] .home-hero-panel::before {
   background:
-    radial-gradient(circle at top right, rgba(147, 174, 227, 0.18) 0, transparent 32%),
-    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.07) 0, transparent 26%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+    radial-gradient(circle at top right, rgba(169, 184, 214, 0.12) 0, transparent 32%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.04) 0, transparent 26%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
 }
 
 [data-dark="true"] .home-hero-title {
@@ -350,50 +354,50 @@ $stack: 860px;
 }
 
 [data-dark="true"] .home-hero-title span {
-  color: #6f95dc;
+  color: #7ea1f0;
 }
 
 [data-dark="true"] .home-hero-lead {
-  color: #c1cce0;
+  color: #d0d5dd;
 }
 
 [data-dark="true"] .home-hero-panel .home-section-label {
-  color: #8ea6d3;
+  color: #9db2dc;
 }
 
 [data-dark="true"] .home-hero-chips span,
 [data-dark="true"] .home-inline-links a {
-  border-color: color-mix(in srgb, var(--light-gray) 88%, white 12%);
-  background: color-mix(in srgb, var(--background-alt) 82%, white 18%);
-  color: #bfd0ef;
+  border-color: rgba(255, 255, 255, 0.08);
+  background: var(--surface-contrast);
+  color: #d4def4;
 }
 
 [data-dark="true"] .home-hero-panel .button:not([data-style="bare"]) {
-  background: linear-gradient(135deg, #4c6fb6 0%, #5b83d0 100%);
-  border-color: rgba(147, 174, 227, 0.34);
+  background: linear-gradient(180deg, #5579c8 0%, #486ab2 100%);
+  border-color: rgba(147, 174, 227, 0.22);
 }
 
 [data-dark="true"] .home-hero-panel .button:not([data-style="bare"]):hover {
-  background: linear-gradient(135deg, #4263a5 0%, #5378c0 100%);
+  background: linear-gradient(180deg, #4d6fba 0%, #4262a5 100%);
 }
 
 [data-dark="true"] .home-hero-panel .button[data-style="bare"] {
-  border-color: color-mix(in srgb, var(--light-gray) 88%, white 12%);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   color: #edf3ff;
 }
 
 [data-dark="true"] .home-hero-panel .button[data-style="bare"]:hover {
-  border-color: rgba(147, 174, 227, 0.45);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(147, 174, 227, 0.28);
+  background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
 }
 
 .home-news-list .post-excerpt {
   margin: 0;
-  border: 1px solid color-mix(in srgb, var(--light-gray) 76%, white 24%);
+  border: 1px solid var(--surface-border);
   border-radius: 24px;
-  background: color-mix(in srgb, var(--background) 80%, white 20%);
+  background: var(--surface);
   box-shadow: none;
 }
 

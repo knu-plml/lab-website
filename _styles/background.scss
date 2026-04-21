@@ -17,3 +17,7 @@
   background-position: 50% 50%;
   z-index: -1;
 }
+
+[data-dark="true"].background:before {
+  filter: saturate(0.75) brightness(0.34) contrast(1.08);
+}

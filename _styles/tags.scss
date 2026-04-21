@@ -15,20 +15,23 @@
   max-width: 100%;
   margin: 0;
   padding: 5px 10px;
+  border: 1px solid var(--surface-border);
   border-radius: 999px;
-  background: var(--secondary);
+  background: var(--surface-raised);
   color: var(--text);
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .tag:hover {
-  background: var(--light-gray);
+  border-color: color-mix(in srgb, var(--primary) 24%, var(--surface-border) 76%);
+  background: var(--surface-contrast);
 }
 
 .tag[data-active] {
-  background: var(--light-gray);
+  border-color: color-mix(in srgb, var(--primary) 24%, var(--surface-border) 76%);
+  background: var(--surface-contrast);
 }
