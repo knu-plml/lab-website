@@ -20,7 +20,7 @@
     {% for tag in tags %}
       <a
         href="{{ link | relative_url }}?search=&quot;tag: {{ tag }}&quot;"
-        class="tag"
+        class="tag ui-chip"
         data-tooltip="Show items with the tag &quot;{{ tag }}&quot;"
       >
         {{ tag }}

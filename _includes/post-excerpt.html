@@ -9,7 +9,7 @@
 {% endif %}
 
 <div class="post-excerpt-container">
-  <div class="post-excerpt">
+  <div class="post-excerpt ui-surface-panel">
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
     {% assign excerpt = post.content | default: include.content | markdownify | strip_html | strip %}

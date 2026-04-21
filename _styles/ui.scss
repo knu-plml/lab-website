@@ -1,0 +1,73 @@
+---
+---
+
+.ui-surface-panel,
+.publication-card,
+.post-excerpt,
+.course-group,
+.courses-page-notice {
+  border: 1px solid var(--surface-border);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-raised) 92%, transparent), transparent 100%),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.ui-surface-subtle,
+.publication-card-image,
+.post-excerpt-image {
+  background: var(--surface-raised);
+}
+
+.ui-chip,
+.tag,
+.course-row-tag,
+.course-date-chip,
+.publication-meta-chip,
+.publication-card-tag,
+.publication-author-link,
+.publication-author-chip {
+  border: 1px solid var(--surface-border);
+  background: var(--surface-raised);
+  color: var(--text);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.ui-chip:hover,
+.tag:hover,
+.publication-meta-chip:hover,
+.publication-card-tag:hover,
+.publication-author-link:hover {
+  border-color: color-mix(in srgb, var(--primary) 24%, var(--surface-border) 76%);
+  background: var(--surface-contrast);
+}
+
+.ui-chip[data-active],
+.tag[data-active] {
+  border-color: color-mix(in srgb, var(--primary) 24%, var(--surface-border) 76%);
+  background: var(--surface-contrast);
+}
+
+.ui-search,
+.search-box {
+  position: relative;
+  height: 40px;
+}
+
+.ui-search button,
+.search-box button {
+  color: var(--gray);
+}
+
+.ui-segmented,
+.publication-tabs-nav,
+.publication-kind-filters {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, white 4%, transparent);
+}

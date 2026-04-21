@@ -42,7 +42,7 @@
   {% assign publication_kind = "conference" %}
 {% endif %}
 
-<div class="publication-card" data-publication-kind="{{ publication_kind }}">
+<div class="publication-card ui-surface-panel" data-publication-kind="{{ publication_kind }}">
   <a
     {% if publication.url %}
       href="{{ publication.url | relative_url | uri_escape }}"
@@ -109,7 +109,7 @@
           {% for tag in visible_tags %}
             <a
               href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
-              class="publication-card-tag tag"
+              class="publication-card-tag tag ui-chip"
               data-publication-search-link
               data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
             >

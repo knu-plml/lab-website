@@ -12,17 +12,13 @@ $wrap: 800px;
   display: flex;
   margin: 20px 0;
   border-radius: var(--rounded);
-  background: color-mix(in srgb, var(--background) 84%, white 16%);
-  border: 1px solid color-mix(in srgb, var(--light-gray) 88%, white 12%);
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .post-excerpt-image {
   position: relative;
   width: $thumb-size;
   flex-shrink: 0;
-  // box-shadow: var(--shadow);
 }
 
 .post-excerpt-image img {

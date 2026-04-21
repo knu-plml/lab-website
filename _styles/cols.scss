@@ -26,6 +26,11 @@ $one: 500px;
   margin-bottom: 0 !important;
 }
 
+.cols > div {
+  padding: 22px 24px;
+  border-radius: var(--rounded);
+}
+
 @media (max-width: $two) {
   .cols {
     --repeat: min(2, var(--cols));

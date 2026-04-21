@@ -21,7 +21,7 @@ layout: default
 
 <div class="member-page">
   <aside class="member-sidebar">
-    <div class="member-profile-card">
+    <div class="member-profile-card ui-surface-panel">
       {% include portrait.html lookup=page.slug %}
 
       {% if page.links %}
@@ -37,11 +37,11 @@ layout: default
   </aside>
 
   <div class="member-main">
-    <article class="member-content">
+    <article class="member-content ui-surface-panel">
       {{ content }}
     </article>
 
-    <div class="member-search-card">
+    <div class="member-search-card ui-surface-panel">
       {% include button.html
         type="search"
         text="Find Publications"

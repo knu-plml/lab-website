@@ -30,7 +30,7 @@ nav:
 
 <div class="publication-tabs" data-publication-tabs>
   <div class="publication-tabs-toolbar">
-    <div class="publication-tabs-nav" role="tablist" aria-label="Publication categories">
+    <div class="publication-tabs-nav ui-segmented" role="tablist" aria-label="Publication categories">
       <button
         type="button"
         class="publication-tab is-active"
@@ -57,7 +57,7 @@ nav:
       </button>
     </div>
 
-    <div class="publication-kind-filters" role="group" aria-label="Publication type">
+    <div class="publication-kind-filters ui-segmented" role="group" aria-label="Publication type">
       <button
         type="button"
         class="publication-kind-filter is-active"

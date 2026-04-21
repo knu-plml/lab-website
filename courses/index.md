@@ -12,7 +12,7 @@ nav:
   {% assign emptyarray = "" | split: "," %}
   <div class="courses-page-rule"></div>
 
-  <div class="courses-page-notice">
+  <div class="courses-page-notice ui-surface-panel">
     <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
     <span>
       강의 자료는
@@ -30,7 +30,7 @@ nav:
       {% assign earliest_semester = semesters | last %}
       {% assign latest_year = latest_semester.year | default: "" %}
       {% assign earliest_year = earliest_semester.year | default: "" %}
-      <section class="course-group">
+      <section class="course-group ui-surface-panel">
         <div class="course-group-header">
           <div class="course-group-main">
             <h2 class="course-group-title">{{ latest.title }}</h2>
@@ -67,7 +67,7 @@ nav:
                 {% when "team-teaching" %}
                   {% assign label = "팀티칭" %}
               {% endcase %}
-              <span class="course-row-tag">{{ label }}</span>
+              <span class="course-row-tag ui-chip">{{ label }}</span>
             {% endfor %}
           {% endif %}
         </div>
@@ -86,7 +86,7 @@ nav:
                 {% assign term_ko = "겨울" %}
             {% endcase %}
 
-            <span class="course-date-chip" aria-disabled="true">
+            <span class="course-date-chip ui-chip" aria-disabled="true">
               <span class="course-date-chip-year">{{ semester.year }}</span>
               <span class="course-date-chip-term">{{ term_ko }}</span>
             </span>

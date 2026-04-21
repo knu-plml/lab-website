@@ -90,7 +90,7 @@ layout: default
               {% unless hidden_tags contains tag %}
                 <a
                   href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
-                  class="tag"
+                  class="tag ui-chip"
                   data-publication-search-link
                   data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
                 >
