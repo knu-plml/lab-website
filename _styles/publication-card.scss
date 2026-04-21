@@ -79,6 +79,12 @@
   gap: 8px;
 }
 
+.publication-team {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .publication-meta-chip,
 .publication-card-tag,
 .publication-author-link,
@@ -99,6 +105,13 @@
   margin: 0;
   color: var(--text);
   line-height: 1.7;
+}
+
+.publication-author-note {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 .publication-meta-chip:hover,

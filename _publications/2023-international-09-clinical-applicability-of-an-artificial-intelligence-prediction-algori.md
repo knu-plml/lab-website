@@ -10,7 +10,7 @@ authors:
 - Dong-Hyeon Kim
 - Tae Young Shin
 - Hyeonseung Im
-- Junbeom Park (* equal contributions)
+- Junbeom Park
 support:
 - 융합보안
 - RIS

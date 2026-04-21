@@ -8,7 +8,7 @@ authors:
   - Dongyoung Park*
   - Suhwan Ji
   - Gihun Joo
-  - Hyeonseung Im (* equal contributions)
+  - Hyeonseung Im
 support:
   - 지역지능화
   - BRL후속

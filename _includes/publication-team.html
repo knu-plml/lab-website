@@ -7,37 +7,50 @@
   {% assign author_items = raw_authors | split: "," %}
 {% endif %}
 
-<div class="publication-author-list">
-  {% for author in author_items %}
-    {% assign author_name = author | replace: "(* equal contributions)", "" | replace: "*", "" | strip %}
-    {% assign author_markup = author_name %}
-    {% assign matched_member = nil %}
+{% assign has_equal_contribution = false %}
 
-    {% if author_name == "Hyeonseung Im" or author_name == "임현승" %}
-      {% capture author_markup %}<strong>{{ author_name }}</strong>{% endcapture %}
-    {% endif %}
+<div class="publication-team">
+  <div class="publication-author-list">
+    {% for author in author_items %}
+      {% assign author_text = author | default: "" | replace: " ", " " | strip %}
+      {% assign author_name = author_text | replace: "*", "" | strip %}
+      {% assign author_markup = author_text %}
+      {% assign matched_member = nil %}
 
-    {% for member in site.members %}
-      {% assign display_name = member.name | default: "" %}
-      {% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
-      {% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
-      {% assign aliases = member.aliases | default: empty %}
+      {% if author_text contains "*" or author_text contains "equal contributions" %}
+        {% assign has_equal_contribution = true %}
+      {% endif %}
 
-      {% if author_name == english_name or author_name == korean_name or aliases contains author_name %}
-        {% assign matched_member = member %}
-        {% break %}
+      {% if author_name == "Hyeonseung Im" or author_name == "임현승" %}
+        {% capture author_markup %}<strong>{{ author_text }}</strong>{% endcapture %}
+      {% endif %}
+
+      {% for member in site.members %}
+        {% assign display_name = member.name | default: "" %}
+        {% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
+        {% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+        {% assign aliases = member.aliases | default: empty %}
+
+        {% if author_name == english_name or author_name == korean_name or aliases contains author_name %}
+          {% assign matched_member = member %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if matched_member %}
+        <a
+          href="{{ matched_member.url | relative_url | uri_escape }}"
+          class="publication-author-link"
+        >
+          {{ author_markup }}
+        </a>
+      {% else %}
+        <span class="publication-author-chip">{{ author_markup }}</span>
       {% endif %}
     {% endfor %}
+  </div>
 
-    {% if matched_member %}
-      <a
-        href="{{ matched_member.url | relative_url | uri_escape }}"
-        class="publication-author-link"
-      >
-        {{ author_markup }}
-      </a>
-    {% else %}
-      <span class="publication-author-chip">{{ author_markup }}</span>
-    {% endif %}
-  {% endfor %}
+  {% if has_equal_contribution %}
+    <p class="publication-author-note">(* equal contributions)</p>
+  {% endif %}
 </div>

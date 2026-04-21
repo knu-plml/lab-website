@@ -7,7 +7,7 @@ authors:
 - Suhwan Ji*
 - Seong-U Kim*
 - Dohyung Kim
-- Hyeonseung Im (* equal contributions)
+- Hyeonseung Im
 support:
 - 블록체인
 - 지역지능화

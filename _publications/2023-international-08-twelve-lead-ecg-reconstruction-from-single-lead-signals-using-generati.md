@@ -9,7 +9,7 @@ authors:
 - Yeji Kim
 - Moo-Nyun Jin
 - Junbeom Park
-- Hyeonseung Im (* equal contributions)
+- Hyeonseung Im
 support:
 - BRL후속
 - DS
