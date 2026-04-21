@@ -3,11 +3,13 @@
 */
 
 {
+  const root = document.documentElement;
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
   const savedMode = window.localStorage.getItem("dark-mode");
 
   const applyMode = (value) => {
-    document.documentElement.dataset.dark = value ? "true" : "false";
+    root.dataset.dark = value ? "true" : "false";
+    root.style.colorScheme = value ? "dark" : "light";
   };
 
   // immediately load saved mode, otherwise follow the browser setting
@@ -17,7 +19,7 @@
     // update toggle button to match loaded mode
     const toggle = document.querySelector(".dark-toggle");
     if (toggle) {
-      toggle.checked = document.documentElement.dataset.dark === "true";
+      toggle.checked = root.dataset.dark === "true";
     }
   };
 

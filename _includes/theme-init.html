@@ -1,0 +1,21 @@
+<script>
+  (() => {
+    const root = document.documentElement;
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    let isDark = mediaQuery.matches;
+
+    try {
+      const savedMode = window.localStorage.getItem("dark-mode");
+      if (savedMode !== null) {
+        isDark = savedMode === "true";
+      }
+    } catch (error) {
+      // Ignore storage access errors and fall back to the system preference.
+    }
+
+    root.dataset.dark = isDark ? "true" : "false";
+    root.style.colorScheme = isDark ? "dark" : "light";
+    root.style.backgroundColor = isDark ? "#1f1f20" : "#ffffff";
+    root.style.color = isDark ? "#eceff4" : "#24324a";
+  })();
+</script>
