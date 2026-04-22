@@ -11,8 +11,9 @@ support:
 - BRL후속
 - 지역지능화
 image: images/publications/2025-domestic-conference-60-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - software-engineering
 - formal-methods

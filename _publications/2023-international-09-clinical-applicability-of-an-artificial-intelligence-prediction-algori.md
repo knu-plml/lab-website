@@ -15,8 +15,9 @@ support:
 - 융합보안
 - RIS
 image: images/publications/2023-international-09-clinical-applicability-of-an-artificial-intelligence-prediction-algori.png
+scope: international
+kind: journal
 tags:
-- international
 - machine-learning
 - healthcare-ai
 date: '2023-09-01'

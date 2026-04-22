@@ -13,34 +13,9 @@
 {% assign authors = publication.authors | default: "" %}
 {% assign awards = publication.awards | default: "" %}
 {% assign support = publication.support | default: "" %}
-{% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
-{% assign visible_tags = "" | split: "," %}
-{% assign publication_tab = "international" %}
-{% unless publication.tags contains "international" %}
-  {% assign publication_tab = "domestic" %}
-{% endunless %}
-{% for tag in publication.tags %}
-  {% unless hidden_tags contains tag %}
-    {% assign visible_tags = visible_tags | push: tag %}
-  {% endunless %}
-{% endfor %}
-{% assign publication_filter_text = publication_venue | default: subtitle_clean | strip | downcase %}
-{% assign publication_kind = "journal" %}
-{% if publication.tags contains "domestic-conference" %}
-  {% assign publication_kind = "conference" %}
-{% elsif publication.tags contains "domestic-journal" %}
-  {% assign publication_kind = "journal" %}
-{% elsif publication_filter_text contains "conference"
-  or publication_filter_text contains "symposium"
-  or publication_filter_text contains "workshop"
-  or publication_filter_text contains "proceedings"
-  or publication_filter_text contains "congress"
-  or publication_filter_text contains "forum"
-  or publication_filter_text contains "colloquium"
-  or publication_filter_text contains "meeting"
-%}
-  {% assign publication_kind = "conference" %}
-{% endif %}
+{% assign visible_tags = publication.tags %}
+{% assign publication_tab = publication.scope | default: "international" | strip %}
+{% assign publication_kind = publication.kind | default: "journal" | strip %}
 
 <div class="publication-card ui-surface-panel" data-publication-kind="{{ publication_kind }}">
   <a
@@ -102,7 +77,7 @@
       </div>
     {% endif %}
 
-    {% if visible_tags.size > 0 %}
+    {% if visible_tags and visible_tags.size > 0 %}
       <div class="publication-card-meta">
         <strong>Tags</strong>
         <div class="publication-meta-list">

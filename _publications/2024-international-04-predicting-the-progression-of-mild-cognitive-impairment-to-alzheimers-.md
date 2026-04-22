@@ -18,8 +18,9 @@ support:
 - DS
 - RIS
 image: images/publications/2024-international-04-predicting-the-progression-of-mild-cognitive-impairment-to-alzheimers-.png
+scope: international
+kind: journal
 tags:
-- international
 - machine-learning
 - healthcare-ai
 - formal-methods

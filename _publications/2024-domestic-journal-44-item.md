@@ -15,8 +15,9 @@ support:
 - RIS
 - 융합보안
 image: images/publications/2024-domestic-journal-44-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - machine-learning
 - healthcare-ai
 date: '2024-10-01'

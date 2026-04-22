@@ -9,8 +9,9 @@ authors:
 - 임현승
 - 정은주
 image: images/publications/2021-domestic-conference-76-scopolia-japonica.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - data-systems
 date: '2021-08-01'
 ---

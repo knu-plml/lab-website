@@ -15,10 +15,11 @@ support:
   - Post-Doc.
   - RISE
 image: images/publications/2025-international-02-neural-methods-for-programming-a-comprehensive-survey-and-future-direc.png
+scope: international
+kind: journal
 tags:
-  - international
-  - machine-learning
-  - programming-languages
+- machine-learning
+- programming-languages
 date: 2025-01-01
 buttons:
   - text: DOI

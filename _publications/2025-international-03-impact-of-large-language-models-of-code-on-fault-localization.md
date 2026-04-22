@@ -15,11 +15,12 @@ support:
   - BRL후속
   - Post-Doc.
 image: /images/publications/2025-international-03-impact-of-large-language-models-of-code-on-fault-localization.png
+scope: international
+kind: conference
 tags:
-  - international
-  - ICST
-  - machine-learning
-  - software-engineering
+- ICST
+- machine-learning
+- software-engineering
 date: 2025-03-01
 buttons:
   - text: PDF

@@ -13,8 +13,9 @@ support:
 - RIS
 - SW
 image: images/publications/2023-domestic-conference-69-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - machine-learning
 - software-engineering

@@ -8,8 +8,9 @@ awards:
 authors:
 - 임현승
 image: images/publications/2015-domestic-journal-81-xpath.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - programming-languages
 - formal-methods
 date: '2015-04-01'

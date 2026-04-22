@@ -8,8 +8,9 @@ authors:
 - 주기훈
 - 임현승
 image: images/publications/2021-domestic-conference-74-automl.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KDBC
 - machine-learning
 - healthcare-ai

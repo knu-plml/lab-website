@@ -9,8 +9,9 @@ authors:
 - 임현승
 - 박준범
 image: images/publications/2021-domestic-conference-77-automl.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KCC
 - machine-learning
 - healthcare-ai

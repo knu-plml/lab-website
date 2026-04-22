@@ -9,8 +9,9 @@ authors:
 - 임현승
 - 박준범
 image: images/publications/2019-domestic-conference-78-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KCC
 - machine-learning
 date: '2019-06-01'

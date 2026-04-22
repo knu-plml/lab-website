@@ -13,8 +13,9 @@ support:
 - BRL후속
 - 지역지능화
 image: images/publications/2024-domestic-conference-63-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - machine-learning
 - software-engineering

@@ -13,8 +13,9 @@ support:
 - Post-Doc.
 - PACEN
 image: images/publications/2025-domestic-conference-58-llm.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - machine-learning
 - healthcare-ai

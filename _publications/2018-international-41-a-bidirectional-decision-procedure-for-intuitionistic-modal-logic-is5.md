@@ -8,8 +8,9 @@ authors:
 - Hyeonseung Im
 - Sungwoo Park
 image: images/publications/2018-international-41-a-bidirectional-decision-procedure-for-intuitionistic-modal-logic-is5.png
+scope: international
+kind: journal
 tags:
-- international
 - formal-methods
 date: '2018-04-01'
 buttons:

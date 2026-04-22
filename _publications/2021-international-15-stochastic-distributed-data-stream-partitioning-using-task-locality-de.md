@@ -8,8 +8,9 @@ authors:
 - Hyeonseung Im
 - Yang-Sae Moon
 image: images/publications/2021-international-15-stochastic-distributed-data-stream-partitioning-using-task-locality-de.svg
+scope: international
+kind: journal
 tags:
-- international
 - data-systems
 date: '2021-03-01'
 buttons:

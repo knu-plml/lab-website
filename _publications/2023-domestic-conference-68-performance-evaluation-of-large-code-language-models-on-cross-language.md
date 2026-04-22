@@ -14,8 +14,9 @@ support:
 - RIS
 - 융합보안
 image: images/publications/2023-domestic-conference-68-performance-evaluation-of-large-code-language-models-on-cross-language.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - machine-learning
 - software-engineering

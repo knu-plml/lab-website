@@ -14,8 +14,9 @@ support:
 - DS
 - RIS
 image: images/publications/2024-domestic-conference-65-leveraging-qlora-on-code-large-language-models-for-multilingual-code-t.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KCC
 - machine-learning
 - software-engineering

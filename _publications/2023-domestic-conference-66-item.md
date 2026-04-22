@@ -12,8 +12,9 @@ support:
 - RIS
 - 지역지능화
 image: images/publications/2023-domestic-conference-66-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - healthcare-ai
 date: '2023-12-01'

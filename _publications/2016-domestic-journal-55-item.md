@@ -6,8 +6,9 @@ venue: '정보과학회논문지'
 authors:
 - 임현승
 image: images/publications/2016-domestic-journal-55-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - programming-languages
 - formal-methods
 date: '2016-12-01'

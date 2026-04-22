@@ -22,8 +22,9 @@ authors:
 - Hyeonseung Im
 - SangYun Kim
 image: images/publications/2022-international-12-predicting-progression-to-dementia-with-comprehensive-visual-rating-sc.png
+scope: international
+kind: journal
 tags:
-- international
 - machine-learning
 - healthcare-ai
 date: '2022-08-01'

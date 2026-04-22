@@ -13,8 +13,9 @@ support:
 - 지역지능화
 - RIS
 image: images/publications/2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste.png
+scope: international
+kind: journal
 tags:
-- international
 - security
 date: '2024-07-01'
 buttons:

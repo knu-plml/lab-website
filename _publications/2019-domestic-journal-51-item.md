@@ -8,8 +8,9 @@ authors:
 - 임현승
 - 김종민
 image: images/publications/2019-domestic-journal-51-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - machine-learning
 - computer-vision
 date: '2019-12-01'

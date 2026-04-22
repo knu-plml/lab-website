@@ -9,8 +9,9 @@ authors:
 - Hyeonseung Im
 - Junbeom Park
 image: images/publications/2020-international-19-clinical-implication-of-machine-learning-in-predicting-the-occurrence-.svg
+scope: international
+kind: journal
 tags:
-- international
 - machine-learning
 - healthcare-ai
 - data-systems

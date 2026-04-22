@@ -13,8 +13,9 @@ support:
 - DS
 - 지역지능화
 image: images/publications/2025-domestic-journal-43-qlora.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - machine-learning
 - software-engineering
 date: '2025-03-01'

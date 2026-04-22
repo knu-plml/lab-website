@@ -5,28 +5,8 @@ layout: default
 {% assign subtitle_clean = page.subtitle | default: "" | strip %}
 {% assign publication_summary_text = subtitle_clean | default: page.venue | default: "" | strip %}
 {% assign publication_year = page.date | date: "%Y" %}
-{% assign hidden_tags = "international,domestic-journal,domestic-conference" | split: "," %}
-{% assign publication_tab = "international" %}
-{% unless page.tags contains "international" %}
-  {% assign publication_tab = "domestic" %}
-{% endunless %}
-{% assign publication_kind = "journal" %}
-{% assign publication_filter_text = page.venue | default: subtitle_clean | default: "" | strip | downcase %}
-{% if page.tags contains "domestic-conference" %}
-  {% assign publication_kind = "conference" %}
-{% elsif page.tags contains "domestic-journal" %}
-  {% assign publication_kind = "journal" %}
-{% elsif publication_filter_text contains "conference"
-  or publication_filter_text contains "symposium"
-  or publication_filter_text contains "workshop"
-  or publication_filter_text contains "proceedings"
-  or publication_filter_text contains "congress"
-  or publication_filter_text contains "forum"
-  or publication_filter_text contains "colloquium"
-  or publication_filter_text contains "meeting"
-%}
-  {% assign publication_kind = "conference" %}
-{% endif %}
+{% assign publication_tab = page.scope | default: "international" | strip %}
+{% assign publication_kind = page.kind | default: "journal" | strip %}
 
 {% assign authors = page.authors | default: "" %}
 {% assign awards = page.awards | default: "" %}
@@ -82,21 +62,19 @@ layout: default
         </div>
       {% endif %}
 
-      {% if page.tags %}
+      {% if page.tags and page.tags.size > 0 %}
         <div class="publication-hero-block">
           <div class="publication-block-label">Tags</div>
           <div class="tags">
             {% for tag in page.tags %}
-              {% unless hidden_tags contains tag %}
-                <a
-                  href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
-                  class="tag ui-chip"
-                  data-publication-search-link
-                  data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
-                >
-                  {{ tag | downcase }}
-                </a>
-              {% endunless %}
+              <a
+                href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
+                class="tag ui-chip"
+                data-publication-search-link
+                data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
+              >
+                {{ tag | downcase }}
+              </a>
             {% endfor %}
           </div>
         </div>

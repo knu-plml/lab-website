@@ -8,8 +8,9 @@ authors:
 - Hyeonseung Im
 - Sang-Ki Ko
 image: images/publications/2021-international-16-efficient-enumeration-of-regular-expressions-for-faster-regular-expres.svg
+scope: international
+kind: conference
 tags:
-- international
 - CIAA
 - programming-languages
 - formal-methods

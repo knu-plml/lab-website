@@ -8,8 +8,9 @@ authors:
 - Hyeonseung Im
 - Sukyoung Ryu
 image: images/publications/2016-international-24-precise-and-scalable-static-analysis-of-jquery-using-a-regular-express.png
+scope: international
+kind: conference
 tags:
-- international
 - DLS
 - programming-languages
 - formal-methods

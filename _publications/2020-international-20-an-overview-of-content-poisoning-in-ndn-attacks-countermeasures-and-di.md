@@ -7,8 +7,9 @@ authors:
 - Hyeonseung Im
 - Dohyung Kim
 image: images/publications/2020-international-20-an-overview-of-content-poisoning-in-ndn-attacks-countermeasures-and-di.png
+scope: international
+kind: journal
 tags:
-- international
 - security
 date: '2020-07-01'
 buttons:

@@ -7,8 +7,8 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-scroll" %}Publications
 
-{% assign international_publications = site.publications | data_filter: "tags && tags.include?('international')" %}
-{% assign domestic_publications = site.publications | data_filter: "tags && (tags.include?('domestic-journal') || tags.include?('domestic-conference'))" %}
+{% assign international_publications = site.publications | where: "scope", "international" %}
+{% assign domestic_publications = site.publications | where: "scope", "domestic" %}
 
 {% include search-box.html %}
 {% include search-info.html %}
@@ -92,7 +92,7 @@ nav:
     aria-labelledby="publication-tab-international"
     data-tab-panel="international"
   >
-    {% include list.html data="publications" component="publication-card" filter="tags && tags.include?('international')" %}
+    {% include list.html data="publications" component="publication-card" filter="scope == 'international'" %}
     <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
   </div>
 
@@ -104,7 +104,7 @@ nav:
     data-tab-panel="domestic"
     hidden
   >
-    {% include list.html data="publications" component="publication-card" filter="tags && (tags.include?('domestic-journal') || tags.include?('domestic-conference'))" %}
+    {% include list.html data="publications" component="publication-card" filter="scope == 'domestic'" %}
     <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
   </div>
 </div>

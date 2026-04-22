@@ -8,8 +8,9 @@ authors:
 - 주기훈
 - 임현승
 image: images/publications/2021-domestic-journal-48-gru.png
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - machine-learning
 date: '2021-04-01'
 buttons:

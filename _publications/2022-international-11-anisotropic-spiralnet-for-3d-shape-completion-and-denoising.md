@@ -9,8 +9,9 @@ authors:
 - Hyeonseung Im
 - Jongmin Kim
 image: images/publications/2022-international-11-anisotropic-spiralnet-for-3d-shape-completion-and-denoising.png
+scope: international
+kind: journal
 tags:
-- international
 - machine-learning
 - computer-vision
 date: '2022-01-01'

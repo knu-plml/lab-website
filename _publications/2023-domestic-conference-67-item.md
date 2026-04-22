@@ -16,8 +16,9 @@ support:
 - RIS
 - 융합보안
 image: images/publications/2023-domestic-conference-67-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - machine-learning
 - healthcare-ai

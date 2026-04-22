@@ -9,8 +9,9 @@ authors:
 - 김아욱
 - 임현승
 image: images/publications/2022-domestic-conference-72-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KCC
 - machine-learning
 date: '2022-06-01'

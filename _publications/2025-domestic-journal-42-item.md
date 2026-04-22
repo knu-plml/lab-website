@@ -11,8 +11,9 @@ support:
 - BRL후속
 - DS
 image: images/publications/2025-domestic-journal-42-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - machine-learning
 - software-engineering
 date: '2025-08-01'

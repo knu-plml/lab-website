@@ -8,8 +8,9 @@ authors:
 - Jinha Kim
 - Hyeonseung Im
 image: images/publications/2008-international-39-functional-netlists.svg
+scope: international
+kind: conference
 tags:
-- international
 - ICFP
 - programming-languages
 date: '2008-01-01'

@@ -9,8 +9,9 @@ authors:
 - Kim Nguyễn
 - Véronique Benzaken
 image: images/publications/2015-international-26-a-core-calculus-for-xquery-3-0-combining-navigational-and-pattern-matc.png
+scope: international
+kind: conference
 tags:
-- international
 - ESOP
 - programming-languages
 - formal-methods

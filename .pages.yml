@@ -342,7 +342,7 @@ content:
     filename: "{slug}.md"
     view:
       primary: title
-      fields: [title, venue, date, "tags[0]"]
+      fields: [title, kind, scope, date]
       sort: [date, title]
       default:
         sort: date
@@ -357,6 +357,26 @@ content:
         label: Title
         type: string
         required: true
+      - name: scope
+        label: Scope
+        type: select
+        required: true
+        options:
+          values:
+            - value: international
+              label: International
+            - value: domestic
+              label: Domestic
+      - name: kind
+        label: Kind
+        type: select
+        required: true
+        options:
+          values:
+            - value: conference
+              label: Conference
+            - value: journal
+              label: Journal
       - name: subtitle
         label: Subtitle
         type: string

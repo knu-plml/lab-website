@@ -9,8 +9,9 @@ authors:
 - Jacques Garrigue
 - Sungwoo Park
 image: images/publications/2011-international-33-a-syntactic-type-system-for-recursive-modules.svg
+scope: international
+kind: conference
 tags:
-- international
 - OOPSLA
 - programming-languages
 - formal-methods

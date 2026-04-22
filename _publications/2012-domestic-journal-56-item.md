@@ -8,8 +8,9 @@ authors:
 - 임정표
 - 박성우
 image: images/publications/2012-domestic-journal-56-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - programming-languages
 - formal-methods
 date: '2012-12-01'

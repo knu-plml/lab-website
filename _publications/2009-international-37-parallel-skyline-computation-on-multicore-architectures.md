@@ -10,8 +10,9 @@ authors:
 - Jinha Kim
 - Hyeonseung Im
 image: images/publications/2009-international-37-parallel-skyline-computation-on-multicore-architectures.svg
+scope: international
+kind: conference
 tags:
-- international
 - ICDE
 - data-systems
 date: '2009-01-01'

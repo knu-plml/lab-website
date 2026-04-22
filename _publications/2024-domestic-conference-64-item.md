@@ -13,8 +13,9 @@ support:
 - BRL후속
 - DS
 image: images/publications/2024-domestic-conference-64-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KCC
 - machine-learning
 - software-engineering

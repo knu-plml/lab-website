@@ -7,8 +7,9 @@ authors:
 - Hyeonseung Im
 - Sungwoo Park
 image: images/publications/2009-international-36-a-module-system-independent-of-base-languages.svg
+scope: international
+kind: conference
 tags:
-- international
 - MLPA
 - programming-languages
 date: '2009-01-01'

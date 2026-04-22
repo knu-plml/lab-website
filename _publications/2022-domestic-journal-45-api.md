@@ -10,8 +10,9 @@ authors:
 - 김아욱
 - 임현승
 image: images/publications/2022-domestic-journal-45-api.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - machine-learning
 date: '2022-09-01'
 buttons:

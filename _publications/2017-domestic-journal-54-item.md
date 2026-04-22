@@ -6,8 +6,9 @@ venue: '정보과학회지'
 authors:
 - 임현승
 image: images/publications/2017-domestic-journal-54-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - programming-languages
 date: '2017-03-01'
 ---

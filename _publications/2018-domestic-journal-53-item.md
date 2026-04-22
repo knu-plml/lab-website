@@ -7,8 +7,9 @@ authors:
 - 지수환
 - 임현승
 image: images/publications/2018-domestic-journal-53-item.svg
+scope: domestic
+kind: journal
 tags:
-- domestic-journal
 - programming-languages
 - formal-methods
 date: '2018-11-01'

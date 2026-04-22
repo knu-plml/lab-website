@@ -15,8 +15,9 @@ support:
 - DS
 - RIS
 image: images/publications/2023-international-08-twelve-lead-ecg-reconstruction-from-single-lead-signals-using-generati.png
+scope: international
+kind: conference
 tags:
-- international
 - MICCAI
 - machine-learning
 - healthcare-ai

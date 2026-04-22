@@ -8,8 +8,9 @@ authors:
 - Keiko Nakata
 - Sungwoo Park
 image: images/publications/2013-international-28-contractive-signatures-with-recursive-types-type-parameters-and-abstra.svg
+scope: international
+kind: conference
 tags:
-- international
 - ICALP
 - programming-languages
 - formal-methods

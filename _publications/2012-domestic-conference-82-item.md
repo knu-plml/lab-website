@@ -10,8 +10,9 @@ authors:
 - 임정표
 - 박성우
 image: images/publications/2012-domestic-conference-82-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KCC
 - programming-languages
 - formal-methods

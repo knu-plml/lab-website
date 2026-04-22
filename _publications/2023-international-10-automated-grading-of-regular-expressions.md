@@ -12,8 +12,9 @@ authors:
 support:
 - BRL
 image: images/publications/2023-international-10-automated-grading-of-regular-expressions.png
+scope: international
+kind: conference
 tags:
-- international
 - ESOP
 - software-engineering
 - programming-languages

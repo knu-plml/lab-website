@@ -13,8 +13,9 @@ authors:
 - 임현승
 - 정은주
 image: images/publications/2021-domestic-conference-75-item.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - computer-vision
 date: '2021-08-01'
 ---

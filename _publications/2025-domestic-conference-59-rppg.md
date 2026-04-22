@@ -14,8 +14,9 @@ support:
 - Post-Doc.
 - RISE
 image: images/publications/2025-domestic-conference-59-rppg.svg
+scope: domestic
+kind: conference
 tags:
-- domestic-conference
 - KSC
 - machine-learning
 - healthcare-ai
