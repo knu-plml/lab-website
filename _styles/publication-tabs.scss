@@ -59,6 +59,19 @@
   box-shadow: 0 10px 22px -16px color-mix(in srgb, var(--primary) 42%, transparent);
 }
 
+[data-dark="true"] .publication-tab.is-active,
+[data-dark="true"] .publication-kind-filter.is-active {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 36%, var(--surface-contrast) 64%) 0%,
+    color-mix(in srgb, var(--primary) 27%, var(--surface-raised) 73%) 100%
+  );
+  color: color-mix(in srgb, #ffffff 84%, var(--text) 16%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 10px 22px -18px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
 .publication-tab-panel[hidden] {
   display: none;
 }
