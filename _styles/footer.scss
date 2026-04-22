@@ -25,7 +25,20 @@ footer::after {
   pointer-events: none;
 }
 
+footer[data-dark="true"] {
+  background: color-mix(in srgb, var(--background) 84%, black 16%);
+}
+
+:root[data-dark="false"] footer[data-dark="true"] {
+  background: color-mix(in srgb, #10141d 88%, var(--background) 12%);
+}
+
 footer.background:before {
+  opacity: 0.16;
+  filter: saturate(0.68) brightness(0.25) contrast(1.12);
+}
+
+:root[data-dark="false"] footer[data-dark="true"].background:before {
   opacity: 0.34;
   filter: saturate(0.92) brightness(0.62) contrast(1.08);
 }

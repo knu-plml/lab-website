@@ -1,5 +1,4 @@
 ---
-header-dark: true
 show-title: false
 show-subtitle: false
 ---
