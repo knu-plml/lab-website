@@ -1,0 +1,20 @@
+{% assign education = include.education | default: empty %}
+
+{% if education.size > 0 %}
+  <ul class="education-list">
+    {% for entry in education %}
+      <li>
+        {% if entry.degree contains "coursework completed" %}
+          {{ entry.degree }}, {{ entry.date }}
+        {% elsif entry.major and entry.major != "" %}
+          {{ entry.degree }} in {{ entry.major }}, {{ entry.date }}
+        {% else %}
+          {{ entry.degree }}, {{ entry.date }}
+        {% endif %}
+      </li>
+      {% if entry.thesis and entry.thesis != "" %}
+        <li>{{ entry.degree | replace: " coursework completed", "" }} Thesis: {{ entry.thesis }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

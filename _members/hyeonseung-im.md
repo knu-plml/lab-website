@@ -3,19 +3,14 @@ slug: "hyeonseung-im"
 name: "Hyeonseung Im (임현승)"
 image: "images/members/hyeonseung-im.jpg"
 role: "principal-investigator"
-affiliation: ""
-description: "Professor"
 links:
-  home-page: "https://pl.kangwon.ac.kr/hsim/"
   dblp: "78/997"
   researchgate: "Hyeonseung-Im-2"
   linkedin: "hyeonseung-im-83b4aa69"
   orcid: "0000-0002-3901-0834"
 ---
-
-Hyeonseung Im is a professor at Kangwon National University and leads the Programming Language and Machine Learning Laboratory.
-
-**Appointments**
+**Affiliations**
+- Professor 교수
 - 소프트웨어중심대학사업단장
 - 강원지역혁신플랫폼 정밀의료사업부단장
 - Former Vice Dean, Office of Research Affairs 前 연구부처장
@@ -24,6 +19,8 @@ Hyeonseung Im is a professor at Kangwon National University and leads the Progra
 - [Department of Convergence Security](https://bcs.kangwon.ac.kr/) 일반대학원 융합보안학과
 - [Interdisciplinary Graduate Program in Medical Bigdata Convergence](https://bk21.kangwon.ac.kr/edu/bigdatamed) 일반대학원 빅데이터메디컬융합학과
 - [Kangwon National University](http://www.kangwon.ac.kr/) 강원대학교
+
+**Contact**
 - Email: hsim at kangwon dot ac dot kr
 - Office: Hanbit-gwan 307
 

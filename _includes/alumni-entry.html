@@ -1,5 +1,6 @@
 {% assign member = include.member %}
 {% assign details = member.content | markdownify %}
+{% assign education = member.education | default: empty %}
 {% assign summary = "" %}
 
 {% if member.affiliation and member.affiliation != "" %}
@@ -24,9 +25,19 @@
   </h3>
 
   {% assign cleaned_details = details | strip %}
-  {% if cleaned_details != "" %}
+
+  {% if education.size > 0 %}
     <div class="alumni-entry-details">
-      {{ details }}
+      {% include education-list.html education=education %}
+      {% if cleaned_details != "" %}
+        {{ details }}
+      {% endif %}
     </div>
+  {% else %}
+    {% if cleaned_details != "" %}
+      <div class="alumni-entry-details">
+        {{ details }}
+      </div>
+    {% endif %}
   {% endif %}
 </article>

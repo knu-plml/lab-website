@@ -4,9 +4,8 @@ name: "Hyeongseop Shin (신형섭)"
 image: ""
 role: "alumni"
 affiliation: "7급 전산직 공무원"
-description: "Undergraduate Intern Alumni"
+education:
+  - degree: "B.S."
+    major: "Computer Science"
+    date: "2020.2"
 ---
-
-7급 전산직 공무원
-
-- B.S. in Computer Science, 2020.2

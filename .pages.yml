@@ -59,6 +59,39 @@ components:
         type: string
         required: false
 
+  education_entry:
+    label: Education Entry
+    type: object
+    fields:
+      - name: degree
+        label: Degree
+        type: select
+        required: true
+        options:
+          values:
+            - value: Ph.D.
+              label: Ph.D.
+            - value: Ph.D. coursework completed
+              label: Ph.D. Coursework Completed
+            - value: M.S.
+              label: M.S.
+            - value: M.S. coursework completed
+              label: M.S. Coursework Completed
+            - value: B.S.
+              label: B.S.
+      - name: major
+        label: Major
+        type: string
+        required: false
+      - name: thesis
+        label: Thesis
+        type: string
+        required: false
+      - name: date
+        label: Date Acquired
+        type: string
+        required: true
+
   action_button:
     label: Button
     type: object
@@ -231,7 +264,7 @@ content:
     filename: "{slug}.md"
     view:
       primary: name
-      fields: [name, role, description]
+      fields: [name, role, "education[0].degree"]
       sort: [name, role]
       default:
         sort: name
@@ -274,10 +307,14 @@ content:
         label: Affiliation
         type: string
         required: false
-      - name: description
-        label: Description
-        type: string
+      - name: education
+        label: Education / Alumni History
+        component: education_entry
         required: false
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.degree} {fields.date}"
       - name: aliases
         label: Aliases
         type: string
@@ -287,7 +324,7 @@ content:
         component: member_links
         required: false
       - name: body
-        label: Bio
+        label: Bio / Notes
         type: code
         required: false
         options:

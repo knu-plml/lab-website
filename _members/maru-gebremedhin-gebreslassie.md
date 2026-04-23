@@ -6,6 +6,5 @@ aliases:
   - 마루 개브래매드힌 개브래슬라세
 image: images/members/maru-gebremedhin-gebreslassie.jpg
 role: phd
-description: PhD Student
+affiliation: "박사과정, PLML lab."
 ---
-Maru Gebremedhin Gebreslassie is a phd student in the PLML Laboratory at Kangwon National University.

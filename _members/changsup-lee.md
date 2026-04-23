@@ -3,12 +3,13 @@ slug: "changsup-lee"
 name: "Changsup Lee (이창섭)"
 image: "images/members/changsup-lee.jpg"
 role: "phd"
-affiliation: ""
-description: "PhD Student"
+affiliation: "박사과정, PLML lab."
+education:
+  - degree: "M.S."
+    major: "Data Science"
+    thesis: "Fault Localization and Patch Generation Techniques Using Code Pre-trained Language Models"
+    date: "2026.2"
+  - degree: "B.S."
+    major: "Computer Science"
+    date: "2024.2"
 ---
-
-박사과정, PLML lab.
-
-- M.S. in Data Science, 2026.2
-- M.S. Thesis: Fault Localization and Patch Generation Techniques Using Code Pre-trained Language Models
-- B.S. in Computer Science, 2024.2

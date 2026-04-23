@@ -4,7 +4,8 @@ name: "Naeheon Lee (이내헌)"
 image: ""
 role: "alumni"
 affiliation: "PLML Laboratory alumni"
-description: "Undergraduate Intern Alumni"
+education:
+  - degree: "B.S."
+    major: "Computer Engineering"
+    date: "2024.2"
 ---
-
-- B.S. in Computer Engineering, 2024.2

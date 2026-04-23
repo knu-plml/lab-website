@@ -6,11 +6,11 @@ permalink: /members/alumni/
 # {% include icon.html icon="fa-solid fa-user-graduate" %}Alumni
 
 {% assign members = site.members | data_filter: "role != 'principal-investigator'" | sort: "name" %}
-{% assign phd_alumni = members | data_filter: "content&.include?('Ph.D. in')" %}
-{% assign phd_coursework_alumni = members | data_filter: "content&.include?('Ph.D. coursework completed')" %}
-{% assign ms_alumni = members | data_filter: "content&.include?('M.S. in') && !content&.include?('Ph.D. in') && !content&.include?('Ph.D. coursework completed')" %}
-{% assign ms_coursework_alumni = members | data_filter: "content&.include?('M.S. coursework completed')" %}
-{% assign undergrad_alumni = members | data_filter: "content&.include?('B.S. in') && !content&.include?('M.S. in') && !content&.include?('Ph.D. in') && !content&.include?('Ph.D. coursework completed') && !content&.include?('M.S. coursework completed')" %}
+{% assign phd_alumni = members | data_filter: "Array(education).any? { |entry| entry['degree'] == 'Ph.D.' } || content&.include?('Ph.D. in')" | sort_by_education_date %}
+{% assign phd_coursework_alumni = members | data_filter: "Array(education).any? { |entry| entry['degree'] == 'Ph.D. coursework completed' } || content&.include?('Ph.D. coursework completed')" | sort_by_education_date %}
+{% assign ms_alumni = members | data_filter: "(Array(education).any? { |entry| entry['degree'] == 'M.S.' } || content&.include?('M.S. in')) && !(Array(education).any? { |entry| entry['degree'] == 'Ph.D.' } || content&.include?('Ph.D. in')) && !(Array(education).any? { |entry| entry['degree'] == 'Ph.D. coursework completed' } || content&.include?('Ph.D. coursework completed'))" | sort_by_education_date %}
+{% assign ms_coursework_alumni = members | data_filter: "Array(education).any? { |entry| entry['degree'] == 'M.S. coursework completed' } || content&.include?('M.S. coursework completed')" | sort_by_education_date %}
+{% assign undergrad_alumni = members | data_filter: "(Array(education).any? { |entry| entry['degree'] == 'B.S.' } || content&.include?('B.S. in')) && !(Array(education).any? { |entry| entry['degree'] == 'M.S.' } || content&.include?('M.S. in')) && !(Array(education).any? { |entry| entry['degree'] == 'Ph.D.' } || content&.include?('Ph.D. in')) && !(Array(education).any? { |entry| entry['degree'] == 'Ph.D. coursework completed' } || content&.include?('Ph.D. coursework completed')) && !(Array(education).any? { |entry| entry['degree'] == 'M.S. coursework completed' } || content&.include?('M.S. coursework completed'))" | sort_by_education_date %}
 
 {% if phd_alumni.size > 0 %}
 ## Ph.D.

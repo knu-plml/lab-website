@@ -18,6 +18,8 @@ layout: default
   {% if korean_name != "" %}"{{ korean_name }}" {% endif %}
   {% for alias in aliases %}"{{ alias }}" {% endfor %}
 {%- endcapture %}
+{% capture member_body %}{{ content }}{% endcapture %}
+{% assign member_body_stripped = member_body | strip %}
 
 <div class="member-page">
   <aside class="member-sidebar">
@@ -38,7 +40,23 @@ layout: default
 
   <div class="member-main">
     <article class="member-content ui-surface-panel">
-      {{ content }}
+      {% if page.affiliation and page.affiliation != "" %}
+        <div class="member-summary member-content-block">
+          <p>{{ page.affiliation }}</p>
+        </div>
+      {% endif %}
+
+      {% if page.education and page.education.size > 0 %}
+        <div class="member-education member-content-block">
+          {% include education-list.html education=page.education %}
+        </div>
+      {% endif %}
+
+      {% if member_body_stripped != "" %}
+        <div class="member-body">
+          {{ member_body }}
+        </div>
+      {% endif %}
     </article>
 
     <div class="member-search-card ui-surface-panel">

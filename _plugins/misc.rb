@@ -68,6 +68,35 @@ module Jekyll
       }
     end
 
+    def education_sort_key(item)
+      education = if item.is_a?(Jekyll::Document)
+        item.data["education"]
+      else
+        item["education"]
+      end
+
+      return "000000" if !education.is_a?(Array) || education.empty?
+
+      latest = education
+        .map { |entry| entry.is_a?(Hash) ? entry["date"].to_s : "" }
+        .reject(&:empty?)
+        .map do |date|
+          parts = date.scan(/\d+/)
+          year = parts[0].to_i
+          month = parts[1].to_i
+          format("%04d%02d", year, month)
+        end
+        .max
+
+      latest || "000000"
+    end
+
+    def sort_by_education_date(data)
+      return data unless data.respond_to?(:sort_by)
+
+      data.sort_by { |item| education_sort_key(item) }.reverse
+    end
+
     # from css text, find font family definitions and construct google font url
     def google_fonts(css)
       names = regex_scan(css, '--\S*:\s*"(.*)",?.*;', false, true).sort.uniq
