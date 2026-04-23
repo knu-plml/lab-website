@@ -91,6 +91,7 @@ components:
         label: Date Acquired
         type: string
         required: true
+        description: "Date acquired. Example: 2026.2"
 
   action_button:
     label: URL
