@@ -1,0 +1,59 @@
+---
+---
+
+.alumni-list {
+  display: grid;
+  gap: 26px;
+  margin: 24px 0 40px;
+}
+
+.alumni-entry {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.alumni-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.alumni-entry-name {
+  margin: 0 0 10px;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  line-height: 1.45;
+}
+
+.alumni-entry-name a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.alumni-entry-name a:hover {
+  color: var(--primary);
+}
+
+.alumni-entry-affiliation {
+  color: var(--text-muted);
+  font-family: var(--body);
+  font-size: 0.95em;
+  font-weight: var(--regular);
+  white-space: normal;
+}
+
+.alumni-entry-details > :first-child {
+  margin-top: 0;
+}
+
+.alumni-entry-details > :last-child {
+  margin-bottom: 0;
+}
+
+.alumni-entry-details p,
+.alumni-entry-details li {
+  text-align: left;
+}
+
+.alumni-entry-details ul,
+.alumni-entry-details ol {
+  margin: 10px 0 0;
+}

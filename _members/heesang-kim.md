@@ -1,7 +1,7 @@
 ---
 slug: "heesang-kim"
 name: "Heesang Kim (김희상)"
-image: "images/portrait-placeholder.svg"
+image: ""
 role: "alumni"
 affiliation: "(주)포소드"
 description: "박사 수료"

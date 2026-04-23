@@ -2,7 +2,7 @@
 title: Team
 nav:
   order: 3
-  tooltip: Faculty, researchers, students, and alumni
+  tooltip: Faculty, researchers, and students
 ---
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
@@ -49,14 +49,5 @@ nav:
 
 <div class="grid">
   {% include list.html data="members" component="portrait" filter="role == 'undergrad'" %}
-</div>
-{% endif %}
-
-{% assign alumni = site.members | data_filter: "role == 'alumni'" %}
-{% if alumni.size > 0 %}
-## Alumni
-
-<div class="grid">
-  {% include list.html data="members" component="portrait" filter="role == 'alumni'" %}
 </div>
 {% endif %}

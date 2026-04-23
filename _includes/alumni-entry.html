@@ -1,0 +1,32 @@
+{% assign member = include.member %}
+{% assign details = member.content | markdownify %}
+{% assign summary = "" %}
+
+{% if member.affiliation and member.affiliation != "" %}
+  {% capture affiliation_html %}<p>{{ member.affiliation }}</p>{% endcapture %}
+  {% assign details = details | replace_first: affiliation_html, "" %}
+  {% if member.affiliation != "PLML Laboratory alumni" %}
+    {% assign summary = member.affiliation %}
+  {% endif %}
+{% endif %}
+
+{% if summary == "" %}
+  {% assign first_block = details | split: "</p>" | first %}
+  {% if first_block contains "<p>" %}
+    {% assign summary = first_block | remove: "<p>" | strip %}
+    {% assign details = details | remove_first: first_block | remove_first: "</p>" | strip %}
+  {% endif %}
+{% endif %}
+
+<article class="alumni-entry">
+  <h3 class="alumni-entry-name">
+    <a href="{{ member.url | relative_url | uri_escape }}">{{ member.name }}</a>{% if summary != "" %}<span class="alumni-entry-affiliation">, {{ summary }}</span>{% endif %}
+  </h3>
+
+  {% assign cleaned_details = details | strip %}
+  {% if cleaned_details != "" %}
+    <div class="alumni-entry-details">
+      {{ details }}
+    </div>
+  {% endif %}
+</article>

@@ -38,7 +38,9 @@ module Jekyll
         |item|
         # if jekyll doc collection, get hash of doc data
         if item.is_a? Jekyll::Document
-          item = item.data
+          item = item.data.merge({
+            "content" => item.content,
+          })
         end
         # start with empty context of local variables
         b = empty_binding

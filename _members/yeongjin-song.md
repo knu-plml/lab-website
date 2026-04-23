@@ -1,7 +1,7 @@
 ---
 slug: "yeongjin-song"
 name: "Yeongjin Song (송영진)"
-image: "images/portrait-placeholder.svg"
+image: ""
 role: "alumni"
 affiliation: "Classmethod"
 description: "석사"

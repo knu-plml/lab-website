@@ -1,7 +1,7 @@
 ---
 slug: "sujeong-lee"
 name: "Sujeong Lee (이수정)"
-image: "images/members/sujeong-lee.jpg"
+image: ""
 role: "alumni"
 affiliation: "PLML Laboratory alumni"
 description: "석사 수료"

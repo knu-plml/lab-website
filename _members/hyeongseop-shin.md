@@ -1,7 +1,7 @@
 ---
 slug: "hyeongseop-shin"
 name: "Hyeongseop Shin (신형섭)"
-image: "images/portrait-placeholder.svg"
+image: ""
 role: "alumni"
 affiliation: "7급 전산직 공무원"
 description: "Undergraduate Intern Alumni"

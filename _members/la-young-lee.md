@@ -1,7 +1,7 @@
 ---
 slug: "la-young-lee"
 name: "La Young Lee (이라영)"
-image: "images/portrait-placeholder.svg"
+image: ""
 role: "alumni"
 affiliation: "영월중학교 정보교사"
 description: "석사"

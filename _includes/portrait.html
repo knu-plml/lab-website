@@ -11,6 +11,7 @@
 {% assign display_name = member.name | default: "" %}
 {% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
 {% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+{% assign portrait_image = member.image | default: "images/portrait-placeholder.svg" %}
 
 <div class="portrait-wrapper">
   <a
@@ -26,7 +27,7 @@
     {% endif %}
 
     <img
-      src="{{ member.image | relative_url | uri_escape }}"
+      src="{{ portrait_image | relative_url | uri_escape }}"
       class="portrait-image"
       style="object-position: {{ member.image_position | default: '50% 20%' }};"
       alt="member portrait"
