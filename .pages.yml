@@ -93,21 +93,24 @@ components:
         required: true
 
   action_button:
-    label: Button
+    label: URL
     type: object
     fields:
       - name: text
-        label: Text
+        label: Label
         type: string
         required: true
+        description: "Button text. Examples: DOI, PDF, GitHub"
       - name: link
-        label: Link
+        label: URL
         type: string
         required: true
+        description: "Destination URL. Examples: https://doi.org/..., /files/paper.pdf, https://github.com/..."
       - name: icon
         label: Icon
         type: select
         required: false
+        description: "Optional icon matching the URL type."
         options:
           values:
             - value: fa-solid fa-file-lines
@@ -320,6 +323,7 @@ content:
         type: string
         required: false
         list: true
+        description: "Names entered here are also used to match this member with author names in publications."
       - name: links
         component: member_links
         required: false
@@ -367,9 +371,21 @@ content:
           language: markdown
       - name: tags
         label: Tags
-        type: string
+        type: select
         required: false
         list: true
+        options:
+          values:
+            - value: publication
+              label: Publication
+            - value: graduation
+              label: Graduation
+            - value: welcome
+              label: Welcome
+            - value: conference
+              label: Conference
+            - value: award
+              label: Award
 
   - name: publications
     label: Publications
@@ -434,6 +450,7 @@ content:
         label: Image
         type: image
         required: false
+        description: "Leave blank to generate an image automatically."
         options:
           path: publications
       - name: authors
@@ -441,21 +458,25 @@ content:
         type: string
         required: false
         list: true
+        description: "Append `*` to an author name to mark equal contributions (shown as `(* equal contributions)`)."
       - name: awards
         label: Awards
         type: string
         required: false
         list: true
+        description: "Optional awards for this publication. Example: 우수논문상"
       - name: support
         label: Support
         type: string
         required: false
         list: true
+        description: "Optional supporting project or funding information. Example: 지역지능화"
       - name: tags
         label: Tags
         type: string
         required: false
         list: true
+        description: "Leave blank to let tags be set automatically."
       - name: date
         label: Date
         type: date
@@ -463,9 +484,10 @@ content:
         options:
           format: yyyy-MM-dd
       - name: buttons
-        label: Buttons
+        label: URLs
         component: action_button
         required: false
+        description: "Optional links related to the publication. Add entries such as DOI, PDF, or GitHub."
         list:
           collapsible:
             collapsed: true
