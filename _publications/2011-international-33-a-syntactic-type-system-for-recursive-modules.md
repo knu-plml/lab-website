@@ -12,7 +12,6 @@ image: images/publications/2011-international-33-a-syntactic-type-system-for-rec
 scope: international
 kind: conference
 tags:
-- OOPSLA
 - programming-languages
 - formal-methods
 date: '2011-01-01'

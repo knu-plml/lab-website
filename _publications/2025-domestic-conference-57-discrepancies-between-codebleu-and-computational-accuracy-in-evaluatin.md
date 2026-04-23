@@ -15,7 +15,6 @@ image: images/publications/2025-domestic-conference-57-discrepancies-between-cod
 scope: domestic
 kind: conference
 tags:
-- KSC
 - software-engineering
 date: '2025-12-01'
 ---

@@ -14,7 +14,6 @@ image: images/publications/2014-international-27-polymorphic-functions-with-set-
 scope: international
 kind: conference
 tags:
-- POPL
 - programming-languages
 - formal-methods
 date: '2014-01-01'

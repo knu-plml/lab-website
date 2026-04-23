@@ -17,7 +17,6 @@ image: images/publications/2024-domestic-conference-65-leveraging-qlora-on-code-
 scope: domestic
 kind: conference
 tags:
-- KCC
 - machine-learning
 - software-engineering
 date: '2024-06-01'

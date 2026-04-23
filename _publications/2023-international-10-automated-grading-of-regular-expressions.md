@@ -15,7 +15,6 @@ image: images/publications/2023-international-10-automated-grading-of-regular-ex
 scope: international
 kind: conference
 tags:
-- ESOP
 - software-engineering
 - programming-languages
 - formal-methods

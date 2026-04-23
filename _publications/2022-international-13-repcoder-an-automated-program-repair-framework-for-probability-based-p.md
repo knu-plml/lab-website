@@ -13,7 +13,6 @@ image: images/publications/2022-international-13-repcoder-an-automated-program-r
 scope: international
 kind: conference
 tags:
-- SAC
 - software-engineering
 date: '2022-04-01'
 buttons:

@@ -12,7 +12,6 @@ image: images/publications/2021-domestic-conference-73-item.svg
 scope: domestic
 kind: conference
 tags:
-- KSC
 - computer-vision
 date: '2021-12-01'
 buttons:

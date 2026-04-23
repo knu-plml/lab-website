@@ -11,7 +11,6 @@ image: images/publications/2021-international-16-efficient-enumeration-of-regula
 scope: international
 kind: conference
 tags:
-- CIAA
 - programming-languages
 - formal-methods
 date: '2021-07-01'

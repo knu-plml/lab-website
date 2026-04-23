@@ -16,7 +16,6 @@ image: images/publications/2024-domestic-conference-63-item.svg
 scope: domestic
 kind: conference
 tags:
-- KSC
 - machine-learning
 - software-engineering
 date: '2024-12-01'

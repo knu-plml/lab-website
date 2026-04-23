@@ -12,7 +12,6 @@ image: images/publications/2019-domestic-conference-78-item.svg
 scope: domestic
 kind: conference
 tags:
-- KCC
 - machine-learning
 date: '2019-06-01'
 ---

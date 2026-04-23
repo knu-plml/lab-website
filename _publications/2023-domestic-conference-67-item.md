@@ -19,7 +19,6 @@ image: images/publications/2023-domestic-conference-67-item.svg
 scope: domestic
 kind: conference
 tags:
-- KSC
 - machine-learning
 - healthcare-ai
 date: '2023-12-01'

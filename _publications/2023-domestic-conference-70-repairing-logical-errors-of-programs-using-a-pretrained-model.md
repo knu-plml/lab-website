@@ -1,8 +1,8 @@
 ---
 slug: 2023-domestic-conference-70-repairing-logical-errors-of-programs-using-a-pretrained-model
 title: Repairing Logical Errors of Programs Using a Pretrained Model
-subtitle: '한국정보과학회 2023 한국컴퓨터종합학술대회 (KCC), 2023.06'
-venue: '한국정보과학회 2023 한국컴퓨터종합학술대회 (KCC)'
+subtitle: 한국정보과학회 2023 한국컴퓨터종합학술대회 (KCC), 2023.06
+venue: 한국정보과학회 2023 한국컴퓨터종합학술대회 (KCC)
 authors:
 - Suhwan Ji
 - Changsup Lee
@@ -16,8 +16,7 @@ image: images/publications/2023-domestic-conference-70-repairing-logical-errors-
 scope: domestic
 kind: conference
 tags:
-- KCC
+- machine-learning
 - software-engineering
-- formal-methods
 date: '2023-06-01'
 ---

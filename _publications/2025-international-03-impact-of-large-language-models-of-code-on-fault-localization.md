@@ -18,7 +18,6 @@ image: /images/publications/2025-international-03-impact-of-large-language-model
 scope: international
 kind: conference
 tags:
-- ICST
 - machine-learning
 - software-engineering
 date: 2025-03-01

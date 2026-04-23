@@ -11,7 +11,6 @@ image: images/publications/2013-international-28-contractive-signatures-with-rec
 scope: international
 kind: conference
 tags:
-- ICALP
 - programming-languages
 - formal-methods
 date: '2013-01-01'

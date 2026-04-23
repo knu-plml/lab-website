@@ -10,7 +10,6 @@ image: images/publications/2009-international-36-a-module-system-independent-of-
 scope: international
 kind: conference
 tags:
-- MLPA
 - programming-languages
 date: '2009-01-01'
 ---

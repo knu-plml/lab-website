@@ -12,7 +12,6 @@ image: images/publications/2021-domestic-conference-77-automl.svg
 scope: domestic
 kind: conference
 tags:
-- KCC
 - machine-learning
 - healthcare-ai
 date: '2021-06-01'

@@ -12,7 +12,6 @@ image: images/publications/2015-international-26-a-core-calculus-for-xquery-3-0-
 scope: international
 kind: conference
 tags:
-- ESOP
 - programming-languages
 - formal-methods
 - data-systems

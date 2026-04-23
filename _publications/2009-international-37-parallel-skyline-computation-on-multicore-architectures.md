@@ -13,7 +13,6 @@ image: images/publications/2009-international-37-parallel-skyline-computation-on
 scope: international
 kind: conference
 tags:
-- ICDE
 - data-systems
 date: '2009-01-01'
 buttons:

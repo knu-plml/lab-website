@@ -18,7 +18,6 @@ image: images/publications/2023-international-08-twelve-lead-ecg-reconstruction-
 scope: international
 kind: conference
 tags:
-- MICCAI
 - machine-learning
 - healthcare-ai
 date: '2023-10-01'

@@ -11,7 +11,6 @@ image: images/publications/2016-international-24-precise-and-scalable-static-ana
 scope: international
 kind: conference
 tags:
-- DLS
 - programming-languages
 - formal-methods
 - data-systems

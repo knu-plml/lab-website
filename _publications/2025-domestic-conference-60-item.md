@@ -14,7 +14,6 @@ image: images/publications/2025-domestic-conference-60-item.svg
 scope: domestic
 kind: conference
 tags:
-- KSC
 - software-engineering
 - formal-methods
 date: '2025-12-01'
