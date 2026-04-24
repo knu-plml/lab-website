@@ -263,6 +263,10 @@ header:not([data-big]) {
       width: 100%;
     }
 
+    .nav-dropdown::after {
+      display: none;
+    }
+
     .nav-dropdown-menu {
       position: static;
       min-width: 0;
@@ -279,6 +283,11 @@ header:not([data-big]) {
       transform: none;
       backdrop-filter: none;
       -webkit-backdrop-filter: none;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+      transform: none;
     }
 
     .nav-dropdown-menu::before {
