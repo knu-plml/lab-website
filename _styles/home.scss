@@ -71,10 +71,10 @@ $stack: 860px;
 }
 
 .home-hero {
-  --hero-art-size: clamp(1000px, 56vw, 1160px);
-  --hero-art-x: calc(40% + clamp(80px, 16vw, 280px));
-  --hero-art-y: 56%;
-  --hero-glow-x: calc(50% + clamp(60px, 14vw, 250px));
+  --hero-art-size: 1200px;
+  --hero-art-x: calc(40% + clamp(24px, 8vw, 140px));
+  --hero-art-y: 70%;
+  --hero-glow-x: calc(40% + clamp(18px, 7vw, 120px));
 
   position: relative;
   z-index: 1;
@@ -707,10 +707,10 @@ section[data-size="full"] > .home-research-overview {
 
 @media (max-width: $stack) {
   .home-hero {
-    --hero-art-size: clamp(560px, 96vw, 820px);
-    --hero-art-x: calc(50% + 20vw);
-    --hero-art-y: 34%;
-    --hero-glow-x: calc(50% + 16vw);
+    --hero-art-size: 1200px;
+    --hero-art-x: calc(50% + clamp(0px, 10vw, 70px));
+    --hero-art-y: 70%;
+    --hero-glow-x: calc(50% + clamp(0px, 8vw, 58px));
 
     min-height: 560px;
   }
@@ -756,16 +756,18 @@ section[data-size="full"] > .home-research-overview {
 
 @media (max-width: 640px) {
   .home-hero {
-    --hero-art-size: clamp(480px, 138vw, 680px);
-    --hero-art-x: 88%;
-    --hero-art-y: 28%;
-    --hero-glow-x: 78%;
+    --hero-art-size: clamp(720px, 186vw, 920px);
+    --hero-art-x: calc(50% - clamp(72px, 22vw, 150px));
+    --hero-art-y: 56%;
+    --hero-glow-x: calc(50% - clamp(48px, 16vw, 110px));
 
     min-height: 480px;
   }
 
   .home-hero::after {
-    background: linear-gradient(90deg, rgba(2, 8, 23, 0.96) 0%, rgba(2, 8, 23, 0.82) 100%);
+    background:
+      linear-gradient(90deg, rgba(2, 8, 23, 0.94) 0%, rgba(2, 8, 23, 0.78) 58%, rgba(2, 8, 23, 0.62) 100%),
+      linear-gradient(180deg, rgba(2, 8, 23, 0.16) 0%, rgba(2, 8, 23, 0.82) 100%);
   }
 
   .home-hero-inner {
@@ -775,6 +777,11 @@ section[data-size="full"] > .home-research-overview {
 
   .home-hero-title {
     font-size: clamp(2.7rem, 16vw, 4rem);
+  }
+
+  .home-hero-title span {
+    display: block;
+    width: fit-content;
   }
 
   .home-hero-lead br {
@@ -789,7 +796,7 @@ section[data-size="full"] > .home-research-overview {
   }
 
   section[data-size="full"] > .home-research-overview {
-    margin-top: 12px !important;
+    margin-top: -15px !important;
   }
 
   .home-research-grid,
