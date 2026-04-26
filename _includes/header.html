@@ -57,19 +57,23 @@
     >
       Home
     </a>
-    {% assign pages = site.pages
-      | where_exp: "page", "page.nav"
+    {% assign nav_pages = site.pages
+      | where_exp: "item", "item.nav"
       | sort: "nav.order"
     %}
-    {% for page in pages %}
-      {% if page.nav and page.title != "Contact" %}
+    {% for nav_page in nav_pages %}
+      {% if nav_page.nav and nav_page.title != "Contact" %}
+        {% assign is_current_section = false %}
+        {% if current_url == nav_page.url or current_url contains nav_page.dir %}
+          {% assign is_current_section = true %}
+        {% endif %}
         <a
-          href="{{ page.dir | relative_url | uri_escape }}"
-          {% if current_url == page.url %}
+          href="{{ nav_page.dir | relative_url | uri_escape }}"
+          {% if is_current_section %}
             aria-current="page"
           {% endif %}
         >
-          {{ page.title }}
+          {{ nav_page.title }}
         </a>
       {% endif %}
     {% endfor %}

@@ -73,7 +73,7 @@ footer .button[data-style="bare"] {
 }
 
 footer .button[data-style="bare"]:hover {
-  border-color: color-mix(in srgb, var(--primary) 26%, var(--surface-border) 74%);
+  border-color: var(--interactive-border);
   background: var(--surface-contrast);
   color: #ffffff;
 }

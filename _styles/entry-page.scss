@@ -8,15 +8,6 @@
   margin: 24px auto 0;
 }
 
-.entry-hero,
-.entry-body,
-.entry-summary-only {
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
-}
-
 .entry-hero {
   display: grid;
   grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
@@ -27,7 +18,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--surface-raised);
 }
 
 .entry-cover img {
@@ -68,7 +58,7 @@
   margin: 0;
   font-size: 1.02rem;
   line-height: 1.85;
-  color: color-mix(in srgb, var(--text) 82%, transparent);
+  color: var(--text-muted-strong);
   word-break: keep-all;
   overflow-wrap: break-word;
 }

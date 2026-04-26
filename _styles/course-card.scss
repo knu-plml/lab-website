@@ -26,7 +26,7 @@
 
 .course-card-subtitle {
   font-style: italic;
-  color: color-mix(in srgb, var(--text) 72%, transparent);
+  color: var(--text-muted);
 }
 
 .course-card-description {

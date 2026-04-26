@@ -14,20 +14,15 @@
   top: 92px;
 }
 
-.member-profile-card,
-.member-search-card,
-.member-content {
-  border-radius: var(--rounded);
-}
-
 .member-profile-card {
-  padding: 18px 14px 22px;
-  background:
+  --panel-background:
     linear-gradient(
       180deg,
       color-mix(in srgb, var(--primary) 10%, var(--surface-raised)) 0,
       var(--surface) 86px
     );
+
+  padding: 18px 14px 22px;
 }
 
 .member-profile-card .portrait {
@@ -131,7 +126,7 @@
   content: "";
   width: 0.7rem;
   height: 0.7rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--primary) 78%, white 22%);
 }
 
@@ -155,23 +150,24 @@
   top: 0.82rem;
   width: 0.42rem;
   height: 0.42rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--primary);
   transform: translateY(-50%);
 }
 
 .member-search-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 22px 24px;
-  background:
+  --panel-background:
     linear-gradient(
       135deg,
       color-mix(in srgb, var(--primary) 9%, var(--surface-raised)) 0%,
       var(--surface) 48%
     );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
 }
 
 .member-search-card p {

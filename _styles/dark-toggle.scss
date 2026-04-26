@@ -7,7 +7,7 @@
   height: 25px;
   margin: 0;
   border: 1px solid var(--surface-border);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-raised);
   appearance: none;
   box-shadow: var(--shadow);
@@ -47,7 +47,7 @@
 }
 
 .dark-toggle:hover {
-  border-color: color-mix(in srgb, var(--primary) 26%, var(--surface-border) 74%);
+  border-color: var(--interactive-border);
   background: var(--surface-contrast);
 }
 

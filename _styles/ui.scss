@@ -2,51 +2,68 @@
 ---
 
 .ui-surface-panel,
+.entry-hero,
+.entry-body,
+.entry-summary-only,
+.home-research-publication,
+.home-focus-card,
+.home-program-card,
+.home-news-list .post-excerpt,
+.member-profile-card,
+.member-search-card,
+.member-content,
 .publication-card,
 .post-excerpt,
 .course-group,
 .courses-page-notice {
   border: 1px solid var(--surface-border);
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--surface-raised) 92%, transparent), transparent 100%),
-    var(--surface);
-  box-shadow: var(--shadow);
+  border-radius: var(--panel-radius, var(--rounded));
+  background: var(--panel-background);
+  box-shadow: var(--panel-shadow, var(--shadow));
 }
 
 .ui-surface-subtle,
+.entry-cover,
+.home-research-image,
+.home-research-publication-image,
 .publication-card-image,
 .post-excerpt-image {
-  background: var(--surface-raised);
+  background: var(--media-background);
 }
 
 .ui-chip,
 .tag,
+.home-hero-chips span,
+.home-inline-links a,
+.home-research-tags li,
 .course-row-tag,
 .course-date-chip,
 .publication-meta-chip,
 .publication-card-tag,
 .publication-author-link,
 .publication-author-chip {
-  border: 1px solid var(--surface-border);
-  background: var(--surface-raised);
-  color: var(--text);
+  border: 1px solid var(--chip-border, var(--surface-border));
+  border-radius: var(--radius-pill);
+  background: var(--chip-background);
+  color: var(--chip-color, var(--text));
   text-decoration: none;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .ui-chip:hover,
 .tag:hover,
+.home-inline-links a:hover,
 .publication-meta-chip:hover,
 .publication-card-tag:hover,
 .publication-author-link:hover {
-  border-color: color-mix(in srgb, var(--primary) 24%, var(--surface-border) 76%);
-  background: var(--surface-contrast);
+  border-color: var(--interactive-border);
+  background: var(--chip-hover-background);
 }
 
 .ui-chip[data-active],
 .tag[data-active] {
-  border-color: color-mix(in srgb, var(--primary) 24%, var(--surface-border) 76%);
-  background: var(--surface-contrast);
+  border-color: var(--interactive-border);
+  background: var(--chip-hover-background);
 }
 
 .ui-search,
@@ -67,7 +84,7 @@
   align-items: center;
   padding: 0.25rem;
   border: 1px solid var(--surface-border);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface);
   box-shadow: inset 0 1px 0 color-mix(in srgb, white 4%, transparent);
 }

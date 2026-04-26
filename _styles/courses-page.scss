@@ -44,12 +44,13 @@ main[data-page="/courses/"] section[data-dark="true"] {
 }
 
 .courses-page-notice {
+  --panel-radius: var(--radius-lg);
+
   display: flex;
   align-items: center;
   gap: 14px;
   margin-bottom: 56px;
   padding: 18px 20px;
-  border-radius: 18px;
   color: var(--text);
   font-size: 0.98rem;
   line-height: 1.7;
@@ -69,8 +70,9 @@ main[data-page="/courses/"] section[data-dark="true"] {
 }
 
 .course-group {
+  --panel-radius: var(--radius-lg);
+
   padding: 22px 24px 24px;
-  border-radius: 20px;
 }
 
 .course-group-header {
@@ -124,7 +126,6 @@ main[data-page="/courses/"] section[data-dark="true"] {
   display: inline-flex;
   align-items: center;
   padding: 6px 10px;
-  border-radius: 999px;
   font-family: var(--body);
   font-size: 0.87rem;
   white-space: nowrap;
@@ -142,7 +143,6 @@ main[data-page="/courses/"] section[data-dark="true"] {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  border-radius: 999px;
   font-family: var(--body);
   font-size: 0.87rem;
   cursor: default;
@@ -186,8 +186,9 @@ main[data-page="/courses/"] section[data-dark="true"] {
   }
 
   .course-group {
+    --panel-radius: var(--radius-md);
+
     padding: 18px 16px;
-    border-radius: 16px;
   }
 
   .course-group-dates {

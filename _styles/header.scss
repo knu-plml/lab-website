@@ -4,7 +4,7 @@
 $logo-big: 80px;
 $logo: 40px;
 $big-padding: 84px;
-$collapse: 700px;
+$collapse: 850px;
 $sticky: true;
 
 header {
@@ -161,11 +161,12 @@ header > nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-self: center;
   gap: 18px;
   font-family: var(--heading);
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 header > nav > a {
@@ -194,8 +195,8 @@ header > nav > a[aria-current="page"]::after {
   display: block;
   width: 100%;
   height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #6b7cff 0%, #d85bff 100%);
+  border-radius: var(--radius-pill);
+  background: var(--brand-gradient);
 }
 
 header > nav > a:hover {
@@ -214,7 +215,7 @@ header > nav > a:hover {
   min-height: 36px;
   padding: 0 16px;
   border: 1px solid rgba(255, 255, 255, 0.42);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: #ffffff;
   font-family: var(--heading);
   font-size: 1.0rem;
@@ -261,7 +262,7 @@ header:not([data-big]) {
       width: min(240px, calc(100vw - 32px));
       padding: 12px;
       border: 1px solid rgba(120, 142, 255, 0.22);
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       background: rgba(3, 8, 20, 0.94);
       box-shadow:
         0 22px 54px rgba(0, 0, 0, 0.34),

@@ -21,7 +21,7 @@
 }
 
 .publication-cover img {
-  border-radius: calc(var(--rounded) - 10px);
+  border-radius: var(--radius-xs);
   background: white;
   box-shadow: 0 18px 42px color-mix(in srgb, black 18%, transparent);
 }
@@ -41,7 +41,7 @@
 
 .publication-summary-subtitle {
   max-width: 54ch;
-  color: color-mix(in srgb, var(--text) 66%, transparent);
+  color: var(--text-subtle);
   text-wrap: pretty;
 }
 
@@ -57,7 +57,7 @@
   font-weight: var(--bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--primary) 76%, var(--text) 24%);
+  color: var(--accent-muted);
 }
 
 .publication-actions {
