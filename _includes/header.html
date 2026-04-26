@@ -1,5 +1,9 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
+{% assign current_url = page.url %}
+{% if page.url == "/" %}
+  {% assign image = "images/background.png" %}
+{% endif %}
 {% if page.url == "/" and page.header-dark == nil %}
   {% assign dark = nil %}
 {% endif %}
@@ -14,9 +18,6 @@
   style="--image: url('{{ image | relative_url | uri_escape }}')"
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
-  {% endif %}
-  {% if page.url == "/" %}
-    data-big
   {% endif %}
 >
   <a href="{{ "/" | relative_url }}" class="home">
@@ -44,18 +45,42 @@
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
   <nav>
+    <a
+      href="{{ "/" | relative_url }}"
+      {% if page.url == "/" %}
+        aria-current="page"
+      {% endif %}
+    >
+      Home
+    </a>
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
     %}
     {% for page in pages %}
-      {% if page.nav %}
+      {% if page.nav and page.title != "Contact" %}
         <a
           href="{{ page.dir | relative_url | uri_escape }}"
+          {% if current_url == page.url %}
+            aria-current="page"
+          {% endif %}
         >
           {{ page.title }}
         </a>
       {% endif %}
     {% endfor %}
   </nav>
+
+  {% assign contact_page = site.pages | where: "title", "Contact" | first %}
+  {% if contact_page %}
+    <a
+      class="contact-link"
+      href="{{ contact_page.dir | relative_url | uri_escape }}"
+      {% if current_url == contact_page.url %}
+        aria-current="page"
+      {% endif %}
+    >
+      Contact
+    </a>
+  {% endif %}
 </header>

@@ -3,94 +3,90 @@ show-title: false
 show-subtitle: false
 ---
 
-<div class="home-hero-panel reveal-on-scroll">
-  <div class="home-hero-copy">
-    <p class="home-section-label">Welcome!</p>
-    <h1 class="home-hero-title">
-      <span>Programming Language & Machine Learning Lab.</span>
-    </h1>
-    <p class="home-hero-lead">
-      강원대학교 PLML 연구실은 프로그래밍 언어, 소프트웨어 공학, 기계학습, 의료 인공지능을 중심으로 다양한 연구를 수행합니다.<br />
-      학부 연구 참여부터 학·석사 연계, 석사 및 박사 과정까지 함께 성장할 연구원을 상시 모집하고 있습니다.<br />
-      관심이 있는 학생은 임현승 교수에게 상담을 신청하거나, 연구실 학생들과 이야기해보기 바랍니다.
-    </p>
-    <div class="home-hero-actions">
-      {%
-        include button.html
-        link="contact"
-        text="연락하기"
-        icon="fa-solid fa-arrow-right"
-      %}
-      {%
-        include button.html
-        link="members"
-        text="연구실 구성원 보기"
-        icon="fa-solid fa-users"
-        style="bare"
-      %}
-    </div>
-    <div class="home-hero-chips">
-      <span>Programming Languages</span>
-      <span>Machine Learning</span>
-      <span>Software Engineering</span>
-      <span>Healthcare AI</span>
+{% include section.html size="full" dark="true" %}
+
+<div class="home-hero">
+  <div class="home-hero-inner">
+    <div class="home-hero-copy">
+      <h1 class="home-hero-title">
+        <span>PLML</span> Laboratory
+      </h1>
+      <p class="home-hero-tagline">Programming Language & Machine Learning Lab.</p>
+      <p class="home-hero-lead">
+        인공지능 기술을 중심으로 프로그래밍 언어, 소프트웨어 공학, 기계학습, 의료 인공지능 분야의 혁신적인 연구를 수행합니다.
+      </p>
+      <div class="home-hero-actions">
+        {%
+          include button.html
+          link="publications"
+          text="Our Research"
+          icon="fa-solid fa-arrow-right"
+          flip=true
+        %}
+        {%
+          include button.html
+          link="contact"
+          text="Join Us"
+          style="bare"
+        %}
+      </div>
     </div>
   </div>
 </div>
 
-{% include section.html %}
-
-<div class="home-block reveal-on-scroll">
-  <div class="home-block-header reveal-on-scroll">
-    <p class="home-section-label">Research Areas</p>
-    <h2>주요 연구 분야</h2>
-  </div>
-  <div class="home-research-grid">
-    <article class="home-research-card reveal-on-scroll">
-      <div class="home-research-image">
-        <img
-          src="{{ 'images/research/programming-languages.svg' | relative_url }}"
-          alt="타입 시스템과 형식 기법 연구 이미지"
-        >
-      </div>
-      <p class="home-research-kicker">Programming Languages</p>
-      <strong>타입 시스템과 형식 기법</strong>
-      <p>재귀 타입, 모듈 시스템, 정적 의미론, 형식 검증을 통해 언어의 안전성과 표현력을 연구합니다.</p>
-    </article>
-    <article class="home-research-card reveal-on-scroll">
-      <div class="home-research-image">
-        <img
-          src="{{ 'images/research/ai-for-code.svg' | relative_url }}"
-          alt="코드 생성, 번역, 자동 수정 연구 이미지"
-        >
-      </div>
-      <p class="home-research-kicker">AI for Code</p>
-      <strong>코드 생성, 번역, 자동 수정</strong>
-      <p>대규모 코드 언어 모델을 활용해 버그 수정, 코드 번역, 프로그램 합성과 같은 문제를 다룹니다.</p>
-    </article>
-    <article class="home-research-card reveal-on-scroll">
-      <div class="home-research-image">
-        <img
-          src="{{ 'images/research/software-engineering.svg' | relative_url }}"
-          alt="프로그램 분석과 품질 자동화 연구 이미지"
-        >
-      </div>
-      <p class="home-research-kicker">Software Engineering</p>
-      <strong>프로그램 분석과 품질 자동화</strong>
-      <p>정적 분석, 테스트, 자동 평가를 바탕으로 실제 개발 환경에 적용 가능한 자동화 기법을 연구합니다.</p>
-    </article>
-    <article class="home-research-card reveal-on-scroll">
-      <div class="home-research-image">
-        <img
-          src="{{ 'images/research/healthcare-ai.svg' | relative_url }}"
-          alt="의료 데이터 분석과 임상 AI 연구 이미지"
-        >
-      </div>
-      <p class="home-research-kicker">Healthcare AI</p>
-      <strong>의료 데이터 분석과 임상 AI</strong>
-      <p>의료 영상, 생체 신호, 임상 데이터를 활용해 예측 모델과 의사결정 지원 기법을 개발합니다.</p>
-    </article>
-  </div>
+<div class="home-research-overview">
+  <article class="home-research-card">
+    <div class="home-research-icon">
+      {% include icon.html icon="fa-solid fa-code" %}
+    </div>
+    <p class="home-research-kicker">Programming Languages</p>
+    <strong>타입 시스템과 형식 기법</strong>
+    <ul class="home-research-tags">
+      <li>재귀 타입</li>
+      <li>모듈 시스템</li>
+      <li>정적 의미론</li>
+      <li>형식 검증</li>
+    </ul>
+  </article>
+  <article class="home-research-card">
+    <div class="home-research-icon">
+      {% include icon.html icon="fa-solid fa-brain" %}
+    </div>
+    <p class="home-research-kicker">AI for Code</p>
+    <strong>코드 생성, 번역, 자동 수정</strong>
+    <ul class="home-research-tags">
+      <li>대규모 코드 언어 모델</li>
+      <li>버그 수정</li>
+      <li>코드 번역</li>
+      <li>프로그램 합성</li>
+    </ul>
+  </article>
+  <article class="home-research-card">
+    <div class="home-research-icon">
+      {% include icon.html icon="fa-solid fa-briefcase-medical" %}
+    </div>
+    <p class="home-research-kicker">Software Engineering</p>
+    <strong>프로그램 분석과 품질 자동화</strong>
+    <ul class="home-research-tags">
+      <li>정적 분석</li>
+      <li>테스트</li>
+      <li>자동 평가</li>
+      <li>개발 자동화</li>
+    </ul>
+  </article>
+  <article class="home-research-card">
+    <div class="home-research-icon">
+      {% include icon.html icon="fa-solid fa-chart-simple" %}
+    </div>
+    <p class="home-research-kicker">Healthcare AI</p>
+    <strong>의료 데이터 분석과 임상 AI</strong>
+    <ul class="home-research-tags">
+      <li>의료 영상</li>
+      <li>생체 신호</li>
+      <li>임상 데이터</li>
+      <li>의사결정 지원</li>
+    </ul>
+  </article>
 </div>
 
 {% include section.html %}
