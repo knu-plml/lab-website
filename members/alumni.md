@@ -5,6 +5,8 @@ permalink: /members/alumni/
 
 # {% include icon.html icon="fa-solid fa-user-graduate" %}Alumni
 
+{% include members-nav.html current="alumni" %}
+
 {% assign members = site.members | data_filter: "role != 'principal-investigator'" | sort: "name" %}
 {% assign phd_alumni = members | data_filter: "Array(education).any? { |entry| entry['degree'] == 'Ph.D.' } || content&.include?('Ph.D. in')" | sort_by_education_date %}
 {% assign phd_coursework_alumni = members | data_filter: "Array(education).any? { |entry| entry['degree'] == 'Ph.D. coursework completed' } || content&.include?('Ph.D. coursework completed')" | sort_by_education_date %}

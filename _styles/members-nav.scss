@@ -1,0 +1,26 @@
+---
+---
+
+.members-page-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 1.75rem;
+}
+
+.members-page-nav-link {
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .members-page-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .members-page-nav-link {
+    flex: 1 1 0;
+    text-align: center;
+  }
+}

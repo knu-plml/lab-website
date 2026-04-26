@@ -1,0 +1,20 @@
+<nav class="members-page-nav publication-tabs-nav ui-segmented" aria-label="Member pages">
+  <a
+    href="{{ '/members/' | relative_url | uri_escape }}"
+    class="members-page-nav-link publication-tab{% if include.current == 'team' %} is-active{% endif %}"
+    {% if include.current == "team" %}
+      aria-current="page"
+    {% endif %}
+  >
+    Team
+  </a>
+  <a
+    href="{{ '/members/alumni/' | relative_url | uri_escape }}"
+    class="members-page-nav-link publication-tab{% if include.current == 'alumni' %} is-active{% endif %}"
+    {% if include.current == "alumni" %}
+      aria-current="page"
+    {% endif %}
+  >
+    Alumni
+  </a>
+</nav>

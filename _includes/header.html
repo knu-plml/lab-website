@@ -50,26 +50,11 @@
     %}
     {% for page in pages %}
       {% if page.nav %}
-        {% if page.dir == '/members/' %}
-          <div class="nav-dropdown">
-            <a
-              href="{{ page.dir | relative_url | uri_escape }}"
-              class="nav-dropdown-trigger"
-            >
-              {{ page.title }}
-            </a>
-            <div class="nav-dropdown-menu">
-              <a href="{{ '/members/' | relative_url | uri_escape }}">Team</a>
-              <a href="{{ '/members/alumni/' | relative_url | uri_escape }}">Alumni</a>
-            </div>
-          </div>
-        {% else %}
-          <a
-            href="{{ page.dir | relative_url | uri_escape }}"
-          >
-            {{ page.title }}
-          </a>
-        {% endif %}
+        <a
+          href="{{ page.dir | relative_url | uri_escape }}"
+        >
+          {{ page.title }}
+        </a>
       {% endif %}
     {% endfor %}
   </nav>

@@ -7,6 +7,8 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
+{% include members-nav.html current="team" %}
+
 {% assign professors = site.members | data_filter: "role == 'principal-investigator'" %}
 {% if professors.size > 0 %}
 ## Professor
