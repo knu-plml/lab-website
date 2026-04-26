@@ -33,6 +33,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,13 +55,74 @@
 }
 
 .portrait-image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin-bottom: 20px;
+  aspect-ratio: 4 / 5;
+  border-radius: 44% 44% 38% 38% / 34% 34% 30% 30%;
+  object-fit: cover;
+  object-position: 50% 28%;
+  background: color-mix(in srgb, var(--surface-raised) 42%, white 58%);
+  box-shadow:
+    0 22px 48px -34px var(--overlay),
+    0 8px 22px -20px color-mix(in srgb, var(--primary) 38%, transparent);
+}
+
+.portrait::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid color-mix(in srgb, var(--surface-border) 92%, transparent);
+  border-radius: 44% 44% 38% 38% / 34% 34% 30% 30%;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-raised) 42%, transparent) 0%, transparent 62%),
+    var(--surface);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 66%, transparent),
+    0 24px 52px -36px var(--overlay);
+  pointer-events: none;
+}
+
+.portrait[data-style="small"] .portrait-image,
+.portrait[data-style="tiny"] .portrait-image {
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-pill);
-  object-fit: cover;
-  object-position: 50% 20%;
-  box-shadow: var(--shadow);
+}
+
+.portrait[data-style="small"]::before,
+.portrait[data-style="tiny"]::before {
+  display: none;
+}
+
+:root[data-dark="true"] .portrait-image {
+  box-shadow:
+    0 26px 56px -34px rgba(0, 0, 0, 0.72),
+    0 0 0 1px rgba(128, 151, 255, 0.08),
+    0 0 36px -24px rgba(111, 140, 255, 0.7);
+}
+
+:root[data-dark="true"] .portrait::before {
+  border-color: rgba(128, 151, 255, 0.16);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(111, 140, 255, 0.12) 0%, transparent 42%),
+    linear-gradient(180deg, rgba(18, 29, 54, 0.42) 0%, rgba(8, 16, 31, 0.18) 68%),
+    transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 24px 58px -34px rgba(0, 0, 0, 0.78),
+    0 0 46px -32px rgba(111, 140, 255, 0.7);
+}
+
+:root[data-dark="true"] .portrait .icon {
+  border: 1px solid rgba(128, 151, 255, 0.16);
+  background: rgba(8, 16, 31, 0.86);
+  box-shadow:
+    0 14px 30px -22px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .portrait[data-style="tiny"] .portrait-image {

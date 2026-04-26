@@ -20,13 +20,13 @@
 
 .member-profile-card .portrait {
   display: flex;
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  width: min(100%, 190px);
+  max-width: 190px;
+  margin: 0 auto;
 }
 
 .member-profile-card .portrait-image {
-  max-width: 190px;
+  max-width: 100%;
 }
 
 .member-links {

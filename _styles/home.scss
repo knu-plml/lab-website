@@ -605,20 +605,17 @@ section[data-size="full"] > .home-research-overview {
 :root[data-dark="true"] .home-focus-card,
 :root[data-dark="true"] .home-program-card,
 :root[data-dark="true"] .home-news-list .post-excerpt {
-  border-color: rgba(120, 142, 255, 0.2);
-  background:
-    linear-gradient(180deg, rgba(15, 27, 50, 0.88) 0%, rgba(7, 15, 29, 0.92) 100%);
-  box-shadow:
-    0 22px 54px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-color: var(--surface-border);
+  background: var(--panel-background);
+  box-shadow: var(--panel-shadow, var(--shadow));
 }
 
 :root[data-dark="true"] .home-research-publication:hover,
 :root[data-dark="true"] .home-program-card:hover {
-  border-color: rgba(126, 100, 255, 0.42);
+  border-color: var(--interactive-border);
   box-shadow:
-    0 24px 64px rgba(37, 64, 202, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 20px 54px -32px rgba(37, 64, 202, 0.2),
+    var(--panel-shadow, var(--shadow));
 }
 
 :root[data-dark="true"] .home-research-publication-image,
@@ -670,7 +667,6 @@ section[data-size="full"] > .home-research-overview {
 
 .home-news-list .post-excerpt {
   --panel-radius: var(--radius-xl);
-  --panel-shadow: none;
 
   margin: 0;
 }
