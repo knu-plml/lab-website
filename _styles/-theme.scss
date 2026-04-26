@@ -18,19 +18,19 @@
   --overlay: rgba(22, 35, 58, 0.09);
 }
 [data-dark="true"] {
-  --primary: #93a7cd;
-  --secondary: rgba(79, 83, 89, 0.34);
-  --text: #eceff4;
-  --background: #1f1f20;
-  --background-alt: #252628;
-  --surface: #2a2b2d;
-  --surface-raised: #333436;
-  --surface-contrast: #47484b;
-  --light-gray: #3a3b3f;
-  --gray: #afb2ba;
+  --primary: #6f8cff;
+  --secondary: rgba(86, 100, 255, 0.24);
+  --text: #f2f6ff;
+  --background: #030814;
+  --background-alt: #07101f;
+  --surface: rgba(8, 16, 31, 0.84);
+  --surface-raised: rgba(15, 26, 48, 0.88);
+  --surface-contrast: rgba(27, 42, 75, 0.92);
+  --light-gray: rgba(113, 132, 178, 0.28);
+  --gray: #a7b4d4;
   --dark-gray: #f3f7ff;
-  --surface-border: rgba(255, 255, 255, 0.06);
-  --overlay: rgba(0, 0, 0, 0.4);
+  --surface-border: rgba(128, 151, 255, 0.18);
+  --overlay: rgba(0, 0, 0, 0.54);
 }
 
 :root {
@@ -57,6 +57,6 @@
 
   // effects
   --rounded: 12px;
-  --shadow: 0 14px 34px -22px var(--overlay), 0 2px 10px -6px var(--overlay);
+  --shadow: 0 18px 44px -26px var(--overlay), 0 2px 14px -8px var(--overlay);
   --transition: 0.2s ease;
 }

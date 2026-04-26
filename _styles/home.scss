@@ -59,16 +59,23 @@ $stack: 860px;
 
 :root[data-dark="true"] .page-shell[data-page="/"] > section:first-of-type {
   background:
+    radial-gradient(circle at 72% 14%, rgba(33, 78, 255, 0.28) 0, transparent 30%),
+    radial-gradient(circle at 82% 46%, rgba(126, 65, 255, 0.18) 0, transparent 24%),
     linear-gradient(
       180deg,
       #020817 0,
       #020817 calc(100% - 118px),
-      #252628 calc(100% - 118px),
-      #252628 100%
+      var(--background-alt) calc(100% - 118px),
+      var(--background-alt) 100%
     );
 }
 
 .home-hero {
+  --hero-art-size: clamp(1000px, 56vw, 1160px);
+  --hero-art-x: calc(40% + clamp(80px, 16vw, 280px));
+  --hero-art-y: 56%;
+  --hero-glow-x: calc(50% + clamp(60px, 14vw, 250px));
+
   position: relative;
   z-index: 1;
   min-height: 600px;
@@ -87,14 +94,26 @@ $stack: 860px;
 
 .home-hero::before {
   z-index: 0;
-  background: url("../images/background.png") 55% 67% / 78% auto no-repeat;
+  background-image:
+    radial-gradient(ellipse at center, rgba(41, 111, 255, 0.42) 0, transparent 58%),
+    radial-gradient(ellipse at center, rgba(135, 76, 255, 0.26) 0, transparent 56%),
+    url("../images/background.png");
+  background-position:
+    var(--hero-glow-x) 48%,
+    calc(var(--hero-glow-x) - 80px) 58%,
+    var(--hero-art-x) var(--hero-art-y);
+  background-repeat: no-repeat;
+  background-size:
+    clamp(700px, 62vw, 1240px) clamp(430px, 38vw, 720px),
+    clamp(600px, 52vw, 1040px) clamp(360px, 32vw, 620px),
+    var(--hero-art-size) auto;
 }
 
 .home-hero::after {
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(2, 8, 23, 0.92) 0%, rgba(2, 8, 23, 0.66) 38%, rgba(2, 8, 23, 0.1) 72%),
-    linear-gradient(180deg, rgba(2, 8, 23, 0) 0%, rgba(2, 8, 23, 0.72) 100%);
+    linear-gradient(90deg, rgba(2, 8, 23, 0.94) 0%, rgba(2, 8, 23, 0.68) 38%, rgba(2, 8, 23, 0.08) 72%),
+    linear-gradient(180deg, rgba(2, 8, 23, 0.16) 0%, rgba(2, 8, 23, 0.82) 100%);
 }
 
 .home-hero-inner {
@@ -594,21 +613,60 @@ section[data-size="full"] > .home-research-overview {
   color: #ffffff;
 }
 
+:root[data-dark="true"] .home-research-publication,
+:root[data-dark="true"] .home-focus-card,
+:root[data-dark="true"] .home-program-card,
+:root[data-dark="true"] .home-news-list .post-excerpt {
+  border-color: rgba(120, 142, 255, 0.2);
+  background:
+    linear-gradient(180deg, rgba(15, 27, 50, 0.88) 0%, rgba(7, 15, 29, 0.92) 100%);
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+:root[data-dark="true"] .home-research-publication:hover,
+:root[data-dark="true"] .home-program-card:hover {
+  border-color: rgba(126, 100, 255, 0.42);
+  box-shadow:
+    0 24px 64px rgba(37, 64, 202, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+:root[data-dark="true"] .home-research-publication-image,
+:root[data-dark="true"] .home-research-image {
+  border-bottom-color: rgba(120, 142, 255, 0.16);
+  background:
+    radial-gradient(circle at 68% 18%, rgba(111, 140, 255, 0.18) 0, transparent 42%),
+    linear-gradient(180deg, rgba(14, 28, 58, 0.9) 0%, rgba(7, 15, 29, 0.94) 100%);
+}
+
 :root[data-dark="true"] .home-research-overview {
-  border-color: rgba(255, 255, 255, 0.09);
-  background: #2a2b2d;
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+  border-color: rgba(120, 142, 255, 0.22);
+  background:
+    linear-gradient(180deg, rgba(18, 29, 54, 0.82) 0%, rgba(7, 16, 31, 0.9) 100%);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 :root[data-dark="true"] .home-research-icon {
-  background: color-mix(in srgb, var(--primary) 18%, var(--surface-raised) 82%);
-  color: #aebfff;
+  border: 1px solid rgba(111, 140, 255, 0.2);
+  background:
+    radial-gradient(circle at 30% 24%, rgba(124, 214, 255, 0.22) 0, transparent 38%),
+    linear-gradient(135deg, rgba(54, 75, 145, 0.74) 0%, rgba(20, 30, 59, 0.94) 100%);
+  color: #8aa7ff;
+  box-shadow:
+    0 16px 34px rgba(32, 66, 212, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 :root[data-dark="true"] .home-research-tags li {
-  border-color: rgba(147, 167, 205, 0.18);
-  background: #333436;
-  color: #d7deef;
+  border-color: rgba(121, 145, 255, 0.22);
+  background: rgba(18, 29, 58, 0.76);
+  color: #d9e2ff;
 }
 
 :root[data-dark="false"] .home-research-overview {
@@ -662,12 +720,12 @@ section[data-size="full"] > .home-research-overview {
 
 @media (max-width: $stack) {
   .home-hero {
-    min-height: 560px;
-  }
+    --hero-art-size: clamp(560px, 96vw, 820px);
+    --hero-art-x: calc(50% + 20vw);
+    --hero-art-y: 34%;
+    --hero-glow-x: calc(50% + 16vw);
 
-  .home-hero::before {
-    background-position: 82% 34%;
-    background-size: 98% auto;
+    min-height: 560px;
   }
 
   .home-hero::after {
@@ -711,12 +769,12 @@ section[data-size="full"] > .home-research-overview {
 
 @media (max-width: 640px) {
   .home-hero {
-    min-height: 540px;
-  }
+    --hero-art-size: clamp(480px, 138vw, 680px);
+    --hero-art-x: 88%;
+    --hero-art-y: 28%;
+    --hero-glow-x: 78%;
 
-  .home-hero::before {
-    background-position: 88% 34%;
-    background-size: auto 88%;
+    min-height: 540px;
   }
 
   .home-hero::after {
@@ -725,7 +783,7 @@ section[data-size="full"] > .home-research-overview {
 
   .home-hero-inner {
     min-height: 540px;
-    padding: 54px 20px 104px;
+    padding: 116px 20px 104px;
   }
 
   .home-hero-title {
@@ -739,17 +797,37 @@ section[data-size="full"] > .home-research-overview {
   .home-research-overview {
     grid-template-columns: 1fr;
     max-width: calc(100% - 28px);
+    margin-top: 20px;
     padding: 16px;
   }
 
   section[data-size="full"] > .home-research-overview {
-    margin-top: -92px;
+    margin-top: 20px !important;
   }
 
   .home-research-grid,
-  .home-research-publications,
   .home-program-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-research-publications {
+    display: grid;
+    grid-auto-columns: minmax(280px, 82vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-inline: -20px;
+    padding: 2px 20px 14px;
+    scroll-padding-inline: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-research-publications .home-research-publication {
+    min-width: 0;
+    scroll-snap-align: start;
   }
 
   .home-research-image {

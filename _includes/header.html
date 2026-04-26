@@ -16,6 +16,10 @@
 <header
   class="background"
   style="--image: url('{{ image | relative_url | uri_escape }}')"
+  {% if page.url == "/" %}
+    data-overlap="true"
+    data-logo-hidden="true"
+  {% endif %}
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
   {% endif %}
@@ -69,12 +73,23 @@
         </a>
       {% endif %}
     {% endfor %}
+    {% assign contact_page = site.pages | where: "title", "Contact" | first %}
+    {% if contact_page %}
+      <a
+        class="contact-link-nav"
+        href="{{ contact_page.dir | relative_url | uri_escape }}"
+        {% if current_url == contact_page.url %}
+          aria-current="page"
+        {% endif %}
+      >
+        Contact
+      </a>
+    {% endif %}
   </nav>
 
-  {% assign contact_page = site.pages | where: "title", "Contact" | first %}
   {% if contact_page %}
     <a
-      class="contact-link"
+      class="contact-link contact-link-standalone"
       href="{{ contact_page.dir | relative_url | uri_escape }}"
       {% if current_url == contact_page.url %}
         aria-current="page"

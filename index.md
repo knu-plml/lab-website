@@ -63,7 +63,7 @@ show-subtitle: false
   </article>
   <article class="home-research-card">
     <div class="home-research-icon">
-      {% include icon.html icon="fa-solid fa-briefcase-medical" %}
+      {% include icon.html icon="fa-solid fa-chart-simple" %}
     </div>
     <p class="home-research-kicker">Software Engineering</p>
     <strong>프로그램 분석과 품질 자동화</strong>
@@ -76,7 +76,7 @@ show-subtitle: false
   </article>
   <article class="home-research-card">
     <div class="home-research-icon">
-      {% include icon.html icon="fa-solid fa-chart-simple" %}
+      {% include icon.html icon="fa-solid fa-briefcase-medical" %}
     </div>
     <p class="home-research-kicker">Healthcare AI</p>
     <strong>의료 데이터 분석과 임상 AI</strong>

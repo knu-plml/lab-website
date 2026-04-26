@@ -10,6 +10,8 @@
   const applyMode = (value) => {
     root.dataset.dark = value ? "true" : "false";
     root.style.colorScheme = value ? "dark" : "light";
+    root.style.backgroundColor = value ? "#030814" : "#ffffff";
+    root.style.color = value ? "#f2f6ff" : "#24324a";
   };
 
   // immediately load saved mode, otherwise follow the browser setting
