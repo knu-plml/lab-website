@@ -381,15 +381,24 @@ section[data-size="full"] > .home-research-overview {
 }
 
 .home-research-publications {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+  scroll-padding-inline: 2px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
 }
 
 .home-research-publication {
   --panel-radius: var(--radius-xl);
 
   display: grid;
+  flex: 1 0 240px;
   gap: 10px;
+  min-width: 240px;
   padding: 24px;
+  scroll-snap-align: start;
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
@@ -807,23 +816,16 @@ section[data-size="full"] > .home-research-overview {
   }
 
   .home-research-publications {
-    display: grid;
-    grid-auto-columns: minmax(280px, 82vw);
-    grid-auto-flow: column;
-    grid-template-columns: none;
     gap: 14px;
-    overflow-x: auto;
-    overflow-y: hidden;
     margin-inline: -20px;
     padding: 2px 20px 14px;
     scroll-padding-inline: 20px;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
   }
 
   .home-research-publications .home-research-publication {
+    flex: 0 0 min(82vw, 360px);
     min-width: 0;
-    scroll-snap-align: start;
   }
 
   .home-research-image {
