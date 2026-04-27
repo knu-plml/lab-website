@@ -1,6 +1,7 @@
 ---
 slug: "yongkyu-lee"
-name: "Yongkyu Lee (이용규)"
+name: "이용규"
+name_en: "Yongkyu Lee"
 image: "images/members/yongkyu-lee.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."

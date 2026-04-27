@@ -1,6 +1,7 @@
 ---
 slug: "yeongjin-song"
-name: "Yeongjin Song (송영진)"
+name: "송영진"
+name_en: "Yeongjin Song"
 image: ""
 role: "alumni"
 affiliation: "Classmethod"

@@ -1,6 +1,7 @@
 ---
 slug: "naeheon-lee"
-name: "Naeheon Lee (이내헌)"
+name: "이내헌"
+name_en: "Naeheon Lee"
 image: ""
 role: "alumni"
 affiliation: "PLML Laboratory alumni"

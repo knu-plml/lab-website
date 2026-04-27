@@ -1,6 +1,7 @@
 ---
 slug: "chaeyoon-park"
-name: "Chaeyoon Park (박채윤)"
+name: "박채윤"
+name_en: "Chaeyoon Park"
 image: "images/members/chaeyoon-park.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."

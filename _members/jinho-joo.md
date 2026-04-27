@@ -1,6 +1,7 @@
 ---
 slug: "jinho-joo"
-name: "Jinho Joo (주진호)"
+name: "주진호"
+name_en: "Jinho Joo"
 image: ""
 role: "alumni"
 affiliation: "integrated M.S.-Ph.D. student at Yonsei Univ."

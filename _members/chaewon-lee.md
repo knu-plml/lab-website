@@ -1,6 +1,7 @@
 ---
 slug: "chaewon-lee"
-name: "Chaewon Lee (이채원)"
+name: "이채원"
+name_en: "Chaewon Lee"
 image: "images/portrait-placeholder.svg"
 role: "alumni"
 affiliation: "강원정보문화산업진흥원"

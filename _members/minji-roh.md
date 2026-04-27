@@ -1,6 +1,7 @@
 ---
 slug: "minji-roh"
-name: "Minji Roh (노민지)"
+name: "노민지"
+name_en: "Minji Roh"
 image: "images/members/minji-roh.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."

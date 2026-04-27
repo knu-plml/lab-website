@@ -1,6 +1,7 @@
 ---
 slug: "seong-u-kim"
-name: "Seong-U Kim (김성우)"
+name: "김성우"
+name_en: "Seong-U Kim"
 image: ""
 role: "alumni"
 affiliation: "박사과정, PLML lab. (leave on absence)"

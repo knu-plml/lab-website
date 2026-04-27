@@ -1,6 +1,7 @@
 ---
 slug: "seung-soo-hwang"
-name: "Seung-Soo Hwang (황승수)"
+name: "황승수"
+name_en: "Seung-Soo Hwang"
 image: ""
 role: "alumni"
 affiliation: "PLML Laboratory alumni"

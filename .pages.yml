@@ -268,8 +268,8 @@ content:
     filename: "{slug}.md"
     view:
       primary: name
-      fields: [name, role, "education[0].degree"]
-      sort: [name, role]
+      fields: [name, name_en, role, "education[0].degree"]
+      sort: [name, name_en, role]
       default:
         sort: role
         order: desc
@@ -280,7 +280,11 @@ content:
         required: true
         description: "URL path value. Example: hyeonseung-im"
       - name: name
-        label: Name
+        label: Korean Name
+        type: string
+        required: true
+      - name: name_en
+        label: English Name
         type: string
         required: true
       - name: image

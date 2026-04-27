@@ -2,6 +2,12 @@
 {% assign details = member.content | markdownify %}
 {% assign education = member.education | default: empty %}
 {% assign summary = "" %}
+{% assign korean_name = member.name | strip %}
+{% assign english_name = member.name_en | strip %}
+{% assign full_name = english_name %}
+{% if korean_name != "" and korean_name != english_name %}
+  {% capture full_name %}{{ english_name }} ({{ korean_name }}){% endcapture %}
+{% endif %}
 
 {% if member.affiliation and member.affiliation != "" %}
   {% capture affiliation_html %}<p>{{ member.affiliation }}</p>{% endcapture %}
@@ -21,7 +27,7 @@
 
 <article class="alumni-entry">
   <h3 class="alumni-entry-name">
-    <a href="{{ member.url | relative_url | uri_escape }}">{{ member.name }}</a>{% if summary != "" %}<span class="alumni-entry-affiliation">, {{ summary }}</span>{% endif %}
+    <a href="{{ member.url | relative_url | uri_escape }}">{{ full_name }}</a>{% if summary != "" %}<span class="alumni-entry-affiliation">, {{ summary }}</span>{% endif %}
   </h3>
 
   {% assign cleaned_details = details | strip %}

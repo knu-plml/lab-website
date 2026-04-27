@@ -1,6 +1,7 @@
 ---
 slug: "yeongseo-jang"
-name: "Yeongseo Jang (장영서)"
+name: "장영서"
+name_en: "Yeongseo Jang"
 image: "images/members/yeongseo-jang.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."

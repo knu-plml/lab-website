@@ -1,6 +1,7 @@
 ---
 slug: "geonhui-lee"
-name: "Geonhui Lee (이건희)"
+name: "이건희"
+name_en: "Geonhui Lee"
 image: "images/members/geonhui-lee.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."

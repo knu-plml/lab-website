@@ -1,6 +1,7 @@
 ---
 slug: "heesang-kim"
-name: "Heesang Kim (김희상)"
+name: "김희상"
+name_en: "Heesang Kim"
 image: ""
 role: "alumni"
 affiliation: "(주)포소드"

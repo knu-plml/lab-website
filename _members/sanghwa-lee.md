@@ -1,6 +1,7 @@
 ---
 slug: "sanghwa-lee"
-name: "Sanghwa Lee (이상화)"
+name: "이상화"
+name_en: "Sanghwa Lee"
 image: "images/members/sanghwa-lee.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."

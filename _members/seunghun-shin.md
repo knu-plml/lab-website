@@ -1,6 +1,7 @@
 ---
 slug: "seunghun-shin"
-name: "Seunghun Shin (신승훈)"
+name: "신승훈"
+name_en: "Seunghun Shin"
 image: ""
 role: "alumni"
 affiliation: "태그바이컴퍼니(주)"

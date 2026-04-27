@@ -1,6 +1,7 @@
 ---
 slug: "suhwan-ji"
-name: "Suhwan Ji (지수환)"
+name: "지수환"
+name_en: "Suhwan Ji"
 image: ""
 role: "alumni"
 affiliation: "Assistant Professor, Dept. of Digital Military Science and Technology, KNU"

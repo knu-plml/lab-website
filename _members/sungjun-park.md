@@ -1,6 +1,7 @@
 ---
 slug: "sungjun-park"
-name: "Sungjun Park (박성준)"
+name: "박성준"
+name_en: "Sungjun Park"
 image: ""
 role: "alumni"
 affiliation: "PLML Laboratory alumni"

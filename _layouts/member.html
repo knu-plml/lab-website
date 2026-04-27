@@ -2,9 +2,8 @@
 layout: default
 ---
 
-{% assign display_name = page.name | default: page.title %}
-{% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
-{% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+{% assign korean_name = page.name | strip %}
+{% assign english_name = page.name_en | strip %}
 {% assign aliases = page.aliases
   | default: ""
   | join: ","
@@ -65,7 +64,7 @@ layout: default
         text="Find Publications"
         link=search
       %}
-      <p>Search publications by {{ page.name | default: page.title }} on the Publications page.</p>
+      <p>Search publications by {{ english_name }} on the Publications page.</p>
     </div>
   </div>
 </div>

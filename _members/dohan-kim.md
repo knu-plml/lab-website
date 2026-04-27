@@ -1,6 +1,7 @@
 ---
 slug: "dohan-kim"
-name: "Dohan Kim (김도한)"
+name: "김도한"
+name_en: "Dohan Kim"
 image: ""
 role: "alumni"
 affiliation: "ZioVision"

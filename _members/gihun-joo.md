@@ -1,6 +1,7 @@
 ---
 slug: "gihun-joo"
-name: "Gihun Joo (주기훈)"
+name: "주기훈"
+name_en: "Gihun Joo"
 image: "images/members/gihun-joo.jpg"
 role: "postdoc"
 affiliation: "Postdoc. at the PLML lab., KNU"

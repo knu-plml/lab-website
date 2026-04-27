@@ -1,6 +1,7 @@
 ---
 slug: "hyeonseung-im"
-name: "Hyeonseung Im (임현승)"
+name: "임현승"
+name_en: "Hyeonseung Im"
 image: "images/members/hyeonseung-im.jpg"
 role: "principal-investigator"
 links:

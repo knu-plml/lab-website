@@ -26,9 +26,8 @@
       {% endif %}
 
       {% for member in site.members %}
-        {% assign display_name = member.name | default: "" %}
-        {% assign english_name = display_name | regex_replace: "\s*\([^)]*\)", "" | strip %}
-        {% assign korean_name = display_name | regex_scan: "\(([^)]*)\)" | strip %}
+        {% assign korean_name = member.name | strip %}
+        {% assign english_name = member.name_en | strip %}
         {% assign aliases = member.aliases | default: empty %}
 
         {% if author_name == english_name or author_name == korean_name or aliases contains author_name %}

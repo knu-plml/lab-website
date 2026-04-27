@@ -1,6 +1,7 @@
 ---
 slug: "changsup-lee"
-name: "Changsup Lee (이창섭)"
+name: "이창섭"
+name_en: "Changsup Lee"
 image: "images/members/changsup-lee.jpg"
 role: "phd"
 affiliation: "박사과정, PLML lab."
