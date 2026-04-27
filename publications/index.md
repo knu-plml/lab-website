@@ -12,19 +12,15 @@ nav:
 
 {% include search-box.html %}
 {% include search-info.html %}
-
-<div class="publication-filters tags">
-  {% for item in site.data.publication_filters %}
-    <a
-      href="?search=&quot;tag: {{ item.tag }}&quot;"
-      class="tag"
-      data-publication-search-link
-      data-tooltip="Filter publications by {{ item.label }}"
-    >
-      {{ item.label }}
-    </a>
-  {% endfor %}
-</div>
+{% include tags.html
+  tags=site.data.publication_filters
+  value_key="tag"
+  label_key="label"
+  class="publication-filters"
+  link="/publications/"
+  tooltip_prefix="Filter publications by"
+  publication_search_link=true
+%}
 
 {% include section.html %}
 

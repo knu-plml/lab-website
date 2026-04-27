@@ -1,29 +1,55 @@
-{% assign tags = include.tags
-  | object_items
-  | join: ","
-  | downcase
-  | split: ","
-  | array_filter
-  | join: ","
-  | regex_replace: "\s+", "-"
-  | split: ","
-  | uniq
-%}
 {% assign link = include.link | default: page.dir %}
+{% assign value_key = include.value_key | default: nil %}
+{% assign label_key = include.label_key | default: nil %}
+{% assign class = include.class | default: "" %}
+{% assign tag_class = include.tag_class | default: "ui-chip" %}
+{% assign tooltip_prefix = include.tooltip_prefix | default: "Show items with the tag" %}
+{% assign extra_query = include.extra_query | default: "" %}
+
+{% if value_key %}
+  {% assign tags = include.tags %}
+{% else %}
+  {% assign tags = include.tags
+    | object_items
+    | join: ","
+    | downcase
+    | split: ","
+    | array_filter
+    | join: ","
+    | regex_replace: "\s+", "-"
+    | split: ","
+    | uniq
+  %}
+{% endif %}
+
 {% if tags.size > 0 or include.repo %}
   <div
-    class="tags"
+    class="tags{% if class != "" %} {{ class }}{% endif %}"
     {% if include.repo %}
       data-repo="{{ include.repo | xml_escape }}"
     {% endif %}
   >
-    {% for tag in tags %}
+    {% for item in tags %}
+      {% if value_key %}
+        {% assign tag = item[value_key] | downcase %}
+        {% if label_key %}
+          {% assign label = item[label_key] | default: tag %}
+        {% else %}
+          {% assign label = tag %}
+        {% endif %}
+      {% else %}
+        {% assign tag = item %}
+        {% assign label = item %}
+      {% endif %}
       <a
-        href="{{ link | relative_url }}?search=&quot;tag: {{ tag }}&quot;"
-        class="tag ui-chip"
-        data-tooltip="Show items with the tag &quot;{{ tag }}&quot;"
+        href="{{ link | relative_url }}?search=&quot;tag: {{ tag }}&quot;{{ extra_query }}"
+        class="tag {{ tag_class }}"
+        {% if include.publication_search_link %}
+          data-publication-search-link
+        {% endif %}
+        data-tooltip="{{ tooltip_prefix }} &quot;{{ label }}&quot;"
       >
-        {{ tag }}
+        {{ label }}
       </a>
     {% endfor %}
   </div>

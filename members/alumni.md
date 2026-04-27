@@ -5,6 +5,11 @@ permalink: /members/alumni/
 
 # {% include icon.html icon="fa-solid fa-user-graduate" %}Alumni
 
+{% include search-box.html %}
+{% include search-info.html %}
+
+{% include section.html %}
+
 {% include members-nav.html current="alumni" %}
 
 {% assign members = site.members | data_filter: "role != 'principal-investigator'" | sort: "name" %}

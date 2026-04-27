@@ -8,9 +8,13 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-book-open" %}Courses
 
+{% include search-box.html %}
+{% include search-info.html %}
+
+{% include section.html %}
+
 <div class="courses-page">
   {% assign emptyarray = "" | split: "," %}
-  <div class="courses-page-rule"></div>
 
   <div class="courses-page-notice ui-surface-panel">
     <i class="fa-regular fa-circle-question" aria-hidden="true"></i>

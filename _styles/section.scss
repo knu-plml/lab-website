@@ -39,8 +39,16 @@ main > section:nth-of-type(even) {
   background: var(--background-alt);
 }
 
-.team-section {
-  background: var(--background) !important;
+.page-shell:not([data-page="/"]) > section:first-of-type {
+  padding-top: calc(#{$padding} + 71px);
+  background:
+    linear-gradient(
+      180deg,
+      var(--hero-ink) 0,
+      var(--hero-ink) 71px,
+      var(--background) 71px,
+      var(--background) 100%
+    );
 }
 
 @media (max-width: 700px) {
@@ -50,5 +58,17 @@ main > section:nth-of-type(even) {
 
   section[data-size="wide"] {
     padding: 32px $mobile-padding;
+  }
+
+  .page-shell:not([data-page="/"]) > section:first-of-type {
+    padding-top: calc(32px + 69px);
+    background:
+      linear-gradient(
+        180deg,
+        var(--hero-ink) 0,
+        var(--hero-ink) 69px,
+        var(--background) 69px,
+        var(--background) 100%
+      );
   }
 }

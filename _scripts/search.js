@@ -5,7 +5,7 @@
 */
 {
   // elements to filter
-  const elementSelector = ".card, .citation, .post-excerpt, .publication-card";
+  const elementSelector = ".card, .citation, .post-excerpt, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
   // search box element
   const searchBoxSelector = ".search-box";
   // results info box element
@@ -123,7 +123,9 @@
   };
 
   const syncYearHeadings = () => {
-    const filterableSelector = ".card, .citation, .post-excerpt-container, .publication-card";
+    const filterableSelector = ".card, .citation, .post-excerpt-container, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
+    const headingSelector = "h2, h3";
+    const filterableGroupSelector = ".grid, .alumni-list";
     const parents = new Set(
       Array.from(document.querySelectorAll(filterableSelector))
         .map((element) => element.parentElement)
@@ -142,7 +144,7 @@
       };
 
       for (const child of children) {
-        if (child.matches("h3")) {
+        if (child.matches(headingSelector)) {
           flushSection();
           currentHeading = child;
           visibleInSection = 0;
@@ -163,6 +165,40 @@
       }
 
       flushSection();
+    }
+
+    // Some category headings sit beside a wrapper that contains the filterable
+    // cards, e.g. Team h2 + .grid and Alumni h2 + .alumni-list.
+    for (const heading of document.querySelectorAll(headingSelector)) {
+      let sibling = heading.nextElementSibling;
+      let filterables = [];
+
+      while (sibling && !sibling.matches(headingSelector)) {
+        if (sibling.matches(filterableSelector)) {
+          filterables.push(sibling);
+        }
+
+        filterables = filterables.concat(
+          Array.from(sibling.querySelectorAll(filterableSelector))
+        );
+        sibling = sibling.nextElementSibling;
+      }
+
+      if (!filterables.length) {
+        continue;
+      }
+
+      heading.hidden = !filterables.some((element) => isElementVisible(element));
+    }
+
+    for (const group of document.querySelectorAll(filterableGroupSelector)) {
+      const filterables = Array.from(group.querySelectorAll(filterableSelector));
+
+      if (!filterables.length) {
+        continue;
+      }
+
+      group.hidden = !filterables.some((element) => isElementVisible(element));
     }
   };
 

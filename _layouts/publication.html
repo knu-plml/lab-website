@@ -65,18 +65,13 @@ layout: default
       {% if page.tags and page.tags.size > 0 %}
         <div class="publication-hero-block">
           <div class="publication-block-label">Tags</div>
-          <div class="tags">
-            {% for tag in page.tags %}
-              <a
-                href="{{ '/publications/' | relative_url }}?search=&quot;tag: {{ tag | downcase }}&quot;&tab={{ publication_tab }}&kind={{ publication_kind }}"
-                class="tag ui-chip"
-                data-publication-search-link
-                data-tooltip="Show items with the tag &quot;{{ tag | downcase }}&quot;"
-              >
-                {{ tag | downcase }}
-              </a>
-            {% endfor %}
-          </div>
+          {% capture publication_tag_query %}&tab={{ publication_tab }}&kind={{ publication_kind }}{% endcapture %}
+          {% include tags.html
+            tags=page.tags
+            link="/publications/"
+            extra_query=publication_tag_query
+            publication_search_link=true
+          %}
         </div>
       {% endif %}
 

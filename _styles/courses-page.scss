@@ -7,6 +7,7 @@ main[data-page="/courses/"] section[data-dark="true"] {
 
 .courses-page {
   position: relative;
+  padding-top: 34px;
   padding-bottom: 32px;
 }
 
@@ -34,13 +35,6 @@ main[data-page="/courses/"] section[data-dark="true"] {
   color: var(--gray);
   text-align: left;
   line-height: var(--spacing);
-}
-
-.courses-page-rule {
-  width: 100%;
-  height: 1px;
-  margin: 34px 0 40px;
-  background: var(--surface-border);
 }
 
 .courses-page-notice {
@@ -176,8 +170,8 @@ main[data-page="/courses/"] section[data-dark="true"] {
 }
 
 @media (max-width: 640px) {
-  .courses-page-rule {
-    margin: 36px 0 32px;
+  .courses-page {
+    padding-top: 32px;
   }
 
   .courses-page-notice {

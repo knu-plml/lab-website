@@ -1,11 +1,7 @@
 {% assign image = page.header | default: site.header %}
-{% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
 {% assign current_url = page.url %}
 {% if page.url == "/" %}
   {% assign image = "images/background.png" %}
-{% endif %}
-{% if page.url == "/" and page.header-dark == nil %}
-  {% assign dark = nil %}
 {% endif %}
 
 {% assign svg = "images/logo.svg" | file_exists %}
@@ -16,13 +12,8 @@
 <header
   class="background"
   style="--image: url('{{ image | relative_url | uri_escape }}')"
-  {% if page.url == "/" %}
-    data-overlap="true"
-    data-logo-hidden="true"
-  {% endif %}
-  {% if dark == true or dark == false %}
-    data-dark="{{ dark }}"
-  {% endif %}
+  data-overlap="true"
+  data-logo-hidden="true"
 >
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}

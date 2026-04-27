@@ -7,6 +7,11 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
+{% include search-box.html %}
+{% include search-info.html %}
+
+{% include section.html %}
+
 {% include members-nav.html current="team" %}
 
 {% assign professors = site.members | data_filter: "role == 'principal-investigator'" %}
