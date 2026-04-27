@@ -9,9 +9,8 @@ nav:
 
 {% include search-box.html %}
 {% include search-info.html %}
+{% include tags.html tags=site.tags %}
 
 {% include section.html %}
-
-{% include tags.html tags=site.tags %}
 
 {% include list.html data="posts" component="post-excerpt" %}
