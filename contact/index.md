@@ -11,6 +11,48 @@ nav:
 
 관심이 있는 학생은 임현승 교수에게 상담을 신청하거나 연구실 학생들과 이야기해보기 바랍니다.
 
+{% include section.html %}
+
+## 대학원 프로그램
+
+<div class="contact-program-grid">
+  <a class="contact-program-card ui-surface-panel" href="http://knuds.kangwon.ac.kr/ds/index.do">
+    <strong>데이터사이언스학과</strong>
+    <span>일반대학원 연계</span>
+    <p>데이터사이언스융합인재양성사업과 연계하여 데이터 중심 연구를 수행합니다.</p>
+  </a>
+  <a class="contact-program-card ui-surface-panel" href="https://bk21.kangwon.ac.kr/bk21/index.do">
+    <strong>빅데이터메디컬융합학과</strong>
+    <span>일반대학원 / BK21</span>
+    <p>4단계 BK21 사업과 연계하여 의료 데이터와 AI 기반 융합 연구를 진행합니다.</p>
+  </a>
+  <a class="contact-program-card ui-surface-panel" href="https://cse.kangwon.ac.kr/cse/index.do">
+    <strong>컴퓨터공학과</strong>
+    <span>일반대학원 연계</span>
+    <p>연구 과제 참여를 바탕으로 시스템 및 소프트웨어 연구를 수행합니다.</p>
+  </a>
+  <a class="contact-program-card ui-surface-panel" href="https://edugradu.kangwon.ac.kr/edugradu/index.do">
+    <strong>컴퓨터교육전공</strong>
+    <span>교육대학원</span>
+    <p>교직 이수와 함께 컴퓨팅 교육 및 프로그래밍 언어 교육 관련 연구를 수행합니다.</p>
+  </a>
+  <a class="contact-program-card ui-surface-panel" href="http://cse.kangwon.ac.kr/cse/index.do">
+    <strong>정보보안전공</strong>
+    <span>정보과학행정대학원</span>
+    <p>야간제 기반으로 정보보안 및 실무 중심의 융합 연구를 병행할 수 있습니다.</p>
+  </a>
+</div>
+
+<div class="contact-program-links">
+  <a class="ui-chip" href="https://graduate.kangwon.ac.kr/graduate/index.do">일반대학원</a>
+  <a class="ui-chip" href="https://edugradu.kangwon.ac.kr/edugradu/index.do">교육대학원</a>
+  <a class="ui-chip" href="https://information.kangwon.ac.kr/information/index.do">정보과학행정대학원</a>
+</div>
+
+{% include section.html %}
+
+## 문의 및 위치
+
 {% capture col1 %}
 **연구실 위치**  
 강원도 춘천시 강원대학길 1  

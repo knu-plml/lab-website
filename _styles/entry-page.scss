@@ -92,6 +92,57 @@
   line-height: 1.9;
 }
 
+.contact-program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.contact-program-card {
+  --panel-radius: var(--radius-xl);
+
+  display: grid;
+  gap: 10px;
+  min-height: 190px;
+  padding: 22px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-program-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--interactive-border);
+}
+
+.contact-program-card strong {
+  font-size: 1.1rem;
+}
+
+.contact-program-card span {
+  color: var(--primary);
+  font-family: var(--body);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-program-card p {
+  margin: 0;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+.contact-program-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.contact-program-links a {
+  padding: 0.45em 0.8em;
+}
+
 .contact-map {
   overflow: hidden;
   border: 1px solid var(--surface-border);

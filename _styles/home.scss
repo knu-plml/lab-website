@@ -320,8 +320,7 @@ section[data-size="full"] > .home-research-overview {
   margin-top: 26px;
 }
 
-.home-hero-chips span,
-.home-inline-links a {
+.home-hero-chips span {
   --chip-color: var(--gray);
 
   display: inline-flex;
@@ -369,12 +368,6 @@ section[data-size="full"] > .home-research-overview {
 .home-news-feed .home-block-header p:last-child {
   max-width: 56ch;
   color: var(--gray);
-}
-
-.home-program-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
 }
 
 .home-research-grid,
@@ -515,46 +508,6 @@ section[data-size="full"] > .home-research-overview {
   transform: scale(1.03);
 }
 
-.home-program-card {
-  --panel-radius: var(--radius-xl);
-
-  display: grid;
-  gap: 10px;
-  min-height: 190px;
-  padding: 22px;
-  color: var(--text);
-  text-decoration: none;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-}
-
-.home-program-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--interactive-border);
-}
-
-.home-program-card strong {
-  font-size: 1.1rem;
-}
-
-.home-program-card span {
-  color: var(--primary);
-  font-family: var(--body);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-}
-
-.home-program-card p {
-  margin: 0;
-  color: var(--gray);
-  line-height: 1.75;
-}
-
-.home-inline-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .home-news-feed {
   display: grid;
   gap: 20px;
@@ -594,8 +547,7 @@ section[data-size="full"] > .home-research-overview {
   color: #8ea5ce;
 }
 
-[data-dark="true"] .home-hero-chips span,
-[data-dark="true"] .home-inline-links a {
+[data-dark="true"] .home-hero-chips span {
   border-color: rgba(255, 255, 255, 0.08);
   background: var(--surface-contrast);
   color: #c7d4ea;
@@ -624,15 +576,13 @@ section[data-size="full"] > .home-research-overview {
 
 :root[data-dark="true"] .home-research-publication,
 :root[data-dark="true"] .home-focus-card,
-:root[data-dark="true"] .home-program-card,
 :root[data-dark="true"] .home-news-list .post-excerpt {
   border-color: var(--surface-border);
   background: var(--panel-background);
   box-shadow: var(--panel-shadow, var(--shadow));
 }
 
-:root[data-dark="true"] .home-research-publication:hover,
-:root[data-dark="true"] .home-program-card:hover {
+:root[data-dark="true"] .home-research-publication:hover {
   border-color: var(--interactive-border);
   box-shadow:
     0 20px 54px -32px rgba(37, 64, 202, 0.2),
@@ -852,8 +802,7 @@ section[data-size="full"] > .home-research-overview {
     margin-top: -15px !important;
   }
 
-  .home-research-grid,
-  .home-program-grid {
+  .home-research-grid {
     grid-template-columns: 1fr;
   }
 
