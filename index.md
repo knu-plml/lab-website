@@ -37,41 +37,53 @@ show-subtitle: false
 <div class="home-research-overview">
   <article class="home-research-card">
     <div class="home-research-icon">
+      {% include icon.html icon="fa-solid fa-brain" %}
+    </div>
+    <p class="home-research-kicker">AI for Software Engineering</p>
+    <strong>AI 기반 소프트웨어 공학</strong>
+    <ul class="home-research-tags">
+      <li>
+        <span>Code LLM</span>
+        <span>자동 프로그램 수정</span>
+      </li>
+      <li>
+        <span>결함 위치 추적</span>
+        <span>코드 번역</span>
+      </li>
+    </ul>
+  </article>
+  <article class="home-research-card">
+    <div class="home-research-icon">
       {% include icon.html icon="fa-solid fa-code" %}
     </div>
     <p class="home-research-kicker">Programming Languages</p>
     <strong>타입 시스템과 형식 기법</strong>
     <ul class="home-research-tags">
-      <li>재귀 타입</li>
-      <li>모듈 시스템</li>
-      <li>정적 의미론</li>
-      <li>형식 검증</li>
+      <li>
+        <span>타입 시스템</span>
+        <span>정적 분석</span>
+      </li>
+      <li>
+        <span>정규식</span>
+        <span>형식 기법</span>
+      </li>
     </ul>
   </article>
   <article class="home-research-card">
     <div class="home-research-icon">
-      {% include icon.html icon="fa-solid fa-brain" %}
+      {% include icon.html icon="fa-solid fa-shield-halved" %}
     </div>
-    <p class="home-research-kicker">AI for Code</p>
-    <strong>코드 생성, 번역, 자동 수정</strong>
+    <p class="home-research-kicker">Data Systems & Security</p>
+    <strong>데이터 시스템과 보안</strong>
     <ul class="home-research-tags">
-      <li>대규모 코드 언어 모델</li>
-      <li>버그 수정</li>
-      <li>코드 번역</li>
-      <li>프로그램 합성</li>
-    </ul>
-  </article>
-  <article class="home-research-card">
-    <div class="home-research-icon">
-      {% include icon.html icon="fa-solid fa-chart-simple" %}
-    </div>
-    <p class="home-research-kicker">Software Engineering</p>
-    <strong>프로그램 분석과 품질 자동화</strong>
-    <ul class="home-research-tags">
-      <li>정적 분석</li>
-      <li>테스트</li>
-      <li>자동 평가</li>
-      <li>개발 자동화</li>
+      <li>
+        <span>블록체인</span>
+        <span>스마트 컨트랙트</span>
+      </li>
+      <li>
+        <span>스카이라인 쿼리</span>
+        <span>데이터 스트림</span>
+      </li>
     </ul>
   </article>
   <article class="home-research-card">
@@ -81,10 +93,14 @@ show-subtitle: false
     <p class="home-research-kicker">Healthcare AI</p>
     <strong>의료 데이터 분석과 임상 AI</strong>
     <ul class="home-research-tags">
-      <li>의료 영상</li>
-      <li>생체 신호</li>
-      <li>임상 데이터</li>
-      <li>의사결정 지원</li>
+      <li>
+        <span>임상 예측</span>
+        <span>심전도 분석</span>
+      </li>
+      <li>
+        <span>AutoML</span>
+        <span>의료 LLM</span>
+      </li>
     </ul>
   </article>
 </div>
