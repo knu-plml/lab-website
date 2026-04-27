@@ -271,8 +271,8 @@ content:
       fields: [name, role, "education[0].degree"]
       sort: [name, role]
       default:
-        sort: name
-        order: asc
+        sort: role
+        order: desc
     fields:
       - name: slug
         label: URL
