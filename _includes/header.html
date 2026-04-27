@@ -13,7 +13,9 @@
   class="background"
   style="--image: url('{{ image | relative_url | uri_escape }}')"
   data-overlap="true"
-  data-logo-hidden="true"
+  {% if page.url == "/" %}
+    data-logo-hidden="true"
+  {% endif %}
 >
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
