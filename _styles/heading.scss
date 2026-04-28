@@ -50,5 +50,5 @@ h6 {
 
 :where(h1, h2, h3, h4, h5, h6) > .icon {
   margin-right: 0.75em;
-  color: var(--light-gray);
+  color: color-mix(in srgb, var(--text) 15%, var(--light-gray));
 }
