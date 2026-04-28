@@ -45,9 +45,11 @@ layout: default
         </div>
       {% endif %}
 
-      {% if page.education and page.education.size > 0 %}
+      {% assign career = page.career | default: empty %}
+      {% assign education = page.education | default: empty %}
+      {% if career.size > 0 or education.size > 0 %}
         <div class="member-education member-content-block">
-          {% include education-list.html education=page.education %}
+          {% include education-list.html career=career education=education %}
         </div>
       {% endif %}
 

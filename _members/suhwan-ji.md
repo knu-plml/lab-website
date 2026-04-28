@@ -5,6 +5,8 @@ name_en: "Suhwan Ji"
 image: ""
 role: "alumni"
 affiliation: "Assistant Professor, Dept. of Digital Military Science and Technology, KNU"
+career:
+  - "Postdoc. at the Theory of Computation lab., Yonsei Univ., 2024.3-2026.2"
 education:
   - degree: "Ph.D."
     major: "AI and Software"
@@ -18,5 +20,3 @@ education:
     major: "Computer Science"
     date: "2017.8"
 ---
-
-- Postdoc. at the Theory of Computation lab., Yonsei Univ., 2024.3-2026.2

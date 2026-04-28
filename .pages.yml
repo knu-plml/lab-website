@@ -315,6 +315,12 @@ content:
         label: Affiliation
         type: string
         required: false
+      - name: career
+        label: Other Career
+        type: string
+        required: false
+        list: true
+        description: "Other career history shown above education. Example: Postdoc. at the ABC Lab., XYZ Univ., 20xx.x-20xx.x"
       - name: education
         label: Education / Alumni History
         component: education_entry

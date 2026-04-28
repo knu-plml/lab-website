@@ -1,7 +1,14 @@
+{% assign career = include.career | default: empty %}
 {% assign education = include.education | default: empty %}
 
-{% if education.size > 0 %}
+{% if career.size > 0 or education.size > 0 %}
   <ul class="education-list">
+    {% for entry in career %}
+      {% assign career_entry = entry | strip %}
+      {% if career_entry != "" %}
+        <li>{{ career_entry }}</li>
+      {% endif %}
+    {% endfor %}
     {% for entry in education %}
       <li>
         {% if entry.degree contains "coursework completed" %}
