@@ -51,7 +51,6 @@ $home-research-overlap: 118px;
   --hero-art-size: 1250px;
   --hero-art-x: min(calc(50vw - 550px), calc(100vw - 1200px));
   --hero-art-y: 70%;
-  --hero-glow-x: calc(40% + clamp(18px, 7vw, 120px));
 
   position: relative;
   z-index: 1;
@@ -71,26 +70,17 @@ $home-research-overlap: 118px;
 
 .home-hero::before {
   z-index: 0;
-  background-image:
-    radial-gradient(ellipse at center, rgba(41, 111, 255, 0.42) 0, transparent 58%),
-    radial-gradient(ellipse at center, rgba(135, 76, 255, 0.26) 0, transparent 56%),
-    url("../images/background.png");
-  background-position:
-    var(--hero-glow-x) 48%,
-    calc(var(--hero-glow-x) - 80px) 58%,
-    var(--hero-art-x) var(--hero-art-y);
+  background-image: url("../images/background.png");
+  background-position: var(--hero-art-x) var(--hero-art-y);
   background-repeat: no-repeat;
-  background-size:
-    clamp(700px, 62vw, 1240px) clamp(430px, 38vw, 720px),
-    clamp(600px, 52vw, 1040px) clamp(360px, 32vw, 620px),
-    var(--hero-art-size) auto;
+  background-size: var(--hero-art-size) auto;
 }
 
 .home-hero::after {
   z-index: 1;
   background:
     linear-gradient(90deg, rgba(2, 8, 23, 0.94) 0%, rgba(2, 8, 23, 0.68) 38%, rgba(2, 8, 23, 0.08) 72%),
-    linear-gradient(180deg, rgba(2, 8, 23, 0.16) 0%, rgba(2, 8, 23, 0.82) 100%);
+    linear-gradient(180deg, rgba(2, 8, 23, 0.16) 20%, rgba(2, 8, 23, 0.82) 100%);
 }
 
 .home-hero-inner {
@@ -245,6 +235,7 @@ section[data-size="full"] > .home-research-overview {
 }
 
 .home-research-overview .home-research-kicker {
+  margin: 0;
   max-width: none;
   color: color-mix(in srgb, var(--primary) 62%, #6678ff 38%);
   font-family: var(--code);
@@ -283,10 +274,12 @@ section[data-size="full"] > .home-research-overview {
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 24px;
   padding: 3px 8px;
   font-size: 0.78rem;
   line-height: 1.35;
+  text-align: center;
   word-break: keep-all;
 }
 
@@ -718,7 +711,7 @@ section[data-size="full"] > .home-research-overview {
   .home-hero::after {
     background:
       linear-gradient(90deg, rgba(2, 8, 23, 0.94) 0%, rgba(2, 8, 23, 0.76) 52%, rgba(2, 8, 23, 0.34) 100%),
-      linear-gradient(180deg, rgba(2, 8, 23, 0.04) 0%, rgba(2, 8, 23, 0.84) 100%);
+      linear-gradient(180deg, rgba(2, 8, 23, 0.04) 20%, rgba(2, 8, 23, 0.84) 100%);
   }
 
   .home-hero-inner {
@@ -783,7 +776,7 @@ section[data-size="full"] > .home-research-overview {
   .home-hero::after {
     background:
       linear-gradient(90deg, rgba(2, 8, 23, 0.94) 0%, rgba(2, 8, 23, 0.78) 58%, rgba(2, 8, 23, 0.62) 100%),
-      linear-gradient(180deg, rgba(2, 8, 23, 0.16) 0%, rgba(2, 8, 23, 0.82) 100%);
+      linear-gradient(180deg, rgba(2, 8, 23, 0.16) 40%, rgba(2, 8, 23, 0.82) 100%);
   }
 
   .home-hero-inner {
@@ -816,7 +809,7 @@ section[data-size="full"] > .home-research-overview {
   }
 
   .home-research-overview .home-research-card:nth-child(n + 2) {
-    padding-top: 22px;
+    padding-top: 10px;
   }
 
   .home-research-overview .home-research-card:nth-child(n + 2)::after {
