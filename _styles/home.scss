@@ -2,6 +2,7 @@
 ---
 
 $stack: 860px;
+$home-research-overlap: 118px;
 
 .reveal-on-scroll {
   opacity: 0;
@@ -40,32 +41,8 @@ $stack: 860px;
     linear-gradient(
       180deg,
       var(--hero-ink) 0,
-      var(--hero-ink) calc(100% - 118px),
-      var(--background-alt) calc(100% - 118px),
-      var(--background-alt) 100%
-    );
-}
-
-:root[data-dark="false"] .page-shell[data-page="/"] > section:first-of-type {
-  background:
-    linear-gradient(
-      180deg,
-      var(--hero-ink) 0,
-      var(--hero-ink) calc(100% - 118px),
-      #f8fafc calc(100% - 118px),
-      #f8fafc 100%
-    );
-}
-
-:root[data-dark="true"] .page-shell[data-page="/"] > section:first-of-type {
-  background:
-    radial-gradient(circle at 72% 14%, rgba(33, 78, 255, 0.28) 0, transparent 30%),
-    radial-gradient(circle at 82% 46%, rgba(126, 65, 255, 0.18) 0, transparent 24%),
-    linear-gradient(
-      180deg,
-      var(--hero-ink) 0,
-      var(--hero-ink) calc(100% - 118px),
-      var(--background-alt) calc(100% - 118px),
+      var(--hero-ink) calc(100% - #{$home-research-overlap}),
+      var(--background-alt) calc(100% - #{$home-research-overlap}),
       var(--background-alt) 100%
     );
 }
@@ -211,7 +188,7 @@ $stack: 860px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   max-width: 1200px;
-  margin: -118px auto 0;
+  margin: -$home-research-overlap auto 0;
   padding: 22px;
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-sm);
@@ -221,7 +198,7 @@ $stack: 860px;
 }
 
 section[data-size="full"] > .home-research-overview {
-  margin: -118px auto 0 !important;
+  margin: -$home-research-overlap auto 0 !important;
   border-radius: var(--radius-sm) !important;
 }
 

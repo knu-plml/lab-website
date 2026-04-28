@@ -3,7 +3,7 @@ show-title: false
 show-subtitle: false
 ---
 
-{% include section.html size="full" dark="true" %}
+{% include section.html size="full" %}
 
 <div class="home-hero">
   <div class="home-hero-inner">
