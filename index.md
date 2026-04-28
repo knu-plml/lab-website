@@ -18,16 +18,10 @@ show-subtitle: false
       <div class="home-hero-actions">
         {%
           include button.html
-          link="publications"
-          text="Our Research"
-          icon="fa-solid fa-arrow-right"
-          flip=true
-        %}
-        {%
-          include button.html
           link="contact"
           text="Join Us"
-          style="bare"
+          icon="fa-solid fa-arrow-right"
+          flip=true
         %}
       </div>
     </div>
@@ -35,23 +29,6 @@ show-subtitle: false
 </div>
 
 <div class="home-research-overview">
-  <article class="home-research-card">
-    <div class="home-research-icon">
-      {% include icon.html icon="fa-solid fa-brain" %}
-    </div>
-    <p class="home-research-kicker">AI for Software Engineering</p>
-    <strong>AI 기반 소프트웨어 공학</strong>
-    <ul class="home-research-tags">
-      <li>
-        <span>Code LLM</span>
-        <span>자동 프로그램 수정</span>
-      </li>
-      <li>
-        <span>결함 위치 추적</span>
-        <span>코드 번역</span>
-      </li>
-    </ul>
-  </article>
   <article class="home-research-card">
     <div class="home-research-icon">
       {% include icon.html icon="fa-solid fa-code" %}
@@ -66,6 +43,23 @@ show-subtitle: false
       <li>
         <span>정규식</span>
         <span>형식 기법</span>
+      </li>
+    </ul>
+  </article>
+  <article class="home-research-card">
+    <div class="home-research-icon">
+      {% include icon.html icon="fa-solid fa-brain" %}
+    </div>
+    <p class="home-research-kicker">Software Engineering</p>
+    <strong>소프트웨어 공학</strong>
+    <ul class="home-research-tags">
+      <li>
+        <span>Code LLM</span>
+        <span>자동 프로그램 수정</span>
+      </li>
+      <li>
+        <span>결함 위치 추적</span>
+        <span>코드 번역</span>
       </li>
     </ul>
   </article>
@@ -111,7 +105,10 @@ show-subtitle: false
 <div class="home-block reveal-on-scroll">
   <div class="home-block-header reveal-on-scroll">
     <p class="home-section-label">Research Output</p>
-    <h2>연구 성과</h2>
+    <div class="home-block-title-row">
+      <h2>연구 성과</h2>
+      <a class="home-block-title-link" href="{{ 'publications' | relative_url }}">전체 논문 보기</a>
+    </div>
   </div>
   <div class="home-research-publications">
     {% for publication in featured_publications limit:4 %}
@@ -140,15 +137,6 @@ show-subtitle: false
       </a>
     {% endfor %}
   </div>
-  <div class="home-news-more">
-    {%
-      include button.html
-      link="publications"
-      text="전체 논문 보기"
-      icon="fa-solid fa-arrow-right"
-      style="bare"
-    %}
-  </div>
 </div>
 
 {% include section.html %}
@@ -156,7 +144,10 @@ show-subtitle: false
 <div class="home-news-feed reveal-on-scroll">
   <div class="home-block-header reveal-on-scroll">
     <p class="home-section-label">Latest News</p>
-    <h2>최근 소식</h2>
+    <div class="home-block-title-row">
+      <h2>최근 소식</h2>
+      <a class="home-block-title-link" href="{{ 'news' | relative_url }}">전체 소식 보기</a>
+    </div>
   </div>
   <div class="home-news-list">
     {% for post in site.posts limit:3 %}
@@ -164,14 +155,5 @@ show-subtitle: false
         {% include post-excerpt.html lookup=post.slug %}
       </div>
     {% endfor %}
-  </div>
-  <div class="home-news-more">
-    {%
-      include button.html
-      link="news"
-      text="전체 소식 보기"
-      icon="fa-solid fa-arrow-right"
-      style="bare"
-    %}
   </div>
 </div>
