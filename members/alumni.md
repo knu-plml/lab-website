@@ -7,10 +7,9 @@ permalink: /members/alumni/
 
 {% include search-box.html %}
 {% include search-info.html %}
+{% include members-nav.html current="alumni" %}
 
 {% include section.html %}
-
-{% include members-nav.html current="alumni" %}
 
 {% assign members = site.members | data_filter: "role != 'principal-investigator'" | sort: "name" %}
 {% assign phd_alumni = members | data_filter: "Array(education).any? { |entry| entry['degree'] == 'Ph.D.' } || content&.include?('Ph.D. in')" | sort_by_education_date %}
@@ -30,6 +29,7 @@ permalink: /members/alumni/
 {% endif %}
 
 {% if phd_coursework_alumni.size > 0 %}
+{% include section.html %}
 ## Ph.D. Coursework Completed
 
 <div class="alumni-list">
@@ -40,6 +40,7 @@ permalink: /members/alumni/
 {% endif %}
 
 {% if ms_alumni.size > 0 %}
+{% include section.html %}
 ## M.S.
 
 <div class="alumni-list">
@@ -50,6 +51,7 @@ permalink: /members/alumni/
 {% endif %}
 
 {% if ms_coursework_alumni.size > 0 %}
+{% include section.html %}
 ## M.S. Coursework Completed
 
 <div class="alumni-list">
@@ -60,6 +62,7 @@ permalink: /members/alumni/
 {% endif %}
 
 {% if undergrad_alumni.size > 0 %}
+{% include section.html %}
 ## Undergraduate Interns
 
 <div class="alumni-list">

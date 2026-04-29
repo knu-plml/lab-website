@@ -97,6 +97,23 @@ module Jekyll
       data.sort_by { |item| education_sort_key(item) }.reverse
     end
 
+    def collection_years(data)
+      return [] unless data.respond_to?(:map)
+
+      data
+        .map do |item|
+          source = item.is_a?(Jekyll::Document) ? item.data : item
+          date = source["date"] if source.respond_to?(:[])
+          slug = source["slug"] if source.respond_to?(:[])
+          year = date.to_s[/\A\d{4}/] || slug.to_s[/\A\d{4}/]
+          year&.to_i
+        end
+        .compact
+        .uniq
+        .sort
+        .reverse
+    end
+
     # from css text, find font family definitions and construct google font url
     def google_fonts(css)
       names = regex_scan(css, '--\S*:\s*"(.*)",?.*;', false, true).sort.uniq

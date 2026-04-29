@@ -11,6 +11,4 @@ nav:
 {% include search-info.html %}
 {% include tags.html tags=site.tags %}
 
-{% include section.html %}
-
-{% include list.html data="posts" component="post-excerpt" %}
+{% include list.html data="posts" component="post-excerpt" section_per_year=true %}

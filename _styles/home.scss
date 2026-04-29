@@ -74,8 +74,8 @@ $home-research-overlap: 118px;
     linear-gradient(
       90deg,
       rgba(2, 8, 23, 0.96) 0%,
-      rgba(2, 8, 23, 0.72) clamp(40%, calc(40% - (100vw - $page)), 80%),
-      rgba(2, 8, 23, 0.1) clamp(60%, calc(60% - (100vw - $page)), 90%),
+      rgba(2, 8, 23, 0.75) clamp(40%, calc(40% - (100vw - $page)), 95%),
+      rgba(2, 8, 23, 0.1) clamp(60%, calc(60% - (100vw - $page)), 95%),
       rgba(2, 8, 23, 0.2) clamp(80%, calc(80% - (100vw - $page)), 95%),
       var(--hero-ink) 100%
     ),
@@ -702,7 +702,7 @@ section[data-size="full"] > .home-research-overview {
   .home-hero {
     --hero-art-size: 1450px;
     --hero-art-x: calc(100vw - 1275px);
-    --hero-art-y: 75%;
+    --hero-art-y: 65%;
     min-height: 480px;
   }
 

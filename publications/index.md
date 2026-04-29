@@ -9,20 +9,23 @@ nav:
 
 {% assign international_publications = site.publications | where: "scope", "international" %}
 {% assign domestic_publications = site.publications | where: "scope", "domestic" %}
+{% assign publication_years = site.publications | collection_years %}
 
 {% include search-box.html %}
 {% include search-info.html %}
-{% include tags.html
-  tags=site.data.publication_filters
-  value_key="tag"
-  label_key="label"
-  class="publication-filters"
-  link="/publications/"
-  tooltip_prefix="Filter publications by"
-  publication_search_link=true
-%}
 
-{% include section.html %}
+<div class="publication-filters tags">
+  {% for item in site.data.publication_filters %}
+    <a
+      href="?search=&quot;tag: {{ item.tag }}&quot;"
+      class="tag"
+      data-publication-search-link
+      data-tooltip="Filter publications by {{ item.label }}"
+    >
+      {{ item.label }}
+    </a>
+  {% endfor %}
+</div>
 
 <div class="publication-tabs" data-publication-tabs>
   <div class="publication-tabs-toolbar">
@@ -33,7 +36,6 @@ nav:
         id="publication-tab-international"
         role="tab"
         aria-selected="true"
-        aria-controls="publication-panel-international"
         data-tab-target="international"
       >
         <span data-tab-label>International</span>
@@ -45,7 +47,6 @@ nav:
         id="publication-tab-domestic"
         role="tab"
         aria-selected="false"
-        aria-controls="publication-panel-domestic"
         data-tab-target="domestic"
       >
         <span data-tab-label>Domestic</span>
@@ -80,27 +81,55 @@ nav:
       </button>
     </div>
   </div>
-
-  <div
-    class="publication-tab-panel is-active"
-    id="publication-panel-international"
-    role="tabpanel"
-    aria-labelledby="publication-tab-international"
-    data-tab-panel="international"
-  >
-    {% include list.html data="publications" component="publication-card" filter="scope == 'international'" %}
-    <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
-  </div>
-
-  <div
-    class="publication-tab-panel"
-    id="publication-panel-domestic"
-    role="tabpanel"
-    aria-labelledby="publication-tab-domestic"
-    data-tab-panel="domestic"
-    hidden
-  >
-    {% include list.html data="publications" component="publication-card" filter="scope == 'domestic'" %}
-    <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
-  </div>
+  <p class="publication-tab-empty" data-publication-empty hidden>No publications found for this type.</p>
 </div>
+
+{% for year in publication_years %}
+  {% assign year_name = year | append: "" %}
+  {% assign has_year_publications = false %}
+  {% for publication in site.publications %}
+    {% assign publication_year = publication.slug | slice: 0, 4 %}
+    {% if publication_year == year_name %}
+      {% assign has_year_publications = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% unless has_year_publications %}
+    {% continue %}
+  {% endunless %}
+
+  {% include section.html %}
+
+  <div class="publication-year-section" data-publication-year-section>
+    <h3 id="{{ year_name }}">{{ year_name }}</h3>
+
+    <div
+      class="publication-tab-panel is-active"
+      role="tabpanel"
+      aria-labelledby="publication-tab-international"
+      data-tab-panel="international"
+    >
+      {% for publication in site.publications %}
+        {% assign publication_year = publication.slug | slice: 0, 4 %}
+        {% if publication_year == year_name and publication.scope == "international" %}
+          {% include publication-card.html lookup=publication.slug %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div
+      class="publication-tab-panel"
+      role="tabpanel"
+      aria-labelledby="publication-tab-domestic"
+      data-tab-panel="domestic"
+      hidden
+    >
+      {% for publication in site.publications %}
+        {% assign publication_year = publication.slug | slice: 0, 4 %}
+        {% if publication_year == year_name and publication.scope == "domestic" %}
+          {% include publication-card.html lookup=publication.slug %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}

@@ -2,9 +2,11 @@ const publicationTabGroups = document.querySelectorAll("[data-publication-tabs]"
 const publicationSearchLinkSelector = "[data-publication-search-link]";
 
 for (const group of publicationTabGroups) {
+  const root = group.closest("main") || document;
   const tabs = Array.from(group.querySelectorAll("[data-tab-target]"));
-  const panels = Array.from(group.querySelectorAll("[data-tab-panel]"));
+  const panels = Array.from(root.querySelectorAll("[data-tab-panel]"));
   const kindFilters = Array.from(group.querySelectorAll("[data-kind-filter]"));
+  const emptyState = group.querySelector("[data-publication-empty]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeTarget = null;
   let activeKind = "all";
@@ -20,8 +22,8 @@ for (const group of publicationTabGroups) {
     url.search = params.toString();
     window.history.replaceState(null, "", url);
   };
-  const getPanelByTarget = (target = activeTarget) =>
-    panels.find((panel) => panel.dataset.tabPanel === target);
+  const getPanelsByTarget = (target = activeTarget) =>
+    panels.filter((panel) => panel.dataset.tabPanel === target);
   const syncSearchLinks = () => {
     const links = document.querySelectorAll(publicationSearchLinkSelector);
 
@@ -48,19 +50,18 @@ for (const group of publicationTabGroups) {
     });
   };
 
-  const countVisiblePublications = (panel) => {
-    if (!panel) {
-      return 0;
-    }
-
+  const countVisiblePublications = (targetPanels) => {
     let count = 0;
+    const panelList = Array.isArray(targetPanels) ? targetPanels : [targetPanels].filter(Boolean);
 
-    for (const card of panel.querySelectorAll(".publication-card")) {
-      const matchesKind = activeKind === "all" || card.dataset.publicationKind === activeKind;
-      const matchesSearch = card.style.display !== "none";
+    for (const panel of panelList) {
+      for (const card of panel.querySelectorAll(".publication-card")) {
+        const matchesKind = activeKind === "all" || card.dataset.publicationKind === activeKind;
+        const matchesSearch = card.style.display !== "none";
 
-      if (matchesKind && matchesSearch) {
-        count += 1;
+        if (matchesKind && matchesSearch) {
+          count += 1;
+        }
       }
     }
 
@@ -69,8 +70,7 @@ for (const group of publicationTabGroups) {
 
   const syncTabCounts = () => {
     for (const tab of tabs) {
-      const panel = getPanelByTarget(tab.dataset.tabTarget);
-      const count = countVisiblePublications(panel);
+      const count = countVisiblePublications(getPanelsByTarget(tab.dataset.tabTarget));
       const countNode = tab.querySelector("[data-tab-count]");
 
       if (countNode) {
@@ -79,31 +79,47 @@ for (const group of publicationTabGroups) {
     }
   };
 
-  const applyKindFilter = (panel) => {
-    if (!panel) {
-      return;
-    }
+  const syncPageSectionTones = () => {
+    const pageSections = Array.from(root.children).filter((child) => child.matches("section"));
+    let visibleIndex = 0;
 
-    const children = Array.from(panel.children);
-    const emptyState = panel.querySelector("[data-publication-empty]");
-    let currentHeading = null;
-    let visibleInSection = 0;
-    let visibleCount = 0;
-
-    const flushSection = () => {
-      if (currentHeading) {
-        currentHeading.hidden = visibleInSection === 0;
-      }
-    };
-
-    for (const child of children) {
-      if (child.matches("h3")) {
-        flushSection();
-        currentHeading = child;
-        visibleInSection = 0;
+    for (const section of pageSections) {
+      if (section.hidden) {
+        delete section.dataset.sectionTone;
         continue;
       }
 
+      section.dataset.sectionTone = visibleIndex % 2 === 0 ? "odd" : "even";
+      visibleIndex += 1;
+    }
+  };
+
+  const syncYearSections = () => {
+    for (const yearSection of root.querySelectorAll("[data-publication-year-section]")) {
+      const activePanels = Array.from(
+        yearSection.querySelectorAll(`[data-tab-panel="${activeTarget}"]`)
+      );
+      const hasVisiblePublications = countVisiblePublications(activePanels) > 0;
+      yearSection.hidden = !hasVisiblePublications;
+
+      const pageSection = yearSection.closest("section");
+      if (pageSection) {
+        pageSection.hidden = !hasVisiblePublications;
+      }
+    }
+
+    syncPageSectionTones();
+  };
+
+  const applyKindFilter = (panel) => {
+    if (!panel) {
+      return 0;
+    }
+
+    const children = Array.from(panel.children);
+    let visibleCount = 0;
+
+    for (const child of children) {
       if (!child.classList.contains("publication-card")) {
         continue;
       }
@@ -114,17 +130,24 @@ for (const group of publicationTabGroups) {
       child.hidden = !isVisible;
 
       if (isVisible) {
-        visibleInSection += 1;
         visibleCount += 1;
       }
     }
 
-    flushSection();
+    return visibleCount;
+  };
 
+  const applyKindFilterToPanels = (target = activeTarget) => {
+    let visibleCount = 0;
+
+    for (const panel of getPanelsByTarget(target)) {
+      visibleCount += applyKindFilter(panel);
+    }
+
+    syncYearSections();
     if (emptyState) {
       emptyState.hidden = visibleCount !== 0;
     }
-
     syncTabCounts();
   };
 
@@ -139,7 +162,7 @@ for (const group of publicationTabGroups) {
   const activateTab = (target, { animate = true } = {}) => {
     if (!target || target === activeTarget) {
       if (target === activeTarget) {
-        applyKindFilter(getPanelByTarget(target));
+        applyKindFilterToPanels(target);
       }
       return;
     }
@@ -172,7 +195,7 @@ for (const group of publicationTabGroups) {
     activeTarget = target;
     updateStateInUrl({ target });
     syncSearchLinks();
-    applyKindFilter(getPanelByTarget(target));
+    applyKindFilterToPanels(target);
   };
 
   const activateKind = (kind) => {
@@ -184,14 +207,16 @@ for (const group of publicationTabGroups) {
     updateStateInUrl({ kind });
     syncKindFilters();
     syncSearchLinks();
-    const activePanel = getPanelByTarget();
+    const activePanels = getPanelsByTarget();
 
-    if (!activePanel) {
+    if (!activePanels.length) {
       return;
     }
 
-    applyKindFilter(activePanel);
-    animatePanel(activePanel, "is-animating");
+    applyKindFilterToPanels();
+    for (const activePanel of activePanels) {
+      animatePanel(activePanel, "is-animating");
+    }
   };
 
   for (const tab of tabs) {
@@ -252,6 +277,6 @@ for (const group of publicationTabGroups) {
   }
 
   window.addEventListener("search:updated", () => {
-    applyKindFilter(getPanelByTarget());
+    applyKindFilterToPanels();
   });
 }

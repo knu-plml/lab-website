@@ -39,6 +39,14 @@ main > section:nth-of-type(even) {
   background: var(--background-alt);
 }
 
+main > section[data-section-tone="odd"] {
+  background: var(--background);
+}
+
+main > section[data-section-tone="even"] {
+  background: var(--background-alt);
+}
+
 .page-shell:not([data-page="/"]) > section:first-of-type {
   padding-top: calc(#{$padding} + 71px);
   background:

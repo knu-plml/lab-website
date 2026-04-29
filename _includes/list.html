@@ -12,6 +12,9 @@
 %}
 
 {% for year in years %}
+  {% if include.section_per_year %}
+    {% include section.html %}
+  {% endif %}
   {% assign data = year.items %}
 
   {% if years.size > 1 %}

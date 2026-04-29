@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin: 0 0 36px;
+  margin: 0;
 }
 
 .publication-tab,
@@ -81,7 +81,7 @@
   transform-origin: top center;
 }
 
-.publication-tab-panel > h3:first-child {
+.publication-year-section > h3:first-child {
   margin-top: 0;
 }
 
@@ -89,7 +89,7 @@
   display: none;
 }
 
-.publication-tab-panel > h3[hidden] {
+.publication-year-section[hidden] {
   display: none;
 }
 

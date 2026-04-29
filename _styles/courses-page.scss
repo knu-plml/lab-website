@@ -7,8 +7,6 @@ main[data-page="/courses/"] section[data-dark="true"] {
 
 .courses-page {
   position: relative;
-  padding-top: 34px;
-  padding-bottom: 32px;
 }
 
 .courses-page-label {
@@ -43,7 +41,7 @@ main[data-page="/courses/"] section[data-dark="true"] {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 56px;
+  margin-bottom: 35px;
   padding: 18px 20px;
   color: var(--text);
   font-size: 0.98rem;

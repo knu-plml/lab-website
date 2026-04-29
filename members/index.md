@@ -9,13 +9,11 @@ nav:
 
 {% include search-box.html %}
 {% include search-info.html %}
-
-{% include section.html %}
-
 {% include members-nav.html current="team" %}
 
 {% assign professors = site.members | data_filter: "role == 'principal-investigator'" %}
 {% if professors.size > 0 %}
+{% include section.html %}
 ## Professor
 
 <div class="grid">
@@ -25,6 +23,7 @@ nav:
 
 {% assign postdocs = site.members | data_filter: "role == 'postdoc'" %}
 {% if postdocs.size > 0 %}
+{% include section.html %}
 ## Postdoctoral Researchers
 
 <div class="grid">
@@ -34,6 +33,7 @@ nav:
 
 {% assign phd_students = site.members | data_filter: "role == 'phd'" %}
 {% if phd_students.size > 0 %}
+{% include section.html %}
 ## PhD Students
 
 <div class="grid">
@@ -43,6 +43,7 @@ nav:
 
 {% assign ms_students = site.members | data_filter: "role == 'ms'" %}
 {% if ms_students.size > 0 %}
+{% include section.html %}
 ## MS Students
 
 <div class="grid">
@@ -52,6 +53,7 @@ nav:
 
 {% assign undergrads = site.members | data_filter: "role == 'undergrad'" %}
 {% if undergrads.size > 0 %}
+{% include section.html %}
 ## Undergraduate Researchers
 
 <div class="grid">

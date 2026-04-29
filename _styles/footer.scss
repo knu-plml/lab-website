@@ -25,12 +25,6 @@ footer::after {
   pointer-events: none;
 }
 
-footer[data-dark="true"] {
-  background:
-    radial-gradient(circle at 76% 0%, rgba(57, 86, 255, 0.16) 0, transparent 34%),
-    rgba(3, 8, 20, 0.94);
-}
-
 :root[data-dark="false"] footer[data-dark="true"] {
   background: color-mix(in srgb, #10141d 88%, var(--background) 12%);
 }
