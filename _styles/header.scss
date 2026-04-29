@@ -187,7 +187,11 @@ header > nav > a[aria-current="page"] {
   color: #ffffff;
 }
 
-header > nav > a[aria-current="page"]::after {
+.nav-label {
+  position: relative;
+}
+
+header > nav > a[aria-current="page"] .nav-label::after {
   content: "";
   position: absolute;
   left: 0;
@@ -291,6 +295,9 @@ header:not([data-big]) {
     }
 
     > nav > a {
+      justify-content: flex-end;
+      width: 100%;
+      padding: 0 10px;
       text-align: right;
     }
 

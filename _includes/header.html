@@ -48,7 +48,7 @@
         aria-current="page"
       {% endif %}
     >
-      Home
+      <span class="nav-label">Home</span>
     </a>
     {% assign nav_pages = site.pages
       | where_exp: "item", "item.nav"
@@ -66,7 +66,7 @@
             aria-current="page"
           {% endif %}
         >
-          {{ nav_page.title }}
+          <span class="nav-label">{{ nav_page.title }}</span>
         </a>
       {% endif %}
     {% endfor %}
@@ -79,7 +79,7 @@
           aria-current="page"
         {% endif %}
       >
-        Contact
+        <span class="nav-label">Contact</span>
       </a>
     {% endif %}
   </nav>
