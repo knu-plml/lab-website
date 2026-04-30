@@ -1,12 +1,12 @@
 <!-- Google Fonts -->
 <!-- automatically get url from fonts used in theme file -->
-<!--
+{% comment %}
 {% assign googlefonts = "_styles/-theme.scss" | file_read | google_fonts %}
 {% if googlefonts and googlefonts != "" %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="{{ googlefonts }}" rel="stylesheet">
 {% endif %}
--->
+{% endcomment %}
 
 <!-- Pretendard -->
 <link
@@ -14,14 +14,6 @@
   href="https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css"
 >
 
-<!-- Font Awesome icons (load asynchronously due to size) -->
+<!-- Font Awesome icons -->
 {% assign fontawesome = "https://use.fontawesome.com/releases/v6.7.0/css/all.css" %}
-<link
-  href="{{ fontawesome }}"
-  rel="stylesheet"
-  media="none"
-  onload="this.removeAttribute('media'); this.onload = null;"
-/>
-<noscript>
-  <link href="{{ fontawesome }}" rel="stylesheet">
-</noscript>
+<link href="{{ fontawesome }}" rel="stylesheet">

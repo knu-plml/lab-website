@@ -1,13 +1,12 @@
----
----
-
-$logo-big: 80px;
 $logo: 40px;
-$big-padding: 84px;
 $collapse: 850px;
 $sticky: true;
+$header-offset: 71px;
+$mobile-header-offset: 69px;
 
 header {
+  isolation: isolate;
+  view-transition-name: site-header;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -19,6 +18,10 @@ header {
     linear-gradient(90deg, rgba(2, 8, 23, 0.96) 0%, rgba(2, 8, 23, 0.82) 42%, rgba(2, 8, 23, 0.58) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition:
+    border-color 180ms ease,
+    backdrop-filter 180ms ease,
+    -webkit-backdrop-filter 180ms ease;
 
   @if $sticky {
     position: sticky !important;
@@ -30,8 +33,12 @@ header {
 header[data-overlap="true"] {
   position: sticky !important;
   top: 0;
-  margin-bottom: -71px;
+  margin-bottom: -$header-offset;
   z-index: 20 !important;
+}
+
+.header-spacer {
+  height: $header-offset;
 }
 
 header[data-logo-hidden="true"] .home {
@@ -39,47 +46,38 @@ header[data-logo-hidden="true"] .home {
   pointer-events: none;
 }
 
-header::after {
+header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: none;
-  pointer-events: none;
+  z-index: 0;
+  background: #020817;
+  opacity: 1;
+  transition: opacity 180ms ease;
 }
 
-header.background:before {
-  background-position: 18% top;
-  background-size: 108% auto;
-  opacity: 0.22;
-  filter: saturate(0.9) brightness(0.48) contrast(1.08);
+header > * {
+  position: relative;
+  z-index: 1;
 }
 
-:root[data-dark="true"] header[data-big]:not([data-dark]).background:before,
-header[data-dark="true"].background:before {
-  opacity: 0.16;
-  filter: saturate(0.68) brightness(0.25) contrast(1.12);
+header[data-scrolled="true"] {
+  border-bottom-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-:root[data-dark="false"] header[data-dark="true"].background:before {
-  opacity: 0.34;
-  filter: saturate(0.92) brightness(0.62) contrast(1.08);
+header[data-scrolled="true"]::before {
+  opacity: 0;
 }
 
-header[data-dark="true"] {
-  background: color-mix(in srgb, var(--background) 84%, black 16%);
+header:focus-within {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-:root[data-dark="false"] header[data-dark="true"] {
-  background: color-mix(in srgb, #10141d 88%, var(--background) 12%);
-}
-
-:root[data-dark="true"] header[data-big]:not([data-dark]),
-header[data-dark="true"][data-big] {
-  background: color-mix(in srgb, var(--background) 80%, black 20%);
-}
-
-:root[data-dark="false"] header[data-big]:not([data-dark]) {
-  background: color-mix(in srgb, #10141d 88%, var(--background) 12%);
+header:focus-within::before {
+  opacity: 1;
 }
 
 header a {
@@ -239,14 +237,18 @@ header > nav > a:hover {
   background: rgba(255, 255, 255, 0.06);
 }
 
-header:not([data-big]) {
-  @media (max-width: $collapse) {
+@media (max-width: $collapse) {
+  header {
     grid-template-columns: 1fr auto;
     padding: 14px 16px;
 
     &[data-overlap="true"] {
       position: sticky !important;
-      margin-bottom: -69px;
+      margin-bottom: -$mobile-header-offset;
+    }
+
+    + .header-spacer {
+      height: $mobile-header-offset;
     }
 
     .contact-link-standalone {
@@ -308,72 +310,9 @@ header:not([data-big]) {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  header:not([data-big]) > nav {
+  header,
+  header > nav,
+  header::before {
     transition: none !important;
   }
-}
-
-header[data-big] {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 100px 20px;
-  border-bottom: 0;
-  box-shadow: none;
-  background: color-mix(in srgb, var(--surface) 94%, black 6%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-
-  @if $sticky {
-    top: unset;
-  }
-
-  .home {
-    flex-direction: column;
-    flex-grow: 0;
-  }
-
-  .logo {
-    height: $logo-big;
-    flex-shrink: 0;
-  }
-
-  .title-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-size: clamp(3rem, 7vw, 4.4rem);
-    letter-spacing: -0.05em;
-  }
-
-  .subtitle {
-    font-size: var(--large);
-  }
-}
-
-@media (max-width: $collapse) {
-  header[data-big] {
-    padding: 72px 16px;
-
-    .logo {
-      height: 56px;
-    }
-
-    .title {
-      font-size: clamp(2.4rem, 11vw, 3.4rem);
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-    }
-  }
-}
-
-:root[data-dark="false"] header[data-big]:not([data-dark]).background:before,
-header[data-big].background:before {
-  opacity: 0.34;
-  filter: saturate(0.92) brightness(0.62) contrast(1.08);
 }

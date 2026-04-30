@@ -2,8 +2,6 @@
 title: PLML Laboratory
 subtitle: Programming Languages and Machine Learning
 description: Programming Languages and Machine Learning Laboratory at Kangwon National University.
-header: images/background.svg
-footer: images/background.svg
 proofer: false
 
 baseurl: /new

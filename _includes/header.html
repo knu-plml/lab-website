@@ -1,8 +1,4 @@
-{% assign image = page.header | default: site.header %}
 {% assign current_url = page.url %}
-{% if page.url == "/" %}
-  {% assign image = "images/background.png" %}
-{% endif %}
 
 {% assign svg = "images/logo.svg" | file_exists %}
 {% assign png = "images/logo.png" | file_exists %}
@@ -10,8 +6,6 @@
 {% assign logo = svg | default: png | default: jpg | default: nil %}
 
 <header
-  class="background"
-  style="--image: url('{{ image | relative_url | uri_escape }}')"
   data-overlap="true"
   {% if page.url == "/" %}
     data-logo-hidden="true"
@@ -96,3 +90,7 @@
     </a>
   {% endif %}
 </header>
+
+{% unless page.url == "/" %}
+  <div class="header-spacer" aria-hidden="true"></div>
+{% endunless %}

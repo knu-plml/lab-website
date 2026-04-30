@@ -1,6 +1,3 @@
----
----
-
 // colors
 [data-dark="false"] {
   --primary: #3f5786;
@@ -21,6 +18,11 @@
   --hero-accent: #89a4ff;
   --hero-title: #f8fbff;
   --hero-text: rgba(255, 255, 255, 0.88);
+  --footer-background: color-mix(in srgb, #10141d 88%, var(--background) 12%);
+  --footer-text: color-mix(in srgb, var(--hero-title) 76%, transparent);
+  --footer-link: color-mix(in srgb, var(--hero-title) 82%, transparent);
+  --footer-button-border: color-mix(in srgb, var(--hero-link) 28%, transparent);
+  --footer-button-border-hover: color-mix(in srgb, var(--hero-link) 46%, transparent);
 }
 [data-dark="true"] {
   --primary: #6f8cff;
@@ -41,6 +43,11 @@
   --hero-accent: #89a4ff;
   --hero-title: #f4f8ff;
   --hero-text: #d0d5dd;
+  --footer-background: color-mix(in srgb, var(--surface) 94%, black 6%);
+  --footer-text: color-mix(in srgb, var(--hero-title) 76%, transparent);
+  --footer-link: color-mix(in srgb, var(--hero-title) 82%, transparent);
+  --footer-button-border: color-mix(in srgb, var(--hero-link) 28%, transparent);
+  --footer-button-border-hover: color-mix(in srgb, var(--hero-link) 46%, transparent);
 }
 
 :root {
@@ -110,6 +117,8 @@
   --text-subtle: color-mix(in srgb, var(--text) 66%, transparent);
   --text-muted: color-mix(in srgb, var(--text) 72%, transparent);
   --text-muted-strong: color-mix(in srgb, var(--text) 82%, transparent);
+  --footer-button-background: rgba(17, 30, 56, 0.78);
+  --footer-button-background-hover: rgba(28, 45, 82, 0.9);
 
   // buttons
   --button-background:
