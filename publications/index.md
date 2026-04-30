@@ -14,7 +14,7 @@ nav:
 {% include search-box.html %}
 {% include search-info.html %}
 
-<div class="publication-filters tags">
+<div class="publication-filters tags tag-scroll">
   {% for item in site.data.publication_filters %}
     <a
       href="?search=&quot;tag: {{ item.tag }}&quot;"

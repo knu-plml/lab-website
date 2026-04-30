@@ -9,6 +9,6 @@ nav:
 
 {% include search-box.html %}
 {% include search-info.html %}
-{% include tags.html tags=site.tags %}
+{% include tags.html tags=site.tags class="tag-scroll" %}
 
 {% include list.html data="posts" component="post-excerpt" section_per_year=true %}

@@ -17,3 +17,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.tags.tag-scroll {
+  flex-wrap: nowrap;
+  justify-content: safe center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+
+.tags.tag-scroll .tag {
+  flex: 0 0 auto;
+}
