@@ -4,3 +4,7 @@
   font-style: italic;
   line-height: var(--spacing);
 }
+
+.search-info:empty {
+  display: none;
+}
