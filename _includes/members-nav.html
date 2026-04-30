@@ -1,20 +1,20 @@
-<nav class="members-page-nav publication-tabs-nav ui-segmented" aria-label="Member pages">
-  <a
-    href="{{ '/members/' | relative_url | uri_escape }}"
-    class="members-page-nav-link publication-tab{% if include.current == 'team' %} is-active{% endif %}"
-    {% if include.current == "team" %}
-      aria-current="page"
-    {% endif %}
+<nav class="members-page-nav publication-tabs-nav ui-segmented" aria-label="Member views" role="tablist" data-publication-tabs>
+  <button
+    type="button"
+    class="publication-tab{% if include.current == 'team' %} is-active{% endif %}"
+    data-tab-target="team"
+    role="tab"
+    aria-selected="{% if include.current == 'team' %}true{% else %}false{% endif %}"
   >
-    Team
-  </a>
-  <a
-    href="{{ '/members/alumni/' | relative_url | uri_escape }}"
-    class="members-page-nav-link publication-tab{% if include.current == 'alumni' %} is-active{% endif %}"
-    {% if include.current == "alumni" %}
-      aria-current="page"
-    {% endif %}
+    Members
+  </button>
+  <button
+    type="button"
+    class="publication-tab{% if include.current == 'alumni' %} is-active{% endif %}"
+    data-tab-target="alumni"
+    role="tab"
+    aria-selected="{% if include.current == 'alumni' %}true{% else %}false{% endif %}"
   >
     Alumni
-  </a>
+  </button>
 </nav>

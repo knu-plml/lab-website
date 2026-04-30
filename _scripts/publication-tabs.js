@@ -196,6 +196,7 @@ for (const group of publicationTabGroups) {
     updateStateInUrl({ target });
     syncSearchLinks();
     applyKindFilterToPanels(target);
+    window.dispatchEvent(new CustomEvent("tabs:updated", { detail: { target } }));
   };
 
   const activateKind = (kind) => {

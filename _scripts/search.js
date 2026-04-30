@@ -6,6 +6,8 @@
 {
   // elements to filter
   const elementSelector = ".card, .citation, .post-excerpt, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
+  const sectionElementSelector = ".card, .citation, .post-excerpt-container, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
+  const filterableGroupSelector = ".grid, .alumni-list";
   // search box element
   const searchBoxSelector = ".search-box";
   // results info box element
@@ -63,6 +65,33 @@
   const getNormalizedTextMatches = (element, selector) =>
     [...element.querySelectorAll(selector)].map((item) => normalizeTag(item.innerText));
 
+  const isInInactiveTabPanel = (element) => {
+    const panel = element.closest("[data-tab-panel]");
+    return Boolean(panel && panel.hidden && !panel.classList.contains("is-active"));
+  };
+
+  const syncPageSectionTones = () => {
+    const main = document.querySelector("main");
+    if (!main) {
+      return;
+    }
+
+    const pageSections = Array.from(main.children).filter((child) =>
+      child.matches("section")
+    );
+    let visibleIndex = 0;
+
+    for (const section of pageSections) {
+      if (section.hidden) {
+        delete section.dataset.sectionTone;
+        continue;
+      }
+
+      section.dataset.sectionTone = visibleIndex % 2 === 0 ? "odd" : "even";
+      visibleIndex += 1;
+    }
+  };
+
   // determine if element should show up in results based on query
   const elementMatches = (element, { terms, phrases, tags, supports }) => {
     // tag elements within element
@@ -96,13 +125,13 @@
 
   // loop through elements, hide/show based on query, and return results info
   const filterElements = (parts) => {
-    let elements = document.querySelectorAll(elementSelector);
+    let elements = Array.from(document.querySelectorAll(elementSelector)).filter(
+      (element) => !isInInactiveTabPanel(element)
+    );
 
     // results info
     let x = 0;
     let n = elements.length;
-    let tags = parts.tags;
-
     // filter elements
     for (const element of elements) {
       if (elementMatches(element, parts)) {
@@ -111,7 +140,7 @@
       } else element.style.display = "none";
     }
 
-    return [x, n, tags];
+    return [x, n];
   };
 
   const isElementVisible = (element) => {
@@ -123,11 +152,10 @@
   };
 
   const syncYearHeadings = () => {
-    const filterableSelector = ".card, .citation, .post-excerpt-container, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
     const headingSelector = "h2, h3";
-    const filterableGroupSelector = ".grid, .alumni-list";
     const parents = new Set(
-      Array.from(document.querySelectorAll(filterableSelector))
+      Array.from(document.querySelectorAll(sectionElementSelector))
+        .filter((element) => !isInInactiveTabPanel(element))
         .map((element) => element.parentElement)
         .filter(Boolean)
     );
@@ -151,7 +179,7 @@
           continue;
         }
 
-        if (!child.matches(filterableSelector)) {
+        if (!child.matches(sectionElementSelector)) {
           continue;
         }
 
@@ -170,16 +198,25 @@
     // Some category headings sit beside a wrapper that contains the filterable
     // cards, e.g. Team h2 + .grid and Alumni h2 + .alumni-list.
     for (const heading of document.querySelectorAll(headingSelector)) {
+      if (isInInactiveTabPanel(heading)) {
+        continue;
+      }
+
       let sibling = heading.nextElementSibling;
       let filterables = [];
 
       while (sibling && !sibling.matches(headingSelector)) {
-        if (sibling.matches(filterableSelector)) {
+        if (isInInactiveTabPanel(sibling)) {
+          sibling = sibling.nextElementSibling;
+          continue;
+        }
+
+        if (sibling.matches(sectionElementSelector)) {
           filterables.push(sibling);
         }
 
         filterables = filterables.concat(
-          Array.from(sibling.querySelectorAll(filterableSelector))
+          Array.from(sibling.querySelectorAll(sectionElementSelector))
         );
         sibling = sibling.nextElementSibling;
       }
@@ -192,7 +229,11 @@
     }
 
     for (const group of document.querySelectorAll(filterableGroupSelector)) {
-      const filterables = Array.from(group.querySelectorAll(filterableSelector));
+      if (isInInactiveTabPanel(group)) {
+        continue;
+      }
+
+      const filterables = Array.from(group.querySelectorAll(sectionElementSelector));
 
       if (!filterables.length) {
         continue;
@@ -200,6 +241,41 @@
 
       group.hidden = !filterables.some((element) => isElementVisible(element));
     }
+  };
+
+  const syncFilterableSections = (query = "") => {
+    const hasQuery = query.trim().length > 0;
+    const main = document.querySelector("main");
+
+    if (!main) {
+      return;
+    }
+
+    for (const section of Array.from(main.children).filter((child) => child.matches("section"))) {
+      if (isInInactiveTabPanel(section)) {
+        continue;
+      }
+
+      const filterables = Array.from(section.querySelectorAll(sectionElementSelector)).filter(
+        (element) => !isInInactiveTabPanel(element)
+      );
+
+      if (!filterables.length) {
+        continue;
+      }
+
+      const shouldHide = hasQuery && !filterables.some((element) => {
+        const target = element.matches(".post-excerpt-container")
+          ? element.querySelector(".post-excerpt")
+          : element;
+
+        return isElementVisible(element) && isElementVisible(target);
+      });
+
+      section.hidden = shouldHide;
+    }
+
+    syncPageSectionTones();
   };
 
   // highlight search terms
@@ -215,7 +291,11 @@
     const filter = () => counter++ < 100;
 
     // highlight terms and phrases
-    new Mark(elementSelector)
+    const activeElements = Array.from(document.querySelectorAll(elementSelector)).filter(
+      (element) => !isInInactiveTabPanel(element)
+    );
+
+    new Mark(activeElements)
       .mark(terms, { separateWordSearch: true, filter })
       .mark(phrases, { separateWordSearch: false, filter });
   };
@@ -275,6 +355,7 @@
     const parts = splitQuery(query);
     const [x, n] = filterElements(parts);
     syncYearHeadings();
+    syncFilterableSections(query);
     updateSearchBox(query);
     updateInfoBox(query, x, n);
     updateTags(query);
@@ -324,4 +405,6 @@
   window.addEventListener("load", searchFromUrl);
   // after tags load
   window.addEventListener("tagsfetched", searchFromUrl);
+  // after tabbed content changes
+  window.addEventListener("tabs:updated", searchFromUrl);
 }

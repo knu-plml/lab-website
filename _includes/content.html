@@ -22,10 +22,24 @@
     | regex_scan: "<size>(.*?)</size>"
     | default: "page"
   %}
+  {% assign tab_panel = section
+    | regex_scan: "<tab-panel>(.*?)</tab-panel>"
+    | default: ""
+  %}
+  {% assign section_content = section
+    | regex_replace: "<tab-panel>[^<]*</tab-panel>", ""
+  %}
 
   <section
-    class="background{% if page.dir contains '/members/' %} team-section{% endif %}"
+    class="background{% if page.dir contains '/members/' %} team-section{% endif %}{% if tab_panel != '' %} publication-tab-panel{% endif %}"
     data-size="{{ size }}"
+    {% if tab_panel != "" %}
+      data-tab-panel="{{ tab_panel }}"
+      role="tabpanel"
+      {% if tab_panel != "team" %}
+        hidden
+      {% endif %}
+    {% endif %}
     {% if dark == "true" or dark == "false" %}
       data-dark="{{ dark }}"
     {% endif %}
@@ -33,6 +47,6 @@
       style="--image: url('{{ image | relative_url | uri_escape }}')"
     {% endif %}
   >
-    {{ section }}
+    {{ section_content }}
   </section>
 {% endfor %}
