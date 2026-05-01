@@ -1,5 +1,6 @@
 const publicationTabGroups = document.querySelectorAll("[data-publication-tabs]");
 const publicationSearchLinkSelector = "[data-publication-search-link]";
+const rootElement = document.documentElement;
 
 for (const group of publicationTabGroups) {
   const root = group.closest("main") || document;
@@ -8,6 +9,9 @@ for (const group of publicationTabGroups) {
   const kindFilters = Array.from(group.querySelectorAll("[data-kind-filter]"));
   const emptyState = group.querySelector("[data-publication-empty]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const segmentedControls = Array.from(
+    group.matches(".ui-segmented") ? [group] : group.querySelectorAll(".ui-segmented")
+  );
   let activeTarget = null;
   let activeKind = "all";
   const url = new URL(window.location.href);
@@ -48,6 +52,58 @@ for (const group of publicationTabGroups) {
     requestAnimationFrame(() => {
       panel.classList.add(className);
     });
+  };
+
+  const ensureSegmentIndicator = (control) => {
+    let indicator = Array.from(control.children).find((child) =>
+      child.classList.contains("segment-indicator")
+    );
+
+    if (!indicator) {
+      indicator = document.createElement("span");
+      indicator.className = "segment-indicator";
+      indicator.setAttribute("aria-hidden", "true");
+      control.prepend(indicator);
+    }
+
+    control.classList.add("has-segment-indicator");
+    return indicator;
+  };
+
+  const syncSegmentIndicator = (control, { animate = true } = {}) => {
+    const activeButton = Array.from(control.children).find(
+      (child) =>
+        child.classList.contains("is-active") &&
+        (child.classList.contains("publication-tab") ||
+          child.classList.contains("publication-kind-filter"))
+    );
+    const indicator = ensureSegmentIndicator(control);
+
+    const updateIndicator = () => {
+      if (!activeButton) {
+        indicator.style.opacity = "0";
+        return;
+      }
+
+      indicator.style.width = `${activeButton.offsetWidth}px`;
+      indicator.style.transform = `translateX(${activeButton.offsetLeft}px)`;
+      indicator.style.opacity = "1";
+    };
+
+    if (animate) {
+      updateIndicator();
+    } else {
+      indicator.style.transition = "none";
+      updateIndicator();
+      indicator.offsetHeight;
+      indicator.style.transition = "";
+    }
+  };
+
+  const syncSegmentIndicators = ({ animate = true } = {}) => {
+    for (const control of segmentedControls) {
+      syncSegmentIndicator(control, { animate });
+    }
   };
 
   const countVisiblePublications = (targetPanels) => {
@@ -151,12 +207,13 @@ for (const group of publicationTabGroups) {
     syncTabCounts();
   };
 
-  const syncKindFilters = () => {
+  const syncKindFilters = ({ animate = true } = {}) => {
     for (const filter of kindFilters) {
       const isActive = filter.dataset.kindFilter === activeKind;
       filter.classList.toggle("is-active", isActive);
       filter.setAttribute("aria-pressed", String(isActive));
     }
+    syncSegmentIndicators({ animate });
   };
 
   const activateTab = (target, { animate = true } = {}) => {
@@ -173,6 +230,7 @@ for (const group of publicationTabGroups) {
       tab.setAttribute("aria-selected", String(isActive));
       tab.tabIndex = isActive ? 0 : -1;
     }
+    syncSegmentIndicators({ animate });
 
     for (const panel of panels) {
       const isActive = panel.dataset.tabPanel === target;
@@ -270,14 +328,22 @@ for (const group of publicationTabGroups) {
 
   if (initialKindFilter) {
     activeKind = initialKindFilter.dataset.kindFilter;
-    syncKindFilters();
+    syncKindFilters({ animate: false });
   }
 
   if (initialTab) {
     activateTab(initialTab.dataset.tabTarget, { animate: false });
   }
 
+  window.addEventListener("resize", syncSegmentIndicators);
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => syncSegmentIndicators({ animate: false }));
+  }
+
   window.addEventListener("search:updated", () => {
     applyKindFilterToPanels();
   });
 }
+
+rootElement.removeAttribute("data-tabs-booting");

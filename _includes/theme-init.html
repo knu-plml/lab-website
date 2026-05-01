@@ -14,6 +14,10 @@
     }
 
     root.dataset.dark = isDark ? "true" : "false";
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("tab") || params.has("kind")) {
+      root.dataset.tabsBooting = "true";
+    }
     root.style.colorScheme = isDark ? "dark" : "light";
     root.style.backgroundColor = isDark ? "#030814" : "#ffffff";
     root.style.color = isDark ? "#f2f6ff" : "#24324a";

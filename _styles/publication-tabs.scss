@@ -10,6 +10,11 @@
   margin: 0;
 }
 
+:root[data-tabs-booting="true"] [data-publication-tabs],
+:root[data-tabs-booting="true"] [data-tab-panel] {
+  visibility: hidden;
+}
+
 .publication-tab,
 .publication-kind-filter {
   appearance: none;
@@ -44,6 +49,53 @@
   outline-offset: 1px;
 }
 
+.ui-segmented.has-segment-indicator {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.segment-indicator {
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  left: 0;
+  z-index: 0;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 78%, var(--surface-contrast) 22%) 0%,
+    color-mix(in srgb, var(--primary) 68%, var(--surface-raised) 32%) 100%
+  );
+  box-shadow: 0 10px 22px -16px color-mix(in srgb, var(--primary) 42%, transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    width 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms ease;
+}
+
+.has-segment-indicator .publication-tab,
+.has-segment-indicator .publication-kind-filter {
+  position: relative;
+  z-index: 1;
+}
+
+.has-segment-indicator .publication-tab.is-active,
+.has-segment-indicator .publication-kind-filter.is-active {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.has-segment-indicator .publication-tab.is-active:hover,
+.has-segment-indicator .publication-tab.is-active:focus-visible,
+.has-segment-indicator .publication-kind-filter.is-active:hover,
+.has-segment-indicator .publication-kind-filter.is-active:focus-visible {
+  background: transparent;
+}
+
 .publication-tab.is-active,
 .publication-kind-filter.is-active {
   background: linear-gradient(
@@ -67,6 +119,23 @@
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 10px 22px -18px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+[data-dark="true"] .segment-indicator {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 36%, var(--surface-contrast) 64%) 0%,
+    color-mix(in srgb, var(--primary) 27%, var(--surface-raised) 73%) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 10px 22px -18px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+[data-dark="true"] .has-segment-indicator .publication-tab.is-active,
+[data-dark="true"] .has-segment-indicator .publication-kind-filter.is-active {
+  background: transparent;
+  box-shadow: none;
 }
 
 .publication-tab-panel[hidden] {
