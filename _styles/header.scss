@@ -15,13 +15,13 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: none;
   background:
-    linear-gradient(90deg, rgba(2, 8, 23, 0.96) 0%, rgba(2, 8, 23, 0.82) 42%, rgba(2, 8, 23, 0.58) 100%);
+    linear-gradient(90deg, rgba(2, 8, 23, 0.96) 0%, rgba(2, 8, 23, 0.85) 35%, rgba(2, 8, 23, 0.78) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition:
-    border-color 180ms ease,
-    backdrop-filter 180ms ease,
-    -webkit-backdrop-filter 180ms ease;
+    border-color 250ms ease,
+    backdrop-filter 250ms ease,
+    -webkit-backdrop-filter 250ms ease;
 
   @if $sticky {
     position: sticky !important;
@@ -51,7 +51,7 @@ header::before {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: #020817;
+  background: var(--hero-ink);
   opacity: 1;
   transition: opacity 180ms ease;
 }

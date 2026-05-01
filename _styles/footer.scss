@@ -15,10 +15,6 @@ footer {
   overflow: hidden;
 }
 
-:root[data-dark="false"] footer[data-dark="true"] {
-  background: var(--footer-background);
-}
-
 footer.background:before {
   opacity: 0.16;
   filter: saturate(0.68) brightness(0.25) contrast(1.12);

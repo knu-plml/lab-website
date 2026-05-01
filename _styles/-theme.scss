@@ -18,7 +18,7 @@
   --hero-accent: #89a4ff;
   --hero-title: #f8fbff;
   --hero-text: rgba(255, 255, 255, 0.88);
-  --footer-background: color-mix(in srgb, #10141d 88%, var(--background) 12%);
+  --footer-background: color-mix(in srgb, var(--hero-ink) 85%, black 15%);
   --footer-text: color-mix(in srgb, var(--hero-title) 76%, transparent);
   --footer-link: color-mix(in srgb, var(--hero-title) 82%, transparent);
   --footer-button-border: color-mix(in srgb, var(--hero-link) 28%, transparent);
@@ -43,7 +43,7 @@
   --hero-accent: #89a4ff;
   --hero-title: #f4f8ff;
   --hero-text: #d0d5dd;
-  --footer-background: color-mix(in srgb, var(--surface) 94%, black 6%);
+  --footer-background: color-mix(in srgb, var(--hero-ink) 85%, black 15%);
   --footer-text: color-mix(in srgb, var(--hero-title) 76%, transparent);
   --footer-link: color-mix(in srgb, var(--hero-title) 82%, transparent);
   --footer-button-border: color-mix(in srgb, var(--hero-link) 28%, transparent);
