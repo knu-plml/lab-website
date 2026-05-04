@@ -193,7 +193,7 @@ content:
     type: collection
     path: _members
     subfolders: false
-    filename: "{slug}.md"
+    filename: "{name_en}.md"
     view:
       primary: name
       fields: [name, name_en, role, "education[0].degree"]
@@ -202,11 +202,6 @@ content:
         sort: role
         order: desc
     fields:
-      - name: slug
-        label: URL
-        type: string
-        required: true
-        description: "URL path value. Example: hyeonseung-im"
       - name: name
         label: Korean Name
         type: string
@@ -278,7 +273,7 @@ content:
     type: collection
     path: _posts
     subfolders: false
-    filename: "{year}-{month}-{day}-{slug}.md"
+    filename: "{year}-{month}-{day}-{title}.md"
     view:
       primary: title
       fields: [title, date, "tags[0]"]
@@ -287,11 +282,6 @@ content:
         sort: date
         order: desc
     fields:
-      - name: slug
-        label: URL
-        type: string
-        required: true
-        description: "URL path value. Example: 2026-03-19-example-post"
       - name: title
         label: Title
         type: string
@@ -301,8 +291,7 @@ content:
         type: date
         required: true
         options:
-          time: true
-          format: yyyy-MM-dd HH:mm:ss xx
+          format: yyyy-MM-dd
       - name: body
         label: Body
         type: code
@@ -331,7 +320,7 @@ content:
     type: collection
     path: _publications
     subfolders: false
-    filename: "{slug}.md"
+    filename: "{title}.md"
     view:
       primary: title
       fields: [title, kind, scope, date]
@@ -340,11 +329,6 @@ content:
         sort: date
         order: desc
     fields:
-      - name: slug
-        label: URL
-        type: string
-        required: true
-        description: "URL path value. Example: 2026-international-example-paper"
       - name: title
         label: Title
         type: string
@@ -442,7 +426,7 @@ content:
     type: collection
     path: _courses
     subfolders: false
-    filename: "{slug}.md"
+    filename: "{title_en}.md"
     view:
       primary: title
       fields: [title, title_en, "semesters[0].label"]
@@ -451,11 +435,6 @@ content:
         sort: title
         order: asc
     fields:
-      - name: slug
-        label: URL
-        type: string
-        required: true
-        description: "URL path value. Example: programming-languages"
       - name: title
         label: Title
         type: string
