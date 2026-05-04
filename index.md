@@ -147,10 +147,10 @@ show-subtitle: false
             {% endif %}
           {% endif %}
         </div>
-        {% if publication.authors %}
-          <p>{{ publication.authors | join: ", " }}</p>
-        {% elsif publication.author %}
-          <p>{{ publication.author }}</p>
+        {% assign homepage_authors_text = publication.authors | join: ", " | replace: " ", " " | strip %}
+        <p>{{ homepage_authors_text }}</p>
+        {% if homepage_authors_text contains "*" %}
+          <p class="home-research-publication-author-note">(* equal contributions)</p>
         {% endif %}
       </article>
     {% endfor %}

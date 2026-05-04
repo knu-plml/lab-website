@@ -400,7 +400,7 @@ content:
       - name: authors
         label: Authors
         type: string
-        required: false
+        required: true
         list: true
         description: "Append `*` to an author name to mark equal contributions (shown as `(* equal contributions)`)."
       - name: awards
