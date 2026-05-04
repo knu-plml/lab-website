@@ -129,6 +129,9 @@ show-subtitle: false
         </a>
         <div class="home-research-publication-meta">
           <span>{{ publication.date | date: "%Y" }}</span>
+          <a class="home-research-publication-title" href="{{ publication.url | relative_url }}">
+            <strong>{{ publication.title }}</strong>
+          </a>
           {% if publication_venue != "" %}
             {% if publication_venue_url != "" %}
               <a
@@ -144,9 +147,6 @@ show-subtitle: false
             {% endif %}
           {% endif %}
         </div>
-        <a class="home-research-publication-title" href="{{ publication.url | relative_url }}">
-          <strong>{{ publication.title }}</strong>
-        </a>
         {% if publication.authors %}
           <p>{{ publication.authors | join: ", " }}</p>
         {% elsif publication.author %}

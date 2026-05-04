@@ -488,7 +488,7 @@ section[data-size="full"] > .home-research-overview {
 }
 
 .home-research-publication-venue {
-  margin: 0;
+  margin: 2px 0 0;
   color: var(--primary);
   font-size: 0.82rem;
   font-weight: var(--semi-bold);
@@ -499,6 +499,10 @@ section[data-size="full"] > .home-research-overview {
 .home-research-publication-title {
   color: inherit;
   text-decoration: none;
+}
+
+.home-research-publication-title + .home-research-publication-venue {
+  margin-top: 4px;
 }
 
 .home-research-publication-title:hover,
