@@ -3,6 +3,7 @@ slug: 2019-international-22-a-comparative-study-of-bitcoin-price-prediction-usin
 title: A Comparative Study of Bitcoin Price Prediction Using Deep Learning
 subtitle: 'Mathematics. 7(10): 898 (2019)'
 venue: 'Mathematics'
+venue_url: https://www.mdpi.com/journal/mathematics
 authors:
 - Suhwan Ji
 - Jongmin Kim

@@ -3,6 +3,7 @@ slug: 2020-international-21-backward-type-inference-for-xml-queries
 title: Backward Type Inference for XML Queries
 subtitle: 'Theoretical Computer Science. Volume 823, 2 July 2020, pp. 69-99'
 venue: 'Theoretical Computer Science'
+venue_url: https://www.journals.elsevier.com/theoretical-computer-science
 authors:
 - Hyeonseung Im
 - Pierre Genevès

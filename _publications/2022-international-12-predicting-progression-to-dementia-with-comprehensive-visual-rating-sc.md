@@ -3,6 +3,7 @@ slug: 2022-international-12-predicting-progression-to-dementia-with-comprehensiv
 title: Predicting Progression to Dementia with “Comprehensive Visual Rating Scale” and Machine Learning Algorithms
 subtitle: 'Frontiers in Neurology. 13:906257, August 2022'
 venue: 'Frontiers in Neurology'
+venue_url: https://www.frontiersin.org/journals/neurology
 authors:
 - Chaeyoon Park
 - Jae-Won Jang

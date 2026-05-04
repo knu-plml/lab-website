@@ -3,6 +3,7 @@ slug: 2023-international-10-automated-grading-of-regular-expressions
 title: Automated Grading of Regular Expressions
 subtitle: 'ESOP 2023: 32nd European Symposium on Programming. 22-27 April 2023'
 venue: 'ESOP 2023: 32nd European Symposium on Programming'
+venue_url: https://www.etaps.org/2023/conferences/
 authors:
 - Su-Hyeon Kim
 - Youngwook Kim

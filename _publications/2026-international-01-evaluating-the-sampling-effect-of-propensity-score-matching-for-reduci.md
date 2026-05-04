@@ -4,6 +4,7 @@ title: Evaluating the sampling effect of propensity score matching for reducing
   selection bias in medical data
 subtitle: Frontiers in Public Health. 2026, 14:1747762
 venue: 'Frontiers in Public Health'
+venue_url: https://www.frontiersin.org/journals/public-health
 authors:
   - Minji Roh
   - Sujin Yum

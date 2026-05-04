@@ -3,6 +3,7 @@ slug: 2023-international-09-clinical-applicability-of-an-artificial-intelligence
 title: Clinical Applicability of an Artificial Intelligence Prediction Algorithm for Early Prediction of Non-persistent Atrial Fibrillation
 subtitle: 'Frontiers in Cardiovascular Medicine. 10:1168054, September 2023'
 venue: 'Frontiers in Cardiovascular Medicine'
+venue_url: https://www.frontiersin.org/journals/cardiovascular-medicine
 authors:
 - Yeji Kim*
 - Gihun Joo*

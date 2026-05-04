@@ -4,6 +4,7 @@ layout: default
 
 {% assign subtitle_clean = page.subtitle | default: "" | strip %}
 {% assign publication_summary_text = subtitle_clean | default: page.venue | default: "" | strip %}
+{% assign publication_venue_url = page.venue_url | default: "" | strip %}
 {% assign publication_year = page.date | date: "%Y" %}
 {% assign publication_tab = page.scope | default: "international" | strip %}
 {% assign publication_kind = page.kind | default: "journal" | strip %}
@@ -30,7 +31,18 @@ layout: default
 
       {% if publication_summary_text != "" %}
         <div class="publication-summary-meta">
-          <span class="publication-summary-subtitle">{{ publication_summary_text }}</span>
+          {% if publication_venue_url != "" %}
+            <a
+              class="publication-summary-subtitle"
+              href="{{ publication_venue_url | escape }}"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ publication_summary_text }}
+            </a>
+          {% else %}
+            <span class="publication-summary-subtitle">{{ publication_summary_text }}</span>
+          {% endif %}
         </div>
       {% endif %}
 

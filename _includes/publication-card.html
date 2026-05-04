@@ -10,6 +10,7 @@
 
 {% assign subtitle_clean = publication.subtitle | default: "" | strip %}
 {% assign publication_venue = publication.venue | default: subtitle_clean | strip %}
+{% assign publication_venue_url = publication.venue_url | default: "" | strip %}
 {% assign authors = publication.authors | default: "" %}
 {% assign awards = publication.awards | default: "" %}
 {% assign support = publication.support | default: "" %}
@@ -46,7 +47,19 @@
     {% endif %}
 
     {% if publication_venue != "" %}
-      <div class="publication-card-venue">{{ publication_venue }}</div>
+      <div class="publication-card-venue">
+        {% if publication_venue_url != "" %}
+          <a
+            href="{{ publication_venue_url | escape }}"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ publication_venue }}
+          </a>
+        {% else %}
+          {{ publication_venue }}
+        {% endif %}
+      </div>
     {% endif %}
 
     {% if authors != "" %}

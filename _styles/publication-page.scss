@@ -42,6 +42,11 @@
   text-wrap: pretty;
 }
 
+a.publication-summary-subtitle {
+  color: var(--text-subtle);
+  text-decoration: none;
+}
+
 .publication-hero-block {
   display: flex;
   flex-direction: column;

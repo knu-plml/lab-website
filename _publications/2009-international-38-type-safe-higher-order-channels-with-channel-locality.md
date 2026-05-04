@@ -3,6 +3,7 @@ slug: 2009-international-38-type-safe-higher-order-channels-with-channel-localit
 title: Type-safe higher-order channels with channel locality
 subtitle: 'Journal of Functional Programming. 19(1): 107-142 (2009)'
 venue: 'Journal of Functional Programming'
+venue_url: http://journals.cambridge.org/action/displayJournal?jid=JFP
 authors:
 - Sungwoo Park
 - Hyeonseung Im

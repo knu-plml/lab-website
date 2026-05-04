@@ -409,7 +409,6 @@ section[data-size="full"] > .home-research-overview {
 
 .home-research-publication {
   color: inherit;
-  text-decoration: none;
   transition:
     transform var(--transition),
     border-color var(--transition),
@@ -494,6 +493,20 @@ section[data-size="full"] > .home-research-overview {
   font-size: 0.82rem;
   font-weight: var(--semi-bold);
   line-height: 1.5;
+  text-decoration: none;
+}
+
+.home-research-publication-title {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-research-publication-title:hover,
+.home-research-publication-title:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
 }
 
 .home-research-publication p {

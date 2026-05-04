@@ -3,6 +3,7 @@ slug: 2019-international-23-measurement-noise-recommendation-for-efficient-kalma
 title: Measurement Noise Recommendation for Efficient Kalman Filtering over a Large Amount of Sensor Data
 subtitle: 'Sensors. 19(5): 1168 (2019)'
 venue: 'Sensors'
+venue_url: https://www.mdpi.com/journal/sensors
 authors:
 - Sebin Park
 - Myeong-Seon Gil

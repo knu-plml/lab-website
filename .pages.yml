@@ -379,6 +379,11 @@ content:
         type: string
         required: true
         description: "Short venue name shown on publication cards and the home page."
+      - name: venue_url
+        label: Venue URL
+        type: string
+        required: false
+        description: "Optional link to the conference or journal venue website."
       - name: abstract
         label: Abstract
         type: code

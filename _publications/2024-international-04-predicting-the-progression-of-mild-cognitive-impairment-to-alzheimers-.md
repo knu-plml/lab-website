@@ -4,6 +4,7 @@ title: Predicting the Progression of Mild Cognitive Impairment to Alzheimer’s 
   Using Recurrent Neural Networks With a Series of Neuropsychological Tests
 subtitle: Journal of Clinical Neurology. 20(5):478-486, September 2024
 venue: Journal of Clinical Neurology
+venue_url: https://thejcn.com/
 authors:
 - Chaeyoon Park
 - Gihun Joo

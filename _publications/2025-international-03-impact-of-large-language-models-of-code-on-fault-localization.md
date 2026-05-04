@@ -4,6 +4,7 @@ title: Impact of Large Language Models of Code on Fault Localization
 subtitle: "ICST 2025: IEEE International Conference on Software Testing,
   Verification and Validation. 31 March – 4 April 2025"
 venue: 'ICST 2025: IEEE International Conference on Software Testing, Verification and Validation'
+venue_url: https://conf.researchr.org/home/icst-2025
 authors:
   - Suhwan Ji
   - Sanghwa Lee

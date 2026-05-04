@@ -3,6 +3,7 @@ slug: 2023-international-08-twelve-lead-ecg-reconstruction-from-single-lead-sign
 title: Twelve-Lead ECG Reconstruction from Single-Lead Signals Using Generative Adversarial Networks
 subtitle: 'MICCAI 2023: International Conference on Medical Image Computing and Computer Assisted Intervention. 8-12 October 2023'
 venue: 'MICCAI 2023: International Conference on Medical Image Computing and Computer Assisted Intervention'
+venue_url: https://conferences.miccai.org/2023/en/
 authors:
 - Jinho Joo*
 - Gihun Joo*

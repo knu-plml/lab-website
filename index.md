@@ -113,28 +113,46 @@ show-subtitle: false
   <div class="home-research-publications">
     {% for publication in featured_publications limit:4 %}
       {% assign publication_venue = publication.venue | default: publication.subtitle | default: "" | strip %}
-      <a class="home-research-publication reveal-on-scroll" href="{{ publication.url | relative_url }}">
-        <div class="home-research-publication-image">
+      {% assign publication_venue_url = publication.venue_url | default: "" | strip %}
+      <article class="home-research-publication reveal-on-scroll">
+        <a
+          class="home-research-publication-image"
+          href="{{ publication.url | relative_url }}"
+          aria-label="{{ publication.title | escape }}"
+        >
           <img
             src="{{ publication.image | relative_url }}"
             alt="{{ publication.title | escape }}"
             loading="lazy"
             {% include fallback.html %}
           >
-        </div>
+        </a>
         <div class="home-research-publication-meta">
           <span>{{ publication.date | date: "%Y" }}</span>
           {% if publication_venue != "" %}
-            <p class="home-research-publication-venue">{{ publication_venue }}</p>
+            {% if publication_venue_url != "" %}
+              <a
+                class="home-research-publication-venue"
+                href="{{ publication_venue_url | escape }}"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ publication_venue }}
+              </a>
+            {% else %}
+              <p class="home-research-publication-venue">{{ publication_venue }}</p>
+            {% endif %}
           {% endif %}
         </div>
-        <strong>{{ publication.title }}</strong>
+        <a class="home-research-publication-title" href="{{ publication.url | relative_url }}">
+          <strong>{{ publication.title }}</strong>
+        </a>
         {% if publication.authors %}
           <p>{{ publication.authors | join: ", " }}</p>
         {% elsif publication.author %}
           <p>{{ publication.author }}</p>
         {% endif %}
-      </a>
+      </article>
     {% endfor %}
   </div>
 </div>

@@ -3,6 +3,7 @@ slug: 2021-international-14-human-motion-reconstruction-using-deep-transformer-n
 title: Human Motion Reconstruction Using Deep Transformer Networks
 subtitle: 'Pattern Recognition Letters. vol. 150, pp. 162-169, October 2021'
 venue: 'Pattern Recognition Letters'
+venue_url: https://www.sciencedirect.com/journal/pattern-recognition-letters
 authors:
 - Seong Uk Kim
 - Hanyoung Jang
