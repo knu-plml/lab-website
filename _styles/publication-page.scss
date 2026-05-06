@@ -99,10 +99,11 @@ a.publication-summary-subtitle {
   border-top: 0;
 }
 
-.publication-abstract p {
+.publication-abstract-text {
   font-size: 1rem;
   line-height: 2;
   color: color-mix(in srgb, var(--text) 88%, transparent);
+  white-space: pre-line;
 }
 
 @media (max-width: 900px) {

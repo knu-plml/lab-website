@@ -108,7 +108,7 @@ layout: default
       {% if has_abstract != "" %}
         <section class="entry-section publication-section publication-abstract">
           <h2>Abstract</h2>
-          {{ page.abstract | markdownify }}
+          <div class="publication-abstract-text">{{ page.abstract | escape }}</div>
         </section>
       {% endif %}
     </div>
