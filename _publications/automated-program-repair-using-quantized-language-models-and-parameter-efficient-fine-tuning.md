@@ -16,11 +16,13 @@ abstract: >-
   are essential for maintaining data privacy and avoiding dependency on
   cloud-based API services.
 
+
   Objective:
 
   This paper presents a comprehensive evaluation of parameter-efficient
   fine-tuning methods across various language models to reduce memory usage
   while maintaining APR effectiveness.
+
 
   Methods:
 
@@ -33,12 +35,14 @@ abstract: >-
   accuracy, inference latency, and memory utilization for each model
   configuration.
 
+
   Results:
 
   Our results demonstrate that QLoRA-tuned models generate 5-27% more plausible
   patches while using 51-71% less memory compared to baseline models.
   Furthermore, within a 24GB GPU memory constraint, QLoRA enables the
   utilization of larger parameter models, leading to 35% more plausible patches.
+
 
   Conclusion:
 
@@ -47,10 +51,16 @@ abstract: >-
   privacy-conscious organizations to leverage advanced APR capabilites without
   relying on external API services.
 
+
   Keywords
 
-  Large language modelAutomated program repairParameter-efficient
-  fine-tuningQuantization
+  Large language model
+
+  Automated program repair
+
+  Parameter-efficient fine-tuning
+
+  Quantization
 image: images/Automated Program Repair using quantized language models and
   parameter-efficient fine-tuning-1.png
 authors:
