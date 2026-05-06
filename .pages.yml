@@ -1,7 +1,19 @@
 media:
-  input: images
-  output: images
-  path: uploads
+  - name: images
+    label: Images
+    input: images
+    output: images
+    rename: safe
+  - name: member_images
+    label: Member Images
+    input: images/members
+    output: images/members
+    rename: safe
+  - name: publication_images
+    label: Publication Images
+    input: images/publications
+    output: images/publications
+    rename: safe
 
 settings:
   hide: true
@@ -215,7 +227,7 @@ content:
         type: image
         required: false
         options:
-          path: members
+          media: member_images
       - name: role
         label: Role
         type: select
@@ -380,7 +392,7 @@ content:
         required: false
         description: "Leave blank to generate an image automatically."
         options:
-          path: publications
+          media: publication_images
       - name: authors
         label: Authors
         type: string

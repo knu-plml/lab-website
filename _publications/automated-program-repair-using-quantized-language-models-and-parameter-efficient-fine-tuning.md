@@ -61,8 +61,7 @@ abstract: >-
   Parameter-efficient fine-tuning
 
   Quantization
-image: images/Automated Program Repair using quantized language models and
-  parameter-efficient fine-tuning-1.png
+image: images/publications/automated-program-repair-using-quantized-language-models-and-parameter-efficient-fine-tuning.png
 authors:
   - Yongkyu Lee
   - Sanghwa Lee
