@@ -52,7 +52,7 @@ abstract: >-
   Large language modelAutomated program repairParameter-efficient
   fine-tuningQuantization
 image: images/Automated Program Repair using quantized language models and
-  parameter-efficient fine-tuning.png
+  parameter-efficient fine-tuning-1.png
 authors:
   - Yongkyu Lee
   - Sanghwa Lee
@@ -68,4 +68,8 @@ tags:
   - software-engineering
   - machine-learning
 date: 2026-04-30
+buttons:
+  - text: DOI
+    link: https://doi.org/10.1016/j.infsof.2026.108181
+    icon: fa-solid fa-file-lines
 ---
