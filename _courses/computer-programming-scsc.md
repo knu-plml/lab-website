@@ -1,5 +1,4 @@
 ---
-slug: computer-programming-scsc
 title: 컴퓨터 프로그래밍
 title_en: Computer Programming (SCSC)
 tags:

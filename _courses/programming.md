@@ -1,5 +1,4 @@
 ---
-slug: programming
 title: 프로그래밍
 title_en: Programming
 tags:

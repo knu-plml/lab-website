@@ -1,5 +1,4 @@
 ---
-slug: software-engineering
 title: 소프트웨어 공학
 title_en: Software Engineering
 semesters:

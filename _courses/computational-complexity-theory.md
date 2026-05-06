@@ -1,5 +1,4 @@
 ---
-slug: computational-complexity-theory
 title: 계산 복잡도 이론
 title_en: Computational Complexity Theory
 tags:

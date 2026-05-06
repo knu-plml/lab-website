@@ -1,5 +1,4 @@
 ---
-slug: computational-thinking-general
 title: 컴퓨팅 사고력(일반)
 title_en: Computational Thinking(General)
 tags:

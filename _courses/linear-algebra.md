@@ -1,5 +1,4 @@
 ---
-slug: linear-algebra
 title: 선형대수학
 title_en: Linear Algebra
 semesters:

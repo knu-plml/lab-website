@@ -1,5 +1,4 @@
 ---
-slug: secure-coding
 title: 시큐어 코딩
 title_en: Secure Coding
 tags:

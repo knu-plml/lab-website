@@ -1,5 +1,4 @@
 ---
-slug: sustainable-change-and-innovation
 title: 지속 가능 변화와 혁신
 title_en: Sustainable Change and Innovation
 tags:

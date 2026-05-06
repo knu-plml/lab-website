@@ -1,5 +1,4 @@
 ---
-slug: programming-languages
 title: 프로그래밍 언어
 title_en: Programming Languages
 semesters:
