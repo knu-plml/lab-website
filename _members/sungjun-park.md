@@ -1,5 +1,4 @@
 ---
-slug: "sungjun-park"
 name: "박성준"
 name_en: "Sungjun Park"
 image: ""

@@ -1,5 +1,4 @@
 ---
-slug: "gihun-joo"
 name: "주기훈"
 name_en: "Gihun Joo"
 image: "images/members/gihun-joo.jpg"

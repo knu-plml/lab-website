@@ -1,5 +1,4 @@
 ---
-slug: 2019-international-22-a-comparative-study-of-bitcoin-price-prediction-using-deep-learning
 title: A Comparative Study of Bitcoin Price Prediction Using Deep Learning
 subtitle: 'Mathematics. 7(10): 898 (2019)'
 venue: 'Mathematics'

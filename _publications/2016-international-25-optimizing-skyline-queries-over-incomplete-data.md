@@ -1,5 +1,4 @@
 ---
-slug: 2016-international-25-optimizing-skyline-queries-over-incomplete-data
 title: Optimizing skyline queries over incomplete data
 subtitle: 'Information Sciences. 361-362: 14-28 (2016)'
 venue: 'Information Sciences'

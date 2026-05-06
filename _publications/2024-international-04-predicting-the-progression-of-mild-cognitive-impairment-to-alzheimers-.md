@@ -1,5 +1,4 @@
 ---
-slug: 2024-international-04-predicting-the-progression-of-mild-cognitive-impairment-to-alzheimers-
 title: Predicting the Progression of Mild Cognitive Impairment to Alzheimer’s Dementia
   Using Recurrent Neural Networks With a Series of Neuropsychological Tests
 subtitle: Journal of Clinical Neurology. 20(5):478-486, September 2024

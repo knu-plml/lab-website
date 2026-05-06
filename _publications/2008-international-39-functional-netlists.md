@@ -1,5 +1,4 @@
 ---
-slug: 2008-international-39-functional-netlists
 title: Functional netlists
 subtitle: 'ICFP 2008: ACM SIGPLAN International Conference on Functional Programming. pp. 353-366'
 venue: 'ICFP 2008: ACM SIGPLAN International Conference on Functional Programming'

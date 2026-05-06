@@ -1,5 +1,4 @@
 ---
-slug: "sanghwa-lee"
 name: "이상화"
 name_en: "Sanghwa Lee"
 image: "images/members/sanghwa-lee.jpg"

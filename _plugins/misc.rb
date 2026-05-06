@@ -104,8 +104,7 @@ module Jekyll
         .map do |item|
           source = item.is_a?(Jekyll::Document) ? item.data : item
           date = source["date"] if source.respond_to?(:[])
-          slug = source["slug"] if source.respond_to?(:[])
-          year = date.to_s[/\A\d{4}/] || slug.to_s[/\A\d{4}/]
+          year = date.to_s[/\A\d{4}/]
           year&.to_i
         end
         .compact

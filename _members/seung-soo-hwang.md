@@ -1,5 +1,4 @@
 ---
-slug: "seung-soo-hwang"
 name: "황승수"
 name_en: "Seung-Soo Hwang"
 image: ""

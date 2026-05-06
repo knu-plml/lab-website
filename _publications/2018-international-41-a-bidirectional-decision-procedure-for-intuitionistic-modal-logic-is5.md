@@ -1,5 +1,4 @@
 ---
-slug: 2018-international-41-a-bidirectional-decision-procedure-for-intuitionistic-modal-logic-is5
 title: A Bidirectional Decision Procedure for Intuitionistic Modal Logic IS5
 subtitle: 'Draft, April 2018'
 venue: 'Draft'

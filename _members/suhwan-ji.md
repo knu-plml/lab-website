@@ -1,5 +1,4 @@
 ---
-slug: "suhwan-ji"
 name: "지수환"
 name_en: "Suhwan Ji"
 image: ""

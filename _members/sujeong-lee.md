@@ -1,5 +1,4 @@
 ---
-slug: "sujeong-lee"
 name: "이수정"
 name_en: "Sujeong Lee"
 image: ""

@@ -1,5 +1,4 @@
 ---
-slug: "seong-u-kim"
 name: "김성우"
 name_en: "Seong-U Kim"
 image: ""

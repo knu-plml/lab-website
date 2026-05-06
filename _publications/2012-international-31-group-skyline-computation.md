@@ -1,5 +1,4 @@
 ---
-slug: 2012-international-31-group-skyline-computation
 title: Group skyline computation
 subtitle: 'Information Sciences. 188: 151-169 (2012)'
 venue: 'Information Sciences'

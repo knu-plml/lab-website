@@ -1,5 +1,4 @@
 ---
-slug: maru-gebremedhin-gebreslassie
 name: "마루 개브래매드힌 개브래슬라세"
 name_en: "Maru Gebremedhin Gebreslassie"
 aliases:

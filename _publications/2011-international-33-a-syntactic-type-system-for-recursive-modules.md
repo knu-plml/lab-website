@@ -1,5 +1,4 @@
 ---
-slug: 2011-international-33-a-syntactic-type-system-for-recursive-modules
 title: A syntactic type system for recursive modules
 subtitle: 'OOPSLA 2011: ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications. pp. 993-1012'
 venue: 'OOPSLA 2011: ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications'

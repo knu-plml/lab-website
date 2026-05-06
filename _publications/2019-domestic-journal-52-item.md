@@ -1,5 +1,4 @@
 ---
-slug: 2019-domestic-journal-52-item
 title: 점진적 타이핑 연구 동향 및 사례 분석
 subtitle: '정보과학회지, 제37권 제3호, pp. 20-28, 2019.03'
 venue: '정보과학회지'

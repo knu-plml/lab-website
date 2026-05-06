@@ -1,5 +1,4 @@
 ---
-slug: "heesang-kim"
 name: "김희상"
 name_en: "Heesang Kim"
 image: ""

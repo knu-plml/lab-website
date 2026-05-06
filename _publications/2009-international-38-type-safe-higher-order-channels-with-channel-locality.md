@@ -1,5 +1,4 @@
 ---
-slug: 2009-international-38-type-safe-higher-order-channels-with-channel-locality
 title: Type-safe higher-order channels with channel locality
 subtitle: 'Journal of Functional Programming. 19(1): 107-142 (2009)'
 venue: 'Journal of Functional Programming'

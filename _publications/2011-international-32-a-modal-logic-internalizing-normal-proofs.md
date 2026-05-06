@@ -1,5 +1,4 @@
 ---
-slug: 2011-international-32-a-modal-logic-internalizing-normal-proofs
 title: A modal logic internalizing normal proofs
 subtitle: 'Information and Computation. 209(12): 1519-1535 (2011)'
 venue: 'Information and Computation'

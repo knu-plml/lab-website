@@ -1,5 +1,4 @@
 ---
-slug: "la-young-lee"
 name: "이라영"
 name_en: "La Young Lee"
 image: ""

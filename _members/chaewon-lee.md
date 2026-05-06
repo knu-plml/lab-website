@@ -1,5 +1,4 @@
 ---
-slug: "chaewon-lee"
 name: "이채원"
 name_en: "Chaewon Lee"
 image: "images/portrait-placeholder.svg"

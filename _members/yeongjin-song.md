@@ -1,5 +1,4 @@
 ---
-slug: "yeongjin-song"
 name: "송영진"
 name_en: "Yeongjin Song"
 image: ""

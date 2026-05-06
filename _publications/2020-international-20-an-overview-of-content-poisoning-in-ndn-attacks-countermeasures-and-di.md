@@ -1,5 +1,4 @@
 ---
-slug: 2020-international-20-an-overview-of-content-poisoning-in-ndn-attacks-countermeasures-and-di
 title: 'An Overview of Content Poisoning in NDN: Attacks, Countermeasures, and Direction'
 subtitle: 'KSII Transactions on Internet and Information Systems. vol. 14, no. 7, pp. 2904-2918, July 2020'
 venue: 'KSII Transactions on Internet and Information Systems'

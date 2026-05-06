@@ -1,5 +1,4 @@
 ---
-slug: "chaeyoon-park"
 name: "박채윤"
 name_en: "Chaeyoon Park"
 image: "images/members/chaeyoon-park.jpg"

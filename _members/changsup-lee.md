@@ -1,5 +1,4 @@
 ---
-slug: "changsup-lee"
 name: "이창섭"
 name_en: "Changsup Lee"
 image: "images/members/changsup-lee.jpg"

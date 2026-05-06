@@ -1,5 +1,4 @@
 ---
-slug: "geonhui-lee"
 name: "이건희"
 name_en: "Geonhui Lee"
 image: "images/members/geonhui-lee.jpg"

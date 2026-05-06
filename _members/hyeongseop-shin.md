@@ -1,5 +1,4 @@
 ---
-slug: "hyeongseop-shin"
 name: "신형섭"
 name_en: "Hyeongseop Shin"
 image: ""

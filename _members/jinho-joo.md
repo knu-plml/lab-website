@@ -1,5 +1,4 @@
 ---
-slug: "jinho-joo"
 name: "주진호"
 name_en: "Jinho Joo"
 image: ""

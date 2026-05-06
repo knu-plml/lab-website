@@ -9,6 +9,7 @@ nav:
 
 {% assign international_publications = site.publications | where: "scope", "international" %}
 {% assign domestic_publications = site.publications | where: "scope", "domestic" %}
+{% assign publications_by_date = site.publications | sort: "date" | reverse %}
 {% assign publication_years = site.publications | collection_years %}
 
 {% include search-box.html %}
@@ -87,8 +88,8 @@ nav:
 {% for year in publication_years %}
   {% assign year_name = year | append: "" %}
   {% assign has_year_publications = false %}
-  {% for publication in site.publications %}
-    {% assign publication_year = publication.slug | slice: 0, 4 %}
+  {% for publication in publications_by_date %}
+    {% assign publication_year = publication.date | date: "%Y" %}
     {% if publication_year == year_name %}
       {% assign has_year_publications = true %}
     {% endif %}
@@ -109,10 +110,10 @@ nav:
       aria-labelledby="publication-tab-international"
       data-tab-panel="international"
     >
-      {% for publication in site.publications %}
-        {% assign publication_year = publication.slug | slice: 0, 4 %}
+      {% for publication in publications_by_date %}
+        {% assign publication_year = publication.date | date: "%Y" %}
         {% if publication_year == year_name and publication.scope == "international" %}
-          {% include publication-card.html lookup=publication.slug %}
+          {% include publication-card.html publication=publication %}
         {% endif %}
       {% endfor %}
     </div>
@@ -124,10 +125,10 @@ nav:
       data-tab-panel="domestic"
       hidden
     >
-      {% for publication in site.publications %}
-        {% assign publication_year = publication.slug | slice: 0, 4 %}
+      {% for publication in publications_by_date %}
+        {% assign publication_year = publication.date | date: "%Y" %}
         {% if publication_year == year_name and publication.scope == "domestic" %}
-          {% include publication-card.html lookup=publication.slug %}
+          {% include publication-card.html publication=publication %}
         {% endif %}
       {% endfor %}
     </div>

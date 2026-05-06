@@ -1,5 +1,4 @@
 ---
-slug: 2012-international-30-computing-exact-skyline-probabilities-for-uncertain-databases
 title: Computing Exact Skyline Probabilities for Uncertain Databases
 subtitle: 'IEEE Transactions on Knowledge and Data Engineering. 24(12): 2113-2126 (2012)'
 venue: 'IEEE Transactions on Knowledge and Data Engineering'

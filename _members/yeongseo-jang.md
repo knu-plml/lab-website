@@ -1,5 +1,4 @@
 ---
-slug: "yeongseo-jang"
 name: "장영서"
 name_en: "Yeongseo Jang"
 image: "images/members/yeongseo-jang.jpg"

@@ -1,5 +1,4 @@
 ---
-slug: "yongkyu-lee"
 name: "이용규"
 name_en: "Yongkyu Lee"
 image: "images/members/yongkyu-lee.jpg"

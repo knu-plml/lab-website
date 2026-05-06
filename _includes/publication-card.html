@@ -1,4 +1,6 @@
-{% if include.lookup %}
+{% if include.publication %}
+  {% assign publication = include.publication %}
+{% elsif include.lookup %}
   {% assign publication = site.publications
     | where_exp: "publication", "publication.slug == include.lookup"
     | first

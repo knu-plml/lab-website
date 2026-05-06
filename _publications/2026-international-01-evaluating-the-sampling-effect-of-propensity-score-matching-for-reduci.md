@@ -1,5 +1,4 @@
 ---
-slug: 2026-international-01-evaluating-the-sampling-effect-of-propensity-score-matching-for-reduci
 title: Evaluating the sampling effect of propensity score matching for reducing
   selection bias in medical data
 subtitle: Frontiers in Public Health. 2026, 14:1747762

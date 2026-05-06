@@ -1,5 +1,4 @@
 ---
-slug: "nayeon-ko"
 name: "고나연"
 name_en: "Nayeon Ko"
 image: "images/members/nayeon-ko.jpg"

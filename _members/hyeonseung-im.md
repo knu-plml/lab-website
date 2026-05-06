@@ -1,5 +1,4 @@
 ---
-slug: "hyeonseung-im"
 name: "임현승"
 name_en: "Hyeonseung Im"
 image: "images/members/hyeonseung-im.jpg"

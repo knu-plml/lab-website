@@ -1,5 +1,4 @@
 ---
-slug: 2020-domestic-journal-49-item
 title: 기계학습 옵티마이저 성능 평가
 subtitle: '전기전자학회논문지, 24(3), pp. 766-776, 2020.09'
 venue: '전기전자학회논문지'

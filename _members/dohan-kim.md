@@ -1,5 +1,4 @@
 ---
-slug: "dohan-kim"
 name: "김도한"
 name_en: "Dohan Kim"
 image: ""

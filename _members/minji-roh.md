@@ -1,5 +1,4 @@
 ---
-slug: "minji-roh"
 name: "노민지"
 name_en: "Minji Roh"
 image: "images/members/minji-roh.jpg"

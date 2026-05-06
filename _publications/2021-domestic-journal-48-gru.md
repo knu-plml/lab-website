@@ -1,5 +1,4 @@
 ---
-slug: 2021-domestic-journal-48-gru
 title: 단어 임베딩과 GRU를 활용한 상품 범주 분류
 subtitle: '한국정보기술학회논문지, 19(4), pp. 11-18, 2021.04'
 venue: '한국정보기술학회논문지'
