@@ -7,7 +7,6 @@ authors:
 - Dongwon Kim
 - Hyeonseung Im
 - Sungwoo Park
-image: images/publications/2012-international-30-computing-exact-skyline-probabilities-for-uncertain-databases.svg
 scope: international
 kind: journal
 date: '2012-01-01'

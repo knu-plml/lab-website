@@ -6,7 +6,6 @@ venue_url: http://www.journals.elsevier.com/information-and-computation/
 authors:
 - Sungwoo Park
 - Hyeonseung Im
-image: images/publications/2011-international-32-a-modal-logic-internalizing-normal-proofs.svg
 scope: international
 kind: journal
 date: '2011-01-01'

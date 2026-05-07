@@ -10,7 +10,6 @@ support:
 - BRL후속
 - 지역지능화
 - RISE
-image: images/publications/2025-domestic-conference-57-discrepancies-between-codebleu-and-computational-accuracy-in-evaluatin.svg
 scope: domestic
 kind: conference
 date: '2025-12-01'

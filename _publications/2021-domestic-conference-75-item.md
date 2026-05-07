@@ -11,7 +11,6 @@ authors:
 - 추예린
 - 임현승
 - 정은주
-image: images/publications/2021-domestic-conference-75-item.svg
 scope: domestic
 kind: conference
 date: '2021-08-01'

@@ -10,7 +10,6 @@ authors:
 - Hyeonseung Im
 - Sergueï Lenglet
 - Luca Padovani
-image: images/publications/2014-international-27-polymorphic-functions-with-set-theoretic-types-part-1-syntax-semantics.svg
 scope: international
 kind: conference
 date: '2014-01-01'

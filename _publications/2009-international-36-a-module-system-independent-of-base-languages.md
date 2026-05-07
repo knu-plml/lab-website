@@ -5,7 +5,6 @@ venue: 'MLPA 2009: Workshop on Modules and Libraries for Proof Assistants'
 authors:
 - Hyeonseung Im
 - Sungwoo Park
-image: images/publications/2009-international-36-a-module-system-independent-of-base-languages.svg
 scope: international
 kind: conference
 date: '2009-01-01'

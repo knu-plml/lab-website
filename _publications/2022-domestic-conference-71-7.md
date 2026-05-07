@@ -9,7 +9,6 @@ authors:
 - 주기훈
 - 지수환
 - 임현승
-image: images/publications/2022-domestic-conference-71-7.svg
 scope: domestic
 kind: conference
 date: '2022-12-01'

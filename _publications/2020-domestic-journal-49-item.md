@@ -6,7 +6,6 @@ authors:
 - 주기훈
 - 박치현
 - 임현승
-image: images/publications/2020-domestic-journal-49-item.svg
 scope: domestic
 kind: journal
 date: '2020-09-01'

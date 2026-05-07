@@ -7,7 +7,6 @@ authors:
 - 이내헌
 - 임현승
 - 정은주
-image: images/publications/2021-domestic-conference-76-scopolia-japonica.svg
 scope: domestic
 kind: conference
 date: '2021-08-01'

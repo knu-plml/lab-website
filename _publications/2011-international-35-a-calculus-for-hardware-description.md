@@ -6,7 +6,6 @@ venue_url: http://journals.cambridge.org/action/displayJournal?jid=JFP
 authors:
 - Sungwoo Park
 - Hyeonseung Im
-image: images/publications/2011-international-35-a-calculus-for-hardware-description.svg
 scope: international
 kind: journal
 date: '2011-01-01'

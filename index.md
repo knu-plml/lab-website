@@ -114,6 +114,7 @@ show-subtitle: false
     {% for publication in featured_publications limit:4 %}
       {% assign publication_venue = publication.venue | default: publication.subtitle | default: "" | strip %}
       {% assign publication_venue_url = publication.venue_url | default: "" | strip %}
+      {% assign publication_image = publication.image | default: "" %}
       <article class="home-research-publication reveal-on-scroll">
         <a
           class="home-research-publication-image"
@@ -121,7 +122,11 @@ show-subtitle: false
           aria-label="{{ publication.title | escape }}"
         >
           <img
-            src="{{ publication.image | relative_url }}"
+            {% if publication_image contains "data:" %}
+              src="{{ publication_image }}"
+            {% else %}
+              src="{{ publication_image | relative_url }}"
+            {% endif %}
             alt="{{ publication.title | escape }}"
             loading="lazy"
             {% include fallback.html %}

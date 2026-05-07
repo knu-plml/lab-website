@@ -19,6 +19,7 @@
 {% assign visible_tags = publication.tags %}
 {% assign publication_tab = publication.scope | default: "international" | strip %}
 {% assign publication_kind = publication.kind | default: "journal" | strip %}
+{% assign publication_image = publication.image | default: "" %}
 
 <div class="publication-card ui-surface-panel" data-publication-kind="{{ publication_kind }}">
   <a
@@ -29,7 +30,11 @@
     class="publication-card-image"
   >
     <img
-      src="{{ publication.image | relative_url | uri_escape }}"
+      {% if publication_image contains "data:" %}
+        src="{{ publication_image }}"
+      {% else %}
+        src="{{ publication_image | relative_url | uri_escape }}"
+      {% endif %}
       alt="{{ publication.title | default: "publication image" | regex_strip }}"
       loading="lazy"
       {% include fallback.html %}

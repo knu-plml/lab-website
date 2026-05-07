@@ -11,7 +11,6 @@ authors:
 support:
 - BRL후속
 - DS
-image: images/publications/2024-domestic-conference-64-item.svg
 scope: domestic
 kind: conference
 date: '2024-06-01'

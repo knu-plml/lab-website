@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
+import argparse
+import json
 from pathlib import Path
+import urllib.parse
 
 from generate_publication_previews import (
     IMAGES_DIR,
@@ -62,6 +65,13 @@ def try_generate_preview(data: dict, stem: str) -> str | None:
         temp_pdf.unlink(missing_ok=True)
 
 
+def svg_data_uri(data: dict) -> str:
+    title = (data.get("title") or "").strip()
+    subtitle = clean_subtitle(data.get("subtitle") or "")
+    svg = make_svg(title, subtitle)
+    return "data:image/svg+xml," + urllib.parse.quote(svg, safe="")
+
+
 def generate_svg_fallback(data: dict, stem: str) -> str:
     output_path = IMAGES_DIR / f"{stem}.svg"
     ensure_parent(output_path)
@@ -71,7 +81,28 @@ def generate_svg_fallback(data: dict, stem: str) -> str:
     return f"images/publications/{stem}.svg"
 
 
+def set_image(data: dict, body: str, path: Path, image: str, write: bool):
+    data["image"] = image
+    if write:
+        dump_front_matter(path, data, body)
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--no-write",
+        action="store_true",
+        help="Generate missing image files without updating publication front matter.",
+    )
+    parser.add_argument(
+        "--map-file",
+        type=Path,
+        help="Write a JSON map of publication stems to resolved image values.",
+    )
+    args = parser.parse_args()
+    write = not args.no_write
+    image_map = {}
+
     checked = 0
     configured = 0
     linked_existing = 0
@@ -91,23 +122,31 @@ def main():
 
         existing_image = existing_generated_image(path.stem)
         if existing_image:
-            data["image"] = existing_image
-            dump_front_matter(path, data, body)
+            image_map[path.stem] = existing_image
+            set_image(data, body, path, existing_image, write)
             linked_existing += 1
             print(f"LINK {path.stem} -> {existing_image}")
             continue
 
+        if args.no_write:
+            fallback_image = svg_data_uri(data)
+            image_map[path.stem] = fallback_image
+            set_image(data, body, path, fallback_image, write)
+            generated_fallbacks += 1
+            print(f"FALLBACK {path.stem} -> data:image/svg+xml")
+            continue
+
         preview_image = try_generate_preview(data, path.stem)
         if preview_image:
-            data["image"] = preview_image
-            dump_front_matter(path, data, body)
+            image_map[path.stem] = preview_image
+            set_image(data, body, path, preview_image, write)
             generated_previews += 1
             print(f"PREVIEW {path.stem} -> {preview_image}")
             continue
 
         fallback_image = generate_svg_fallback(data, path.stem)
-        data["image"] = fallback_image
-        dump_front_matter(path, data, body)
+        image_map[path.stem] = fallback_image
+        set_image(data, body, path, fallback_image, write)
         generated_fallbacks += 1
         print(f"FALLBACK {path.stem} -> {fallback_image}")
 
@@ -116,6 +155,10 @@ def main():
     print(f"linked_existing_images {linked_existing}")
     print(f"generated_previews {generated_previews}")
     print(f"generated_fallbacks {generated_fallbacks}")
+
+    if args.map_file:
+        args.map_file.parent.mkdir(parents=True, exist_ok=True)
+        args.map_file.write_text(json.dumps(image_map), encoding="utf-8")
 
 
 if __name__ == "__main__":

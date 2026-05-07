@@ -6,7 +6,6 @@ authors:
 - 신승훈
 - 주기훈
 - 임현승
-image: images/publications/2021-domestic-conference-74-automl.svg
 scope: domestic
 kind: conference
 date: '2021-11-01'

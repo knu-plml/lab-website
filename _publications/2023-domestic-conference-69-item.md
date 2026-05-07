@@ -11,7 +11,6 @@ support:
 - BRL후속
 - RIS
 - SW
-image: images/publications/2023-domestic-conference-69-item.svg
 scope: domestic
 kind: conference
 date: '2023-12-01'

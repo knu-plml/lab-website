@@ -6,7 +6,6 @@ awards:
   - 우수논문상
 authors:
 - 임현승
-image: images/publications/2015-domestic-journal-81-xpath.svg
 scope: domestic
 kind: journal
 date: '2015-04-01'

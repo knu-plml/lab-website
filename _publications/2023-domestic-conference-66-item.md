@@ -10,7 +10,6 @@ authors:
 support:
 - RIS
 - 지역지능화
-image: images/publications/2023-domestic-conference-66-item.svg
 scope: domestic
 kind: conference
 date: '2023-12-01'

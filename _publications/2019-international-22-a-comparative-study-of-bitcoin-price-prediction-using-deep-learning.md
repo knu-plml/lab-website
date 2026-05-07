@@ -7,7 +7,6 @@ authors:
 - Suhwan Ji
 - Jongmin Kim
 - Hyeonseung Im
-image: images/publications/2019-international-22-a-comparative-study-of-bitcoin-price-prediction-using-deep-learning.svg
 scope: international
 kind: journal
 date: '2019-01-01'

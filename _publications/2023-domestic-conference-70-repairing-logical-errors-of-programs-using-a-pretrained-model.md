@@ -11,7 +11,6 @@ authors:
 support:
 - BRL후속
 - RIS
-image: images/publications/2023-domestic-conference-70-repairing-logical-errors-of-programs-using-a-pretrained-model.svg
 scope: domestic
 kind: conference
 date: '2023-06-01'

@@ -7,7 +7,6 @@ authors:
 - Hyeonseung Im
 - Keiko Nakata
 - Sungwoo Park
-image: images/publications/2013-international-28-contractive-signatures-with-recursive-types-type-parameters-and-abstra.svg
 scope: international
 kind: conference
 date: '2013-01-01'

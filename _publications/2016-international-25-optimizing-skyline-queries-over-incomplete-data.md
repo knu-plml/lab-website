@@ -7,7 +7,6 @@ authors:
 - Jongwuk Lee
 - Hyeonseung Im
 - Gae-won You
-image: images/publications/2016-international-25-optimizing-skyline-queries-over-incomplete-data.svg
 scope: international
 kind: journal
 date: '2016-01-01'

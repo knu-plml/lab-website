@@ -11,7 +11,6 @@ authors:
 support:
 - BRL후속
 - 지역지능화
-image: images/publications/2024-domestic-conference-63-item.svg
 scope: domestic
 kind: conference
 date: '2024-12-01'

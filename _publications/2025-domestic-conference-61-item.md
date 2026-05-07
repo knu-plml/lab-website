@@ -10,7 +10,6 @@ authors:
 support:
 - 지역지능화
 - Post-Doc.
-image: images/publications/2025-domestic-conference-61-item.svg
 scope: domestic
 kind: conference
 date: '2025-07-01'

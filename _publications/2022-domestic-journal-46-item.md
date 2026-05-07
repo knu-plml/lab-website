@@ -6,7 +6,6 @@ authors:
 - 김희상
 - 임현승
 - 문양세
-image: images/publications/2022-domestic-journal-46-item.svg
 scope: domestic
 kind: journal
 date: '2022-01-01'

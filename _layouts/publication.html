@@ -12,12 +12,17 @@ layout: default
 {% assign authors = page.authors | default: "" %}
 {% assign awards = page.awards | default: "" %}
 {% assign support = page.support | default: "" %}
+{% assign publication_image = page.image | default: "" %}
 <article class="entry-page entry-page-publication">
   <div class="entry-hero publication-hero">
     {% if page.image %}
       <div class="entry-cover publication-cover">
         <img
-          src="{{ page.image | relative_url | uri_escape }}"
+          {% if publication_image contains "data:" %}
+            src="{{ publication_image }}"
+          {% else %}
+            src="{{ publication_image | relative_url | uri_escape }}"
+          {% endif %}
           alt="{{ page.title | default: 'publication image' | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}

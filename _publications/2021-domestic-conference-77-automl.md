@@ -7,7 +7,6 @@ authors:
 - 주기훈
 - 임현승
 - 박준범
-image: images/publications/2021-domestic-conference-77-automl.svg
 scope: domestic
 kind: conference
 date: '2021-06-01'

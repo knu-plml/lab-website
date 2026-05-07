@@ -12,7 +12,6 @@ support:
 - 지역지능화
 - Post-Doc.
 - RISE
-image: images/publications/2025-domestic-conference-59-rppg.svg
 scope: domestic
 kind: conference
 date: '2025-12-01'

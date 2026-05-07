@@ -7,7 +7,6 @@ authors:
 - Hyeonseung Im
 - Jonghyun Park
 - Sungwoo Park
-image: images/publications/2011-international-34-parallel-skyline-computation-on-multicore-architectures.svg
 scope: international
 kind: journal
 date: '2011-01-01'

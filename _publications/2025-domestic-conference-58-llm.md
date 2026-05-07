@@ -11,7 +11,6 @@ support:
 - 지역지능화
 - Post-Doc.
 - PACEN
-image: images/publications/2025-domestic-conference-58-llm.svg
 scope: domestic
 kind: conference
 date: '2025-12-01'

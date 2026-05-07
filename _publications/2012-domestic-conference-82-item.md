@@ -8,7 +8,6 @@ authors:
 - 임현승
 - 임정표
 - 박성우
-image: images/publications/2012-domestic-conference-82-item.svg
 scope: domestic
 kind: conference
 date: '2012-06-01'

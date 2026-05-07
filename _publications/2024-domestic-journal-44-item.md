@@ -13,7 +13,6 @@ support:
 - DS
 - RIS
 - 융합보안
-image: images/publications/2024-domestic-journal-44-item.svg
 scope: domestic
 kind: journal
 date: '2024-10-01'

@@ -4,7 +4,6 @@ subtitle: '정보과학회논문지, 제43권 제12호, pp. 1342-1350, 2016.12'
 venue: '정보과학회논문지'
 authors:
 - 임현승
-image: images/publications/2016-domestic-journal-55-item.svg
 scope: domestic
 kind: journal
 date: '2016-12-01'

@@ -8,7 +8,6 @@ authors:
 - Myeong-Seon Gil
 - Hyeonseung Im
 - Yang-Sae Moon
-image: images/publications/2019-international-23-measurement-noise-recommendation-for-efficient-kalman-filtering-over-a.svg
 scope: international
 kind: journal
 date: '2019-01-01'

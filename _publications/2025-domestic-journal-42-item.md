@@ -9,7 +9,6 @@ authors:
 support:
 - BRL후속
 - DS
-image: images/publications/2025-domestic-journal-42-item.svg
 scope: domestic
 kind: journal
 date: '2025-08-01'

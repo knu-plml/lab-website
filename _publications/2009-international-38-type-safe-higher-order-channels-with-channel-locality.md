@@ -6,7 +6,6 @@ venue_url: http://journals.cambridge.org/action/displayJournal?jid=JFP
 authors:
 - Sungwoo Park
 - Hyeonseung Im
-image: images/publications/2009-international-38-type-safe-higher-order-channels-with-channel-locality.svg
 scope: international
 kind: journal
 date: '2009-01-01'

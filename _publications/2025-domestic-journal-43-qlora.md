@@ -11,7 +11,6 @@ support:
 - BRL후속
 - DS
 - 지역지능화
-image: images/publications/2025-domestic-journal-43-qlora.svg
 scope: domestic
 kind: journal
 date: '2025-03-01'

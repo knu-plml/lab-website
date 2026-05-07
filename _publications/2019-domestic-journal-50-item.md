@@ -6,7 +6,6 @@ authors:
 - 노지현
 - 임현승
 - 김종민
-image: images/publications/2019-domestic-journal-50-item.svg
 scope: domestic
 kind: journal
 date: '2019-12-01'

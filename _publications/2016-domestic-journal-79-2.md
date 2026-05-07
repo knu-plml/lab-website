@@ -6,7 +6,6 @@ authors:
 - 이종욱
 - 임현승
 - 김성수
-image: images/publications/2016-domestic-journal-79-2.svg
 scope: domestic
 kind: journal
 date: '2016-12-01'

@@ -12,7 +12,6 @@ support:
 - BRL후속
 - DS
 - RIS
-image: images/publications/2024-domestic-conference-65-leveraging-qlora-on-code-large-language-models-for-multilingual-code-t.svg
 scope: domestic
 kind: conference
 date: '2024-06-01'

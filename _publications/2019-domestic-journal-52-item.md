@@ -4,7 +4,6 @@ subtitle: '정보과학회지, 제37권 제3호, pp. 20-28, 2019.03'
 venue: '정보과학회지'
 authors:
 - 임현승
-image: images/publications/2019-domestic-journal-52-item.svg
 scope: domestic
 kind: journal
 date: '2019-03-01'

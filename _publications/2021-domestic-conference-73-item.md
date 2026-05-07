@@ -7,7 +7,6 @@ authors:
 - 장경주
 - 정은주
 - 임현승
-image: images/publications/2021-domestic-conference-73-item.svg
 scope: domestic
 kind: conference
 date: '2021-12-01'
