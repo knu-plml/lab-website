@@ -26,9 +26,7 @@ links:
 - Office: Hanbit-gwan 307
 
 **Announcement**
-- I am looking for motivated PhD/MS students and postdocs.
-- If interested, send me an email with your full Curriculum Vitae and transcript.
-- Currently, I only accept GKS-funded students, so you should check the [K scholarship](https://www.studyinkorea.go.kr/ko/scholarshipmain.do) programs first before sending me an e-mail.
+I am looking for motivated PhD/MS students and postdocs. If interested, send me an email with your full Curriculum Vitae and transcript. Currently, I only accept GKS-funded students, so you should check the [K scholarship](https://www.studyinkorea.go.kr/ko/scholarshipmain.do) programs first before sending me an e-mail.
 
 **Research Interests**
 - Human-AI collaborative programming :: automatic program synthesis and repair
