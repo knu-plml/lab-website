@@ -1,13 +1,14 @@
 ---
-name: "임현승"
-name_en: "Hyeonseung Im"
-image: "images/members/hyeonseung-im.jpg"
-role: "principal-investigator"
+name: 임현승
+name_en: Hyeonseung Im
+image: images/members/hyeonseung-im.jpg
+role: principal-investigator
 links:
-  dblp: "78/997"
-  researchgate: "Hyeonseung-Im-2"
-  linkedin: "hyeonseung-im-83b4aa69"
-  orcid: "0000-0002-3901-0834"
+  dblp: 78/997
+  researchgate: Hyeonseung-Im-2
+  linkedin: hyeonseung-im-83b4aa69
+  orcid: 0000-0002-3901-0834
+  google-scholar: YpEAA4kAAAAJ
 ---
 **Affiliations**
 - Professor 교수
