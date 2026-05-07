@@ -14,8 +14,5 @@ support:
 image: images/publications/2024-domestic-conference-64-item.svg
 scope: domestic
 kind: conference
-tags:
-- machine-learning
-- software-engineering
 date: '2024-06-01'
 ---

@@ -16,9 +16,6 @@ support:
 image: images/publications/2023-international-07-prediction-of-osteoporosis-in-patients-with-rheumatoid-arthritis-using.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- healthcare-ai
 date: '2023-12-01'
 buttons:
 - text: DOI

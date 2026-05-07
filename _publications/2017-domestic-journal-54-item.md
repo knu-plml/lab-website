@@ -7,7 +7,5 @@ authors:
 image: images/publications/2017-domestic-journal-54-item.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
 date: '2017-03-01'
 ---

@@ -11,10 +11,6 @@ authors:
 image: images/publications/2015-international-26-a-core-calculus-for-xquery-3-0-combining-navigational-and-pattern-matc.png
 scope: international
 kind: conference
-tags:
-- programming-languages
-- formal-methods
-- data-systems
 date: '2015-04-01'
 buttons:
 - text: DOI

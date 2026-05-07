@@ -9,8 +9,6 @@ authors:
 image: images/publications/2011-international-32-a-modal-logic-internalizing-normal-proofs.svg
 scope: international
 kind: journal
-tags:
-- formal-methods
 date: '2011-01-01'
 buttons:
 - text: DOI

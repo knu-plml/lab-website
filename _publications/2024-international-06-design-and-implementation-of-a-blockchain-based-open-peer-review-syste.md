@@ -15,8 +15,6 @@ support:
 image: images/publications/2024-international-06-design-and-implementation-of-a-blockchain-based-open-peer-review-syste.png
 scope: international
 kind: journal
-tags:
-- security
 date: '2024-07-01'
 buttons:
 - text: PDF

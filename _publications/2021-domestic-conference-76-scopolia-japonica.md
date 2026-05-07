@@ -10,7 +10,5 @@ authors:
 image: images/publications/2021-domestic-conference-76-scopolia-japonica.svg
 scope: domestic
 kind: conference
-tags:
-- data-systems
 date: '2021-08-01'
 ---

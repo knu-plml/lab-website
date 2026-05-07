@@ -11,9 +11,6 @@ authors:
 image: images/publications/2020-international-21-backward-type-inference-for-xml-queries.png
 scope: international
 kind: journal
-tags:
-- programming-languages
-- data-systems
 date: '2020-07-01'
 buttons:
 - text: PDF

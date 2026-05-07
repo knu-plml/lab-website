@@ -14,7 +14,5 @@ authors:
 image: images/publications/2021-domestic-conference-75-item.svg
 scope: domestic
 kind: conference
-tags:
-- computer-vision
 date: '2021-08-01'
 ---

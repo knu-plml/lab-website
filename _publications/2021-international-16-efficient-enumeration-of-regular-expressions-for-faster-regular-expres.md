@@ -10,9 +10,6 @@ authors:
 image: images/publications/2021-international-16-efficient-enumeration-of-regular-expressions-for-faster-regular-expres.svg
 scope: international
 kind: conference
-tags:
-- programming-languages
-- formal-methods
 date: '2021-07-01'
 buttons:
 - text: DOI

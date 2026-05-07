@@ -10,7 +10,5 @@ authors:
 image: images/publications/2022-domestic-conference-72-item.svg
 scope: domestic
 kind: conference
-tags:
-- machine-learning
 date: '2022-06-01'
 ---

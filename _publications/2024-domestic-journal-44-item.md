@@ -16,9 +16,6 @@ support:
 image: images/publications/2024-domestic-journal-44-item.svg
 scope: domestic
 kind: journal
-tags:
-- machine-learning
-- healthcare-ai
 date: '2024-10-01'
 buttons:
 - text: PDF

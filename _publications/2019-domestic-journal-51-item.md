@@ -9,9 +9,6 @@ authors:
 image: images/publications/2019-domestic-journal-51-item.svg
 scope: domestic
 kind: journal
-tags:
-- machine-learning
-- computer-vision
 date: '2019-12-01'
 buttons:
 - text: PDF

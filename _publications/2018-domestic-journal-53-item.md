@@ -8,9 +8,6 @@ authors:
 image: images/publications/2018-domestic-journal-53-item.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
-- formal-methods
 date: '2018-11-01'
 buttons:
 - text: GitHub

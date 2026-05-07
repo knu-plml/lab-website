@@ -9,8 +9,5 @@ authors:
 image: images/publications/2021-domestic-conference-74-automl.svg
 scope: domestic
 kind: conference
-tags:
-- machine-learning
-- healthcare-ai
 date: '2021-11-01'
 ---

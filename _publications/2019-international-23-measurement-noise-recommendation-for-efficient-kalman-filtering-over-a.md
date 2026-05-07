@@ -11,9 +11,6 @@ authors:
 image: images/publications/2019-international-23-measurement-noise-recommendation-for-efficient-kalman-filtering-over-a.svg
 scope: international
 kind: journal
-tags:
-- machine-learning
-- data-systems
 date: '2019-01-01'
 buttons:
 - text: PDF

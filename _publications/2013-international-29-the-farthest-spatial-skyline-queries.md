@@ -11,7 +11,5 @@ authors:
 image: images/publications/2013-international-29-the-farthest-spatial-skyline-queries.svg
 scope: international
 kind: journal
-tags:
-- data-systems
 date: '2013-01-01'
 ---

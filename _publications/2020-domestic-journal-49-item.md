@@ -9,8 +9,6 @@ authors:
 image: images/publications/2020-domestic-journal-49-item.svg
 scope: domestic
 kind: journal
-tags:
-- machine-learning
 date: '2020-09-01'
 buttons:
 - text: PDF

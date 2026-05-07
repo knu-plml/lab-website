@@ -9,9 +9,6 @@ authors:
 image: images/publications/2012-domestic-journal-56-item.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
-- formal-methods
 date: '2012-12-01'
 buttons:
 - text: PDF

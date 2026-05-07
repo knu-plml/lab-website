@@ -18,9 +18,6 @@ support:
 image: /images/publications/2026-international-01-evaluating-the-sampling-effect-of-propensity-score-matching-for-reduci.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- healthcare-ai
 date: 2026-01-01
 buttons:
   - text: DOI

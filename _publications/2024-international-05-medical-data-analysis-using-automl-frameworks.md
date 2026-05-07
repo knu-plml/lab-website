@@ -17,9 +17,6 @@ support:
 image: images/publications/2024-international-05-medical-data-analysis-using-automl-frameworks.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- healthcare-ai
 date: 2024-09-01
 buttons:
   - text: PDF

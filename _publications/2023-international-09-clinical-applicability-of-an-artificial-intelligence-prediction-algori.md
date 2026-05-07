@@ -17,9 +17,6 @@ support:
 image: images/publications/2023-international-09-clinical-applicability-of-an-artificial-intelligence-prediction-algori.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- healthcare-ai
 date: '2023-09-01'
 buttons:
 - text: DOI

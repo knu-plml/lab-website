@@ -17,9 +17,6 @@ support:
 image: images/publications/2023-international-08-twelve-lead-ecg-reconstruction-from-single-lead-signals-using-generati.png
 scope: international
 kind: conference
-tags:
-- machine-learning
-- healthcare-ai
 date: '2023-10-01'
 buttons:
 - text: DOI

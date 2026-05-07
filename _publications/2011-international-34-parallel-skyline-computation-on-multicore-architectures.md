@@ -10,8 +10,6 @@ authors:
 image: images/publications/2011-international-34-parallel-skyline-computation-on-multicore-architectures.svg
 scope: international
 kind: journal
-tags:
-- data-systems
 date: '2011-01-01'
 buttons:
 - text: DOI

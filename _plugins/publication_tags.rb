@@ -1,16 +1,9 @@
-#!/usr/bin/env python3
+# frozen_string_literal: true
 
-import re
-from pathlib import Path
-
-import yaml
-
-
-ROOT = Path(__file__).resolve().parents[1]
-PUBLICATIONS_DIR = ROOT / "_publications"
-
-TOPIC_RULES = {
-    "machine-learning": [
+module Jekyll
+  module PublicationTags
+    TOPIC_RULES = {
+      "machine-learning" => [
         "machine learning",
         "deep learning",
         "neural",
@@ -55,8 +48,8 @@ TOPIC_RULES = {
         "pretrained model",
         "미세조정",
         "fine-tuning",
-    ],
-    "healthcare-ai": [
+      ].freeze,
+      "healthcare-ai" => [
         "medical",
         "healthcare",
         "clinical",
@@ -81,8 +74,8 @@ TOPIC_RULES = {
         "rppg",
         "alzheimer",
         "neuropsychological",
-    ],
-    "programming-languages": [
+      ].freeze,
+      "programming-languages" => [
         "programming language",
         "functional",
         "xquery",
@@ -103,8 +96,8 @@ TOPIC_RULES = {
         "타입 시스템",
         "타입시스템",
         "재귀 타입",
-    ],
-    "formal-methods": [
+      ].freeze,
+      "formal-methods" => [
         "theorem",
         "proof",
         "modal logic",
@@ -128,8 +121,8 @@ TOPIC_RULES = {
         "의미구조",
         "코인덕션",
         "서브타이핑",
-    ],
-    "software-engineering": [
+      ].freeze,
+      "software-engineering" => [
         "software",
         "fault localization",
         "program repair",
@@ -147,8 +140,8 @@ TOPIC_RULES = {
         "코드 분류",
         "소프트웨어",
         "program synthesis",
-    ],
-    "data-systems": [
+      ].freeze,
+      "data-systems" => [
         "skyline",
         "database",
         "query",
@@ -162,8 +155,8 @@ TOPIC_RULES = {
         "sensor data",
         "스카이라인",
         "데이터 과학",
-    ],
-    "security": [
+      ].freeze,
+      "security" => [
         "blockchain",
         "ethereum",
         "smart contract",
@@ -172,8 +165,8 @@ TOPIC_RULES = {
         "content poisoning",
         "ndn",
         "보안",
-    ],
-    "computer-vision": [
+      ].freeze,
+      "computer-vision" => [
         "3d shape",
         "image",
         "face mesh",
@@ -188,67 +181,49 @@ TOPIC_RULES = {
         "모션",
         "광학 문자 인식",
         "수형",
-    ],
-}
+      ].freeze,
+    }.freeze
 
-PUBLICATION_FILTERS = [
-    "machine-learning",
-    "healthcare-ai",
-    "software-engineering",
-    "programming-languages",
-    "formal-methods",
-    "data-systems",
-    "security",
-    "computer-vision",
-]
+    module_function
 
+    def filter_tags(site)
+      Array(site.data["publication_filters"]).map { |item| item["tag"].to_s }
+    end
 
-def load_front_matter(path: Path):
-    text = path.read_text()
-    _, front_matter, body = text.split("---", 2)
-    return yaml.safe_load(front_matter), body
+    def normalize(text)
+      text
+        .to_s
+        .downcase
+        .gsub("::", " ")
+        .gsub(/[\u2013\u2014]/, " ")
+        .gsub(/[^0-9a-zㄱ-ㅎㅏ-ㅣ가-힣\s-]/, " ")
+        .gsub(/\s+/, " ")
+        .strip
+    end
 
+    def infer_topics(text)
+      TOPIC_RULES.select do |_tag, keywords|
+        keywords.any? { |keyword| text.include?(keyword) }
+      end.keys
+    end
 
-def dump_front_matter(path: Path, data, body: str):
-    rendered = yaml.safe_dump(data, sort_keys=False, allow_unicode=True).strip()
-    path.write_text(f"---\n{rendered}\n---{body}")
+    def assign!(site)
+      publications = site.collections["publications"]
+      return unless publications
 
+      ordered_filters = filter_tags(site)
 
-def normalize(text: str) -> str:
-    cleaned = (text or "").lower()
-    cleaned = cleaned.replace("::", " ")
-    cleaned = re.sub(r"[\u2013\u2014]", " ", cleaned)
-    cleaned = re.sub(r"[^0-9a-z\u3131-\u318e\uac00-\ud7a3\s-]", " ", cleaned)
-    cleaned = re.sub(r"\s+", " ", cleaned).strip()
-    return cleaned
+      publications.docs.each do |doc|
+        existing_tags = Array(doc.data["tags"])
+        custom_tags = existing_tags.reject { |tag| ordered_filters.include?(tag) }
+        inferred_tags = infer_topics(normalize(doc.data["title"]))
 
+        doc.data["tags"] = custom_tags + ordered_filters.select { |tag| inferred_tags.include?(tag) }
+      end
+    end
+  end
+end
 
-def infer_topics(text: str):
-    topics = []
-    for tag, keywords in TOPIC_RULES.items():
-        if any(keyword in text for keyword in keywords):
-            topics.append(tag)
-    return topics
-
-
-def main():
-    updated = 0
-    for path in sorted(PUBLICATIONS_DIR.glob("*.md")):
-        data, body = load_front_matter(path)
-        text = normalize(data.get("title", ""))
-
-        base_tags = list(data.get("tags") or [])
-        category_tags = [tag for tag in base_tags if tag not in PUBLICATION_FILTERS]
-        topic_tags = infer_topics(text)
-        merged_tags = category_tags + [tag for tag in PUBLICATION_FILTERS if tag in topic_tags]
-
-        if merged_tags != base_tags:
-            data["tags"] = merged_tags
-            dump_front_matter(path, data, body)
-            updated += 1
-
-    print(f"updated_publication_tags {updated}")
-
-
-if __name__ == "__main__":
-    main()
+Jekyll::Hooks.register :site, :post_read do |site|
+  Jekyll::PublicationTags.assign!(site)
+end

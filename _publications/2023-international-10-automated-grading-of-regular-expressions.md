@@ -14,10 +14,6 @@ support:
 image: images/publications/2023-international-10-automated-grading-of-regular-expressions.png
 scope: international
 kind: conference
-tags:
-- software-engineering
-- programming-languages
-- formal-methods
 date: '2023-04-01'
 buttons:
 - text: PDF

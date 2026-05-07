@@ -12,9 +12,6 @@ support:
 image: images/publications/2025-domestic-journal-42-item.svg
 scope: domestic
 kind: journal
-tags:
-- machine-learning
-- software-engineering
 date: '2025-08-01'
 buttons:
 - text: PDF

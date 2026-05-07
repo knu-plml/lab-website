@@ -7,8 +7,5 @@ authors:
 image: images/publications/2016-domestic-journal-55-item.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
-- formal-methods
 date: '2016-12-01'
 ---

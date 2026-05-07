@@ -15,8 +15,5 @@ support:
 image: images/publications/2025-domestic-conference-59-rppg.svg
 scope: domestic
 kind: conference
-tags:
-- machine-learning
-- healthcare-ai
 date: '2025-12-01'
 ---

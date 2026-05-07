@@ -8,8 +8,6 @@ authors:
 image: images/publications/2021-international-18-on-correspondence-between-selective-cps-transformation-and-selective-d.svg
 scope: international
 kind: journal
-tags:
-- formal-methods
 date: '2021-01-01'
 buttons:
 - text: PDF

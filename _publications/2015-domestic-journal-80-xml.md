@@ -7,8 +7,5 @@ authors:
 image: images/publications/2015-domestic-journal-80-xml.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
-- data-systems
 date: '2015-06-01'
 ---

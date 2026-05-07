@@ -9,9 +9,6 @@ authors:
 image: images/publications/2015-domestic-journal-81-xpath.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
-- formal-methods
 date: '2015-04-01'
 buttons:
 - text: PDF

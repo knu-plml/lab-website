@@ -13,7 +13,5 @@ support:
 image: images/publications/2023-domestic-conference-66-item.svg
 scope: domestic
 kind: conference
-tags:
-- healthcare-ai
 date: '2023-12-01'
 ---

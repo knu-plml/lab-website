@@ -11,9 +11,6 @@ authors:
 image: images/publications/2022-international-11-anisotropic-spiralnet-for-3d-shape-completion-and-denoising.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- computer-vision
 date: '2022-01-01'
 buttons:
 - text: DOI

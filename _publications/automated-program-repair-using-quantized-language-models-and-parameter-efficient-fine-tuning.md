@@ -73,9 +73,6 @@ support:
   - Post-Doc.
   - 글로컬랩
   - RISE
-tags:
-  - software-engineering
-  - machine-learning
 date: 2026-04-30
 buttons:
   - text: DOI

@@ -12,9 +12,6 @@ authors:
 image: images/publications/2022-domestic-conference-71-7.svg
 scope: domestic
 kind: conference
-tags:
-- healthcare-ai
-- computer-vision
 date: '2022-12-01'
 buttons:
 - text: GitHub

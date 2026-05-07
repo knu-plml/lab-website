@@ -12,8 +12,6 @@ authors:
 image: images/publications/2022-international-13-repcoder-an-automated-program-repair-framework-for-probability-based-p.png
 scope: international
 kind: conference
-tags:
-- software-engineering
 date: '2022-04-01'
 buttons:
 - text: DOI

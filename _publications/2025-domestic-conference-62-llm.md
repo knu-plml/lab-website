@@ -12,8 +12,5 @@ support:
 image: images/publications/2025-domestic-conference-62-llm.svg
 scope: domestic
 kind: conference
-tags:
-- machine-learning
-- healthcare-ai
 date: '2025-07-01'
 ---

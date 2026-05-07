@@ -9,9 +9,6 @@ authors:
 image: images/publications/2011-international-35-a-calculus-for-hardware-description.svg
 scope: international
 kind: journal
-tags:
-- programming-languages
-- formal-methods
 date: '2011-01-01'
 buttons:
 - text: DOI

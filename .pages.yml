@@ -360,16 +360,22 @@ content:
               label: Conference
             - value: journal
               label: Journal
-      - name: subtitle
-        label: Subtitle
+      - name: authors
+        label: Authors
         type: string
         required: true
-        description: "Full citation text shown on the publication detail page."
+        list: true
+        description: "Append `*` to an author name to mark equal contributions (shown as `(* equal contributions)`)."
       - name: venue
         label: Venue
         type: string
         required: true
-        description: "Short venue name shown on publication cards and the home page."
+        description: "Short venue name shown on publication cards and the home page. Example: Frontiers in Public Health"
+      - name: subtitle
+        label: Citation
+        type: string
+        required: true
+        description: "Full citation text shown on the publication detail page. Example: Frontiers in Public Health. 2026, 14:1747762"
       - name: venue_url
         label: Venue URL
         type: string
@@ -388,12 +394,6 @@ content:
         description: "Leave blank to generate an image automatically."
         options:
           media: publication_images
-      - name: authors
-        label: Authors
-        type: string
-        required: true
-        list: true
-        description: "Append `*` to an author name to mark equal contributions (shown as `(* equal contributions)`)."
       - name: awards
         label: Awards
         type: string
@@ -406,12 +406,6 @@ content:
         required: false
         list: true
         description: "Optional supporting project or funding information. Example: 지역지능화"
-      - name: tags
-        label: Tags
-        type: string
-        required: false
-        list: true
-        description: "Leave blank to let tags be set automatically."
       - name: date
         label: Date
         type: date

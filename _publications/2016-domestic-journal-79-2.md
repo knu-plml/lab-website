@@ -9,7 +9,5 @@ authors:
 image: images/publications/2016-domestic-journal-79-2.svg
 scope: domestic
 kind: journal
-tags:
-- data-systems
 date: '2016-12-01'
 ---

@@ -11,7 +11,6 @@ authors:
 image: images/publications/2022-domestic-journal-45-api.svg
 scope: domestic
 kind: journal
-tags: []
 date: '2022-09-01'
 buttons:
 - text: PDF

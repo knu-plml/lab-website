@@ -9,7 +9,5 @@ authors:
 image: images/publications/2012-international-31-group-skyline-computation.svg
 scope: international
 kind: journal
-tags:
-- data-systems
 date: '2012-01-01'
 ---

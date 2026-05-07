@@ -9,8 +9,6 @@ authors:
 image: images/publications/2021-domestic-journal-48-gru.png
 scope: domestic
 kind: journal
-tags:
-- machine-learning
 date: '2021-04-01'
 buttons:
 - text: PDF

@@ -11,8 +11,5 @@ authors:
 image: images/publications/2012-domestic-conference-82-item.svg
 scope: domestic
 kind: conference
-tags:
-- programming-languages
-- formal-methods
 date: '2012-06-01'
 ---

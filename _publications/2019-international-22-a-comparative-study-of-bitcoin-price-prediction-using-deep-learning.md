@@ -10,8 +10,6 @@ authors:
 image: images/publications/2019-international-22-a-comparative-study-of-bitcoin-price-prediction-using-deep-learning.svg
 scope: international
 kind: journal
-tags:
-- machine-learning
 date: '2019-01-01'
 buttons:
 - text: PDF

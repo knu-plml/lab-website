@@ -10,10 +10,6 @@ authors:
 image: images/publications/2016-international-24-precise-and-scalable-static-analysis-of-jquery-using-a-regular-express.png
 scope: international
 kind: conference
-tags:
-- programming-languages
-- formal-methods
-- data-systems
 date: '2016-02-01'
 buttons:
 - text: PDF

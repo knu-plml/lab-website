@@ -10,8 +10,6 @@ authors:
 image: images/publications/2016-international-25-optimizing-skyline-queries-over-incomplete-data.svg
 scope: international
 kind: journal
-tags:
-- data-systems
 date: '2016-01-01'
 buttons:
 - text: DOI

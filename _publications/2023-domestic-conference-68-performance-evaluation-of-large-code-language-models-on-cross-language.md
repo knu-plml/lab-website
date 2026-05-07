@@ -15,8 +15,5 @@ support:
 image: images/publications/2023-domestic-conference-68-performance-evaluation-of-large-code-language-models-on-cross-language.svg
 scope: domestic
 kind: conference
-tags:
-- machine-learning
-- software-engineering
 date: '2023-12-01'
 ---

@@ -21,9 +21,6 @@ support:
 image: images/publications/2024-international-04-predicting-the-progression-of-mild-cognitive-impairment-to-alzheimers-.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- healthcare-ai
 date: '2024-09-01'
 buttons:
 - text: PDF

@@ -7,8 +7,6 @@ authors:
 image: images/publications/2019-domestic-journal-52-item.svg
 scope: domestic
 kind: journal
-tags:
-- programming-languages
 date: '2019-03-01'
 buttons:
 - text: PDF

@@ -10,7 +10,5 @@ authors:
 image: images/publications/2012-international-30-computing-exact-skyline-probabilities-for-uncertain-databases.svg
 scope: international
 kind: journal
-tags:
-- data-systems
 date: '2012-01-01'
 ---

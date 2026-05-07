@@ -8,6 +8,5 @@ authors:
 image: images/publications/2021-domestic-journal-47-item.svg
 scope: domestic
 kind: journal
-tags: []
 date: '2021-12-01'
 ---

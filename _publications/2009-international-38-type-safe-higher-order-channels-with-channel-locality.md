@@ -9,8 +9,6 @@ authors:
 image: images/publications/2009-international-38-type-safe-higher-order-channels-with-channel-locality.svg
 scope: international
 kind: journal
-tags:
-- formal-methods
 date: '2009-01-01'
 buttons:
 - text: DOI

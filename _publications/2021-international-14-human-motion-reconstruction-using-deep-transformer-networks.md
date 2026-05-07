@@ -11,9 +11,6 @@ authors:
 image: images/publications/2021-international-14-human-motion-reconstruction-using-deep-transformer-networks.png
 scope: international
 kind: journal
-tags:
-- machine-learning
-- computer-vision
 date: '2021-10-01'
 buttons:
 - text: PDF

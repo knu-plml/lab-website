@@ -9,8 +9,6 @@ authors:
 image: images/publications/2022-domestic-journal-46-item.svg
 scope: domestic
 kind: journal
-tags:
-- machine-learning
 date: '2022-01-01'
 buttons:
 - text: PDF
