@@ -17,8 +17,7 @@ links:
 - Former Vice Dean, Office of Research Affairs 前 연구부처장
 - [Programming Language and Machine Learning Laboratory](https://pl.kangwon.ac.kr/) 프로그래밍 언어 및 기계학습 연구실
 - [Department of Computer Science and Engineering](https://cse.kangwon.ac.kr/cse/index.do) 컴퓨터공학과
-- [Department of Convergence Security](https://bcs.kangwon.ac.kr/) 일반대학원 융합보안학과
-- [Interdisciplinary Graduate Program in Medical Bigdata Convergence](https://bk21.kangwon.ac.kr/edu/bigdatamed) 일반대학원 빅데이터메디컬융합학과
+- [Department of Data Science](https://knuds.kangwon.ac.kr/) 일반대학원 데이터사이언스학과
 - [Kangwon National University](http://www.kangwon.ac.kr/) 강원대학교
 
 **Contact**
@@ -26,7 +25,7 @@ links:
 - Office: Hanbit-gwan 307
 
 **Announcement**
-I am looking for motivated PhD/MS students and postdocs. If interested, send me an email with your full Curriculum Vitae and transcript. Currently, I only accept GKS-funded students, so you should check the [K scholarship](https://www.studyinkorea.go.kr/ko/scholarshipmain.do) programs first before sending me an e-mail.
+- I am looking for motivated PhD/MS students and postdocs. If interested, send me an email with your full Curriculum Vitae and transcript. Currently, I only accept GKS-funded students, so you should check the [K scholarship](https://www.studyinkorea.go.kr/ko/scholarshipmain.do) programs first before sending me an e-mail.
 
 **Research Interests**
 - Human-AI collaborative programming :: automatic program synthesis and repair
