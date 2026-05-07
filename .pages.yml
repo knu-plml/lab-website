@@ -432,7 +432,7 @@ content:
     type: collection
     path: _gallery
     subfolders: false
-    filename: "{title}.md"
+    filename: "{date}.md"
     view:
       primary: title
       fields: [title, date, "tags[0]"]
