@@ -5,9 +5,9 @@
 */
 {
   // elements to filter
-  const elementSelector = ".card, .citation, .post-excerpt, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
-  const sectionElementSelector = ".card, .citation, .post-excerpt-container, .publication-card, .portrait-wrapper, .alumni-entry, .course-group";
-  const filterableGroupSelector = ".grid, .alumni-list";
+  const elementSelector = ".card, .citation, .post-excerpt, .publication-card, .portrait-wrapper, .alumni-entry, .course-group, .gallery-card";
+  const sectionElementSelector = ".card, .citation, .post-excerpt-container, .publication-card, .portrait-wrapper, .alumni-entry, .course-group, .gallery-card";
+  const filterableGroupSelector = ".grid, .alumni-list, .gallery-grid";
   // search box element
   const searchBoxSelector = ".search-box";
   // results info box element

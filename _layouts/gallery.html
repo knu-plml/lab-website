@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+{% assign photos = page.photos | default: empty %}
+
+{% include section.html %}
+
+<article class="entry-page entry-page-gallery">
+  <div class="entry-summary entry-summary-only gallery-summary">
+    <div class="entry-eyebrow">Gallery</div>
+    <h1 class="entry-title">{{ page.title }}</h1>
+
+    <div class="gallery-detail-meta">
+      <span>
+        <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+        {{ page.date | date: "%B %-d, %Y" }}
+      </span>
+      <span>
+        <i class="fa-regular fa-images" aria-hidden="true"></i>
+        {{ photos | size }} photos
+      </span>
+    </div>
+
+    {% if page.tags and page.tags.size > 0 %}
+      {% include tags.html tags=page.tags link="/gallery/" %}
+    {% endif %}
+  </div>
+
+  {% if content != "" or photos.size > 0 %}
+    <div class="entry-body gallery-body">
+      {% if content != "" %}
+        <div class="entry-section gallery-description">
+          {{ content }}
+        </div>
+      {% endif %}
+
+      {% if photos.size > 0 %}
+        <div class="gallery-photo-stack">
+          {% for photo in photos %}
+            <figure class="gallery-photo">
+              <img
+                src="{{ photo | relative_url | uri_escape }}"
+                alt="{{ page.title | default: "Gallery photo" | regex_strip }} {{ forloop.index }}"
+                loading="lazy"
+                {% include fallback.html %}
+              >
+            </figure>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</article>

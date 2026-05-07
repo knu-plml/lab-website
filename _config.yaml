@@ -37,6 +37,10 @@ defaults:
       type: "courses"
     values:
       layout: course
+  - scope:
+      type: "gallery"
+    values:
+      layout: gallery
 
 collections:
   # generate page for each member
@@ -48,6 +52,8 @@ collections:
   publications:
     output: true
   courses:
+    output: true
+  gallery:
     output: true
 
 # jekyll plugins
