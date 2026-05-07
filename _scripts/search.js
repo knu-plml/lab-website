@@ -125,19 +125,28 @@
 
   // loop through elements, hide/show based on query, and return results info
   const filterElements = (parts) => {
-    let elements = Array.from(document.querySelectorAll(elementSelector)).filter(
-      (element) => !isInInactiveTabPanel(element)
-    );
+    const elements = Array.from(document.querySelectorAll(elementSelector));
 
     // results info
     let x = 0;
-    let n = elements.length;
+    let n = 0;
     // filter elements
     for (const element of elements) {
-      if (elementMatches(element, parts)) {
+      const isActive = !isInInactiveTabPanel(element);
+      const matches = elementMatches(element, parts);
+
+      if (isActive) {
+        n++;
+      }
+
+      if (matches) {
         element.style.display = "";
-        x++;
-      } else element.style.display = "none";
+        if (isActive) {
+          x++;
+        }
+      } else {
+        element.style.display = "none";
+      }
     }
 
     return [x, n];

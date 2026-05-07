@@ -13,7 +13,6 @@ nav:
 {% assign publication_years = site.publications | collection_years %}
 
 {% include search-box.html %}
-{% include search-info.html %}
 
 <div class="publication-filters tags tag-scroll">
   {% for item in site.data.publication_filters %}
