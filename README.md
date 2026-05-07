@@ -17,7 +17,7 @@ bundle exec jekyll serve
 - `_config.yaml`: 사이트 설정
 - `_styles/`: SCSS 스타일
 - `_layouts/`, `_includes/`: 레이아웃과 공통 컴포넌트
-- `_members/`, `_publications/`, `_posts/`, `_courses/`: 콘텐츠 데이터
+- `_members/`, `_publications/`, `_news/`, `_courses/`: 콘텐츠 데이터
 - `images/`: 이미지 자산
 
 ## Notes

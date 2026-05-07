@@ -142,7 +142,7 @@ module Jekyll
         options = {
           allow_missing_href: true,
           enforce_https: false,
-          ignore_files: [/.*testbed.html/],
+          ignore_files: [],
           ignore_urls: [
             /fonts\.gstatic\.com/,
             /localhost:/,

@@ -280,10 +280,10 @@ content:
         options:
           language: markdown
 
-  - name: news_posts
+  - name: news_items
     label: News Posts
     type: collection
-    path: _posts
+    path: _news
     subfolders: false
     filename: "{year}-{month}-{day}-{title}.md"
     view:

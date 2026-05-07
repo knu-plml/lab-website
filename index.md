@@ -173,7 +173,8 @@ show-subtitle: false
     </div>
   </div>
   <div class="home-news-list">
-    {% for post in site.posts limit:3 %}
+    {% assign latest_news = site.news | sort: "date" | reverse %}
+    {% for post in latest_news limit:3 %}
       <div class="reveal-on-scroll">
         {% include post-excerpt.html lookup=post.slug %}
       </div>

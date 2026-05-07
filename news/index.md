@@ -9,6 +9,7 @@ nav:
 
 {% include search-box.html %}
 {% include search-info.html %}
-{% include tags.html tags=site.tags class="tag-scroll" %}
+{% assign news_tags = site.news | map: "tags" | join: "," | split: "," %}
+{% include tags.html tags=news_tags class="tag-scroll" %}
 
-{% include list.html data="posts" component="post-excerpt" section_per_year=true %}
+{% include list.html data="news" component="post-excerpt" section_per_year=true %}

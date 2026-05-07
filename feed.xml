@@ -1,0 +1,21 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ "/" | absolute_url }}</link>
+    <atom:link href="{{ "feed.xml" | absolute_url }}" rel="self" type="application/rss+xml" />
+    {% assign latest_news = site.news | sort: "date" | reverse %}
+    {% for item in latest_news %}
+      <item>
+        <title>{{ item.title | xml_escape }}</title>
+        <description>{{ item.content | markdownify | strip_html | strip | xml_escape }}</description>
+        <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+        <guid isPermaLink="false">{{ item.path | xml_escape }}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

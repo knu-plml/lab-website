@@ -4,8 +4,6 @@ subtitle: Programming Languages and Machine Learning
 description: Programming Languages and Machine Learning Laboratory at Kangwon National University.
 proofer: false
 
-baseurl: /
-
 # site social media and other links
 links:
   github: knu-plml
@@ -24,19 +22,17 @@ defaults:
       type: "members"
     values:
       layout: member
-  # markdown files in /_posts
+  # markdown files in /_news
   - scope:
-      type: "posts"
-    values:
-      layout: post
+      type: "news"
+    values: {}
   - scope:
       type: "publications"
     values:
       layout: publication
   - scope:
       type: "courses"
-    values:
-      layout: course
+    values: {}
   - scope:
       type: "gallery"
     values:
@@ -46,13 +42,12 @@ collections:
   # generate page for each member
   members:
     output: true
-  # generate page for each post
-  posts:
-    output: true
+  news:
+    output: false
   publications:
     output: true
   courses:
-    output: true
+    output: false
   gallery:
     output: true
 
@@ -61,7 +56,6 @@ plugins:
   - jekyll-spaceship
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-feed
   - jekyll-last-modified-at
 
 # code block syntax highlighting
