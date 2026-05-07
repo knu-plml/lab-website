@@ -1,0 +1,27 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: deploy-lab-webpage
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, lab-webpage]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Jekyll site
+        run: |
+          bundle install
+          bundle exec jekyll build
+
+      - name: Deploy
+        run: |
+          rsync -av --delete _site/ /var/www/html/new/
