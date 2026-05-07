@@ -19,5 +19,4 @@ date: '2022-12-01'
 buttons:
 - text: GitHub
   link: https://github.com/knu-plml/blood-pressure-ocr
-  icon: fa-brands fa-github
 ---

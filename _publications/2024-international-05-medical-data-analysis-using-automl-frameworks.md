@@ -24,10 +24,8 @@ date: 2024-09-01
 buttons:
   - text: PDF
     link: https://rdcu.be/dJ8Kp
-    icon: fa-solid fa-file-lines
   - text: GitHub
     link: https://github.com/knu-plml/automl-medical
-    icon: fa-brands fa-github
 abstract: Recently, there has been a growing interest in applying machine
   learning (ML) and deep learning to medical big data and smart healthcare.
   However, it can be challenging to possess both domain knowledge of medical

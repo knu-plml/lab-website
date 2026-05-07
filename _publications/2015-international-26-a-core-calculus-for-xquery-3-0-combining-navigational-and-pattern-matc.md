@@ -19,5 +19,4 @@ date: '2015-04-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1007/978-3-662-46669-8_10
-  icon: fa-solid fa-file-lines
 ---

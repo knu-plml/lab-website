@@ -16,8 +16,6 @@ date: '2021-03-01'
 buttons:
 - text: PDF
   link: https://rdcu.be/chqOz
-  icon: fa-solid fa-file-lines
 - text: DOI
   link: https://doi.org/10.1007/s11227-021-03725-4
-  icon: fa-solid fa-file-lines
 ---

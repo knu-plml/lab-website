@@ -16,5 +16,4 @@ date: '2012-12-01'
 buttons:
 - text: PDF
   link: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE02055355
-  icon: fa-solid fa-file-lines
 ---

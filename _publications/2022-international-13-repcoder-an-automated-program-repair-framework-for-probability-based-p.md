@@ -18,5 +18,4 @@ date: '2022-04-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1145/3477314.3507083
-  icon: fa-solid fa-file-lines
 ---

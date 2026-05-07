@@ -24,10 +24,8 @@ date: 2025-03-01
 buttons:
   - text: PDF
     link: https://ieeexplore.ieee.org/document/10989036
-    icon: fa-solid fa-file-lines
   - text: GitHub
     link: https://github.com/knu-plml/LLM4FL
-    icon: fa-brands fa-github
 abstract: Identifying the point of error is imperative in software debugging.
   Traditional fault localization (FL) techniques rely on executing the program
   and using the code coverage matrix in tandem with test case results to

@@ -13,5 +13,4 @@ date: '2019-03-01'
 buttons:
 - text: PDF
   link: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07626162
-  icon: fa-solid fa-file-lines
 ---

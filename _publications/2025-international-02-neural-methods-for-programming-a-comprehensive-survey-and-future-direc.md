@@ -24,7 +24,6 @@ date: 2025-01-01
 buttons:
   - text: DOI
     link: https://doi.org/10.3390/app152212150
-    icon: fa-solid fa-file-lines
 abstract: >-
   The advancement of neural-based models has driven significant progress in
   modern code intelligence, accelerating the development of intelligent

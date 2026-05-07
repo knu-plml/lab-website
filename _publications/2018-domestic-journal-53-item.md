@@ -15,5 +15,4 @@ date: '2018-11-01'
 buttons:
 - text: GitHub
   link: https://github.com/93suhwan/python-sos
-  icon: fa-brands fa-github
 ---

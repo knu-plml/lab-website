@@ -1,0 +1,30 @@
+{% assign button_type = include.text | default: include.type | default: "" | strip %}
+
+{% case button_type %}
+  {% when "DOI" %}
+    {% assign button_icon = "fa-solid fa-file-lines" %}
+  {% when "PDF" %}
+    {% assign button_icon = "fa-solid fa-file-lines" %}
+  {% when "GitHub" %}
+    {% assign button_icon = "fa-brands fa-github" %}
+  {% when "Webpage" %}
+    {% assign button_icon = "fa-solid fa-link" %}
+{% endcase %}
+
+{% if include.link or button_type != "" %}
+  <div class="button-wrapper">
+    <a
+      class="button"
+      href="{{ include.link | replace: "$LINK", include.link | relative_url }}"
+      data-style="{{ include.style }}"
+      aria-label="{{ button_type | default: "publication link" | regex_strip }}"
+    >
+      {% if button_icon and button_icon != "" %}
+        <i class="icon {{ button_icon }}"></i>
+      {% endif %}
+      {% if button_type != "" %}
+        <span>{{ button_type }}</span>
+      {% endif %}
+    </a>
+  </div>
+{% endif %}

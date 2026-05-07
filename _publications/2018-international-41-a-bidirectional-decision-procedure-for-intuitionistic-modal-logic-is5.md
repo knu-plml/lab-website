@@ -15,11 +15,8 @@ date: '2018-04-01'
 buttons:
 - text: PDF
   link: https://pl.kangwon.ac.kr/wp/wp-content/uploads/submission.pdf
-  icon: fa-solid fa-file-lines
 - text: Webpage
   link: http://pl.postech.ac.kr/IS5/
-  icon: fa-solid fa-file-lines
 - text: GitHub
   link: https://github.com/hyeonseung/is5prover
-  icon: fa-brands fa-github
 ---

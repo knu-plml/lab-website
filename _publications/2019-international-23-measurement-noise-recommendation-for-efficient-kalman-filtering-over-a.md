@@ -18,5 +18,4 @@ date: '2019-01-01'
 buttons:
 - text: PDF
   link: https://www.mdpi.com/1424-8220/19/5/1168
-  icon: fa-solid fa-file-lines
 ---

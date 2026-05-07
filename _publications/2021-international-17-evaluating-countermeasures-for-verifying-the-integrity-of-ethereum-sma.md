@@ -16,8 +16,6 @@ date: '2021-06-01'
 buttons:
 - text: PDF
   link: https://ieeexplore.ieee.org/document/9461797
-  icon: fa-solid fa-file-lines
 - text: GitHub
   link: https://github.com/93suhwan/uscv
-  icon: fa-brands fa-github
 ---

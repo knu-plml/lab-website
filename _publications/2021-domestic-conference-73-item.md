@@ -16,5 +16,4 @@ date: '2021-12-01'
 buttons:
 - text: GitHub
   link: https://github.com/knu-plml/plant-measurement
-  icon: fa-brands fa-github
 ---

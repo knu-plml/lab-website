@@ -16,5 +16,4 @@ date: '2015-04-01'
 buttons:
 - text: PDF
   link: https://kiss.kstudy.com/Detail/Ar?key=3874958
-  icon: fa-solid fa-file-lines
 ---

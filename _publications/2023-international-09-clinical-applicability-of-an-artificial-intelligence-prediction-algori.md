@@ -24,5 +24,4 @@ date: '2023-09-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.3389/fcvm.2023.1168054
-  icon: fa-solid fa-file-lines
 ---

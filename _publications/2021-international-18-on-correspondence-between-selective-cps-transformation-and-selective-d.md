@@ -14,5 +14,4 @@ date: '2021-01-01'
 buttons:
 - text: PDF
   link: https://www.mdpi.com/2227-7390/9/4/385
-  icon: fa-solid fa-file-lines
 ---

@@ -16,5 +16,4 @@ date: '2016-01-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1016/j.ins.2016.04.022
-  icon: fa-solid fa-link
 ---

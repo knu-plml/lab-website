@@ -28,5 +28,4 @@ date: '2024-09-01'
 buttons:
 - text: PDF
   link: https://thejcn.com/DOIx.php?id=10.3988/jcn.2023.0289
-  icon: fa-solid fa-file-lines
 ---

@@ -18,8 +18,6 @@ date: '2020-07-01'
 buttons:
 - text: PDF
   link: https://pl.kangwon.ac.kr/wp/wp-content/uploads/TCS2020.pdf
-  icon: fa-solid fa-file-lines
 - text: DOI
   link: https://doi.org/10.1016/j.tcs.2020.03.020
-  icon: fa-solid fa-file-lines
 ---

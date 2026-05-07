@@ -25,7 +25,6 @@ date: 2026-01-01
 buttons:
   - text: DOI
     link: https://doi.org/10.3389/fpubh.2026.1747762
-    icon: fa-solid fa-file-lines
 abstract: >-
   Background
 

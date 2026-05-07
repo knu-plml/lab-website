@@ -21,8 +21,6 @@ date: '2024-07-01'
 buttons:
 - text: PDF
   link: https://rdcu.be/dJh1G
-  icon: fa-solid fa-file-lines
 - text: GitHub
   link: https://github.com/knu-plml/boprs
-  icon: fa-brands fa-github
 ---

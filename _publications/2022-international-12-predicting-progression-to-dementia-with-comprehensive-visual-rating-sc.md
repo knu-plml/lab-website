@@ -31,5 +31,4 @@ date: '2022-08-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.3389/fneur.2022.906257
-  icon: fa-solid fa-file-lines
 ---

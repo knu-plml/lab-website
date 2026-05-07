@@ -89,8 +89,7 @@
           <div class="citation-buttons">
             {% for button in citation.buttons %}
               {%
-                include button.html
-                type=button.type
+                include publication-button.html
                 icon=button.icon
                 text=button.text
                 link=button.link

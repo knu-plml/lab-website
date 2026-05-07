@@ -15,5 +15,4 @@ date: '2020-07-01'
 buttons:
 - text: PDF
   link: http://itiis.org/digital-library/23721
-  icon: fa-solid fa-file-lines
 ---

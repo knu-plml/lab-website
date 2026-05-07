@@ -23,8 +23,6 @@ date: '2023-12-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1038/s41598-023-48842-7
-  icon: fa-solid fa-file-lines
 - text: GitHub
   link: https://github.com/knu-plml/RA-osteoporosis-ml-prediction
-  icon: fa-brands fa-github
 ---

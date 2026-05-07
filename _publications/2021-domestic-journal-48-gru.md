@@ -15,5 +15,4 @@ date: '2021-04-01'
 buttons:
 - text: PDF
   link: https://ki-it.com/xml/28903/28903.pdf
-  icon: fa-solid fa-file-lines
 ---

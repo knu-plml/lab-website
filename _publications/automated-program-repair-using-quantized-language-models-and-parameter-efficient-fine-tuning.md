@@ -80,8 +80,6 @@ date: 2026-04-30
 buttons:
   - text: DOI
     link: https://doi.org/10.1016/j.infsof.2026.108181
-    icon: fa-solid fa-file-lines
   - text: GitHub
     link: https://github.com/knu-plml/apr-using-qlora
-    icon: fa-brands fa-github
 ---

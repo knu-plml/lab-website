@@ -22,5 +22,4 @@ date: '2023-04-01'
 buttons:
 - text: PDF
   link: https://link.springer.com/chapter/10.1007/978-3-031-30044-8_4
-  icon: fa-solid fa-file-lines
 ---

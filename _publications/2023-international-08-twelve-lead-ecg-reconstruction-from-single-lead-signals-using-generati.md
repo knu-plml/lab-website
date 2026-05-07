@@ -24,8 +24,6 @@ date: '2023-10-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1007/978-3-031-43990-2_18
-  icon: fa-solid fa-file-lines
 - text: GitHub
   link: https://github.com/knu-plml/ecg-recon
-  icon: fa-brands fa-github
 ---

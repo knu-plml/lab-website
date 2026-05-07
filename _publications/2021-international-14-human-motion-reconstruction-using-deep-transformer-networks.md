@@ -18,8 +18,6 @@ date: '2021-10-01'
 buttons:
 - text: PDF
   link: https://authors.elsevier.com/c/1dVPWcAmylzS5
-  icon: fa-solid fa-file-lines
 - text: DOI
   link: https://doi.org/10.1016/j.patrec.2021.06.018
-  icon: fa-solid fa-file-lines
 ---

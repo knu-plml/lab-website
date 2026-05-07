@@ -18,5 +18,4 @@ date: '2011-01-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1145/2076021.2048106
-  icon: fa-solid fa-file-lines
 ---

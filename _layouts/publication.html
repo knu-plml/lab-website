@@ -90,7 +90,7 @@ layout: default
       {% if page.buttons.size > 0 %}
         <div class="entry-actions publication-actions">
           {% for button in page.buttons %}
-            {% include button.html
+            {% include publication-button.html
               icon=button.icon
               text=button.text
               link=button.link

@@ -15,5 +15,4 @@ date: '2011-01-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1016/j.ic.2011.09.002
-  icon: fa-solid fa-file-lines
 ---

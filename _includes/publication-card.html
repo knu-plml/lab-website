@@ -114,7 +114,7 @@
       <div class="publication-card-buttons">
         {% for button in publication.buttons %}
           {%
-            include button.html
+            include publication-button.html
             icon=button.icon
             text=button.text
             link=button.link

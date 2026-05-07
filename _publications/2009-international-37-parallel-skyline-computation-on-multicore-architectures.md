@@ -18,5 +18,4 @@ date: '2009-01-01'
 buttons:
 - text: DOI
   link: https://doi.org/10.1109/ICDE.2009.56
-  icon: fa-solid fa-file-lines
 ---

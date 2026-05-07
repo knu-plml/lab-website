@@ -19,5 +19,4 @@ date: '2020-09-01'
 buttons:
 - text: PDF
   link: https://ieeexplore.ieee.org/document/9186081
-  icon: fa-solid fa-file-lines
 ---

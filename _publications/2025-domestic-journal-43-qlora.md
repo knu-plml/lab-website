@@ -21,5 +21,4 @@ date: '2025-03-01'
 buttons:
 - text: PDF
   link: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12109180
-  icon: fa-solid fa-file-lines
 ---

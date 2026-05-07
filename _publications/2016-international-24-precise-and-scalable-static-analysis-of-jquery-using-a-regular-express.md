@@ -18,5 +18,4 @@ date: '2016-02-01'
 buttons:
 - text: PDF
   link: https://pl.kangwon.ac.kr/wp/wp-content/uploads/DLS2016.pdf
-  icon: fa-solid fa-file-lines
 ---

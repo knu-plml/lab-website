@@ -15,5 +15,4 @@ date: '2020-09-01'
 buttons:
 - text: PDF
   link: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10476646
-  icon: fa-solid fa-file-lines
 ---

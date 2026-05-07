@@ -110,30 +110,25 @@ components:
     type: object
     fields:
       - name: text
-        label: Label
-        type: string
+        label: Type
+        type: select
         required: true
-        description: "Button text. Examples: DOI, PDF, GitHub"
+        description: "Button type. The icon is assigned automatically."
+        options:
+          values:
+            - value: DOI
+              label: DOI
+            - value: GitHub
+              label: GitHub
+            - value: PDF
+              label: PDF
+            - value: Webpage
+              label: Webpage
       - name: link
         label: URL
         type: string
         required: true
         description: "Destination URL. Examples: https://doi.org/..., /files/paper.pdf, https://github.com/..."
-      - name: icon
-        label: Icon
-        type: select
-        required: false
-        description: "Optional icon matching the URL type."
-        options:
-          values:
-            - value: fa-solid fa-file-lines
-              label: Document
-            - value: fa-brands fa-github
-              label: GitHub
-            - value: fa-solid fa-link
-              label: Link
-            - value: fa-solid fa-code
-              label: Code
 
   course_semester:
     label: Semester
@@ -427,7 +422,7 @@ content:
         label: URLs
         component: action_button
         required: false
-        description: "Optional links related to the publication. Add entries such as DOI, PDF, or GitHub."
+        description: "Optional links related to the publication. Choose a type and enter the destination URL."
         list:
           collapsible:
             collapsed: true
