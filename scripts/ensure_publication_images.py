@@ -16,12 +16,21 @@ from regenerate_korean_publication_svgs import clean_subtitle, make_svg
 
 
 PUBLICATIONS_DIR = ROOT / "_publications"
+IMAGE_EXTENSIONS = (".png", ".svg")
 
 
 def image_exists(image: str) -> bool:
     if not image:
         return False
     return (ROOT / image.lstrip("/")).exists()
+
+
+def existing_generated_image(stem: str) -> str | None:
+    for extension in IMAGE_EXTENSIONS:
+        path = IMAGES_DIR / f"{stem}{extension}"
+        if path.exists():
+            return f"images/publications/{stem}{extension}"
+    return None
 
 
 def ensure_parent(path: Path):
@@ -64,6 +73,8 @@ def generate_svg_fallback(data: dict, stem: str) -> str:
 
 def main():
     checked = 0
+    configured = 0
+    linked_existing = 0
     generated_previews = 0
     generated_fallbacks = 0
 
@@ -72,7 +83,18 @@ def main():
         image = (data.get("image") or "").strip()
         checked += 1
 
-        if image_exists(image):
+        if image:
+            configured += 1
+            if not image_exists(image):
+                print(f"CONFIGURED_MISSING {path.stem} -> {image}")
+            continue
+
+        existing_image = existing_generated_image(path.stem)
+        if existing_image:
+            data["image"] = existing_image
+            dump_front_matter(path, data, body)
+            linked_existing += 1
+            print(f"LINK {path.stem} -> {existing_image}")
             continue
 
         preview_image = try_generate_preview(data, path.stem)
@@ -90,6 +112,8 @@ def main():
         print(f"FALLBACK {path.stem} -> {fallback_image}")
 
     print(f"checked_publications {checked}")
+    print(f"configured_images {configured}")
+    print(f"linked_existing_images {linked_existing}")
     print(f"generated_previews {generated_previews}")
     print(f"generated_fallbacks {generated_fallbacks}")
 
