@@ -14,8 +14,8 @@ h6 {
 h1 {
   margin: 0 0 32px;
   font-family: var(--title);
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
-  font-weight: var(--regular);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: var(--semi-bold);
   line-height: 0.98;
   text-transform: none;
   text-align: left;
@@ -26,7 +26,7 @@ h2 {
   padding-bottom: 12px;
   border-bottom: solid 1px var(--light-gray);
   font-family: var(--title);
-  font-weight: var(--regular);
+  font-weight: var(--semi-bold);
 }
 
 h3 {
@@ -45,7 +45,43 @@ h6 {
   font-size: 1rem;
 }
 
-:where(h1, h2, h3, h4, h5, h6) > .icon {
-  margin-right: 0.75em;
-  color: color-mix(in srgb, var(--text) 15%, var(--light-gray));
+:is(h1, h2, h3, h4, h5, h6) > .icon {
+  --heading-icon-background: color-mix(in srgb, var(--primary) 30%, var(--text));
+  --heading-icon-color: white;
+  --heading-icon-shadow:
+    0 0.14em 0.28em color-mix(in srgb, var(--text) 18%, transparent),
+    inset 0 0.04em 0 color-mix(in srgb, white 18%, transparent);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -0.08em;
+  width: 1.05em;
+  height: 0.92em;
+  margin-right: 0.5em;
+  border-radius: 0.14em;
+  background: var(--heading-icon-background);
+  box-shadow: var(--heading-icon-shadow);
+  color: var(--heading-icon-color);
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+:is(h1, h2, h3, h4, h5, h6) > .icon::before {
+  font-size: 0.52em;
+}
+
+:is(h1, h2, h3, h4, h5, h6) > span.icon > svg {
+  top: 0;
+  height: 0.52em;
+}
+
+:root[data-dark="true"] :is(h1, h2, h3, h4, h5, h6) > .icon {
+  --heading-icon-background: color-mix(in srgb, var(--primary) 28%, var(--surface-contrast));
+  --heading-icon-color: color-mix(in srgb, white 88%, var(--text) 12%);
+  --heading-icon-shadow:
+    0 0.12em 0.22em rgba(0, 0, 0, 0.28),
+    inset 0 0.04em 0 color-mix(in srgb, white 8%, transparent);
 }
