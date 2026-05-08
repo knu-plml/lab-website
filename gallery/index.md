@@ -26,7 +26,7 @@ nav:
 {% include section.html %}
 
 <div class="gallery-page publication-year-section" data-gallery-year-section>
-  <h3 id="{{ year }}">{{ year }}</h3>
+  <h3 class="list-year-heading" id="{{ year }}">{{ year }}</h3>
 
   <div class="gallery-grid">
     {% for item in gallery_items %}

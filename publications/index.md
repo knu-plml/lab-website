@@ -101,7 +101,7 @@ nav:
   {% include section.html %}
 
   <div class="publication-year-section" data-publication-year-section>
-    <h3 id="{{ year_name }}">{{ year_name }}</h3>
+    <h3 class="list-year-heading" id="{{ year_name }}">{{ year_name }}</h3>
 
     <div
       class="publication-tab-panel is-active"
