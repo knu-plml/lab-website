@@ -1,5 +1,5 @@
 ---
-title: "Dongyoung’s paper “Medical Data Analysis Using AutoML Frameworks” has been published online in Journal of Electrical Engineering & Technology (SCIE, IF: 1.9). Congrats, Dongyoung!"
+title: 'Dongyoung’s paper “Medical Data Analysis Using AutoML Frameworks” has been published online in ***Journal of Electrical Engineering & Technology*** (SCIE, IF: 1.9). Congrats, Dongyoung!'
 date: "2024-06-02"
 tags:
   - "publication"

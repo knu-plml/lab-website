@@ -1,5 +1,5 @@
 ---
-title: "Our paper “A Performance Comparison of Commercial Speech Recognition APIs in Noisy Environments” (with Geonhui Lee, Sanghwa Lee, Suhwan Ji, and Auk Kim) has been published in The Transactions of the Korean Institute of Electrical Engineers (Scopus)."
+title: Our paper “A Performance Comparison of Commercial Speech Recognition APIs in Noisy Environments” (with Geonhui Lee, Sanghwa Lee, Suhwan Ji, and Auk Kim) has been published in ***The Transactions of the Korean Institute of Electrical Engineers* **(Scopus).
 date: "2022-09-01"
 tags:
   - "publication"

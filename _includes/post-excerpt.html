@@ -10,15 +10,17 @@
 
 <div class="post-excerpt-container">
   <div class="post-excerpt ui-surface-panel">
-    {% assign title = post.title %}
+    {% assign title_markdown = post.title | default: "" | auto_link_publications %}
+    {% assign title = title_markdown | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+    {% assign title_plain = post.title | default: "excerpt image" | markdownify | strip_html | strip %}
     {% assign image = post.image | relative_url | uri_escape %}
-    {% assign excerpt = post.content | default: include.content | markdownify | strip_html | strip %}
+    {% assign excerpt = post.content | default: include.content | auto_link_publications | markdownify | strip %}
 
     {% if image %}
       <div class="post-excerpt-image">
         <img
           src="{{ image }}"
-          alt="{{ title | default: "excerpt image" | regex_strip }}"
+          alt="{{ title_plain | default: "excerpt image" | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}
         >
@@ -29,7 +31,7 @@
       <h3 class="post-excerpt-title">{{ title }}</h3>
 
       {% if excerpt != "" %}
-        <p class="post-excerpt-body">{{ excerpt }}</p>
+        <div class="post-excerpt-body">{{ excerpt }}</div>
       {% endif %}
 
       {%

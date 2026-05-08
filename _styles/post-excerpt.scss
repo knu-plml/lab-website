@@ -41,21 +41,22 @@ $wrap: 800px;
 .post-excerpt-title {
   width: 100%;
   font-family: inherit;
-  font-weight: var(--semi-bold);
+  font-weight: var(--regular);
   font-size: 1rem;
   line-height: inherit;
   letter-spacing: inherit;
+}
+
+.post-excerpt-title :where(strong, b) {
+  font-weight: var(--bold);
 }
 
 .post-excerpt-text > div {
   justify-content: flex-start;
 }
 
-.post-excerpt-text > p {
-  width: 100%;
-}
-
 .post-excerpt-body {
+  width: 100%;
   color: var(--gray);
   line-height: 1.7;
 }

@@ -1,5 +1,5 @@
 ---
-title: "Chaeyoon’s paper “Predicting Progression to Dementia with ‘Comprehensive Visual Rating Scale’ and Machine Learning Algorithms” has been accepted for publication in Frontiers in Neurology (SCIE, IF: 4.086). Congrats, Chaeyoon!"
+title: 'Chaeyoon’s paper “Predicting Progression to Dementia with ‘Comprehensive Visual Rating Scale’ and Machine Learning Algorithms” has been accepted for publication in ***Frontiers in Neurology*** (SCIE, IF: 4.086). Congrats, Chaeyoon!'
 date: "2022-07-01"
 tags:
   - "publication"
