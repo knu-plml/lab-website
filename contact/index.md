@@ -35,40 +35,46 @@ nav:
 
 ## 문의 및 위치
 
-{% capture col1 %}
-**연구실 위치**  
-강원도 춘천시 강원대학길 1  
-강원대학교 춘천캠퍼스  
-한빛관 307호
-{% endcapture %}
+<div class="contact-location-layout">
+  <div class="contact-map">
+    <iframe
+      title="강원대학교 한빛관 지도"
+      src="https://www.google.com/maps?q=%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90%20%ED%95%9C%EB%B9%9B%EA%B4%80&z=17&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen
+    ></iframe>
+  </div>
 
-{% capture col2 %}
-**학생 연구실**  
-강원도 춘천시 강원대학길 1  
-강원대학교 춘천캠퍼스  
-한빛관 308호, 312-1호
-{% endcapture %}
+  <div class="contact-location-cards">
+    <section class="contact-location-card ui-surface-panel">
+      <span class="contact-location-icon">{% include icon.html icon="fa-solid fa-building" %}</span>
+      <div>
+        <h3>연구실 위치</h3>
+        <p>강원도 춘천시 강원대학길 1</p>
+        <p>강원대학교 춘천캠퍼스</p>
+        <p>한빛관 307호</p>
+      </div>
+    </section>
 
-{% capture col3 %}
-**문의**  
-임현승 교수  
-이메일: hsim AT kangwon DOT ac DOT kr  
-전화: 033-250-8441
-{% endcapture %}
+    <section class="contact-location-card ui-surface-panel">
+      <span class="contact-location-icon">{% include icon.html icon="fa-solid fa-user-group" %}</span>
+      <div>
+        <h3>학생 연구실</h3>
+        <p>강원도 춘천시 강원대학길 1</p>
+        <p>강원대학교 춘천캠퍼스</p>
+        <p>한빛관 308호, 312-1호</p>
+      </div>
+    </section>
 
-{% include cols.html col1=col1 col2=col2 col3=col3 %}
-
-{% include section.html %}
-
-## 오시는 길
-
-
-<div class="contact-map">
-  <iframe
-    title="강원대학교 한빛관 지도"
-    src="https://www.google.com/maps?q=%EA%B0%95%EC%9B%90%EB%8C%80%ED%95%99%EA%B5%90%20%ED%95%9C%EB%B9%9B%EA%B4%80&z=17&output=embed"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen
-  ></iframe>
+    <section class="contact-location-card ui-surface-panel">
+      <span class="contact-location-icon">{% include icon.html icon="fa-solid fa-phone" %}</span>
+      <div>
+        <h3>문의</h3>
+        <p>임현승 교수</p>
+        <p><strong>이메일</strong> hsim AT kangwon DOT ac DOT kr</p>
+        <p><strong>전화</strong> 033-250-8441</p>
+      </div>
+    </section>
+  </div>
 </div>
