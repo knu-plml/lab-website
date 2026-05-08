@@ -97,6 +97,32 @@ module Jekyll
       data.sort_by { |item| education_sort_key(item) }.reverse
     end
 
+    def member_sort_value(item, key)
+      source = item.is_a?(Jekyll::Document) ? item.data : item
+      return "" unless source.respond_to?(:[])
+
+      source[key].to_s.strip
+    end
+
+    def sort_members(data)
+      return data unless data.respond_to?(:sort_by)
+
+      site = @context.registers[:site] if @context && @context.respond_to?(:registers)
+      member_order = site&.data&.dig("member_order", "order") || []
+      order_index = member_order.each_with_index.to_h
+
+      data.sort_by do |item|
+        name = member_sort_value(item, "name")
+        index = order_index[name]
+
+        if !index.nil?
+          [0, index, name]
+        else
+          [1, Float::INFINITY, name]
+        end
+      end
+    end
+
     def collection_years(data)
       return [] unless data.respond_to?(:map)
 

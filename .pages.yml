@@ -280,6 +280,18 @@ content:
         options:
           language: markdown
 
+  - name: member_order
+    label: Member Order
+    type: file
+    path: _data/member_order.yml
+    fields:
+      - name: order
+        label: order
+        type: string
+        required: false
+        list: true
+        description: "Korean names in display order. Names not listed here are shown after listed members."
+
   - name: news_items
     label: News Posts
     type: collection
