@@ -2,6 +2,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+images/gallery/thumbnails/
 vendor
 debug.log
 __pycache__

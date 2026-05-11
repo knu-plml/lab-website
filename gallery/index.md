@@ -34,13 +34,14 @@ nav:
       {% if item_year == year %}
         {% assign photos = item.photos | default: empty %}
         {% assign cover = item.cover | default: photos.first | default: "images/fallback.svg" %}
+        {% assign cover_thumbnail = cover | gallery_thumbnail %}
         {% assign photo_count = photos | size %}
         {% assign excerpt = item.content | markdownify | strip_html | strip %}
 
         <article class="gallery-card ui-surface-panel" data-search="{{ item.title | xml_escape }} {{ item.tags | join: ' ' | xml_escape }}">
           <a class="gallery-card-image ui-surface-subtle" href="{{ item.url | relative_url | uri_escape }}">
             <img
-              src="{{ cover | relative_url | uri_escape }}"
+              src="{{ cover_thumbnail | relative_url | uri_escape }}"
               alt="{{ item.title | default: "Gallery photo" | regex_strip }}"
               loading="lazy"
               {% include fallback.html %}

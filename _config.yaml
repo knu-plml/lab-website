@@ -68,6 +68,11 @@ theme: null
 sass:
   sass_dir: _styles
 
+gallery_thumbnails:
+  width: 800
+  height: 500
+  quality: 78
+
 # force jekyll to include certain files/folders
 include:
   - _styles
