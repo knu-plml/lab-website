@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374 80" role="img" aria-label="PLML Laboratory logo">
   <defs>
     <linearGradient id="plml-accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4380ff"/>
-      <stop offset="42%" stop-color="#6978ff"/>
-      <stop offset="100%" stop-color="#8b54ff"/>
+      <stop offset="0%" stop-color="#4f8cff"/>
+      <stop offset="42%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#7aa7ff"/>
     </linearGradient>
     <filter id="plml-depth" x="-4%" y="-10%" width="108%" height="122%">
       <feDropShadow dx="0" dy="1.4" stdDeviation="1.1" flood-color="#000716" flood-opacity="0.55"/>
