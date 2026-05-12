@@ -3,7 +3,7 @@ title: Automated Program Repair using quantized language models and
   parameter-efficient fine-tuning
 scope: international
 kind: journal
-subtitle: "Information and Software Technology. 2026, "
+subtitle: Information and Software Technology. 2026, 108181
 venue: Information and Software Technology
 venue_url: https://www.sciencedirect.com/journal/information-and-software-technology
 abstract: >-
