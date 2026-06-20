@@ -1,8 +1,8 @@
 ---
 show-title: false
 show-subtitle: false
+header-dark: false
 ---
-
 {% include section.html size="full" %}
 
 <div class="home-hero">
@@ -34,7 +34,7 @@ show-subtitle: false
       {% include icon.html icon="fa-solid fa-code" %}
     </div>
     <p class="home-research-kicker">Programming Languages</p>
-    <strong>타입 시스템과 형식 기법</strong>
+    <strong>타입 시스템과 정형 기법</strong>
     <ul class="home-research-tags">
       <li>
         <span>타입 시스템</span>
@@ -42,7 +42,7 @@ show-subtitle: false
       </li>
       <li>
         <span>정규식</span>
-        <span>형식 기법</span>
+        <span>정형 기법</span>
       </li>
     </ul>
   </article>
@@ -51,7 +51,7 @@ show-subtitle: false
       {% include icon.html icon="fa-solid fa-brain" %}
     </div>
     <p class="home-research-kicker">Software Engineering</p>
-    <strong>소프트웨어 공학</strong>
+    <strong>소프트웨어공학</strong>
     <ul class="home-research-tags">
       <li>
         <span>Code LLM</span>
@@ -75,7 +75,7 @@ show-subtitle: false
         <span>스마트 컨트랙트</span>
       </li>
       <li>
-        <span>스카이라인 쿼리</span>
+        <span>스카이라인 질의</span>
         <span>데이터 스트림</span>
       </li>
     </ul>
