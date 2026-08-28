@@ -11,10 +11,12 @@ links:
   google-scholar: YpEAA4kAAAAJ
 ---
 **Affiliations**
-- Professor 교수
-- 소프트웨어중심대학사업단장
-- 강원지역혁신플랫폼 정밀의료사업부단장
-- Former Vice Dean, Office of Research Affairs 前 연구부처장
+- Professor, Department of Computer Science and Engineering / 교수
+- CIO, Office of Information Systems and Technology / 정보화본부장
+- Director, National Center of Excellence in Software / 소프트웨어중심대학사업단장
+- Director, AI Bootcamp Center / AI부트캠프사업단장
+- Former Director, Division of Precision Medicine, Gangwon Regional Innovation Platform / 前 강원지역혁신플랫폼 정밀의료사업단장
+- Former Vice Dean, Office of Research Affairs / 前 연구부처장
 - [Programming Language and Machine Learning Laboratory](https://pl.kangwon.ac.kr/) 프로그래밍 언어 및 기계학습 연구실
 - [Department of Computer Science and Engineering](https://cse.kangwon.ac.kr/cse/index.do) 컴퓨터공학과
 - [Department of Data Science](https://knuds.kangwon.ac.kr/) 일반대학원 데이터사이언스학과
