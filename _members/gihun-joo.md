@@ -3,7 +3,7 @@ name: 주기훈
 name_en: Gihun Joo
 image: images/members/gihun-joo.jpg
 role: alumni
-affiliation: Postdoc. at the PLML lab., KNU
+affiliation: Assistant Professor, Dept. of Computer Science, KNU
 education:
   - degree: Ph.D.
     major: AI and Software
@@ -19,4 +19,6 @@ education:
     date: "2018.2"
 links:
   home-page: http://huhuni.github.io/
+career:
+  - Postdoc. at the Theory of Computation lab., Yonsei Univ., 2024.3-2026.8
 ---
