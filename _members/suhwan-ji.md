@@ -4,9 +4,10 @@ name_en: "Suhwan Ji"
 image: ""
 role: "alumni"
 affiliation: "Assistant Professor, Dept. of Digital Military Science and Technology, KNU"
-career:
-  - "Postdoc. at the Theory of Computation lab., Yonsei Univ., 2024.3-2026.2"
 education:
+  - degree: Postdoc
+    institution: Theory of Computation lab., Yonsei Univ.
+    date: "2024.3-2026.2"
   - degree: "Ph.D."
     major: "AI and Software"
     thesis: "A Fault Localization Method Using Pre-trained Code Language Models"

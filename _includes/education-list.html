@@ -11,7 +11,9 @@
     {% endfor %}
     {% for entry in education %}
       <li>
-        {% if entry.degree contains "coursework completed" %}
+        {% if entry.degree == "Postdoc" %}
+          Postdoc.{% if entry.institution and entry.institution != "" %} at the {{ entry.institution }}{% endif %}, {{ entry.date }}
+        {% elsif entry.degree contains "coursework completed" %}
           {{ entry.degree }}, {{ entry.date }}
         {% elsif entry.major and entry.major != "" %}
           {{ entry.degree }} in {{ entry.major }}, {{ entry.date }}

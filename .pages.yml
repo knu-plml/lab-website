@@ -77,15 +77,17 @@ components:
         required: false
 
   education_entry:
-    label: Education Entry
+    label: Education / History Entry
     type: object
     fields:
       - name: degree
-        label: Degree
+        label: Degree / Position
         type: select
         required: true
         options:
           values:
+            - value: Postdoc
+              label: Postdoc
             - value: Ph.D.
               label: Ph.D.
             - value: Ph.D. coursework completed
@@ -96,6 +98,10 @@ components:
               label: M.S. Coursework Completed
             - value: B.S.
               label: B.S.
+      - name: institution
+        label: Institution / Lab (Postdoc)
+        type: string
+        required: false
       - name: major
         label: Major
         type: string
@@ -105,10 +111,10 @@ components:
         type: string
         required: false
       - name: date
-        label: Date Acquired
+        label: Date / Period
         type: string
         required: true
-        description: "Date acquired. Example: 2026.2"
+        description: "Date acquired or Postdoc period. Examples: 2026.2, 2024.3-2026.2"
 
   action_button:
     label: URL
@@ -257,7 +263,7 @@ content:
         type: string
         required: false
         list: true
-        description: "Other career history shown above education. Example: Postdoc. at the ABC Lab., XYZ Univ., 20xx.x-20xx.x"
+        description: "Other career history shown above education. Add Postdoc appointments under Education / Alumni History."
       - name: education
         label: Education / Alumni History
         component: education_entry

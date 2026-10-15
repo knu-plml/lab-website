@@ -78,6 +78,7 @@ module Jekyll
       return "000000" if !education.is_a?(Array) || education.empty?
 
       latest = education
+        .reject { |entry| entry.is_a?(Hash) && entry["degree"] == "Postdoc" }
         .map { |entry| entry.is_a?(Hash) ? entry["date"].to_s : "" }
         .reject(&:empty?)
         .map do |date|

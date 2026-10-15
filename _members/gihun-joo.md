@@ -5,6 +5,9 @@ image: images/members/gihun-joo.jpg
 role: alumni
 affiliation: Assistant Professor, Dept. of Computer Science, KNU
 education:
+  - degree: Postdoc
+    institution: Theory of Computation lab., Yonsei Univ.
+    date: "2024.3-2026.8"
   - degree: Ph.D.
     major: AI and Software
     thesis: A Generative Model-Based Framework for ECG Reconstruction and
@@ -19,6 +22,4 @@ education:
     date: "2018.2"
 links:
   home-page: http://huhuni.github.io/
-career:
-  - Postdoc. at the Theory of Computation lab., Yonsei Univ., 2024.3-2026.8
 ---
