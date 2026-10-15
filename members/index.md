@@ -34,6 +34,17 @@ nav:
 </div>
 {% endif %}
 
+{% assign phd_candidates = site.members | data_filter: "role == 'phd-candidate'" %}
+{% if phd_candidates.size > 0 %}
+{% include section.html %}
+<tab-panel>team</tab-panel>
+## PhD Candidates
+
+<div class="grid">
+  {% include list.html data="members" component="portrait" filter="role == 'phd-candidate'" %}
+</div>
+{% endif %}
+
 {% assign phd_students = site.members | data_filter: "role == 'phd'" %}
 {% if phd_students.size > 0 %}
 {% include section.html %}

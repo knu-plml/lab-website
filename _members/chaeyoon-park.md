@@ -2,7 +2,7 @@
 name: "박채윤"
 name_en: "Chaeyoon Park"
 image: "images/members/chaeyoon-park.jpg"
-role: "phd"
+role: "phd-candidate"
 affiliation: "박사과정, PLML lab."
 education:
   - degree: "M.S."

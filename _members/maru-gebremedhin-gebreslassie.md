@@ -4,6 +4,6 @@ name_en: "Maru Gebremedhin Gebreslassie"
 aliases:
   - Gebremedhin Gebreslassie Maru
 image: images/members/maru-gebremedhin-gebreslassie.jpg
-role: phd
+role: phd-candidate
 affiliation: "박사과정, PLML lab."
 ---

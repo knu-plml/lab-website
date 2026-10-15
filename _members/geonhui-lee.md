@@ -2,7 +2,7 @@
 name: "이건희"
 name_en: "Geonhui Lee"
 image: "images/members/geonhui-lee.jpg"
-role: "phd"
+role: "phd-candidate"
 affiliation: "박사과정, PLML lab."
 education:
   - degree: "M.S."

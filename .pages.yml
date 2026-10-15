@@ -238,6 +238,8 @@ content:
               label: Principal Investigator
             - value: postdoc
               label: Postdoc
+            - value: phd-candidate
+              label: PhD Candidate
             - value: phd
               label: PhD Student
             - value: ms

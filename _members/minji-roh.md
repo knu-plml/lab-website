@@ -2,7 +2,7 @@
 name: "노민지"
 name_en: "Minji Roh"
 image: "images/members/minji-roh.jpg"
-role: "phd"
+role: "phd-candidate"
 affiliation: "박사과정, PLML lab."
 education:
   - degree: "M.S."

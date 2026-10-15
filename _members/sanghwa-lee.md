@@ -2,7 +2,7 @@
 name: "이상화"
 name_en: "Sanghwa Lee"
 image: "images/members/sanghwa-lee.jpg"
-role: "phd"
+role: "phd-candidate"
 affiliation: "박사과정, PLML lab."
 education:
   - degree: "M.S."
