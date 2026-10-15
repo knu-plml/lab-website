@@ -6,8 +6,8 @@ role: alumni
 affiliation: Assistant Professor, Dept. of Computer Science, KNU
 education:
   - degree: Postdoc
-    institution: Theory of Computation lab., Yonsei Univ.
-    date: "2024.3-2026.8"
+    institution: Programming Language and Machine Learning Lab., Kangwon National Univ.
+    date: 2024.3-2026.8
   - degree: Ph.D.
     major: AI and Software
     thesis: A Generative Model-Based Framework for ECG Reconstruction and
