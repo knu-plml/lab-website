@@ -1,7 +1,7 @@
 ---
 name: 임현승
 name_en: Hyeonseung Im
-image: images/members/hyeonseung-im.png
+image: images/members/31x38.png
 role: principal-investigator
 links:
   dblp: 78/997
