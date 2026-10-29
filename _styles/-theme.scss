@@ -25,18 +25,18 @@
   --footer-button-border-hover: color-mix(in srgb, var(--hero-link) 46%, transparent);
 }
 [data-dark="true"] {
-  --primary: #6f8cff;
-  --secondary: rgba(86, 100, 255, 0.24);
-  --text: #f2f6ff;
-  --background: #030814;
-  --background-alt: #07101f;
-  --surface: rgba(10, 18, 32, 0.82);
-  --surface-raised: rgba(16, 27, 48, 0.86);
-  --surface-contrast: rgba(24, 39, 68, 0.9);
-  --light-gray: rgba(113, 132, 178, 0.28);
-  --gray: #a7b4d4;
-  --dark-gray: #f3f7ff;
-  --surface-border: rgba(112, 139, 205, 0.24);
+  --primary: #93b4ed;
+  --secondary: rgba(147, 180, 237, 0.14);
+  --text: #e8eaed;
+  --background: #0b111c;
+  --background-alt: #101824;
+  --surface: #172130;
+  --surface-raised: #1e2a3a;
+  --surface-contrast: #29384b;
+  --light-gray: rgba(180, 190, 204, 0.2);
+  --gray: #a6afbd;
+  --dark-gray: #e8eaed;
+  --surface-border: rgba(180, 190, 204, 0.14);
   --overlay: rgba(0, 0, 0, 0.54);
   --hero-ink: #020817;
   --hero-link: #84a2ff;
@@ -136,10 +136,23 @@
 }
 
 [data-dark="true"] {
-  --panel-background:
-    linear-gradient(180deg, rgba(28, 44, 78, 0.34) 0%, rgba(10, 19, 35, 0.1) 72%),
-    rgba(9, 17, 31, 0.72);
+  --panel-background: var(--surface);
+  --chip-background: #1c2736;
+  --chip-color: #bdc5d0;
+  --media-background: var(--surface-raised);
   --panel-shadow:
     0 22px 60px -40px rgba(0, 0, 0, 0.86),
     inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+// Interior pages use a clearer blue accent; the home palette stays softer.
+:root[data-dark="true"] main:not([data-page="/"]),
+:root[data-dark="true"] main:not([data-page="/"]) [data-dark="true"] {
+  --primary: #7fa6ff;
+  --secondary: rgba(93, 139, 255, 0.2);
+  --surface-contrast: #293e60;
+  --interactive-border: rgba(127, 166, 255, 0.3);
+  --interactive-border-strong: rgba(127, 166, 255, 0.48);
+  --accent-muted: #91a9d6;
+  --chip-hover-background: var(--surface-contrast);
 }

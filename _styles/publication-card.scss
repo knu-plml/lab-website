@@ -134,3 +134,20 @@
     height: auto;
   }
 }
+
+[data-dark="true"] .publication-card-title {
+  color: var(--primary);
+}
+
+[data-dark="true"] .publication-card-title:hover,
+[data-dark="true"] .publication-card-title:focus-visible {
+  color: color-mix(in srgb, var(--primary) 76%, var(--text) 24%);
+}
+
+[data-dark="true"] .publication-card-meta strong {
+  color: var(--gray);
+}
+
+[data-dark="true"] .publication-card-image img {
+  filter: brightness(0.88);
+}
