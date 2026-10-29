@@ -4,10 +4,10 @@ $home-research-overlap: 118px;
 
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(12px);
   transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .reveal-on-scroll.is-visible {

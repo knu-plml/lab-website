@@ -24,13 +24,12 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.05,
-      rootMargin: "0px 0px 8% 0px",
+      threshold: 0,
+      rootMargin: "0px 0px 15% 0px",
     }
   );
 
-  items.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+  items.forEach((item) => {
     observer.observe(item);
   });
 });
