@@ -104,7 +104,6 @@ header-dark: false
 {% assign featured_publications = site.publications | where: "scope", "international" | sort: "date" | reverse %}
 <div class="home-block reveal-on-scroll">
   <div class="home-block-header reveal-on-scroll">
-    <p class="home-section-label">Research Output</p>
     <div class="home-block-title-row">
       <h2>연구 성과</h2>
       <a class="home-block-title-link" href="{{ 'publications' | relative_url }}">전체 논문 보기</a>
@@ -166,7 +165,6 @@ header-dark: false
 
 <div class="home-news-feed reveal-on-scroll">
   <div class="home-block-header reveal-on-scroll">
-    <p class="home-section-label">Latest News</p>
     <div class="home-block-title-row">
       <h2>최근 소식</h2>
       <a class="home-block-title-link" href="{{ 'news' | relative_url }}">전체 소식 보기</a>

@@ -15,7 +15,6 @@
   --overlay: rgba(22, 35, 58, 0.09);
   --hero-ink: #020817;
   --hero-link: #84a2ff;
-  --hero-accent: #89a4ff;
   --hero-title: #f8fbff;
   --hero-text: rgba(255, 255, 255, 0.88);
   --footer-background: color-mix(in srgb, var(--hero-ink) 85%, black 15%);
@@ -40,7 +39,6 @@
   --overlay: rgba(0, 0, 0, 0.54);
   --hero-ink: #020817;
   --hero-link: #84a2ff;
-  --hero-accent: #89a4ff;
   --hero-title: #f4f8ff;
   --hero-text: #d0d5dd;
   --footer-background: color-mix(in srgb, var(--hero-ink) 85%, black 15%);
@@ -97,7 +95,6 @@
     var(--brand-gradient-mid) 42%,
     var(--brand-gradient-end) 100%
   );
-  --brand-gradient-cta: linear-gradient(135deg, #3b82f6 0%, #4f8cff 46%, #7aa7ff 100%);
 
   // shared surfaces
   --panel-background:
