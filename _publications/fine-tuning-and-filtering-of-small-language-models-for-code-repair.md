@@ -1,5 +1,5 @@
 ---
-title: Fine-tuning and Filtering of Small Language Models for Code Repair
+title: 코드 수정을 위한 소형 언어 모델의 미세조정과 필터링
 scope: domestic
 kind: journal
 authors:
