@@ -211,7 +211,7 @@ content:
     type: collection
     path: _members
     subfolders: false
-    filename: "{name_en}.md"
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
       primary: name
       fields: [name, name_en, role, "education[0].degree"]
@@ -305,7 +305,7 @@ content:
     type: collection
     path: _news
     subfolders: false
-    filename: "{year}-{month}-{day}-{title}.md"
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
       primary: title
       fields: [title, date, "tags[0]"]
@@ -452,7 +452,7 @@ content:
     type: collection
     path: _gallery
     subfolders: false
-    filename: "{date}.md"
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
       primary: title
       fields: [title, date, "tags[0]"]
@@ -507,7 +507,7 @@ content:
     type: collection
     path: _courses
     subfolders: false
-    filename: "{title_en}.md"
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
       primary: title
       fields: [title, title_en, "semesters[0].label"]
