@@ -83,4 +83,8 @@ exclude:
   - README.md
   - LICENSE.md
   - CITATION.cff
+  - Dockerfile
+  - scripts
+  - requirements.txt
+  - CHANGELOG.md
 logo-text: false

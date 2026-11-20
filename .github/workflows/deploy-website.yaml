@@ -9,6 +9,9 @@ concurrency:
   group: deploy-lab-webpage
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: [self-hosted, lab-webpage]
@@ -16,19 +19,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-      - name: Install Python dependencies
+      - name: Build in Docker and deploy static output
+        shell: bash
         run: |
-          python3 -m venv .venv
-          . .venv/bin/activate
-          python -m pip install -r requirements.txt
-          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
-
-      - name: Build Jekyll site
-        run: |
-          bundle install
-          bundle exec jekyll build
-
-      - name: Deploy
-        run: |
-          rsync -av --delete _site/ /var/www/html/new/
+          set -euo pipefail
+          output_dir="$(mktemp -d "${RUNNER_TEMP}/lab-webpage.XXXXXX")"
+          trap 'rm -rf "$output_dir"' EXIT
+          DOCKER_BUILDKIT=1 docker build --pull --target artifact \
+            --output "type=local,dest=${output_dir}" .
+          test -s "$output_dir/index.html"
+          # Require the completed backup and web-root migration.
+          grep -qx 'plml-static-root-v1' /var/www/.lab-webpage-root-deployed
+          rsync -av --no-owner --no-group --chmod=D755,F644 --delete "$output_dir/" /var/www/html/

@@ -10,7 +10,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-기본 주소: `http://127.0.0.1:4000/new`
+기본 주소: `http://127.0.0.1:4000/`
 
 ## Structure
 
@@ -19,6 +19,20 @@ bundle exec jekyll serve
 - `_layouts/`, `_includes/`: 레이아웃과 공통 컴포넌트
 - `_members/`, `_publications/`, `_news/`, `_courses/`: 콘텐츠 데이터
 - `images/`: 이미지 자산
+
+## Docker 빌드 및 배포
+
+`master`에 push하면 self-hosted 러너가 Docker에서 빌드한 정적 결과물만 배포합니다.
+러너에는 Docker(BuildKit), Git, rsync가 필요합니다.
+
+로컬 빌드:
+
+```bash
+output_dir="$(mktemp -d)"
+DOCKER_BUILDKIT=1 docker build --pull --target artifact \
+  --output "type=local,dest=${output_dir}" .
+echo "$output_dir"
+```
 
 ## Notes
 
